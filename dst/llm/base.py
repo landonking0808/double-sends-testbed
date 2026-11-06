@@ -21,6 +21,13 @@ CT = ZoneInfo("America/Chicago")
 RETRY_STATUS = {429, 500, 502, 503, 504}
 
 
+def _daily_quota_429(body: str) -> bool:
+    """True when a 429 body says a free *daily* allocation is exhausted (Workers AI neurons,
+    Gemini requests-per-day), as opposed to a per-minute limit that a backoff clears."""
+    b = body.lower()
+    return "daily free allocation" in b or "perday" in b.replace("_", "").replace(" ", "")
+
+
 class LLMError(RuntimeError):
     """A non-retryable provider error, or retries exhausted."""
 
@@ -206,6 +213,11 @@ class BaseClient:
                     self.last_usage = {"input_tokens": res.input_tokens, "output_tokens": res.output_tokens}
                     return res.text
                 last_err = f"HTTP {status}: {resp.text[:500]}"
+                if status == 429 and _daily_quota_429(resp.text):
+                    # the provider says the free daily allocation is used up: stop, do not retry
+                    gov.settle(None, 0.0, est_in, est_neurons)
+                    self._log({**base, "cached": False, "error": last_err[:300], "attempts": attempts})
+                    raise QuotaExhausted(f"{self.provider}:{model} provider reports the free daily quota used up")
                 if status not in RETRY_STATUS:
                     gov.settle(None, 0.0, est_in, est_neurons)
                     self._log({**base, "cached": False, "error": last_err[:300], "attempts": attempts})

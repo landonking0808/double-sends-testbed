@@ -17,6 +17,8 @@ from typing import Optional
 class CacheMiss(KeyError):
     """replay_only mode and the response is not in the cache."""
 
+    abort_reason = "aborted_replay"   # an episode stops instead of running on no-ops
+
 
 def request_key(provider: str, model: str, messages: list, temperature: float, seed: int,
                 max_tokens: int) -> str:

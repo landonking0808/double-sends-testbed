@@ -1,6 +1,12 @@
-"""A deterministic fake chat client for tests: plays a simple policy from the observation
-JSON in the last user message, in varying output formats, with occasional garbage."""
+"""A deterministic fake chat client for tests: plays a simple policy from the rendered
+observation (identity from the system prompt, message ids and customers from the
+"M01 from C01:" lines of the last user message), in varying output formats, with
+occasional garbage."""
 import json
+import re
+
+IDENT = re.compile(r"You are (\S+) \((\w+)\)\. Your parent: \S+\. Agents below you: ([^.]*)\. Batch task id: (\S+)\.")
+ITEM = re.compile(r"^\s*-?\s*(M\d+) from (C\d+):", re.M)
 
 
 class FakeClient:
@@ -10,10 +16,13 @@ class FakeClient:
         self.garbage_every = garbage_every
         self.last_usage = None
 
-    def complete(self, messages, *, model, temperature, seed):
+    def complete(self, messages, *, model, temperature, seed, max_tokens=None):
         self.n += 1
         text = messages[-1]["content"]
-        obs = json.loads(text.split("OBSERVATION\n", 1)[1])
+        agent, role, kids, task_id = IDENT.search(messages[0]["content"]).groups()
+        kids = [] if kids == "none" else kids.split(", ")
+        obs = {"agent": agent, "role": role, "children": kids, "task_id": task_id,
+               "items": ITEM.findall(text.split("Your last call:")[0])}
         call = self._policy(obs)
         self.last_usage = {"input_tokens": sum(len(m["content"]) for m in messages) // 4, "output_tokens": 20}
         if self.garbage_every and self.n % self.garbage_every == 0:
@@ -29,11 +38,7 @@ class FakeClient:
     def _policy(self, obs):
         me = obs["agent"]
         st = self.state.setdefault(me, {"items": [], "plan": None})
-        for m in obs["new_messages"]:
-            if m["kind"] == "customer_message":
-                st["items"].append((m["id"], m["customer"]))
-            elif m["kind"] == "delegation":
-                st["items"] += [(i["id"], i["customer"]) for i in m["items"]]
+        st["items"] += obs["items"]
         if st["plan"] is None and st["items"]:
             if obs["role"] in ("lead", "manager"):
                 kids = obs["children"]

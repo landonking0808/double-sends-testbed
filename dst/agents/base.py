@@ -41,3 +41,37 @@ class Agent(ABC):
 
     def stats(self) -> dict:
         return {}
+
+
+# Episode end reasons that mean "the run was cut short by the infrastructure, not by the
+# team": such an episode is not a valid sample and a grid runner reruns it later.
+ABORT_REASONS = ("aborted_quota", "aborted_client_error", "aborted_replay", "aborted_deadline")
+
+
+class EpisodeStop(Exception):
+    """Raised from ``act`` to end the whole episode now, before the agent's tool call.
+
+    ``reason`` becomes ``ledger["end"]["reason"]``: one of ``ABORT_REASONS`` (an invalid
+    sample: free quota reached, the provider kept failing) or ``call_cap`` (the episode
+    used its LLM-call budget; a valid ending, like the per-agent turn cap)."""
+
+    fatal = False
+
+    def __init__(self, reason: str, detail: str = ""):
+        super().__init__(f"{reason}: {detail}" if detail else reason)
+        self.reason = reason
+        self.detail = detail
+
+
+class CallBudget:
+    """A per-episode LLM call budget shared by every agent of the team."""
+
+    def __init__(self, max_calls: int | None):
+        self.max_calls = max_calls
+        self.used = 0
+
+    def take(self) -> bool:
+        if self.max_calls is not None and self.used >= self.max_calls:
+            return False
+        self.used += 1
+        return True

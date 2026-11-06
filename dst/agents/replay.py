@@ -16,11 +16,13 @@ class ReplayMismatch(Exception):
 
 
 class ReplayedClientError(Exception):
-    """Re-raises a client error that happened in the original run, with the same text."""
+    """Re-raises a client error that happened in the original run, with the same text
+    (and, if that error stopped the episode, the same ``abort_reason``)."""
 
-    def __init__(self, logged_error: str):
+    def __init__(self, logged_error: str, abort_reason=None):
         super().__init__(logged_error)
         self.logged_error = logged_error
+        self.abort_reason = abort_reason
 
 
 class ReplayClient:
@@ -30,19 +32,20 @@ class ReplayClient:
         self.i = 0
         self.last_usage = None
 
-    def complete(self, messages, *, model, temperature, seed) -> str:
+    def complete(self, messages, *, model, temperature, seed, max_tokens=None) -> str:
         if self.i >= len(self.events):
             raise ReplayMismatch(f"{self.agent_id}: more LLM calls than recorded ({len(self.events)})")
         ev = self.events[self.i]
         self.i += 1
         h = prompt_hash(messages)
         for name, got, want in (("prompt_hash", h, ev["prompt_hash"]), ("model", model, ev["model"]),
-                                ("seed", seed, ev["seed"]), ("temperature", temperature, ev["temperature"])):
+                                ("seed", seed, ev["seed"]), ("temperature", temperature, ev["temperature"]),
+                                ("max_tokens", max_tokens, ev.get("max_tokens"))):
             if got != want:
                 raise ReplayMismatch(f"{self.agent_id} call {self.i - 1}: {name} differs ({got!r} != {want!r})")
         self.last_usage = ev.get("usage")
         if ev.get("error"):
-            raise ReplayedClientError(ev["error"])
+            raise ReplayedClientError(ev["error"], ev.get("abort"))
         return ev["response"]
 
 

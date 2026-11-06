@@ -32,6 +32,10 @@ WINDOW_S = 60.0
 class QuotaExhausted(RuntimeError):
     """The daily free quota (at DAILY_FRACTION) would be passed; the call was not sent."""
 
+    # read by dst.agents.llm_agent (duck-typed, so the agent layer does not import dst.llm):
+    # the episode stops with this end reason instead of filling up with no-ops
+    abort_reason = "aborted_quota"
+
 
 @dataclass(frozen=True)
 class Limits:

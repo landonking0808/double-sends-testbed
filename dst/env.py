@@ -21,7 +21,7 @@ import copy
 import json
 from dataclasses import asdict, dataclass, field
 
-from .agents.base import Agent
+from .agents.base import Agent, EpisodeStop
 from .seeding import make_rng
 from .tasks import Batch
 
@@ -154,6 +154,7 @@ class Office:
         self.unread = {a: 0 for a in self.specs}
         self.last = {a: (None, None) for a in self.specs}
         self.end = None
+        self._stop = None             # EpisodeStop raised by an agent (quota, client failure, call cap)
         msg_by_id = {m["id"]: m for m in batch.messages}
         self._msg_by_id = msg_by_id
         self.items["lead"] = [m["id"] for m in batch.messages]
@@ -227,9 +228,16 @@ class Office:
                 if self.status[aid] != "running":
                     continue  # put to sleep / finished earlier in this tick cannot happen, but be safe
                 self._turn(aid, agents[aid])
+                if self._stop is not None:
+                    break
+            if self._stop is not None:
+                reason = self._stop["reason"]
+                break
             self.t += 1
         self.end = {"t": self.t, "seq": self._next_seq(), "reason": reason,
                     "unfinished": [a for a in self.order0 if self.status[a] in RUNNING]}
+        if self._stop is not None:
+            self.end["stop"] = self._stop
         led = self.ledger()
         self.log.ledger(led)
         return led
@@ -250,7 +258,14 @@ class Office:
     def _turn(self, aid: str, agent: Agent) -> None:
         spec = self.specs[aid]
         obs = self._observation(aid)
-        call = agent.act(obs)
+        try:
+            call = agent.act(obs)
+        except EpisodeStop as stop:
+            # the episode ends before this agent's tool call; its llm_call (if any) is logged
+            for ev, payload in agent.drain_events():
+                self.log.event(self.t, aid, spec.parent, ev, payload)
+            self._stop = {"reason": stop.reason, "agent": aid, "t": self.t, "detail": stop.detail[:300]}
+            return
         for ev, payload in agent.drain_events():
             self.log.event(self.t, aid, spec.parent, ev, payload)
         step = self.turns[aid]

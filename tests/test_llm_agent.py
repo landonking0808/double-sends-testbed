@@ -40,8 +40,15 @@ def test_prompts_per_role_and_condition():
            "condition": "P1", "task_id": "batch-1", "tools": tools, "new_messages": [], "last_call": None,
            "last_result": None}
     msg = render_observation(obs)
-    shown = json.loads(msg.split("OBSERVATION\n", 1)[1])
-    assert shown["agent"] == "w1" and "condition" not in shown
+    assert "P1" not in msg and "condition" not in msg and msg.startswith("Turn 1 (40 turns left)")
+    obs2 = dict(obs, new_messages=[{"kind": "delegation", "from": "lead", "task_id": "batch-1", "brief": "do it",
+                                    "items": [{"id": "M01", "customer": "C01", "text": "hi"}],
+                                    "policy": {"text": "Refund policy: ..."}, "t": 0}],
+                last_call={"tool": "lookup", "args": {"customer": "C01"}}, last_result={"status": "ok"})
+    msg2 = render_observation(obs2)
+    assert "M01 from C01: hi" in msg2 and "[delegation from lead" in msg2 and 'lookup {"customer":"C01"}' in msg2
+    ident = system_prompt("worker", "B0", tools, identity="You are w1 (worker).")
+    assert "You are w1 (worker)." in ident
 
 
 class _Boom:

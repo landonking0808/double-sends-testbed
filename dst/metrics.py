@@ -162,11 +162,13 @@ def episode_metrics(ledger: dict, schedule: list | None = None, events: list | N
             continue
         p = ev["payload"]
         llm["llm_calls"] += 1
-        u = p.get("usage") or p.get("est_tokens") or {}
-        if not p.get("usage"):
+        # provider-reported tokens (client.last_usage) when present, per field; else the estimate
+        u, est = p.get("usage") or {}, p.get("est_tokens") or {}
+        if u.get("input_tokens") is None or u.get("output_tokens") is None:
             llm["estimated_token_calls"] += 1
-        llm["input_tokens"] += int(u.get("input_tokens", 0) or 0)
-        llm["output_tokens"] += int(u.get("output_tokens", 0) or 0)
+        for k in ("input_tokens", "output_tokens"):
+            v = u.get(k)
+            llm[k] += int(v if v is not None else (est.get(k) or 0))
         if p.get("error"):
             llm["client_errors"] += 1
         elif not p.get("parse_ok"):
@@ -190,6 +192,7 @@ def episode_metrics(ledger: dict, schedule: list | None = None, events: list | N
                  "refused_reports": len(refused), "ticks": ledger["end"]["t"], **llm},
         "attribution": {"duplicates": dups, "false_dones": false_dones, "premature": premature},
         "end_reason": ledger["end"]["reason"],
+        "aborted": str(ledger["end"]["reason"]).startswith("aborted_"),
     }
 
 

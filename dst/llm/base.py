@@ -88,7 +88,7 @@ class BaseClient:
 
     def __init__(self, *, cache_dir: os.PathLike = "runs/cache", quota_dir: os.PathLike = "runs/cache/_quota",
                  usage_log: Optional[os.PathLike] = "runs/usage/llm_calls.jsonl", replay_only: bool = False,
-                 timeout: float = 60.0, max_retries: int = 6, backoff_base: float = 2.0,
+                 timeout: float = 150.0, max_retries: int = 6, backoff_base: float = 2.0,
                  backoff_cap: float = 90.0, http: Optional[httpx.Client] = None,
                  limits: Optional[dict] = None, sleep: Callable[[float], None] = time.sleep,
                  clock: Callable[[], float] = time.time, rng: Optional[random.Random] = None):

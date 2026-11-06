@@ -9,7 +9,7 @@ and prompt version) is skipped; LLM responses are cached in runs/cache/ as well.
 Writes <out>/episodes/<label>.json, <out>/episodes.csv, <out>/summary.csv (long format:
 monitor, view, group, metric, k, n, rate or value, ci95 lo/hi) and <out>/summary.json.
 Aborted episodes (end reason aborted_*) are skipped and listed. Exit 3 when a free quota
-stopped the run (rerun later to resume). See docs/MONITOR.md.
+stopped the run, exit 4 when an episode's LLM call kept failing (rerun later to resume). See docs/MONITOR.md.
 """
 from __future__ import annotations
 
@@ -24,7 +24,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
-from monitor.llm_monitor import MONITOR_MODEL, MONITOR_PROVIDER, PROMPT_VERSION, run_llm_monitor  # noqa: E402
+from monitor.llm_monitor import DEFAULT_BUDGET, MONITOR_MODEL, MONITOR_REV, MONITOR_PROVIDER, PROMPT_VERSION, run_llm_monitor  # noqa: E402
 from monitor.score import load_truth, run_baseline, score_episode, summarize  # noqa: E402
 
 EP_FIELDS = ["label", "episode_id", "team_model", "condition", "shape", "seed", "monitor", "view",
@@ -75,7 +75,8 @@ def ep_row(label, truth, tm, mon, view, sc, res) -> dict:
             "trimmed": bool(trim.get("dropped") or trim.get("shortened") or trim.get("middle_cut"))}
 
 
-def write_outputs(out: Path, records: list, view: str, skipped: list, calls: dict) -> dict:
+def write_outputs(out: Path, records: list, view: str, skipped: list, calls: dict, budget: int,
+                  errors: list = ()) -> dict:
     rows, by = [], defaultdict(list)
     for r in records:
         for mon in ("llm", "baseline"):
@@ -116,7 +117,8 @@ def write_outputs(out: Path, records: list, view: str, skipped: list, calls: dic
         w.writeheader()
         w.writerows(srows)
     meta = {"view": view, "episodes": len(records), "skipped": skipped, "llm_calls": calls,
-            "monitor_model": MONITOR_MODEL, "prompt_version": PROMPT_VERSION}
+            "monitor_model": MONITOR_MODEL, "prompt_version": PROMPT_VERSION, "budget_tokens": budget,
+            "llm_errors": list(errors)}
     with open(out / "summary.json", "w", encoding="utf-8") as f:
         json.dump({"meta": meta, "summary": summary}, f, indent=1, sort_keys=True)
     return summary
@@ -130,7 +132,7 @@ def main(argv=None) -> int:
     ap.add_argument("--monitors", default="llm,baseline", help="comma list of llm, baseline")
     ap.add_argument("--model", default=MONITOR_MODEL)
     ap.add_argument("--provider", default=MONITOR_PROVIDER, help=argparse.SUPPRESS)   # "fake" in tests
-    ap.add_argument("--budget", type=int, default=8000, help="view budget in estimated tokens")
+    ap.add_argument("--budget", type=int, default=DEFAULT_BUDGET, help="view budget in estimated tokens")
     ap.add_argument("--limit", type=int, default=0, help="at most N episodes (0 = all)")
     ap.add_argument("--max-calls", type=int, default=0, help="stop after N new LLM calls (0 = no cap)")
     ap.add_argument("--replay-only", action="store_true", help="LLM answers from the cache only; never the network")
@@ -154,7 +156,7 @@ def main(argv=None) -> int:
     eps = find_episodes(a.runs)
     if a.limit:
         eps = eps[: a.limit]
-    records, skipped, quota_stop = [], [], False
+    records, skipped, errors, quota_stop = [], [], [], False
     calls = {"new": 0, "cached": 0, "errors": 0, "input_tokens": 0, "output_tokens": 0}
     for ep in eps:
         label = label_of(ep)
@@ -168,7 +170,8 @@ def main(argv=None) -> int:
             with open(path, encoding="utf-8") as f:
                 rec = json.load(f)
             lr = (rec.get("llm") or {}).get("result") or {}
-            if "llm" in mons and (lr.get("model") != a.model or lr.get("prompt_version") != PROMPT_VERSION):
+            if "llm" in mons and (lr.get("model") != a.model or lr.get("prompt_version") != PROMPT_VERSION
+                                     or lr.get("budget_tokens") != a.budget or lr.get("monitor_rev") != MONITOR_REV):
                 rec = None
         if rec is None:
             rec = {"label": label, "episode_dir": str(ep), "team_model": team_model(ep), "truth": truth, "view": a.view}
@@ -188,14 +191,18 @@ def main(argv=None) -> int:
                         quota_stop = True
                         break
                     calls["errors"] += 1
+                    errors.append({"label": label, "error": f"{type(e).__name__}: {str(e)[:120]}"})
                     print(f"{label}: LLM error {type(e).__name__}: {str(e)[:200]}", file=sys.stderr)
                     continue
-                new = client.usage.completions > before
-                calls["new" if new else "cached"] += 1
+                delta = client.usage.completions - before
+                if delta:
+                    calls["new"] += delta
+                else:
+                    calls["cached"] += 1
                 u = res.get("usage") or {}
                 calls["input_tokens"] += u.get("input_tokens") or 0
                 calls["output_tokens"] += u.get("output_tokens") or 0
-                claims = {k: res[k] for k in ("duplicates", "false_dones", "parse_ok")}
+                claims = {k: res[k] for k in ("duplicates", "false_dones", "parse_ok", "salvaged")}
                 rec["llm"] = {"claims": claims, "scores": score_episode(claims, truth),
                               "result": {k: v for k, v in res.items() if k not in ("duplicates", "false_dones")}}
             tmp = path.with_suffix(".tmp")
@@ -204,7 +211,7 @@ def main(argv=None) -> int:
             os.replace(tmp, path)
             print(f"{label}: done", file=sys.stderr)
         records.append(rec)
-    summary = write_outputs(out, records, a.view, skipped, calls)
+    summary = write_outputs(out, records, a.view, skipped, calls, a.budget, errors)
     for mon, groups in summary.items():
         s = groups.get("all")
         if not s:
@@ -215,8 +222,11 @@ def main(argv=None) -> int:
         print(f"{mon:8s} view={a.view} n={s['episodes']}  dup P={fmt('dup_precision')} R={fmt('dup_recall')} "
               f"attr={fmt('dup_attr_acc')}  fd P={fmt('fd_precision')} R={fmt('fd_recall')}  "
               f"agents P={fmt('agent_precision')} R={fmt('agent_recall')}  parse_fail={s['parse_failures']}")
-    print(json.dumps({"llm_calls": calls, "skipped": len(skipped)}))
-    return 3 if quota_stop else 0
+    print(json.dumps({"llm_calls": calls, "skipped": len(skipped), "llm_errors": [e["label"] for e in errors]}))
+    if errors:
+        print(f"{len(errors)} episode(s) failed after retries and are not in the summary; rerun to resume",
+              file=sys.stderr)
+    return 3 if quota_stop else (4 if errors else 0)
 
 
 if __name__ == "__main__":

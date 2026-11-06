@@ -1,0 +1,41 @@
+label,episode_id,team_model,condition,shape,seed,monitor,view,dup_claims,dup_truth,dup_tp,dup_tp_strict,dup_attr_ok,fd_claims,fd_truth,fd_tp,agents_claimed,agents_truth,agents_tp,parse_ok,input_tokens,output_tokens,prompt_est_tokens,trimmed
+runs__pilot__r2__A__F-B0-s1,F-B0-A-s1,gemma-4-26b-a4b-it,B0,F,1,llm,full,2,2,2,2,2,4,3,3,lead w1 w2 w4 w5,lead w1 w4 w5,4,True,6680,377,4827,False
+runs__pilot__r2__A__F-B0-s1,F-B0-A-s1,gemma-4-26b-a4b-it,B0,F,1,baseline,full,3,2,2,2,2,6,3,3,lead w1 w2 w3 w4 w5,lead w1 w4 w5,4,True,,,,False
+runs__pilot__r2__A__F-B0-s2,F-B0-A-s2,gemma-4-26b-a4b-it,B0,F,2,llm,full,2,1,1,1,1,1,3,1,lead w2 w3,lead w1 w2 w3,3,True,8300,233,5862,False
+runs__pilot__r2__A__F-B0-s2,F-B0-A-s2,gemma-4-26b-a4b-it,B0,F,2,baseline,full,3,1,1,1,1,8,3,3,lead w1 w2 w3 w4 w5 w6,lead w1 w2 w3,4,True,,,,False
+runs__pilot__r2__A__F-E1-s1,F-E1-A-s1,gemma-4-26b-a4b-it,E1,F,1,llm,full,0,0,0,0,0,3,6,3,lead w4 w6,lead w1 w4 w5 w6,3,True,6555,195,4526,False
+runs__pilot__r2__A__F-E1-s1,F-E1-A-s1,gemma-4-26b-a4b-it,E1,F,1,baseline,full,0,0,0,0,0,8,6,6,lead w1 w2 w3 w4 w5 w6,lead w1 w4 w5 w6,5,True,,,,False
+runs__pilot__r2__A__F-E1-s2,F-E1-A-s2,gemma-4-26b-a4b-it,E1,F,2,llm,full,0,0,0,0,0,2,4,2,lead w2,lead w1 w2 w3,2,True,7570,177,5149,False
+runs__pilot__r2__A__F-E1-s2,F-E1-A-s2,gemma-4-26b-a4b-it,E1,F,2,baseline,full,1,0,0,0,0,8,4,4,lead w1 w2 w3 w4 w5 w6,lead w1 w2 w3,4,True,,,,False
+runs__pilot__r2__A__F-E2-s1,F-E2-A-s1,gemma-4-26b-a4b-it,E2,F,1,llm,full,20,19,19,19,19,0,1,0,w1 w4 w5 w6,w1 w4 w5 w6,4,True,16880,2572,6186,True
+runs__pilot__r2__A__F-E2-s1,F-E2-A-s1,gemma-4-26b-a4b-it,E2,F,1,baseline,full,21,19,19,19,19,6,1,1,w1 w2 w3 w4 w5 w6,w1 w4 w5 w6,4,True,,,,False
+runs__pilot__r2__A__F-E2-s2,F-E2-A-s2,gemma-4-26b-a4b-it,E2,F,2,llm,full,2,4,2,2,2,1,2,0,w3,w1 w2 w3 w4,1,True,8793,219,6190,True
+runs__pilot__r2__A__F-E2-s2,F-E2-A-s2,gemma-4-26b-a4b-it,E2,F,2,baseline,full,5,4,4,4,4,6,2,2,w1 w2 w3 w4 w5 w6,w1 w2 w3 w4,4,True,,,,False
+runs__pilot__r2__A__F-E3-s1,F-E3-A-s1,gemma-4-26b-a4b-it,E3,F,1,llm,full,0,0,0,0,0,0,2,0,,lead w5,0,True,8836,23,6042,False
+runs__pilot__r2__A__F-E3-s1,F-E3-A-s1,gemma-4-26b-a4b-it,E3,F,1,baseline,full,2,0,0,0,0,6,2,2,lead w1 w2 w3 w4 w5,lead w5,2,True,,,,False
+runs__pilot__r2__A__F-E3-s2,F-E3-A-s2,gemma-4-26b-a4b-it,E3,F,2,llm,full,0,0,0,0,0,1,4,1,lead,lead w1 w2 w4,1,True,8203,81,6178,True
+runs__pilot__r2__A__F-E3-s2,F-E3-A-s2,gemma-4-26b-a4b-it,E3,F,2,baseline,full,2,0,0,0,0,8,4,4,lead w1 w2 w3 w4 w5 w6,lead w1 w2 w4,4,True,,,,False
+runs__pilot__r2__A__F-P1-s1,F-P1-A-s1,gemma-4-26b-a4b-it,P1,F,1,llm,full,3,5,3,3,3,1,1,1,w1 w2 w5,w1 w2 w5 w6,3,False,8545,948,6137,True
+runs__pilot__r2__A__F-P1-s1,F-P1-A-s1,gemma-4-26b-a4b-it,P1,F,1,baseline,full,7,5,5,5,5,4,1,1,w1 w2 w3 w4 w5 w6,w1 w2 w5 w6,4,True,,,,False
+runs__pilot__r2__A__F-P1-s2,F-P1-A-s2,gemma-4-26b-a4b-it,P1,F,2,llm,full,1,1,1,1,1,1,0,0,w4,w4,1,True,9184,1020,6181,True
+runs__pilot__r2__A__F-P1-s2,F-P1-A-s2,gemma-4-26b-a4b-it,P1,F,2,baseline,full,2,1,1,1,1,5,0,0,w1 w3 w4 w5 w6,w4,1,True,,,,False
+runs__pilot__r2__B__F-B0-s1,F-B0-B-s1,@cf/ibm-granite/granite-4.0-h-micro,B0,F,1,llm,full,0,0,0,0,0,6,6,6,lead w1 w2 w3 w4 w5,lead w1 w2 w3 w4 w5,6,True,2665,323,2314,False
+runs__pilot__r2__B__F-B0-s1,F-B0-B-s1,@cf/ibm-granite/granite-4.0-h-micro,B0,F,1,baseline,full,0,0,0,0,0,6,6,6,lead w1 w2 w3 w4 w5,lead w1 w2 w3 w4 w5,6,True,,,,False
+runs__pilot__r2__B__F-B0-s2,F-B0-B-s2,@cf/ibm-granite/granite-4.0-h-micro,B0,F,2,llm,full,1,5,1,1,1,7,7,7,lead w1 w2 w3 w4 w5 w6,lead w1 w2 w3 w4 w5 w6,7,True,4408,418,3475,False
+runs__pilot__r2__B__F-B0-s2,F-B0-B-s2,@cf/ibm-granite/granite-4.0-h-micro,B0,F,2,baseline,full,6,5,5,5,5,7,7,7,lead w1 w2 w3 w4 w5 w6,lead w1 w2 w3 w4 w5 w6,7,True,,,,False
+runs__pilot__r2__B__F-E1-s1,F-E1-B-s1,@cf/ibm-granite/granite-4.0-h-micro,E1,F,1,llm,full,0,0,0,0,0,5,5,4,lead w1 w2 w3 w4,lead w1 w2 w3 w5,4,True,3052,291,2572,False
+runs__pilot__r2__B__F-E1-s1,F-E1-B-s1,@cf/ibm-granite/granite-4.0-h-micro,E1,F,1,baseline,full,0,0,0,0,0,6,5,5,lead w1 w2 w3 w4 w5,lead w1 w2 w3 w5,5,True,,,,False
+runs__pilot__r2__B__F-E1-s2,F-E1-B-s2,@cf/ibm-granite/granite-4.0-h-micro,E1,F,2,llm,full,1,0,0,0,0,6,7,6,lead w1 w2 w4 w5 w6,lead w1 w2 w3 w4 w5 w6,6,True,4346,379,3674,False
+runs__pilot__r2__B__F-E1-s2,F-E1-B-s2,@cf/ibm-granite/granite-4.0-h-micro,E1,F,2,baseline,full,0,0,0,0,0,7,7,7,lead w1 w2 w3 w4 w5 w6,lead w1 w2 w3 w4 w5 w6,7,True,,,,False
+runs__pilot__r2__B__F-E2-s1,F-E2-B-s1,@cf/ibm-granite/granite-4.0-h-micro,E2,F,1,llm,full,0,0,0,0,0,3,4,3,lead w1 w2,lead w1 w2 w3,3,True,3601,142,3193,False
+runs__pilot__r2__B__F-E2-s1,F-E2-B-s1,@cf/ibm-granite/granite-4.0-h-micro,E2,F,1,baseline,full,0,0,0,0,0,4,4,4,lead w1 w2 w3,lead w1 w2 w3,4,True,,,,False
+runs__pilot__r2__B__F-E2-s2,F-E2-B-s2,@cf/ibm-granite/granite-4.0-h-micro,E2,F,2,llm,full,1,1,1,1,1,3,4,3,lead w1 w5 w6,lead w1 w5 w6,4,True,4414,233,3750,False
+runs__pilot__r2__B__F-E2-s2,F-E2-B-s2,@cf/ibm-granite/granite-4.0-h-micro,E2,F,2,baseline,full,2,1,1,1,1,5,4,4,lead w1 w4 w5 w6,lead w1 w5 w6,4,True,,,,False
+runs__pilot__r2__B__F-E3-s1,F-E3-B-s1,@cf/ibm-granite/granite-4.0-h-micro,E3,F,1,llm,full,0,0,0,0,0,3,4,2,w2 w3 w6,w2 w3 w4 w5,2,True,4106,199,3404,False
+runs__pilot__r2__B__F-E3-s1,F-E3-B-s1,@cf/ibm-granite/granite-4.0-h-micro,E3,F,1,baseline,full,0,0,0,0,0,6,4,4,w1 w2 w3 w4 w5 w6,w2 w3 w4 w5,4,True,,,,False
+runs__pilot__r2__B__F-E3-s2,F-E3-B-s2,@cf/ibm-granite/granite-4.0-h-micro,E3,F,2,llm,full,0,0,0,0,0,0,2,0,,lead w1,0,True,5005,18,4206,False
+runs__pilot__r2__B__F-E3-s2,F-E3-B-s2,@cf/ibm-granite/granite-4.0-h-micro,E3,F,2,baseline,full,0,0,0,0,0,7,2,2,lead w1 w2 w3 w4 w5 w6,lead w1,2,True,,,,False
+runs__pilot__r2__B__F-P1-s1,F-P1-B-s1,@cf/ibm-granite/granite-4.0-h-micro,P1,F,1,llm,full,1,1,1,1,1,7,5,5,lead w1 w2 w3 w4 w5 w6,lead w3 w4 w5 w6,5,True,3321,415,2699,False
+runs__pilot__r2__B__F-P1-s1,F-P1-B-s1,@cf/ibm-granite/granite-4.0-h-micro,P1,F,1,baseline,full,1,1,1,1,1,7,5,5,lead w1 w2 w3 w4 w5 w6,lead w3 w4 w5 w6,5,True,,,,False
+runs__pilot__r2__B__F-P1-s2,F-P1-B-s2,@cf/ibm-granite/granite-4.0-h-micro,P1,F,2,llm,full,0,0,0,0,0,4,6,4,lead w2 w3 w6,lead w1 w2 w3 w5 w6,4,True,3958,236,3116,False
+runs__pilot__r2__B__F-P1-s2,F-P1-B-s2,@cf/ibm-granite/granite-4.0-h-micro,P1,F,2,baseline,full,0,0,0,0,0,7,6,6,lead w1 w2 w3 w4 w5 w6,lead w1 w2 w3 w5 w6,6,True,,,,False

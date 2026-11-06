@@ -245,7 +245,7 @@ def trim(lines: list, budget_tokens: int) -> tuple:
     return out, info
 
 
-def render(ep_dir, view: str, budget_tokens: int = 8000) -> tuple:
+def render(ep_dir, view: str, budget_tokens: int = 5500) -> tuple:
     """Episode directory -> (view text, trim info)."""
     lines = build_view(load_events(Path(ep_dir)), view, task_input(Path(ep_dir)))
     kept, info = trim(lines, budget_tokens)

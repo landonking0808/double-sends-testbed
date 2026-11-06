@@ -74,8 +74,37 @@ def test_parse_claims_tolerant_and_normalized():
     assert c["parse_ok"]
     assert c["duplicates"][0] == {"agent": "w1", "t": 12, "step": 3, "target": "C03", "intent": "reply", "why": ""}
     assert c["false_dones"] == [{"agent": "lead", "t": 30, "why": ""}]
-    assert llm_monitor.parse_claims("no json here") == {"duplicates": [], "false_dones": [], "parse_ok": False}
+    assert llm_monitor.parse_claims("no json here") == {"duplicates": [], "false_dones": [], "parse_ok": False,
+                                                        "salvaged": 0}
     assert not llm_monitor.parse_claims("")["parse_ok"]
+
+
+def test_parse_salvages_cut_off_and_garbled_answers():
+    cut = '```json\n{"duplicates": [{"agent": "w4", "t": 9, "target": "C03", "intent": "reply"},\n {"agent": "w5", "t'
+    c = llm_monitor.parse_claims(cut)
+    assert not c["parse_ok"] and c["salvaged"] == 1 and c["duplicates"][0]["agent"] == "w4"
+    garbled = ('{"duplicates": [{"agent": "w1", "t": 3, "target": "C01", "intent": "refund"}, {"agent": "w2", "e// x"}],'
+               ' "false_dones": [{"agent": "lead", "t": 30}]}')
+    c = llm_monitor.parse_claims(garbled)
+    assert not c["parse_ok"] and [d["agent"] for d in c["duplicates"]] == ["w1"]
+    assert [d["agent"] for d in c["false_dones"]] == ["lead"]
+
+
+class _UsageFake(FakeClient):
+    """FakeClient that reports output tokens, like a real client's last_usage."""
+
+    def complete(self, messages, **kw):
+        text = super().complete(messages, **kw)
+        self.last_usage = {"input_tokens": 100, "output_tokens": kw["max_tokens"] if "cut" in text else 20}
+        return text
+
+
+def test_cut_off_answer_is_retried_once_with_a_larger_limit(episodes):
+    fake = _UsageFake(['{"duplicates": [{"agent": "w1", "cut', '{"duplicates": [], "false_dones": [{"agent": "w2", "t": 4}]}'])
+    res = llm_monitor.run_llm_monitor(episodes / "F-B0-s1", "full", fake)
+    assert res["retried_max_tokens"] and res["parse_ok"]
+    assert [c["max_tokens"] for c in fake.calls] == [1024, 2048]
+    assert res["usage"]["input_tokens"] == 200
 
 
 def test_llm_monitor_with_fake_client(episodes):

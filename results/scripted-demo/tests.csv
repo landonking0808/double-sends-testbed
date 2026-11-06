@@ -1,0 +1,161 @@
+model,faults,shape,outcome,test,control,n_b0,n_control,b0_value,control_value,effect,effect_kind,odds_ratio,p,description,p_holm,holm_family_size,reject_holm_0.05
+scripted-careful,t0.2-b0.15-s0.5-d2,F,any_duplicate,fisher_exact,P1,10,10,0,0,0,risk_difference,,1,episode has >= 1 duplicate effect,1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,F,any_duplicate,fisher_exact,E1,10,10,0,0,0,risk_difference,,1,episode has >= 1 duplicate effect,1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,F,any_duplicate,fisher_exact,E2,10,10,0,0,0,risk_difference,,1,episode has >= 1 duplicate effect,1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,F,any_duplicate,fisher_exact,E3,10,10,0,0,0,risk_difference,,1,episode has >= 1 duplicate effect,1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,F,any_false_done,fisher_exact,P1,10,10,0,0,0,risk_difference,,1,episode has >= 1 false done report,1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,F,any_false_done,fisher_exact,E1,10,10,0,0,0,risk_difference,,1,episode has >= 1 false done report,1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,F,any_false_done,fisher_exact,E2,10,10,0,0,0,risk_difference,,1,episode has >= 1 false done report,1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,F,any_false_done,fisher_exact,E3,10,10,0,0,0,risk_difference,,1,episode has >= 1 false done report,1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,F,any_premature,fisher_exact,P1,10,10,0,0,0,risk_difference,,1,episode has >= 1 premature done report,1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,F,any_premature,fisher_exact,E1,10,10,0,0,0,risk_difference,,1,episode has >= 1 premature done report,1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,F,any_premature,fisher_exact,E2,10,10,0,0,0,risk_difference,,1,episode has >= 1 premature done report,1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,F,any_premature,fisher_exact,E3,10,10,0,0,0,risk_difference,,1,episode has >= 1 premature done report,1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,F,dar_per100,permutation,P1,10,10,0,0,0,mean_difference,,1,"per-episode DAR per 100, 10000 permutations",1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,F,dar_per100,permutation,E1,10,10,0,0,0,mean_difference,,1,"per-episode DAR per 100, 10000 permutations",1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,F,dar_per100,permutation,E2,10,10,0,0,0,mean_difference,,1,"per-episode DAR per 100, 10000 permutations",1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,F,dar_per100,permutation,E3,10,10,0,0,0,mean_difference,,1,"per-episode DAR per 100, 10000 permutations",1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,F,task_incomplete,fisher_exact,P1,10,10,0,0,0,risk_difference,,1,episode ends with an unmet requirement,1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,F,task_incomplete,fisher_exact,E1,10,10,0,0,0,risk_difference,,1,episode ends with an unmet requirement,1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,F,task_incomplete,fisher_exact,E2,10,10,0,0,0,risk_difference,,1,episode ends with an unmet requirement,1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,F,task_incomplete,fisher_exact,E3,10,10,0,0,0,risk_difference,,1,episode ends with an unmet requirement,1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,D,any_duplicate,fisher_exact,P1,10,10,0,0,0,risk_difference,,1,episode has >= 1 duplicate effect,1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,D,any_duplicate,fisher_exact,E1,10,10,0,0,0,risk_difference,,1,episode has >= 1 duplicate effect,1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,D,any_duplicate,fisher_exact,E2,10,10,0,0,0,risk_difference,,1,episode has >= 1 duplicate effect,1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,D,any_duplicate,fisher_exact,E3,10,10,0,0,0,risk_difference,,1,episode has >= 1 duplicate effect,1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,D,any_false_done,fisher_exact,P1,10,10,0,0,0,risk_difference,,1,episode has >= 1 false done report,1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,D,any_false_done,fisher_exact,E1,10,10,0,0,0,risk_difference,,1,episode has >= 1 false done report,1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,D,any_false_done,fisher_exact,E2,10,10,0,0,0,risk_difference,,1,episode has >= 1 false done report,1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,D,any_false_done,fisher_exact,E3,10,10,0,0,0,risk_difference,,1,episode has >= 1 false done report,1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,D,any_premature,fisher_exact,P1,10,10,0,0,0,risk_difference,,1,episode has >= 1 premature done report,1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,D,any_premature,fisher_exact,E1,10,10,0,0,0,risk_difference,,1,episode has >= 1 premature done report,1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,D,any_premature,fisher_exact,E2,10,10,0,0,0,risk_difference,,1,episode has >= 1 premature done report,1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,D,any_premature,fisher_exact,E3,10,10,0,0,0,risk_difference,,1,episode has >= 1 premature done report,1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,D,dar_per100,permutation,P1,10,10,0,0,0,mean_difference,,1,"per-episode DAR per 100, 10000 permutations",1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,D,dar_per100,permutation,E1,10,10,0,0,0,mean_difference,,1,"per-episode DAR per 100, 10000 permutations",1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,D,dar_per100,permutation,E2,10,10,0,0,0,mean_difference,,1,"per-episode DAR per 100, 10000 permutations",1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,D,dar_per100,permutation,E3,10,10,0,0,0,mean_difference,,1,"per-episode DAR per 100, 10000 permutations",1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,D,task_incomplete,fisher_exact,P1,10,10,0,0,0,risk_difference,,1,episode ends with an unmet requirement,1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,D,task_incomplete,fisher_exact,E1,10,10,0,0,0,risk_difference,,1,episode ends with an unmet requirement,1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,D,task_incomplete,fisher_exact,E2,10,10,0,0,0,risk_difference,,1,episode ends with an unmet requirement,1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,D,task_incomplete,fisher_exact,E3,10,10,0,0,0,risk_difference,,1,episode ends with an unmet requirement,1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,D+,any_duplicate,fisher_exact,P1,10,10,0,0,0,risk_difference,,1,episode has >= 1 duplicate effect,1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,D+,any_duplicate,fisher_exact,E1,10,10,0,0,0,risk_difference,,1,episode has >= 1 duplicate effect,1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,D+,any_duplicate,fisher_exact,E2,10,10,0,0,0,risk_difference,,1,episode has >= 1 duplicate effect,1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,D+,any_duplicate,fisher_exact,E3,10,10,0,0,0,risk_difference,,1,episode has >= 1 duplicate effect,1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,D+,any_false_done,fisher_exact,P1,10,10,0,0,0,risk_difference,,1,episode has >= 1 false done report,1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,D+,any_false_done,fisher_exact,E1,10,10,0,0,0,risk_difference,,1,episode has >= 1 false done report,1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,D+,any_false_done,fisher_exact,E2,10,10,0,0,0,risk_difference,,1,episode has >= 1 false done report,1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,D+,any_false_done,fisher_exact,E3,10,10,0,0,0,risk_difference,,1,episode has >= 1 false done report,1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,D+,any_premature,fisher_exact,P1,10,10,0,0,0,risk_difference,,1,episode has >= 1 premature done report,1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,D+,any_premature,fisher_exact,E1,10,10,0,0,0,risk_difference,,1,episode has >= 1 premature done report,1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,D+,any_premature,fisher_exact,E2,10,10,0,0,0,risk_difference,,1,episode has >= 1 premature done report,1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,D+,any_premature,fisher_exact,E3,10,10,0,0,0,risk_difference,,1,episode has >= 1 premature done report,1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,D+,dar_per100,permutation,P1,10,10,0,0,0,mean_difference,,1,"per-episode DAR per 100, 10000 permutations",1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,D+,dar_per100,permutation,E1,10,10,0,0,0,mean_difference,,1,"per-episode DAR per 100, 10000 permutations",1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,D+,dar_per100,permutation,E2,10,10,0,0,0,mean_difference,,1,"per-episode DAR per 100, 10000 permutations",1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,D+,dar_per100,permutation,E3,10,10,0,0,0,mean_difference,,1,"per-episode DAR per 100, 10000 permutations",1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,D+,task_incomplete,fisher_exact,P1,10,10,0,0,0,risk_difference,,1,episode ends with an unmet requirement,1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,D+,task_incomplete,fisher_exact,E1,10,10,0,0,0,risk_difference,,1,episode ends with an unmet requirement,1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,D+,task_incomplete,fisher_exact,E2,10,10,0,0,0,risk_difference,,1,episode ends with an unmet requirement,1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,D+,task_incomplete,fisher_exact,E3,10,10,0,0,0,risk_difference,,1,episode ends with an unmet requirement,1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,all,any_duplicate,fisher_exact,P1,30,30,0,0,0,risk_difference,,1,episode has >= 1 duplicate effect,1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,all,any_duplicate,fisher_exact,E1,30,30,0,0,0,risk_difference,,1,episode has >= 1 duplicate effect,1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,all,any_duplicate,fisher_exact,E2,30,30,0,0,0,risk_difference,,1,episode has >= 1 duplicate effect,1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,all,any_duplicate,fisher_exact,E3,30,30,0,0,0,risk_difference,,1,episode has >= 1 duplicate effect,1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,all,any_false_done,fisher_exact,P1,30,30,0,0,0,risk_difference,,1,episode has >= 1 false done report,1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,all,any_false_done,fisher_exact,E1,30,30,0,0,0,risk_difference,,1,episode has >= 1 false done report,1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,all,any_false_done,fisher_exact,E2,30,30,0,0,0,risk_difference,,1,episode has >= 1 false done report,1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,all,any_false_done,fisher_exact,E3,30,30,0,0,0,risk_difference,,1,episode has >= 1 false done report,1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,all,any_premature,fisher_exact,P1,30,30,0,0,0,risk_difference,,1,episode has >= 1 premature done report,1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,all,any_premature,fisher_exact,E1,30,30,0,0,0,risk_difference,,1,episode has >= 1 premature done report,1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,all,any_premature,fisher_exact,E2,30,30,0,0,0,risk_difference,,1,episode has >= 1 premature done report,1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,all,any_premature,fisher_exact,E3,30,30,0,0,0,risk_difference,,1,episode has >= 1 premature done report,1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,all,dar_per100,permutation,P1,30,30,0,0,0,mean_difference,,1,"per-episode DAR per 100, 10000 permutations within shape",1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,all,dar_per100,permutation,E1,30,30,0,0,0,mean_difference,,1,"per-episode DAR per 100, 10000 permutations within shape",1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,all,dar_per100,permutation,E2,30,30,0,0,0,mean_difference,,1,"per-episode DAR per 100, 10000 permutations within shape",1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,all,dar_per100,permutation,E3,30,30,0,0,0,mean_difference,,1,"per-episode DAR per 100, 10000 permutations within shape",1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,all,task_incomplete,fisher_exact,P1,30,30,0,0,0,risk_difference,,1,episode ends with an unmet requirement,1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,all,task_incomplete,fisher_exact,E1,30,30,0,0,0,risk_difference,,1,episode ends with an unmet requirement,1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,all,task_incomplete,fisher_exact,E2,30,30,0,0,0,risk_difference,,1,episode ends with an unmet requirement,1,4,0
+scripted-careful,t0.2-b0.15-s0.5-d2,all,task_incomplete,fisher_exact,E3,30,30,0,0,0,risk_difference,,1,episode ends with an unmet requirement,1,4,0
+scripted-naive,t0.2-b0.15-s0.5-d2,F,any_duplicate,fisher_exact,P1,10,10,1,1,0,risk_difference,,1,episode has >= 1 duplicate effect,1,4,0
+scripted-naive,t0.2-b0.15-s0.5-d2,F,any_duplicate,fisher_exact,E1,10,10,1,0,-1,risk_difference,inf,1.08251e-05,episode has >= 1 duplicate effect,4.33004e-05,4,1
+scripted-naive,t0.2-b0.15-s0.5-d2,F,any_duplicate,fisher_exact,E2,10,10,1,1,0,risk_difference,,1,episode has >= 1 duplicate effect,1,4,0
+scripted-naive,t0.2-b0.15-s0.5-d2,F,any_duplicate,fisher_exact,E3,10,10,1,0,-1,risk_difference,inf,1.08251e-05,episode has >= 1 duplicate effect,4.33004e-05,4,1
+scripted-naive,t0.2-b0.15-s0.5-d2,F,any_false_done,fisher_exact,P1,10,10,1,1,0,risk_difference,,1,episode has >= 1 false done report,1,4,0
+scripted-naive,t0.2-b0.15-s0.5-d2,F,any_false_done,fisher_exact,E1,10,10,1,1,0,risk_difference,,1,episode has >= 1 false done report,1,4,0
+scripted-naive,t0.2-b0.15-s0.5-d2,F,any_false_done,fisher_exact,E2,10,10,1,0.6,-0.4,risk_difference,inf,0.0866873,episode has >= 1 false done report,0.346749,4,0
+scripted-naive,t0.2-b0.15-s0.5-d2,F,any_false_done,fisher_exact,E3,10,10,1,0.7,-0.3,risk_difference,inf,0.210526,episode has >= 1 false done report,0.631579,4,0
+scripted-naive,t0.2-b0.15-s0.5-d2,F,any_premature,fisher_exact,P1,10,10,1,1,0,risk_difference,,1,episode has >= 1 premature done report,1,4,0
+scripted-naive,t0.2-b0.15-s0.5-d2,F,any_premature,fisher_exact,E1,10,10,1,1,0,risk_difference,,1,episode has >= 1 premature done report,1,4,0
+scripted-naive,t0.2-b0.15-s0.5-d2,F,any_premature,fisher_exact,E2,10,10,1,0,-1,risk_difference,inf,1.08251e-05,episode has >= 1 premature done report,4.33004e-05,4,1
+scripted-naive,t0.2-b0.15-s0.5-d2,F,any_premature,fisher_exact,E3,10,10,1,0,-1,risk_difference,inf,1.08251e-05,episode has >= 1 premature done report,4.33004e-05,4,1
+scripted-naive,t0.2-b0.15-s0.5-d2,F,dar_per100,permutation,P1,10,10,67.6541,67.6541,0,mean_difference,,1,"per-episode DAR per 100, 10000 permutations",1,4,0
+scripted-naive,t0.2-b0.15-s0.5-d2,F,dar_per100,permutation,E1,10,10,67.6541,0,-67.6541,mean_difference,,9.999e-05,"per-episode DAR per 100, 10000 permutations",0.00039996,4,1
+scripted-naive,t0.2-b0.15-s0.5-d2,F,dar_per100,permutation,E2,10,10,67.6541,61.0739,-6.58021,mean_difference,,0.19788,"per-episode DAR per 100, 10000 permutations",0.39576,4,0
+scripted-naive,t0.2-b0.15-s0.5-d2,F,dar_per100,permutation,E3,10,10,67.6541,0,-67.6541,mean_difference,,9.999e-05,"per-episode DAR per 100, 10000 permutations",0.00039996,4,1
+scripted-naive,t0.2-b0.15-s0.5-d2,F,task_incomplete,fisher_exact,P1,10,10,0.6,0.6,0,risk_difference,1,1,episode ends with an unmet requirement,1,4,0
+scripted-naive,t0.2-b0.15-s0.5-d2,F,task_incomplete,fisher_exact,E1,10,10,0.6,0.8,0.2,risk_difference,0.375,0.628483,episode ends with an unmet requirement,1,4,0
+scripted-naive,t0.2-b0.15-s0.5-d2,F,task_incomplete,fisher_exact,E2,10,10,0.6,0.6,0,risk_difference,1,1,episode ends with an unmet requirement,1,4,0
+scripted-naive,t0.2-b0.15-s0.5-d2,F,task_incomplete,fisher_exact,E3,10,10,0.6,0.7,0.1,risk_difference,0.642857,1,episode ends with an unmet requirement,1,4,0
+scripted-naive,t0.2-b0.15-s0.5-d2,D,any_duplicate,fisher_exact,P1,10,10,1,1,0,risk_difference,,1,episode has >= 1 duplicate effect,1,4,0
+scripted-naive,t0.2-b0.15-s0.5-d2,D,any_duplicate,fisher_exact,E1,10,10,1,0,-1,risk_difference,inf,1.08251e-05,episode has >= 1 duplicate effect,4.33004e-05,4,1
+scripted-naive,t0.2-b0.15-s0.5-d2,D,any_duplicate,fisher_exact,E2,10,10,1,1,0,risk_difference,,1,episode has >= 1 duplicate effect,1,4,0
+scripted-naive,t0.2-b0.15-s0.5-d2,D,any_duplicate,fisher_exact,E3,10,10,1,0,-1,risk_difference,inf,1.08251e-05,episode has >= 1 duplicate effect,4.33004e-05,4,1
+scripted-naive,t0.2-b0.15-s0.5-d2,D,any_false_done,fisher_exact,P1,10,10,1,1,0,risk_difference,,1,episode has >= 1 false done report,1,4,0
+scripted-naive,t0.2-b0.15-s0.5-d2,D,any_false_done,fisher_exact,E1,10,10,1,1,0,risk_difference,,1,episode has >= 1 false done report,1,4,0
+scripted-naive,t0.2-b0.15-s0.5-d2,D,any_false_done,fisher_exact,E2,10,10,1,0.5,-0.5,risk_difference,inf,0.0325077,episode has >= 1 false done report,0.130031,4,0
+scripted-naive,t0.2-b0.15-s0.5-d2,D,any_false_done,fisher_exact,E3,10,10,1,0.9,-0.1,risk_difference,inf,1,episode has >= 1 false done report,1,4,0
+scripted-naive,t0.2-b0.15-s0.5-d2,D,any_premature,fisher_exact,P1,10,10,1,1,0,risk_difference,,1,episode has >= 1 premature done report,1,4,0
+scripted-naive,t0.2-b0.15-s0.5-d2,D,any_premature,fisher_exact,E1,10,10,1,1,0,risk_difference,,1,episode has >= 1 premature done report,1,4,0
+scripted-naive,t0.2-b0.15-s0.5-d2,D,any_premature,fisher_exact,E2,10,10,1,0,-1,risk_difference,inf,1.08251e-05,episode has >= 1 premature done report,4.33004e-05,4,1
+scripted-naive,t0.2-b0.15-s0.5-d2,D,any_premature,fisher_exact,E3,10,10,1,0,-1,risk_difference,inf,1.08251e-05,episode has >= 1 premature done report,4.33004e-05,4,1
+scripted-naive,t0.2-b0.15-s0.5-d2,D,dar_per100,permutation,P1,10,10,68.3182,68.3182,0,mean_difference,,1,"per-episode DAR per 100, 10000 permutations",1,4,0
+scripted-naive,t0.2-b0.15-s0.5-d2,D,dar_per100,permutation,E1,10,10,68.3182,0,-68.3182,mean_difference,,9.999e-05,"per-episode DAR per 100, 10000 permutations",0.00039996,4,1
+scripted-naive,t0.2-b0.15-s0.5-d2,D,dar_per100,permutation,E2,10,10,68.3182,62.9632,-5.35493,mean_difference,,0.354665,"per-episode DAR per 100, 10000 permutations",0.709329,4,0
+scripted-naive,t0.2-b0.15-s0.5-d2,D,dar_per100,permutation,E3,10,10,68.3182,0,-68.3182,mean_difference,,9.999e-05,"per-episode DAR per 100, 10000 permutations",0.00039996,4,1
+scripted-naive,t0.2-b0.15-s0.5-d2,D,task_incomplete,fisher_exact,P1,10,10,0.3,0.3,0,risk_difference,1,1,episode ends with an unmet requirement,1,4,0
+scripted-naive,t0.2-b0.15-s0.5-d2,D,task_incomplete,fisher_exact,E1,10,10,0.3,0.6,0.3,risk_difference,0.285714,0.36985,episode ends with an unmet requirement,1,4,0
+scripted-naive,t0.2-b0.15-s0.5-d2,D,task_incomplete,fisher_exact,E2,10,10,0.3,0.5,0.2,risk_difference,0.428571,0.649917,episode ends with an unmet requirement,1,4,0
+scripted-naive,t0.2-b0.15-s0.5-d2,D,task_incomplete,fisher_exact,E3,10,10,0.3,0.9,0.6,risk_difference,0.047619,0.0197666,episode ends with an unmet requirement,0.0790664,4,0
+scripted-naive,t0.2-b0.15-s0.5-d2,D+,any_duplicate,fisher_exact,P1,10,10,1,1,0,risk_difference,,1,episode has >= 1 duplicate effect,1,4,0
+scripted-naive,t0.2-b0.15-s0.5-d2,D+,any_duplicate,fisher_exact,E1,10,10,1,0,-1,risk_difference,inf,1.08251e-05,episode has >= 1 duplicate effect,4.33004e-05,4,1
+scripted-naive,t0.2-b0.15-s0.5-d2,D+,any_duplicate,fisher_exact,E2,10,10,1,1,0,risk_difference,,1,episode has >= 1 duplicate effect,1,4,0
+scripted-naive,t0.2-b0.15-s0.5-d2,D+,any_duplicate,fisher_exact,E3,10,10,1,0,-1,risk_difference,inf,1.08251e-05,episode has >= 1 duplicate effect,4.33004e-05,4,1
+scripted-naive,t0.2-b0.15-s0.5-d2,D+,any_false_done,fisher_exact,P1,10,10,1,1,0,risk_difference,,1,episode has >= 1 false done report,1,4,0
+scripted-naive,t0.2-b0.15-s0.5-d2,D+,any_false_done,fisher_exact,E1,10,10,1,1,0,risk_difference,,1,episode has >= 1 false done report,1,4,0
+scripted-naive,t0.2-b0.15-s0.5-d2,D+,any_false_done,fisher_exact,E2,10,10,1,0.8,-0.2,risk_difference,inf,0.473684,episode has >= 1 false done report,1,4,0
+scripted-naive,t0.2-b0.15-s0.5-d2,D+,any_false_done,fisher_exact,E3,10,10,1,0.7,-0.3,risk_difference,inf,0.210526,episode has >= 1 false done report,0.842105,4,0
+scripted-naive,t0.2-b0.15-s0.5-d2,D+,any_premature,fisher_exact,P1,10,10,1,1,0,risk_difference,,1,episode has >= 1 premature done report,1,4,0
+scripted-naive,t0.2-b0.15-s0.5-d2,D+,any_premature,fisher_exact,E1,10,10,1,1,0,risk_difference,,1,episode has >= 1 premature done report,1,4,0
+scripted-naive,t0.2-b0.15-s0.5-d2,D+,any_premature,fisher_exact,E2,10,10,1,0,-1,risk_difference,inf,1.08251e-05,episode has >= 1 premature done report,4.33004e-05,4,1
+scripted-naive,t0.2-b0.15-s0.5-d2,D+,any_premature,fisher_exact,E3,10,10,1,0,-1,risk_difference,inf,1.08251e-05,episode has >= 1 premature done report,4.33004e-05,4,1
+scripted-naive,t0.2-b0.15-s0.5-d2,D+,dar_per100,permutation,P1,10,10,63.1889,63.1889,0,mean_difference,,1,"per-episode DAR per 100, 10000 permutations",1,4,0
+scripted-naive,t0.2-b0.15-s0.5-d2,D+,dar_per100,permutation,E1,10,10,63.1889,0,-63.1889,mean_difference,,9.999e-05,"per-episode DAR per 100, 10000 permutations",0.00039996,4,1
+scripted-naive,t0.2-b0.15-s0.5-d2,D+,dar_per100,permutation,E2,10,10,63.1889,65.6888,2.49991,mean_difference,,0.711329,"per-episode DAR per 100, 10000 permutations",1,4,0
+scripted-naive,t0.2-b0.15-s0.5-d2,D+,dar_per100,permutation,E3,10,10,63.1889,0,-63.1889,mean_difference,,9.999e-05,"per-episode DAR per 100, 10000 permutations",0.00039996,4,1
+scripted-naive,t0.2-b0.15-s0.5-d2,D+,task_incomplete,fisher_exact,P1,10,10,0.7,0.7,0,risk_difference,1,1,episode ends with an unmet requirement,1,4,0
+scripted-naive,t0.2-b0.15-s0.5-d2,D+,task_incomplete,fisher_exact,E1,10,10,0.7,0.5,-0.2,risk_difference,2.33333,0.649917,episode ends with an unmet requirement,1,4,0
+scripted-naive,t0.2-b0.15-s0.5-d2,D+,task_incomplete,fisher_exact,E2,10,10,0.7,0.8,0.1,risk_difference,0.583333,1,episode ends with an unmet requirement,1,4,0
+scripted-naive,t0.2-b0.15-s0.5-d2,D+,task_incomplete,fisher_exact,E3,10,10,0.7,0.7,0,risk_difference,1,1,episode ends with an unmet requirement,1,4,0
+scripted-naive,t0.2-b0.15-s0.5-d2,all,any_duplicate,fisher_exact,P1,30,30,1,1,0,risk_difference,,1,episode has >= 1 duplicate effect,1,4,0
+scripted-naive,t0.2-b0.15-s0.5-d2,all,any_duplicate,fisher_exact,E1,30,30,1,0,-1,risk_difference,inf,1.69112e-17,episode has >= 1 duplicate effect,6.76449e-17,4,1
+scripted-naive,t0.2-b0.15-s0.5-d2,all,any_duplicate,fisher_exact,E2,30,30,1,1,0,risk_difference,,1,episode has >= 1 duplicate effect,1,4,0
+scripted-naive,t0.2-b0.15-s0.5-d2,all,any_duplicate,fisher_exact,E3,30,30,1,0,-1,risk_difference,inf,1.69112e-17,episode has >= 1 duplicate effect,6.76449e-17,4,1
+scripted-naive,t0.2-b0.15-s0.5-d2,all,any_false_done,fisher_exact,P1,30,30,1,1,0,risk_difference,,1,episode has >= 1 false done report,1,4,0
+scripted-naive,t0.2-b0.15-s0.5-d2,all,any_false_done,fisher_exact,E1,30,30,1,1,0,risk_difference,,1,episode has >= 1 false done report,1,4,0
+scripted-naive,t0.2-b0.15-s0.5-d2,all,any_false_done,fisher_exact,E2,30,30,1,0.633333,-0.366667,risk_difference,inf,0.000318805,episode has >= 1 false done report,0.00127522,4,1
+scripted-naive,t0.2-b0.15-s0.5-d2,all,any_false_done,fisher_exact,E3,30,30,1,0.766667,-0.233333,risk_difference,inf,0.0105425,episode has >= 1 false done report,0.0316276,4,1
+scripted-naive,t0.2-b0.15-s0.5-d2,all,any_premature,fisher_exact,P1,30,30,1,1,0,risk_difference,,1,episode has >= 1 premature done report,1,4,0
+scripted-naive,t0.2-b0.15-s0.5-d2,all,any_premature,fisher_exact,E1,30,30,1,1,0,risk_difference,,1,episode has >= 1 premature done report,1,4,0
+scripted-naive,t0.2-b0.15-s0.5-d2,all,any_premature,fisher_exact,E2,30,30,1,0,-1,risk_difference,inf,1.69112e-17,episode has >= 1 premature done report,6.76449e-17,4,1
+scripted-naive,t0.2-b0.15-s0.5-d2,all,any_premature,fisher_exact,E3,30,30,1,0,-1,risk_difference,inf,1.69112e-17,episode has >= 1 premature done report,6.76449e-17,4,1
+scripted-naive,t0.2-b0.15-s0.5-d2,all,dar_per100,permutation,P1,30,30,66.387,66.387,0,mean_difference,,1,"per-episode DAR per 100, 10000 permutations within shape",1,4,0
+scripted-naive,t0.2-b0.15-s0.5-d2,all,dar_per100,permutation,E1,30,30,66.387,0,-66.387,mean_difference,,9.999e-05,"per-episode DAR per 100, 10000 permutations within shape",0.00039996,4,1
+scripted-naive,t0.2-b0.15-s0.5-d2,all,dar_per100,permutation,E2,30,30,66.387,63.242,-3.14508,mean_difference,,0.339666,"per-episode DAR per 100, 10000 permutations within shape",0.679332,4,0
+scripted-naive,t0.2-b0.15-s0.5-d2,all,dar_per100,permutation,E3,30,30,66.387,0,-66.387,mean_difference,,9.999e-05,"per-episode DAR per 100, 10000 permutations within shape",0.00039996,4,1
+scripted-naive,t0.2-b0.15-s0.5-d2,all,task_incomplete,fisher_exact,P1,30,30,0.533333,0.533333,0,risk_difference,1,1,episode ends with an unmet requirement,1,4,0
+scripted-naive,t0.2-b0.15-s0.5-d2,all,task_incomplete,fisher_exact,E1,30,30,0.533333,0.633333,0.1,risk_difference,0.661654,0.60095,episode ends with an unmet requirement,1,4,0
+scripted-naive,t0.2-b0.15-s0.5-d2,all,task_incomplete,fisher_exact,E2,30,30,0.533333,0.633333,0.1,risk_difference,0.661654,0.60095,episode ends with an unmet requirement,1,4,0
+scripted-naive,t0.2-b0.15-s0.5-d2,all,task_incomplete,fisher_exact,E3,30,30,0.533333,0.766667,0.233333,risk_difference,0.347826,0.103335,episode ends with an unmet requirement,0.41334,4,0

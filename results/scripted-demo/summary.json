@@ -1,0 +1,40 @@
+{
+ "bootstrap": {
+  "n_boot": 5000,
+  "seed": 0,
+  "unit": "seed (cluster)"
+ },
+ "episode_git_commits": [
+  "697c816a306e"
+ ],
+ "episodes_excluded": 0,
+ "episodes_found": 300,
+ "episodes_included": 300,
+ "exclude_client_errors": false,
+ "excluded_by_reason": {},
+ "fault_profiles": [
+  "t0.2-b0.15-s0.5-d2"
+ ],
+ "files": [
+  "episodes.csv",
+  "excluded.csv",
+  "table1.csv",
+  "table1.md",
+  "tests.csv",
+  "validation.csv"
+ ],
+ "hit_call_cap_included": 0,
+ "hit_max_ticks_included": 0,
+ "inputs": [
+  "runs/scripted-demo"
+ ],
+ "label": "scripted demo (no LLM)",
+ "models": [
+  "scripted-careful",
+  "scripted-naive"
+ ],
+ "permutation": {
+  "n_perm": 10000,
+  "seed": 0
+ }
+}

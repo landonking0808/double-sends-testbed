@@ -1,0 +1,12 @@
+{
+ "_note": "Model aliases and the fault profile used to pick Table 1 rows for each results/<grid>/ directory (report/build.py).",
+ "grids": {
+  "grid": {
+   "models": {"A": "gemma-4-26b-a4b-it", "B": "@cf/ibm-granite/granite-4.0-h-micro"},
+   "faults": "t0.1-b0.15-s0.5-d2"
+  },
+  "scripted-demo": {
+   "models": {"A": "scripted-naive", "B": "scripted-careful"}
+  }
+ }
+}

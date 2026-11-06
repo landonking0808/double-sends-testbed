@@ -83,3 +83,23 @@ def test_dry_run_calls_nothing(tmp_path, capsys, monkeypatch):
     monkeypatch.setattr(run_grid, "make_client", lambda *a: pytest.fail("no client in a dry run"))
     assert run_grid.main(ARGS + ["--out", str(tmp_path / "g"), "--dry-run"]) == 0
     assert capsys.readouterr().out.count("would run") == 4
+
+
+def test_pilot_table_on_a_grid(tmp_path, capsys):
+    out = tmp_path / "g"
+    assert run_grid.main(ARGS + ["--out", str(out)]) == 0
+    spec2 = importlib.util.spec_from_file_location("pilot_table", ROOT / "scripts" / "pilot_table.py")
+    pt = importlib.util.module_from_spec(spec2)
+    spec2.loader.exec_module(pt)
+    capsys.readouterr()
+    assert pt.main([str(out), "--md"]) == 0
+    text = capsys.readouterr().out
+    assert "4 finished episodes" in text and "| B0 | 2 |" in text and "| E3 | 2 |" in text
+
+
+def test_frozen_config_is_read(tmp_path, capsys):
+    cfg = ROOT / "configs" / "frozen.json"
+    frozen = json.loads(cfg.read_text())
+    assert run_grid.main(["--model", "fake", "--shapes", "F", "--conditions", "B0", "--seeds", "1",
+                          "--out", str(tmp_path / "g"), "--dry-run"]) == 0
+    assert f"'p_timeout': {frozen['faults']['p_timeout']}" in capsys.readouterr().out

@@ -1,0 +1,323 @@
+{
+ "batch": {
+  "n_messages": 12,
+  "n_repeat": 3
+ },
+ "conditions": [
+  "B0",
+  "P1",
+  "E1",
+  "E2",
+  "E3"
+ ],
+ "config": null,
+ "env": {
+  "lease_ticks": 6,
+  "max_ticks": 300,
+  "turn_cap": 40
+ },
+ "episodes": {
+  "F-B0-s1": {
+   "client_errors": 0,
+   "created_at": "2026-11-06T10:29:32-06:00",
+   "dar_extras": 0,
+   "dar_required": 23,
+   "end_reason": "quiescent",
+   "false_dones": [
+    6,
+    6
+   ],
+   "input_tokens": 31129,
+   "llm_calls": 33,
+   "output_tokens": 1804,
+   "parse_failures": 0,
+   "premature": [
+    1,
+    1
+   ],
+   "status": "done",
+   "task_success": [
+    12,
+    27
+   ],
+   "wall_s": 58.5
+  },
+  "F-B0-s2": {
+   "client_errors": 0,
+   "created_at": "2026-11-06T10:33:42-06:00",
+   "dar_extras": 5,
+   "dar_required": 22,
+   "end_reason": "quiescent",
+   "false_dones": [
+    7,
+    7
+   ],
+   "input_tokens": 66892,
+   "llm_calls": 67,
+   "output_tokens": 3340,
+   "parse_failures": 0,
+   "premature": [
+    1,
+    1
+   ],
+   "status": "done",
+   "task_success": [
+    12,
+    27
+   ],
+   "wall_s": 156.7
+  },
+  "F-E1-s1": {
+   "client_errors": 0,
+   "created_at": "2026-11-06T10:31:05-06:00",
+   "dar_extras": 0,
+   "dar_required": 23,
+   "end_reason": "quiescent",
+   "false_dones": [
+    5,
+    6
+   ],
+   "input_tokens": 40089,
+   "llm_calls": 41,
+   "output_tokens": 2179,
+   "parse_failures": 0,
+   "premature": [
+    1,
+    1
+   ],
+   "status": "done",
+   "task_success": [
+    15,
+    27
+   ],
+   "wall_s": 92.7
+  },
+  "F-E1-s2": {
+   "client_errors": 0,
+   "created_at": "2026-11-06T10:37:10-06:00",
+   "dar_extras": 0,
+   "dar_required": 22,
+   "end_reason": "quiescent",
+   "false_dones": [
+    7,
+    7
+   ],
+   "input_tokens": 59458,
+   "llm_calls": 60,
+   "output_tokens": 3302,
+   "parse_failures": 1,
+   "premature": [
+    1,
+    1
+   ],
+   "status": "done",
+   "task_success": [
+    17,
+    27
+   ],
+   "wall_s": 208.6
+  },
+  "F-E2-s1": {
+   "client_errors": 0,
+   "created_at": "2026-11-06T10:31:04-06:00",
+   "dar_extras": 0,
+   "dar_required": 23,
+   "end_reason": "quiescent",
+   "false_dones": [
+    4,
+    4
+   ],
+   "input_tokens": 54396,
+   "llm_calls": 48,
+   "output_tokens": 2358,
+   "parse_failures": 0,
+   "premature": [
+    0,
+    1
+   ],
+   "status": "done",
+   "task_success": [
+    11,
+    27
+   ],
+   "wall_s": 84.6
+  },
+  "F-E2-s2": {
+   "client_errors": 0,
+   "created_at": "2026-11-06T10:36:58-06:00",
+   "dar_extras": 1,
+   "dar_required": 22,
+   "end_reason": "quiescent",
+   "false_dones": [
+    4,
+    5
+   ],
+   "input_tokens": 69925,
+   "llm_calls": 65,
+   "output_tokens": 3161,
+   "parse_failures": 2,
+   "premature": [
+    0,
+    1
+   ],
+   "status": "done",
+   "task_success": [
+    13,
+    27
+   ],
+   "wall_s": 123.0
+  },
+  "F-E3-s1": {
+   "client_errors": 0,
+   "created_at": "2026-11-06T10:33:18-06:00",
+   "dar_extras": 0,
+   "dar_required": 23,
+   "end_reason": "quiescent",
+   "false_dones": [
+    4,
+    6
+   ],
+   "input_tokens": 60455,
+   "llm_calls": 59,
+   "output_tokens": 3017,
+   "parse_failures": 0,
+   "premature": [
+    0,
+    0
+   ],
+   "status": "done",
+   "task_success": [
+    15,
+    27
+   ],
+   "wall_s": 133.7
+  },
+  "F-E3-s2": {
+   "client_errors": 0,
+   "created_at": "2026-11-06T10:40:17-06:00",
+   "dar_extras": 0,
+   "dar_required": 22,
+   "end_reason": "quiescent",
+   "false_dones": [
+    2,
+    7
+   ],
+   "input_tokens": 82238,
+   "llm_calls": 73,
+   "output_tokens": 3415,
+   "parse_failures": 1,
+   "premature": [
+    0,
+    1
+   ],
+   "status": "done",
+   "task_success": [
+    22,
+    27
+   ],
+   "wall_s": 105.2
+  },
+  "F-P1-s1": {
+   "client_errors": 0,
+   "created_at": "2026-11-06T10:29:39-06:00",
+   "dar_extras": 1,
+   "dar_required": 23,
+   "end_reason": "quiescent",
+   "false_dones": [
+    5,
+    7
+   ],
+   "input_tokens": 47811,
+   "llm_calls": 48,
+   "output_tokens": 2510,
+   "parse_failures": 0,
+   "premature": [
+    1,
+    1
+   ],
+   "status": "done",
+   "task_success": [
+    13,
+    27
+   ],
+   "wall_s": 65.6
+  },
+  "F-P1-s2": {
+   "client_errors": 0,
+   "created_at": "2026-11-06T10:34:55-06:00",
+   "dar_extras": 0,
+   "dar_required": 22,
+   "end_reason": "quiescent",
+   "false_dones": [
+    6,
+    7
+   ],
+   "input_tokens": 60882,
+   "llm_calls": 59,
+   "output_tokens": 2513,
+   "parse_failures": 0,
+   "premature": [
+    1,
+    1
+   ],
+   "status": "done",
+   "task_success": [
+    17,
+    27
+   ],
+   "wall_s": 97.6
+  }
+ },
+ "episodes_done": 10,
+ "episodes_left": 0,
+ "episodes_total": 10,
+ "faults": {
+  "delivery_delay": 2,
+  "p_bounce": 0.15,
+  "p_stale_board": 0.5,
+  "p_timeout": 0.1
+ },
+ "history_turns": 3,
+ "invocations": [
+  {
+   "ended_ct": "2026-11-06T10:37:25-06:00",
+   "parallel": 2,
+   "ran": 10,
+   "started_ct": "2026-11-06T10:28:33-06:00",
+   "stop_reason": "aborted_deadline",
+   "wall_s": 531.5
+  },
+  {
+   "ended_ct": "2026-11-06T10:40:17-06:00",
+   "parallel": 2,
+   "ran": 1,
+   "started_ct": "2026-11-06T10:38:31-06:00",
+   "stop_reason": null,
+   "wall_s": 105.9
+  }
+ ],
+ "llm": {
+  "max_consecutive_errors": 1,
+  "max_llm_calls": 200,
+  "max_prompt_tokens": 1200,
+  "max_tokens": 256
+ },
+ "model": "@cf/ibm-granite/granite-4.0-h-micro",
+ "model_key": "B",
+ "provider": "cloudflare",
+ "seeds": [
+  1,
+  2
+ ],
+ "shapes": [
+  "F"
+ ],
+ "temperature": 0.7,
+ "totals_done": {
+  "client_errors": 0,
+  "input_tokens": 573275,
+  "llm_calls": 553,
+  "output_tokens": 27599,
+  "parse_failures": 4
+ }
+}

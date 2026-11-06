@@ -39,7 +39,9 @@ Within a turn the order is always: zero or more `llm_call`, then `tool_call`, th
   (per call, derived from the episode seed, agent and call index), `prompt_hash` (SHA-256 of the
   JSON-serialized message list, sorted keys), `n_messages`, `response` (the full raw text, or null if the
   client raised), `usage` (`{input_tokens, output_tokens}` if the client reported it, else null),
-  `est_tokens` (deterministic chars/4 estimate), `parse_ok`, `error` (client error text or null).
+  `est_tokens` (deterministic chars/4 estimate), `parse_ok`, `error` (client error text or null),
+  `max_tokens` (output limit sent, or null), `abort` (null, or the end reason when this call stopped the
+  episode: `aborted_quota`, `aborted_client_error`, `aborted_replay`, `aborted_deadline`).
   This is what makes exact replay possible.
 - **`tool_call`**: `step` (the agent's turn index, from 0) and `call` (the tool call exactly as the agent
   returned it, `{"tool": ..., "args": {...}}`; malformed calls are kept as given).
@@ -85,7 +87,7 @@ and the only read access is `verify(target)`.
 | `delegations` | every accepted delegation (`agent`, `child`, `items`, `brief`, `seq`) |
 | `status_changes` | every agent state change with its `seq` (used for "was a descendant still running?") |
 | `board` | every board post: `n`, `seq`, `t`, `agent`, `kind` (`claim`/`note`), `visible_t` (stale-board fault: one tick later with probability `p_stale_board`) |
-| `turns`, `final_status`, `end` | turns per agent, final states, end tick/seq/reason (`quiescent` or `max_ticks`) and unfinished agents |
+| `turns`, `final_status`, `end` | turns per agent, final states, end tick/seq/reason and unfinished agents. Reasons: `quiescent`, `max_ticks`, `call_cap` (the team used its LLM-call budget; valid), or an abort: `aborted_quota` (a free quota would be passed; nothing was sent), `aborted_client_error` (a provider call kept failing), `aborted_replay` (replay-only cache miss), `aborted_deadline` (grid runner stopping). An abort adds `end.stop = {reason, agent, t, detail}`; such an episode is not a valid sample. |
 
 `seq` is one global counter over every ledger record, so "before" and "after" are exact even within a tick.
 
@@ -93,7 +95,10 @@ and the only read access is `verify(target)`.
 
 `episode_id, seed, shape, condition, agents, provider, model, temperature, history_turns, max_retries,
 faults{p_timeout, p_bounce, p_stale_board, delivery_delay}, turn_cap, max_ticks, lease_ticks,
-batch{n_messages, n_repeat, task_id}, agent_stats, git_commit, git_dirty_dst, python, platform,
+batch{n_messages, n_repeat, task_id}, agent_stats, end_reason, aborted, wall_s, and for LLM teams
+llm{max_prompt_tokens, max_tokens, max_llm_calls, max_consecutive_errors}, client_usage (provider client
+counters for this episode: calls incl. retries, completions, cache_hits, tokens, retries, wait_s), grid
+(when run by `scripts/run_grid.py`), git_commit, git_dirty_dst, python, platform,
 created_at, files_sha256`, and `replay_of` for replays.
 
 ## How the metrics use the logs

@@ -1,0 +1,130 @@
+{
+ "aborted": false,
+ "attribution": {
+  "duplicates": [],
+  "false_dones": [
+   {
+    "agent": "w1",
+    "report": "r003",
+    "role": "worker",
+    "step": 5,
+    "t": 7,
+    "unmet": [
+     "C03:reply",
+     "C03:record:status"
+    ]
+   },
+   {
+    "agent": "w3",
+    "report": "r010",
+    "role": "worker",
+    "step": 4,
+    "t": 15,
+    "unmet": [
+     "C01:reply",
+     "C06:reply",
+     "C06:record:status"
+    ]
+   },
+   {
+    "agent": "lead",
+    "report": "r011",
+    "role": "lead",
+    "step": 16,
+    "t": 16,
+    "unmet": [
+     "C01:reply",
+     "C03:reply",
+     "C03:record:status",
+     "C04:reply",
+     "C04:record:status",
+     "C04:refund",
+     "C05:reply",
+     "C05:record:status",
+     "C05:refund",
+     "C06:reply",
+     "C06:record:status",
+     "C07:reply",
+     "C07:record:status",
+     "C08:reply",
+     "C08:record:status",
+     "C08:refund",
+     "C09:reply",
+     "C09:record:status"
+    ]
+   }
+  ],
+  "premature": []
+ },
+ "condition": "E2",
+ "cost": {
+  "blocked": 0,
+  "client_errors": 0,
+  "effects": 5,
+  "estimated_token_calls": 0,
+  "input_tokens": 39670,
+  "llm_calls": 37,
+  "output_tokens": 1914,
+  "parse_failures": 0,
+  "refused_reports": 7,
+  "steps": 37,
+  "steps_scheduler": 37,
+  "suppressed": 0,
+  "ticks": 17
+ },
+ "dar": {
+  "any_duplicate": false,
+  "by_cause": {
+   "cross_agent": 0,
+   "same_agent": 0
+  },
+  "extras": 0,
+  "per100": 0.0,
+  "required": 22
+ },
+ "end_reason": "quiescent",
+ "episode_id": "F-E2-B-s2",
+ "fcr": {
+  "all": [
+   3,
+   4
+  ],
+  "lead": [
+   1,
+   1
+  ],
+  "worker": [
+   2,
+   3
+  ]
+ },
+ "fidelity": {
+  "claimed": 30,
+  "claimed_true": 10,
+  "lead": {
+   "claimed": 22,
+   "claimed_true": 5,
+   "met": 4,
+   "met_claimed": 4
+  },
+  "met": 8,
+  "met_claimed": 8
+ },
+ "lead_done": true,
+ "pcr": {
+  "all": [
+   0,
+   1
+  ],
+  "lead": [
+   0,
+   1
+  ]
+ },
+ "seed": 2,
+ "shape": "F",
+ "task_success": {
+  "met": 9,
+  "total": 27
+ }
+}

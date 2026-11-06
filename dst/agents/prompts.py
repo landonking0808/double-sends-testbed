@@ -31,7 +31,7 @@ TOOL_SPECS = {
     "verify": ('{"target":"C01"}', "read back every effect recorded on this customer (messages with delivery status, refunds, record updates)."),
     "claim": ('{"target":"C01"}', "post a claim on the board that you are handling this customer."),
     "post_board": ('{"note":"text"}', "post a note on the board."),
-    "send_message": ('{"to":"C01","body":"text","task":"<task id>"}', "message the customer. SIDE EFFECT."),
+    "send_message": ('{"to":"C01","body":"text","task":"<task id>"}', "message the customer; the result queued means accepted for delivery. SIDE EFFECT."),
     "issue_refund": ('{"customer":"C01","amount":42,"task":"<task id>"}', "refund the customer. SIDE EFFECT."),
     "update_record": ('{"id":"C01","field":"status","value":"resolved","task":"<task id>"}', "set a field on the customer's record. SIDE EFFECT."),
     "delegate": ('{"child":"<agent id>","items":["M01","M02"],"brief":"text"}', "hand customer messages (by message id) to an agent below you."),
@@ -153,7 +153,7 @@ def render_message(m: dict) -> str:
     return "[message] " + _j({k: v for k, v in m.items() if k not in ("t",)})
 
 
-def render_result(result, limit: int = 1500) -> str:
+def render_result(result, limit: int = 1000) -> str:
     """A tool result as compact JSON; inbox messages become text lines. Long results are
     cut at ``limit`` characters (marked), so one big read cannot blow the prompt budget."""
     if isinstance(result, dict) and isinstance(result.get("messages"), list):

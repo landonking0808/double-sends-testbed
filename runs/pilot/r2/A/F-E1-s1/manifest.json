@@ -1,0 +1,95 @@
+{
+ "aborted": false,
+ "agent_stats": {
+  "lead": {
+   "calls": 40,
+   "client_errors": 0,
+   "parse_failures": 0
+  },
+  "w1": {
+   "calls": 13,
+   "client_errors": 0,
+   "parse_failures": 0
+  },
+  "w2": {
+   "calls": 6,
+   "client_errors": 0,
+   "parse_failures": 0
+  },
+  "w3": {
+   "calls": 5,
+   "client_errors": 0,
+   "parse_failures": 0
+  },
+  "w4": {
+   "calls": 7,
+   "client_errors": 0,
+   "parse_failures": 0
+  },
+  "w5": {
+   "calls": 9,
+   "client_errors": 0,
+   "parse_failures": 0
+  },
+  "w6": {
+   "calls": 6,
+   "client_errors": 0,
+   "parse_failures": 0
+  }
+ },
+ "agents": "llm",
+ "batch": {
+  "n_messages": 12,
+  "n_repeat": 3,
+  "task_id": "batch-1"
+ },
+ "client_usage": {
+  "cache_hits": 82,
+  "calls": 4,
+  "completions": 4,
+  "input_tokens": 7366,
+  "output_tokens": 189,
+  "retries": 0,
+  "wait_s": 236.2
+ },
+ "condition": "E1",
+ "created_at": "2026-11-06T12:17:18-06:00",
+ "end_reason": "quiescent",
+ "episode_id": "F-E1-A-s1",
+ "faults": {
+  "delivery_delay": 2,
+  "p_bounce": 0.15,
+  "p_stale_board": 0.5,
+  "p_timeout": 0.1
+ },
+ "files_sha256": {
+  "episode.jsonl": "7686c03221eed32117422ae28da311318fd3fcba70843e181dd97113558eec22",
+  "ledger.json": "795fa5a08f4aba9cf3f1067f7da0d1550b3b26dc4e53f58a8b522b258c4f72ee",
+  "scheduler.jsonl": "e1128ae02f3b4321c39af585ade470f0ba140464023f37bf6b4051a1a0adc9ef"
+ },
+ "git_commit": "9a8c98f1ad64bbf9767962c0ff3fa1ad7661b3e9",
+ "git_dirty_dst": true,
+ "grid": {
+  "config": null,
+  "model_key": "A"
+ },
+ "history_turns": 3,
+ "lease_ticks": 6,
+ "llm": {
+  "max_consecutive_errors": 1,
+  "max_llm_calls": 200,
+  "max_prompt_tokens": 1200,
+  "max_tokens": 256
+ },
+ "max_retries": 3,
+ "max_ticks": 300,
+ "model": "gemma-4-26b-a4b-it",
+ "platform": "linux",
+ "provider": "gemini",
+ "python": "3.12.3",
+ "seed": 1,
+ "shape": "F",
+ "temperature": 0.7,
+ "turn_cap": 40,
+ "wall_s": 246.7
+}

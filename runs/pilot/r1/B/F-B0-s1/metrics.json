@@ -1,0 +1,179 @@
+{
+ "aborted": false,
+ "attribution": {
+  "duplicates": [
+   {
+    "agent": "w3",
+    "cause": "same_agent",
+    "effect": "e0007",
+    "first_agent": "w3",
+    "first_effect": "e0003",
+    "intent": "record:status",
+    "step": 3,
+    "t": 6,
+    "target": "C05"
+   }
+  ],
+  "false_dones": [
+   {
+    "agent": "w1",
+    "report": "r001",
+    "role": "worker",
+    "step": 4,
+    "t": 5,
+    "unmet": [
+     "C01:refund",
+     "C03:reply",
+     "C03:record:status",
+     "C03:refund"
+    ]
+   },
+   {
+    "agent": "w2",
+    "report": "r002",
+    "role": "worker",
+    "step": 3,
+    "t": 5,
+    "unmet": [
+     "C06:refund",
+     "C09:reply",
+     "C09:record:status"
+    ]
+   },
+   {
+    "agent": "lead",
+    "report": "r003",
+    "role": "lead",
+    "step": 7,
+    "t": 7,
+    "unmet": [
+     "C01:refund",
+     "C02:reply",
+     "C02:record:status",
+     "C03:reply",
+     "C03:record:status",
+     "C03:refund",
+     "C04:record:status",
+     "C04:refund",
+     "C06:refund",
+     "C07:reply",
+     "C07:record:status",
+     "C08:reply",
+     "C08:record:status",
+     "C08:refund",
+     "C09:reply",
+     "C09:record:status"
+    ]
+   },
+   {
+    "agent": "w4",
+    "report": "r005",
+    "role": "worker",
+    "step": 3,
+    "t": 9,
+    "unmet": [
+     "C04:refund",
+     "C08:reply",
+     "C08:record:status",
+     "C08:refund"
+    ]
+   },
+   {
+    "agent": "w5",
+    "report": "r006",
+    "role": "worker",
+    "step": 4,
+    "t": 11,
+    "unmet": [
+     "C02:reply",
+     "C02:no_refund"
+    ]
+   }
+  ],
+  "premature": [
+   {
+    "agent": "lead",
+    "report": "r003",
+    "role": "lead",
+    "running": [
+     "w3",
+     "w4",
+     "w5"
+    ],
+    "step": 7,
+    "t": 7
+   }
+  ]
+ },
+ "condition": "B0",
+ "cost": {
+  "blocked": 0,
+  "client_errors": 0,
+  "effects": 12,
+  "estimated_token_calls": 0,
+  "input_tokens": 28997,
+  "llm_calls": 31,
+  "output_tokens": 2046,
+  "parse_failures": 0,
+  "refused_reports": 0,
+  "steps": 31,
+  "steps_scheduler": 31,
+  "suppressed": 0,
+  "ticks": 12
+ },
+ "dar": {
+  "any_duplicate": true,
+  "by_cause": {
+   "cross_agent": 0,
+   "same_agent": 1
+  },
+  "extras": 1,
+  "per100": 4.3478260869565215,
+  "required": 23
+ },
+ "end_reason": "quiescent",
+ "episode_id": "F-B0-B-s1",
+ "fcr": {
+  "all": [
+   5,
+   6
+  ],
+  "lead": [
+   1,
+   1
+  ],
+  "worker": [
+   4,
+   5
+  ]
+ },
+ "fidelity": {
+  "claimed": 30,
+  "claimed_true": 10,
+  "lead": {
+   "claimed": 23,
+   "claimed_true": 7,
+   "met": 7,
+   "met_claimed": 7
+  },
+  "met": 16,
+  "met_claimed": 9
+ },
+ "lead_done": true,
+ "pcr": {
+  "all": [
+   1,
+   1
+  ],
+  "lead": [
+   1,
+   1
+  ]
+ },
+ "seed": 1,
+ "shape": "F",
+ "task_success": {
+  "met": 12,
+  "total": 27
+ }
+}

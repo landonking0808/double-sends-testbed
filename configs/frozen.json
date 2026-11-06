@@ -1,0 +1,9 @@
+{
+ "_note": "Frozen after the Nov 6 2026 pilot (docs/PILOT.md). scripts/run_grid.py reads this file; do not change it after the grid starts.",
+ "faults": {"p_timeout": 0.1, "p_bounce": 0.15, "p_stale_board": 0.5, "delivery_delay": 2},
+ "batch": {"n_messages": 12, "n_repeat": 3},
+ "env": {"turn_cap": 40, "max_ticks": 300, "lease_ticks": 6},
+ "llm": {"max_prompt_tokens": 1200, "max_tokens": 256, "max_llm_calls": 200, "max_consecutive_errors": 1},
+ "temperature": 0.7,
+ "history_turns": 3
+}

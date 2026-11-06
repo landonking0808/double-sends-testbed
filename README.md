@@ -24,7 +24,17 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 
 Options: `--shape F|D|D+`, `--condition B0|P1|E1|E2|E3`, `--agents scripted-naive|scripted-careful|llm`,
 `--seed`, fault rates `--p-timeout --p-bounce --p-stale --delivery-delay`, batch `--messages --repeat`,
-`--turn-cap --max-ticks --lease-ticks --max-retries`, and for LLM teams `--temperature --history-turns`.
+`--turn-cap --max-ticks --lease-ticks --max-retries`, and for LLM teams `--temperature --history-turns
+--max-prompt-tokens --max-tokens --max-llm-calls`. An LLM episode stops early, marked `aborted` in its manifest
+(exit code 3), when a free quota is reached or a provider call keeps failing; it is not a valid sample and is
+rerun from the response cache.
+
+Grids (resumable, paced to the free limits, settings from `configs/frozen.json`; see [docs/PILOT.md](docs/PILOT.md)):
+
+```bash
+.venv/bin/python scripts/run_grid.py --model A --shapes F,D --conditions B0,P1,E1,E2,E3 --seeds 1-8 --out runs/grid/A
+.venv/bin/python scripts/pilot_table.py runs/grid/A        # per-condition table of the finished episodes
+```
 
 ## What is in the box
 
@@ -60,6 +70,9 @@ Options: `--shape F|D|D+`, `--condition B0|P1|E1|E2|E3`, `--agents scripted-naiv
 `complete(messages, *, model, temperature, seed) -> str` (`messages` is a list of
 `{"role": "system"|"user"|"assistant", "content": str}`). The agent sends one rendered observation per
 turn and parses one JSON tool call `{"tool": name, "args": {...}}` from the answer (code fences and
-surrounding prose are tolerated); a reply it cannot parse is counted and becomes `noop`. A client may set
-`last_usage = {"input_tokens", "output_tokens"}` after each call. Prompts per role and condition are in
+surrounding prose are tolerated); a reply it cannot parse is counted and becomes `noop` (the next turn says
+so). A client may set `last_usage = {"input_tokens", "output_tokens"}` after each call; those counts are used
+for cost. Each prompt holds the system prompt, the first exchange (the brief), a one-line-per-step log of the
+agent's own calls and received coordination messages, and as many recent full exchanges as fit the prompt
+budget. Prompts per role and condition are in
 `dst/agents/prompts.py`. Any other policy can implement `dst.agents.base.Agent.act(observation) -> dict`.

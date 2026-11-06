@@ -1,0 +1,315 @@
+{
+ "batch": {
+  "n_messages": 12,
+  "n_repeat": 3
+ },
+ "conditions": [
+  "B0",
+  "P1",
+  "E1",
+  "E2",
+  "E3"
+ ],
+ "config": null,
+ "env": {
+  "lease_ticks": 6,
+  "max_ticks": 300,
+  "turn_cap": 40
+ },
+ "episodes": {
+  "F-B0-s1": {
+   "client_errors": 0,
+   "created_at": "2026-11-06T08:35:59-06:00",
+   "dar_extras": 1,
+   "dar_required": 23,
+   "end_reason": "quiescent",
+   "false_dones": [
+    5,
+    6
+   ],
+   "input_tokens": 28997,
+   "llm_calls": 31,
+   "output_tokens": 2046,
+   "parse_failures": 0,
+   "premature": [
+    1,
+    1
+   ],
+   "status": "done",
+   "task_success": [
+    12,
+    27
+   ],
+   "wall_s": 59.1
+  },
+  "F-B0-s2": {
+   "client_errors": 0,
+   "created_at": "2026-11-06T08:40:49-06:00",
+   "dar_extras": 3,
+   "dar_required": 22,
+   "end_reason": "quiescent",
+   "false_dones": [
+    5,
+    6
+   ],
+   "input_tokens": 48425,
+   "llm_calls": 49,
+   "output_tokens": 2388,
+   "parse_failures": 0,
+   "premature": [
+    1,
+    1
+   ],
+   "status": "done",
+   "task_success": [
+    17,
+    27
+   ],
+   "wall_s": 106.9
+  },
+  "F-E1-s1": {
+   "client_errors": 0,
+   "created_at": "2026-11-06T08:37:07-06:00",
+   "dar_extras": 0,
+   "dar_required": 23,
+   "end_reason": "quiescent",
+   "false_dones": [
+    5,
+    5
+   ],
+   "input_tokens": 32774,
+   "llm_calls": 33,
+   "output_tokens": 1500,
+   "parse_failures": 0,
+   "premature": [
+    1,
+    1
+   ],
+   "status": "done",
+   "task_success": [
+    10,
+    27
+   ],
+   "wall_s": 67.9
+  },
+  "F-E1-s2": {
+   "client_errors": 0,
+   "created_at": "2026-11-06T08:42:21-06:00",
+   "dar_extras": 0,
+   "dar_required": 22,
+   "end_reason": "quiescent",
+   "false_dones": [
+    7,
+    7
+   ],
+   "input_tokens": 42002,
+   "llm_calls": 43,
+   "output_tokens": 1856,
+   "parse_failures": 0,
+   "premature": [
+    1,
+    1
+   ],
+   "status": "done",
+   "task_success": [
+    17,
+    27
+   ],
+   "wall_s": 91.6
+  },
+  "F-E2-s1": {
+   "client_errors": 0,
+   "created_at": "2026-11-06T08:39:02-06:00",
+   "dar_extras": 1,
+   "dar_required": 23,
+   "end_reason": "quiescent",
+   "false_dones": [
+    4,
+    4
+   ],
+   "input_tokens": 56368,
+   "llm_calls": 50,
+   "output_tokens": 2814,
+   "parse_failures": 0,
+   "premature": [
+    0,
+    1
+   ],
+   "status": "done",
+   "task_success": [
+    10,
+    27
+   ],
+   "wall_s": 127.5
+  },
+  "F-E2-s2": {
+   "client_errors": 0,
+   "created_at": "2026-11-06T08:43:36-06:00",
+   "dar_extras": 0,
+   "dar_required": 22,
+   "end_reason": "quiescent",
+   "false_dones": [
+    3,
+    4
+   ],
+   "input_tokens": 39670,
+   "llm_calls": 37,
+   "output_tokens": 1914,
+   "parse_failures": 0,
+   "premature": [
+    0,
+    1
+   ],
+   "status": "done",
+   "task_success": [
+    9,
+    27
+   ],
+   "wall_s": 82.2
+  },
+  "F-E3-s1": {
+   "client_errors": 0,
+   "created_at": "2026-11-06T08:39:32-06:00",
+   "dar_extras": 0,
+   "dar_required": 23,
+   "end_reason": "quiescent",
+   "false_dones": [
+    6,
+    7
+   ],
+   "input_tokens": 62892,
+   "llm_calls": 59,
+   "output_tokens": 3600,
+   "parse_failures": 1,
+   "premature": [
+    0,
+    1
+   ],
+   "status": "done",
+   "task_success": [
+    15,
+    27
+   ],
+   "wall_s": 144.9
+  },
+  "F-E3-s2": {
+   "client_errors": 0,
+   "created_at": "2026-11-06T08:43:30-06:00",
+   "dar_extras": 0,
+   "dar_required": 22,
+   "end_reason": "quiescent",
+   "false_dones": [
+    1,
+    3
+   ],
+   "input_tokens": 31087,
+   "llm_calls": 28,
+   "output_tokens": 1711,
+   "parse_failures": 0,
+   "premature": [
+    0,
+    1
+   ],
+   "status": "done",
+   "task_success": [
+    10,
+    27
+   ],
+   "wall_s": 69.4
+  },
+  "F-P1-s1": {
+   "client_errors": 0,
+   "created_at": "2026-11-06T08:36:54-06:00",
+   "dar_extras": 2,
+   "dar_required": 23,
+   "end_reason": "quiescent",
+   "false_dones": [
+    4,
+    7
+   ],
+   "input_tokens": 53021,
+   "llm_calls": 53,
+   "output_tokens": 2843,
+   "parse_failures": 1,
+   "premature": [
+    1,
+    1
+   ],
+   "status": "done",
+   "task_success": [
+    14,
+    27
+   ],
+   "wall_s": 114.1
+  },
+  "F-P1-s2": {
+   "client_errors": 0,
+   "created_at": "2026-11-06T08:42:13-06:00",
+   "dar_extras": 3,
+   "dar_required": 22,
+   "end_reason": "quiescent",
+   "false_dones": [
+    2,
+    6
+   ],
+   "input_tokens": 48482,
+   "llm_calls": 47,
+   "output_tokens": 2369,
+   "parse_failures": 0,
+   "premature": [
+    1,
+    1
+   ],
+   "status": "done",
+   "task_success": [
+    17,
+    27
+   ],
+   "wall_s": 160.5
+  }
+ },
+ "episodes_done": 10,
+ "episodes_left": 0,
+ "episodes_total": 10,
+ "faults": {
+  "delivery_delay": 2,
+  "p_bounce": 0.15,
+  "p_stale_board": 0.5,
+  "p_timeout": 0.2
+ },
+ "history_turns": 3,
+ "invocations": [
+  {
+   "ended_ct": "2026-11-06T08:43:36-06:00",
+   "parallel": 2,
+   "ran": 10,
+   "started_ct": "2026-11-06T08:35:00-06:00",
+   "stop_reason": null,
+   "wall_s": 515.9
+  }
+ ],
+ "llm": {
+  "max_consecutive_errors": 3,
+  "max_llm_calls": 200,
+  "max_prompt_tokens": 1200,
+  "max_tokens": 256
+ },
+ "model": "@cf/ibm-granite/granite-4.0-h-micro",
+ "model_key": "B",
+ "provider": "cloudflare",
+ "seeds": [
+  1,
+  2
+ ],
+ "shapes": [
+  "F"
+ ],
+ "temperature": 0.7,
+ "totals_done": {
+  "client_errors": 0,
+  "input_tokens": 443718,
+  "llm_calls": 430,
+  "output_tokens": 23041,
+  "parse_failures": 2
+ }
+}

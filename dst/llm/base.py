@@ -210,7 +210,9 @@ class BaseClient:
                     gov.settle(None, 0.0, est_in, est_neurons)
                     self._log({**base, "cached": False, "error": last_err[:300], "attempts": attempts})
                     raise LLMError(f"{self.provider}:{model} {last_err}", status)
-                gov.settle(None, 0.0, est_in, est_neurons)
+                # a 5xx was not processed: release its input-token reservation (it still counts as a
+                # request in the per-minute window); a 429 keeps it, to back off harder
+                gov.settle(0 if status >= 500 else None, 0.0, est_in, est_neurons)
                 retry_why.append(status)
                 delay = parse_retry_after(resp)
             if attempts > self.max_retries:

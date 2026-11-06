@@ -162,6 +162,10 @@ def main(argv=None) -> int:
 
     provider, model = MODELS[args.model]
     cfg = load_config(Path(args.config))
+    try:   # record the config path relative to the repo (no host paths in published logs)
+        cfg_name = str(Path(args.config).resolve().relative_to(ROOT))
+    except ValueError:
+        cfg_name = Path(args.config).name
     f = dict(FaultConfig().to_dict(), **cfg.get("faults", {}))
     for k, flag in (("p_timeout", args.p_timeout), ("p_bounce", args.p_bounce), ("p_stale_board", args.p_stale)):
         if flag is not None:
@@ -213,7 +217,7 @@ def main(argv=None) -> int:
             episode_id=f"{shape}-{cond}-{args.model}-s{seed}",
             max_prompt_tokens=llm["max_prompt_tokens"], max_tokens=llm["max_tokens"],
             max_llm_calls=llm["max_llm_calls"], max_consecutive_errors=llm["max_consecutive_errors"],
-            extra_manifest={"grid": {"model_key": args.model, "config": args.config if cfg else None}})
+            extra_manifest={"grid": {"model_key": args.model, "config": cfg_name if cfg else None}})
         if met["end_reason"] == "aborted_quota":
             with lock:
                 why["reason"] = "aborted_quota"
@@ -263,13 +267,15 @@ def main(argv=None) -> int:
     manifest = {
         "model_key": args.model, "provider": provider, "model": model, "shapes": shapes, "conditions": conds,
         "seeds": seeds, "faults": faults.to_dict(), "batch": batch, "llm": llm, "env": env,
-        "temperature": temperature, "history_turns": history_turns, "config": args.config if cfg else None,
+        "temperature": temperature, "history_turns": history_turns, "config": cfg_name if cfg else None,
         "episodes_total": len(cells), "episodes_done": len(done), "episodes_left": left,
         "totals_done": {k: sum(v[k] for v in done) for k in ("llm_calls", "input_tokens", "output_tokens",
                                                              "parse_failures", "client_errors")},
         "invocations": invocations, "episodes": eps,
     }
-    mpath.write_text(json.dumps(manifest, indent=1, sort_keys=True) + "\n", encoding="utf-8")
+    tmp = mpath.with_suffix(".json.tmp")      # atomic: a kill mid-write cannot lose earlier invocations
+    tmp.write_text(json.dumps(manifest, indent=1, sort_keys=True) + "\n", encoding="utf-8")
+    os.replace(tmp, mpath)
     print(f"[{now_ct()}] {len(done)}/{len(cells)} episodes done; {left} left"
           + (f"; stopped: {why['reason']}" if why.get("reason") and left else "") + f"; manifest {mpath}", flush=True)
     return 0 if left == 0 else 3

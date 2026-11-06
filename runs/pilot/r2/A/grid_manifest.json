@@ -1,0 +1,427 @@
+{
+ "batch": {
+  "n_messages": 12,
+  "n_repeat": 3
+ },
+ "conditions": [
+  "B0",
+  "P1",
+  "E1",
+  "E2",
+  "E3"
+ ],
+ "config": "configs/frozen.json",
+ "env": {
+  "lease_ticks": 6,
+  "max_ticks": 300,
+  "turn_cap": 40
+ },
+ "episodes": {
+  "F-B0-s1": {
+   "client_errors": 0,
+   "created_at": "2026-11-06T11:59:20-06:00",
+   "dar_extras": 2,
+   "dar_required": 23,
+   "end_reason": "quiescent",
+   "false_dones": [
+    3,
+    6
+   ],
+   "input_tokens": 102834,
+   "llm_calls": 84,
+   "output_tokens": 3164,
+   "parse_failures": 0,
+   "premature": [
+    0,
+    1
+   ],
+   "status": "done",
+   "task_success": [
+    24,
+    27
+   ],
+   "wall_s": 308.4
+  },
+  "F-B0-s2": {
+   "client_errors": 0,
+   "created_at": "2026-11-06T12:30:42-06:00",
+   "dar_extras": 1,
+   "dar_required": 22,
+   "end_reason": "quiescent",
+   "false_dones": [
+    3,
+    8
+   ],
+   "input_tokens": 127456,
+   "llm_calls": 100,
+   "output_tokens": 3588,
+   "parse_failures": 0,
+   "premature": [
+    0,
+    1
+   ],
+   "status": "done",
+   "task_success": [
+    25,
+    27
+   ],
+   "wall_s": 505.3
+  },
+  "F-E1-s1": {
+   "client_errors": 0,
+   "created_at": "2026-11-06T12:17:18-06:00",
+   "dar_extras": 0,
+   "dar_required": 23,
+   "end_reason": "quiescent",
+   "false_dones": [
+    6,
+    8
+   ],
+   "input_tokens": 114726,
+   "llm_calls": 86,
+   "output_tokens": 3082,
+   "parse_failures": 0,
+   "premature": [
+    0,
+    1
+   ],
+   "status": "done",
+   "task_success": [
+    20,
+    27
+   ],
+   "wall_s": 246.7
+  },
+  "F-E1-s2": {
+   "client_errors": 0,
+   "created_at": "2026-11-06T12:25:55-06:00",
+   "dar_extras": 0,
+   "dar_required": 22,
+   "end_reason": "quiescent",
+   "false_dones": [
+    4,
+    8
+   ],
+   "input_tokens": 125295,
+   "llm_calls": 97,
+   "output_tokens": 3346,
+   "parse_failures": 0,
+   "premature": [
+    0,
+    1
+   ],
+   "status": "done",
+   "task_success": [
+    22,
+    27
+   ],
+   "wall_s": 218.9
+  },
+  "F-E2-s1": {
+   "client_errors": 0,
+   "created_at": "2026-11-06T12:54:58-06:00",
+   "dar_extras": 19,
+   "dar_required": 23,
+   "end_reason": "quiescent",
+   "false_dones": [
+    1,
+    6
+   ],
+   "input_tokens": 186187,
+   "llm_calls": 136,
+   "output_tokens": 4940,
+   "parse_failures": 0,
+   "premature": [
+    0,
+    0
+   ],
+   "status": "done",
+   "task_success": [
+    26,
+    27
+   ],
+   "wall_s": 292.1
+  },
+  "F-E2-s2": {
+   "client_errors": 0,
+   "created_at": "2026-11-06T13:08:24-06:00",
+   "dar_extras": 4,
+   "dar_required": 22,
+   "end_reason": "quiescent",
+   "false_dones": [
+    2,
+    6
+   ],
+   "input_tokens": 230536,
+   "llm_calls": 161,
+   "output_tokens": 4481,
+   "parse_failures": 0,
+   "premature": [
+    0,
+    0
+   ],
+   "status": "done",
+   "task_success": [
+    24,
+    27
+   ],
+   "wall_s": 144.1
+  },
+  "F-E3-s1": {
+   "client_errors": 0,
+   "created_at": "2026-11-06T12:32:52-06:00",
+   "dar_extras": 0,
+   "dar_required": 23,
+   "end_reason": "quiescent",
+   "false_dones": [
+    2,
+    6
+   ],
+   "input_tokens": 147333,
+   "llm_calls": 107,
+   "output_tokens": 3934,
+   "parse_failures": 0,
+   "premature": [
+    0,
+    1
+   ],
+   "status": "done",
+   "task_success": [
+    26,
+    27
+   ],
+   "wall_s": 9.5
+  },
+  "F-E3-s2": {
+   "client_errors": 0,
+   "created_at": "2026-11-06T13:03:42-06:00",
+   "dar_extras": 0,
+   "dar_required": 22,
+   "end_reason": "quiescent",
+   "false_dones": [
+    4,
+    8
+   ],
+   "input_tokens": 199498,
+   "llm_calls": 139,
+   "output_tokens": 4613,
+   "parse_failures": 0,
+   "premature": [
+    0,
+    1
+   ],
+   "status": "done",
+   "task_success": [
+    24,
+    27
+   ],
+   "wall_s": 347.5
+  },
+  "F-P1-s1": {
+   "client_errors": 0,
+   "created_at": "2026-11-06T12:51:10-06:00",
+   "dar_extras": 5,
+   "dar_required": 23,
+   "end_reason": "quiescent",
+   "false_dones": [
+    1,
+    4
+   ],
+   "input_tokens": 176375,
+   "llm_calls": 125,
+   "output_tokens": 3870,
+   "parse_failures": 0,
+   "premature": [
+    0,
+    0
+   ],
+   "status": "done",
+   "task_success": [
+    23,
+    27
+   ],
+   "wall_s": 64.0
+  },
+  "F-P1-s2": {
+   "client_errors": 0,
+   "created_at": "2026-11-06T12:51:11-06:00",
+   "dar_extras": 1,
+   "dar_required": 22,
+   "end_reason": "quiescent",
+   "false_dones": [
+    0,
+    5
+   ],
+   "input_tokens": 193562,
+   "llm_calls": 141,
+   "output_tokens": 3930,
+   "parse_failures": 1,
+   "premature": [
+    0,
+    0
+   ],
+   "status": "done",
+   "task_success": [
+    25,
+    27
+   ],
+   "wall_s": 64.7
+  }
+ },
+ "episodes_done": 10,
+ "episodes_left": 0,
+ "episodes_total": 10,
+ "faults": {
+  "delivery_delay": 2,
+  "p_bounce": 0.15,
+  "p_stale_board": 0.5,
+  "p_timeout": 0.1
+ },
+ "history_turns": 3,
+ "invocations": [
+  {
+   "ended_ct": "2026-11-06T11:07:21-06:00",
+   "parallel": 10,
+   "ran": 10,
+   "started_ct": "2026-11-06T10:58:32-06:00",
+   "stop_reason": "aborted_deadline",
+   "wall_s": 529.0
+  },
+  {
+   "ended_ct": "2026-11-06T11:16:18-06:00",
+   "parallel": 10,
+   "ran": 10,
+   "started_ct": "2026-11-06T11:07:30-06:00",
+   "stop_reason": "aborted_deadline",
+   "wall_s": 527.5
+  },
+  {
+   "ended_ct": "2026-11-06T11:26:06-06:00",
+   "parallel": 10,
+   "ran": 10,
+   "started_ct": "2026-11-06T11:16:58-06:00",
+   "stop_reason": "aborted_deadline",
+   "wall_s": 547.3
+  },
+  {
+   "ended_ct": "2026-11-06T11:35:09-06:00",
+   "parallel": 10,
+   "ran": 10,
+   "started_ct": "2026-11-06T11:26:20-06:00",
+   "stop_reason": "aborted_deadline",
+   "wall_s": 529.3
+  },
+  {
+   "ended_ct": "2026-11-06T11:44:32-06:00",
+   "parallel": 10,
+   "ran": 10,
+   "started_ct": "2026-11-06T11:35:17-06:00",
+   "stop_reason": "aborted_deadline",
+   "wall_s": 555.1
+  },
+  {
+   "ended_ct": "2026-11-06T11:54:03-06:00",
+   "parallel": 10,
+   "ran": 10,
+   "started_ct": "2026-11-06T11:44:55-06:00",
+   "stop_reason": "aborted_deadline",
+   "wall_s": 548.6
+  },
+  {
+   "ended_ct": "2026-11-06T12:03:10-06:00",
+   "parallel": 10,
+   "ran": 10,
+   "started_ct": "2026-11-06T11:54:10-06:00",
+   "stop_reason": "aborted_deadline",
+   "wall_s": 539.7
+  },
+  {
+   "ended_ct": "2026-11-06T12:12:50-06:00",
+   "parallel": 10,
+   "ran": 9,
+   "started_ct": "2026-11-06T12:03:37-06:00",
+   "stop_reason": "aborted_deadline",
+   "wall_s": 552.9
+  },
+  {
+   "ended_ct": "2026-11-06T12:21:52-06:00",
+   "parallel": 10,
+   "ran": 9,
+   "started_ct": "2026-11-06T12:13:07-06:00",
+   "stop_reason": "aborted_deadline",
+   "wall_s": 524.9
+  },
+  {
+   "ended_ct": "2026-11-06T12:32:04-06:00",
+   "parallel": 10,
+   "ran": 8,
+   "started_ct": "2026-11-06T12:22:13-06:00",
+   "stop_reason": "aborted_deadline",
+   "wall_s": 590.8
+  },
+  {
+   "ended_ct": "2026-11-06T12:41:08-06:00",
+   "parallel": 10,
+   "ran": 6,
+   "started_ct": "2026-11-06T12:32:36-06:00",
+   "stop_reason": "aborted_deadline",
+   "wall_s": 511.5
+  },
+  {
+   "ended_ct": "2026-11-06T12:49:46-06:00",
+   "parallel": 10,
+   "ran": 5,
+   "started_ct": "2026-11-06T12:41:21-06:00",
+   "stop_reason": "aborted_deadline",
+   "wall_s": 504.9
+  },
+  {
+   "ended_ct": "2026-11-06T12:57:43-06:00",
+   "parallel": 10,
+   "ran": 5,
+   "started_ct": "2026-11-06T12:50:05-06:00",
+   "stop_reason": "aborted_deadline",
+   "wall_s": 458.5
+  },
+  {
+   "ended_ct": "2026-11-06T13:05:50-06:00",
+   "parallel": 10,
+   "ran": 2,
+   "started_ct": "2026-11-06T12:57:54-06:00",
+   "stop_reason": "aborted_deadline",
+   "wall_s": 476.1
+  },
+  {
+   "ended_ct": "2026-11-06T13:08:24-06:00",
+   "parallel": 10,
+   "ran": 1,
+   "started_ct": "2026-11-06T13:05:59-06:00",
+   "stop_reason": null,
+   "wall_s": 144.5
+  }
+ ],
+ "llm": {
+  "max_consecutive_errors": 1,
+  "max_llm_calls": 200,
+  "max_prompt_tokens": 1200,
+  "max_tokens": 256
+ },
+ "model": "gemma-4-26b-a4b-it",
+ "model_key": "A",
+ "provider": "gemini",
+ "seeds": [
+  1,
+  2
+ ],
+ "shapes": [
+  "F"
+ ],
+ "temperature": 0.7,
+ "totals_done": {
+  "client_errors": 0,
+  "input_tokens": 1603802,
+  "llm_calls": 1176,
+  "output_tokens": 38948,
+  "parse_failures": 1
+ }
+}

@@ -7,7 +7,7 @@ The client is any object with::
 where ``messages`` is ``[{"role": "system"|"user"|"assistant", "content": str}, ...]`` and
 the return value is the raw assistant text. Optionally the client may set
 ``client.last_usage = {"input_tokens": int, "output_tokens": int}`` after each call; it is
-logged when present. Provider clients, caching and backoff live outside this module.
+logged when present; otherwise cost uses a deterministic chars/4 estimate. Provider clients, caching and backoff live outside this module.
 
 Each turn the agent renders the observation into a user message, calls the client once,
 and parses one JSON tool call from the answer (robust to code fences and surrounding
@@ -154,6 +154,9 @@ class LLMAgent(Agent):
         self._events.append(("llm_call", {
             "call_index": self.calls, "model": self.model, "temperature": self.temperature, "seed": call_seed,
             "prompt_hash": phash, "n_messages": len(messages), "response": text, "usage": usage,
+            # deterministic size estimate (chars / 4), used for cost when the client reports no usage
+            "est_tokens": {"input_tokens": -(-sum(len(m["content"]) for m in messages) // 4),
+                           "output_tokens": -(-len(text or "") // 4)},
             "parse_ok": ok, "error": error,
         }))
         self.calls += 1

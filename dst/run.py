@@ -69,7 +69,8 @@ def run_episode(*, shape="F", condition="B0", agents="scripted-naive", seed=1, f
     logger = MemoryLogger(eid, seed)
     office = Office(batch, cfg, seed, logger, eid)
     ledger = office.run(team)
-    metrics = episode_metrics(ledger, logger.schedule_records(), logger.events())
+    # the event log is only needed for LLM cost counters
+    metrics = episode_metrics(ledger, logger.schedule_records(), logger.events() if agents == "llm" else None)
     if out is not None:
         manifest = base_manifest()
         manifest.update({

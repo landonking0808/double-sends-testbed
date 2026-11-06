@@ -90,7 +90,9 @@ def duplicates(ledger: dict) -> list:
             out.append({
                 "target": target, "intent": intent, "effect": e["id"], "agent": e["agent"], "step": e["step"],
                 "t": e["t"], "first_effect": effs[0]["id"], "first_agent": effs[0]["agent"],
-                "cause": "retry" if e["agent"] in earlier_agents else "overlap",
+                # same_agent: the agent repeated its own effect (a retry, or it handled the customer's
+                # second message too); cross_agent: another agent had already done it (overlap)
+                "cause": "same_agent" if e["agent"] in earlier_agents else "cross_agent",
             })
     return out
 
@@ -153,13 +155,16 @@ def episode_metrics(ledger: dict, schedule: list | None = None, events: list | N
         steps_sched = sum(len(s["order"]) for s in schedule)
     else:
         steps_sched = None
-    llm = {"llm_calls": 0, "input_tokens": 0, "output_tokens": 0, "parse_failures": 0, "client_errors": 0}
+    llm = {"llm_calls": 0, "input_tokens": 0, "output_tokens": 0, "estimated_token_calls": 0,
+           "parse_failures": 0, "client_errors": 0}
     for ev in events or []:
         if ev["event"] != "llm_call":
             continue
         p = ev["payload"]
         llm["llm_calls"] += 1
-        u = p.get("usage") or {}
+        u = p.get("usage") or p.get("est_tokens") or {}
+        if not p.get("usage"):
+            llm["estimated_token_calls"] += 1
         llm["input_tokens"] += int(u.get("input_tokens", 0) or 0)
         llm["output_tokens"] += int(u.get("output_tokens", 0) or 0)
         if p.get("error"):
@@ -174,7 +179,7 @@ def episode_metrics(ledger: dict, schedule: list | None = None, events: list | N
         "shape": ledger["shape"],
         "dar": {"extras": len(dups), "required": n_req, "per100": 100.0 * len(dups) / n_req if n_req else float("nan"),
                 "any_duplicate": bool(dups),
-                "by_cause": {c: sum(1 for d in dups if d["cause"] == c) for c in ("retry", "overlap")}},
+                "by_cause": {c: sum(1 for d in dups if d["cause"] == c) for c in ("same_agent", "cross_agent")}},
         "fcr": {"all": fcr_all, **{r: list(v) for r, v in sorted(fcr_counts.items())}},
         "pcr": {"all": pcr_all, **{r: list(v) for r, v in sorted(pcr_counts.items())}},
         "lead_done": any(r["accepted"] and r["status"] == "done" and roles[r["agent"]] == "lead" for r in ledger["reports"]),

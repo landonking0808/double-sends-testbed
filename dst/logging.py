@@ -50,7 +50,13 @@ class MemoryLogger:
         self.schedule_lines.append(dumps(record))
 
     def ledger(self, ledger: dict) -> None:
-        self.ledger_text = json.dumps(ledger, sort_keys=True, indent=1, ensure_ascii=False) + "\n"
+        self._ledger = ledger  # serialized lazily (the env hands over a private deep copy)
+        self.ledger_text = None
+
+    def _ledger_text(self) -> str:
+        if self.ledger_text is None and getattr(self, "_ledger", None) is not None:
+            self.ledger_text = json.dumps(self._ledger, sort_keys=True, indent=1, ensure_ascii=False) + "\n"
+        return self.ledger_text or ""
 
     # parsed views ----------------------------------------------------------
     def events(self) -> list:
@@ -60,13 +66,14 @@ class MemoryLogger:
         return [json.loads(x) for x in self.schedule_lines]
 
     def ledger_dict(self) -> dict:
-        return json.loads(self.ledger_text) if self.ledger_text else {}
+        text = self._ledger_text()
+        return json.loads(text) if text else {}
 
     def texts(self) -> dict:
         return {
             "episode.jsonl": "".join(x + "\n" for x in self.event_lines),
             "scheduler.jsonl": "".join(x + "\n" for x in self.schedule_lines),
-            "ledger.json": self.ledger_text or "",
+            "ledger.json": self._ledger_text(),
         }
 
     def write(self, out_dir, manifest: dict) -> Path:

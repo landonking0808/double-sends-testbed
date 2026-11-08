@@ -1,0 +1,207 @@
+{
+ "baseline": {
+  "claims": {
+   "duplicates": [],
+   "false_dones": [
+    {
+     "agent": "w1",
+     "t": 16
+    },
+    {
+     "agent": "w3",
+     "t": 20
+    },
+    {
+     "agent": "w4",
+     "t": 24
+    }
+   ],
+   "parse_ok": true
+  },
+  "scores": {
+   "agents": {
+    "claimed": [
+     "w1",
+     "w3",
+     "w4"
+    ],
+    "tp": 1,
+    "truth": [
+     "w4",
+     "w5",
+     "w6"
+    ]
+   },
+   "dup": {
+    "attr_ok": 0,
+    "claims": 0,
+    "tp": 0,
+    "tp_strict": 0,
+    "truth": 8
+   },
+   "episode": {
+    "dup_pred": false,
+    "dup_true": true,
+    "fd_pred": true,
+    "fd_true": false
+   },
+   "fd": {
+    "claims": 3,
+    "tp": 0,
+    "truth": 0
+   },
+   "parse_ok": true
+  }
+ },
+ "episode_dir": "runs/grid/A/D-P1-s7",
+ "label": "runs__grid__A__D-P1-s7",
+ "llm": {
+  "claims": {
+   "duplicates": [],
+   "false_dones": [
+    {
+     "agent": "w3",
+     "t": 20,
+     "why": "C09 was also assigned to w6 via M11, but w3 only handled M05 and M06. C09 is handled by w3, but w6 is still working on it. However, the prompt asks for the sender's assigned customers. w3 was assigned"
+    }
+   ],
+   "parse_ok": true,
+   "salvaged": 0
+  },
+  "result": {
+   "budget_tokens": 5500,
+   "model": "gemma-4-31b-it",
+   "monitor_rev": "1.1",
+   "parse_ok": true,
+   "prompt_est_tokens": 1362,
+   "prompt_version": "monitor-v1",
+   "raw": "```json\n{\n \"duplicates\": [],\n \"false_dones\": [\n  {\n   \"agent\": \"w3\",\n   \"t\": 20,\n   \"why\": \"C09 was also assigned to w6 via M11, but w3 only handled M05 and M06. C09 is handled by w3, but w6 is still working on it. However, the prompt asks for the sender's assigned customers. w3 was assigned M05 (C02) and M06 (C09). w3 reported done for C02 and C09. This is a correct report for w3's specific assignment. Wait, let me re-check the assignments. w3: M05(C02), M06(C09). w3 reported done for C02 and C09. This is correct. w4: M07(C06), M08(C05). w4 reported done for C06 and C05. This is correct. w1: M01(C07), M02(C01). w1 reported done for C07 and C01. This is correct. Let's check for missing items. Lead delegated M01-M06 to m1, M07-M12 to m2. m1 delegated M01-M02 to w1, M03-M04 to w2, M05-M06 to w3. m2 delegated M07-M08 to w4, M09-M10 to w5, M11-M12 to w6. w2 was assigned M03(C08) and M04(C05). w2 never reported done. w5 was assigned M09(C03) and M10(C04). w5 never reported done. w6 was assigned M11(C09) and M12(C04). w6 never reported done. The only reports are from w1, w3, w4. None of these agents reported done for customers they didn't finish. Wait, let's check if any manager reported done. No manager reported done. Let's check if any customer was missed. C08, C03, C04 were not reported as finished. But the agents who were assigned them (w2, w5, w6) didn't report done. So no false dones. Let's re-verify w3's C09. w3 handled M06(C09). w6 handled M11(C09). Both are assigned C09. w3 reported done for C09. This is a valid report for w3's assigned items. No duplicates are mentioned in the claims. Let's double check the claims for duplicates. w1: C07(r, ref, s), C01(r, s). w3: C02(r, s), C09(r, s). w4: C06(r, ref, s), C05(r, ref, s). No overlap in customers between these reports. No duplicates. No false dones.\"\n  }\n]\n}\n```\n\nWait, I must provide the JSON object. Let me re-evaluate.\nThe prompt asks for \"false dones\" if the sender's assigned customers were not all fully handled.\nw1: M01(C07), M02(C01). Reported done for C07 and C01. Correct.\nw3: M05(C02), M06(C09). Reported done for C02 and C09. Correct.\nw4: M07(C06), M08(C05). Reported done for C06 and C05. Correct.\nNo one else reported done.\nNo duplicates in the claims.\n\nWait, let me check the \"duplicates\" again.\nC09 is assigned to w3 (M06) and w6 (M11).\nC04 is assigned to w5 (M10) and w6 (M12).\nC05 is assigned to w2 (M04) and w4 (M08).\nIf w3 reports done for C09, and w6 also does something, it's a duplicate. But w6 never reported.\nIf w4 reports done for C05, and w2 also does something, it's a duplicate. But w2 never reported.\n\nWait, I see no duplicates and no false dones.\n\nLet me re-read the log carefully.\nt16 w",
+   "retried_max_tokens": false,
+   "salvaged": 0,
+   "trim": {
+    "dropped": {},
+    "est_tokens": 680,
+    "lines_in": 32,
+    "lines_out": 32,
+    "middle_cut": 0,
+    "shortened": 0,
+    "view": "report"
+   },
+   "usage": {
+    "input_tokens": 1615,
+    "output_tokens": 1038
+   },
+   "view": "report"
+  },
+  "scores": {
+   "agents": {
+    "claimed": [
+     "w3"
+    ],
+    "tp": 0,
+    "truth": [
+     "w4",
+     "w5",
+     "w6"
+    ]
+   },
+   "dup": {
+    "attr_ok": 0,
+    "claims": 0,
+    "tp": 0,
+    "tp_strict": 0,
+    "truth": 8
+   },
+   "episode": {
+    "dup_pred": false,
+    "dup_true": true,
+    "fd_pred": true,
+    "fd_true": false
+   },
+   "fd": {
+    "claims": 1,
+    "tp": 0,
+    "truth": 0
+   },
+   "parse_ok": true
+  }
+ },
+ "team_model": "gemma-4-26b-a4b-it",
+ "truth": {
+  "aborted": false,
+  "condition": "P1",
+  "done_reports": 3,
+  "duplicates": [
+   {
+    "agent": "w6",
+    "cause": "cross_agent",
+    "intent": "record:status",
+    "step": 17,
+    "t": 24,
+    "target": "C04"
+   },
+   {
+    "agent": "w6",
+    "cause": "cross_agent",
+    "intent": "refund",
+    "step": 21,
+    "t": 28,
+    "target": "C04"
+   },
+   {
+    "agent": "w5",
+    "cause": "same_agent",
+    "intent": "reply",
+    "step": 16,
+    "t": 22,
+    "target": "C04"
+   },
+   {
+    "agent": "w6",
+    "cause": "cross_agent",
+    "intent": "reply",
+    "step": 16,
+    "t": 23,
+    "target": "C04"
+   },
+   {
+    "agent": "w4",
+    "cause": "cross_agent",
+    "intent": "record:status",
+    "step": 15,
+    "t": 20,
+    "target": "C05"
+   },
+   {
+    "agent": "w4",
+    "cause": "cross_agent",
+    "intent": "refund",
+    "step": 14,
+    "t": 19,
+    "target": "C05"
+   },
+   {
+    "agent": "w6",
+    "cause": "cross_agent",
+    "intent": "record:status",
+    "step": 12,
+    "t": 19,
+    "target": "C09"
+   },
+   {
+    "agent": "w6",
+    "cause": "cross_agent",
+    "intent": "reply",
+    "step": 11,
+    "t": 18,
+    "target": "C09"
+   }
+  ],
+  "end_reason": "call_cap",
+  "episode_id": "D-P1-A-s7",
+  "false_dones": [],
+  "seed": 7,
+  "shape": "D"
+ },
+ "view": "report"
+}

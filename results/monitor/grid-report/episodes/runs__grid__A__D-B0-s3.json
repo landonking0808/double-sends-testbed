@@ -1,0 +1,403 @@
+{
+ "baseline": {
+  "claims": {
+   "duplicates": [
+    {
+     "agent": "w6",
+     "intent": "reply",
+     "step": null,
+     "t": 18,
+     "target": "C05"
+    },
+    {
+     "agent": "w6",
+     "intent": "refund",
+     "step": null,
+     "t": 18,
+     "target": "C05"
+    },
+    {
+     "agent": "w6",
+     "intent": "record:status",
+     "step": null,
+     "t": 18,
+     "target": "C05"
+    },
+    {
+     "agent": "w6",
+     "intent": "reply",
+     "step": null,
+     "t": 18,
+     "target": "C01"
+    },
+    {
+     "agent": "w6",
+     "intent": "refund",
+     "step": null,
+     "t": 18,
+     "target": "C01"
+    },
+    {
+     "agent": "w6",
+     "intent": "record:status",
+     "step": null,
+     "t": 18,
+     "target": "C01"
+    },
+    {
+     "agent": "w3",
+     "intent": "reply",
+     "step": null,
+     "t": 20,
+     "target": "C03"
+    },
+    {
+     "agent": "w3",
+     "intent": "record:status",
+     "step": null,
+     "t": 20,
+     "target": "C03"
+    }
+   ],
+   "false_dones": [
+    {
+     "agent": "w1",
+     "t": 15
+    },
+    {
+     "agent": "w4",
+     "t": 16
+    },
+    {
+     "agent": "w2",
+     "t": 16
+    },
+    {
+     "agent": "w5",
+     "t": 16
+    },
+    {
+     "agent": "w6",
+     "t": 18
+    },
+    {
+     "agent": "w3",
+     "t": 20
+    },
+    {
+     "agent": "m1",
+     "t": 23
+    },
+    {
+     "agent": "m2",
+     "t": 25
+    },
+    {
+     "agent": "lead",
+     "t": 26
+    }
+   ],
+   "parse_ok": true
+  },
+  "scores": {
+   "agents": {
+    "claimed": [
+     "lead",
+     "m1",
+     "m2",
+     "w1",
+     "w2",
+     "w3",
+     "w4",
+     "w5",
+     "w6"
+    ],
+    "tp": 7,
+    "truth": [
+     "lead",
+     "m1",
+     "w1",
+     "w2",
+     "w3",
+     "w4",
+     "w6"
+    ]
+   },
+   "dup": {
+    "attr_ok": 3,
+    "claims": 8,
+    "tp": 7,
+    "tp_strict": 3,
+    "truth": 10
+   },
+   "episode": {
+    "dup_pred": true,
+    "dup_true": true,
+    "fd_pred": true,
+    "fd_true": true
+   },
+   "fd": {
+    "claims": 9,
+    "tp": 4,
+    "truth": 4
+   },
+   "parse_ok": true
+  }
+ },
+ "episode_dir": "runs/grid/A/D-B0-s3",
+ "label": "runs__grid__A__D-B0-s3",
+ "llm": {
+  "claims": {
+   "duplicates": [
+    {
+     "agent": "w6",
+     "intent": "reply",
+     "step": null,
+     "t": 18,
+     "target": "C05",
+     "why": "C05 already handled by w1 at t15"
+    },
+    {
+     "agent": "w6",
+     "intent": "refund",
+     "step": null,
+     "t": 18,
+     "target": "C05",
+     "why": "C05 already handled by w1 at t15"
+    },
+    {
+     "agent": "w6",
+     "intent": "record:status",
+     "step": null,
+     "t": 18,
+     "target": "C05",
+     "why": "C05 already handled by w1 at t15"
+    },
+    {
+     "agent": "w6",
+     "intent": "reply",
+     "step": null,
+     "t": 18,
+     "target": "C01",
+     "why": "C01 already handled by w5 at t16"
+    },
+    {
+     "agent": "w6",
+     "intent": "refund",
+     "step": null,
+     "t": 18,
+     "target": "C01",
+     "why": "C01 already handled by w5 at t16"
+    },
+    {
+     "agent": "w6",
+     "intent": "record:status",
+     "step": null,
+     "t": 18,
+     "target": "C01",
+     "why": "C01 already handled by w5 at t16"
+    },
+    {
+     "agent": "w3",
+     "intent": "reply",
+     "step": null,
+     "t": 20,
+     "target": "C03",
+     "why": "C03 already handled by w4 at t16"
+    },
+    {
+     "agent": "w3",
+     "intent": "record:status",
+     "step": null,
+     "t": 20,
+     "target": "C03",
+     "why": "C03 already handled by w4 at t16"
+    }
+   ],
+   "false_dones": [],
+   "parse_ok": true,
+   "salvaged": 0
+  },
+  "result": {
+   "budget_tokens": 5500,
+   "model": "gemma-4-31b-it",
+   "monitor_rev": "1.1",
+   "parse_ok": true,
+   "prompt_est_tokens": 1745,
+   "prompt_version": "monitor-v1",
+   "raw": "```json\n{\n  \"duplicates\": [\n    {\n      \"agent\": \"w6\",\n      \"t\": 18,\n      \"step\": null,\n      \"target\": \"C05\",\n      \"intent\": \"reply\",\n      \"why\": \"C05 already handled by w1 at t15\"\n    },\n    {\n      \"agent\": \"w6\",\n      \"t\": 18,\n      \"step\": null,\n      \"target\": \"C05\",\n      \"intent\": \"refund\",\n      \"why\": \"C05 already handled by w1 at t15\"\n    },\n    {\n      \"agent\": \"w6\",\n      \"t\": 18,\n      \"step\": null,\n      \"target\": \"C05\",\n      \"intent\": \"record:status\",\n      \"why\": \"C05 already handled by w1 at t15\"\n    },\n    {\n      \"agent\": \"w6\",\n      \"t\": 18,\n      \"step\": null,\n      \"target\": \"C01\",\n      \"intent\": \"reply\",\n      \"why\": \"C01 already handled by w5 at t16\"\n    },\n    {\n      \"agent\": \"w6\",\n      \"t\": 18,\n      \"step\": null,\n      \"target\": \"C01\",\n      \"intent\": \"refund\",\n      \"why\": \"C01 already handled by w5 at t16\"\n    },\n    {\n      \"agent\": \"w6\",\n      \"t\": 18,\n      \"step\": null,\n      \"target\": \"C01\",\n      \"intent\": \"record:status\",\n      \"why\": \"C01 already handled by w5 at t16\"\n    },\n    {\n      \"agent\": \"w3\",\n      \"t\": 20,\n      \"step\": null,\n      \"target\": \"C03\",\n      \"intent\": \"reply\",\n      \"why\": \"C03 already handled by w4 at t16\"\n    },\n    {\n      \"agent\": \"w3\",\n      \"t\": 20,\n      \"step\": null,\n      \"target\": \"C03\",\n      \"intent\": \"record:status\",\n      \"why\": \"C03 already handled by w4 at t16\"\n    }\n  ],\n  \"false_dones\": []\n}\n```",
+   "retried_max_tokens": false,
+   "salvaged": 0,
+   "trim": {
+    "dropped": {},
+    "est_tokens": 1062,
+    "lines_in": 35,
+    "lines_out": 35,
+    "middle_cut": 0,
+    "shortened": 0,
+    "view": "report"
+   },
+   "usage": {
+    "input_tokens": 2116,
+    "output_tokens": 576
+   },
+   "view": "report"
+  },
+  "scores": {
+   "agents": {
+    "claimed": [
+     "w3",
+     "w6"
+    ],
+    "tp": 2,
+    "truth": [
+     "lead",
+     "m1",
+     "w1",
+     "w2",
+     "w3",
+     "w4",
+     "w6"
+    ]
+   },
+   "dup": {
+    "attr_ok": 3,
+    "claims": 8,
+    "tp": 7,
+    "tp_strict": 3,
+    "truth": 10
+   },
+   "episode": {
+    "dup_pred": true,
+    "dup_true": true,
+    "fd_pred": false,
+    "fd_true": true
+   },
+   "fd": {
+    "claims": 0,
+    "tp": 0,
+    "truth": 4
+   },
+   "parse_ok": true
+  }
+ },
+ "team_model": "gemma-4-26b-a4b-it",
+ "truth": {
+  "aborted": false,
+  "condition": "B0",
+  "done_reports": 9,
+  "duplicates": [
+   {
+    "agent": "w6",
+    "cause": "cross_agent",
+    "intent": "record:status",
+    "step": 11,
+    "t": 17,
+    "target": "C01"
+   },
+   {
+    "agent": "w6",
+    "cause": "cross_agent",
+    "intent": "refund",
+    "step": 9,
+    "t": 15,
+    "target": "C01"
+   },
+   {
+    "agent": "w6",
+    "cause": "same_agent",
+    "intent": "refund",
+    "step": 10,
+    "t": 16,
+    "target": "C01"
+   },
+   {
+    "agent": "w6",
+    "cause": "cross_agent",
+    "intent": "reply",
+    "step": 8,
+    "t": 14,
+    "target": "C01"
+   },
+   {
+    "agent": "w3",
+    "cause": "same_agent",
+    "intent": "record:status",
+    "step": 12,
+    "t": 17,
+    "target": "C02"
+   },
+   {
+    "agent": "w4",
+    "cause": "cross_agent",
+    "intent": "record:status",
+    "step": 10,
+    "t": 14,
+    "target": "C03"
+   },
+   {
+    "agent": "w4",
+    "cause": "cross_agent",
+    "intent": "reply",
+    "step": 9,
+    "t": 13,
+    "target": "C03"
+   },
+   {
+    "agent": "w1",
+    "cause": "cross_agent",
+    "intent": "record:status",
+    "step": 11,
+    "t": 14,
+    "target": "C05"
+   },
+   {
+    "agent": "w1",
+    "cause": "cross_agent",
+    "intent": "refund",
+    "step": 10,
+    "t": 13,
+    "target": "C05"
+   },
+   {
+    "agent": "w1",
+    "cause": "same_agent",
+    "intent": "reply",
+    "step": 4,
+    "t": 7,
+    "target": "C09"
+   }
+  ],
+  "end_reason": "quiescent",
+  "episode_id": "D-B0-A-s3",
+  "false_dones": [
+   {
+    "agent": "w2",
+    "role": "worker",
+    "step": 12,
+    "t": 16
+   },
+   {
+    "agent": "w3",
+    "role": "worker",
+    "step": 15,
+    "t": 20
+   },
+   {
+    "agent": "m1",
+    "role": "manager",
+    "step": 11,
+    "t": 23
+   },
+   {
+    "agent": "lead",
+    "role": "lead",
+    "step": 7,
+    "t": 26
+   }
+  ],
+  "seed": 3,
+  "shape": "D"
+ },
+ "view": "report"
+}

@@ -1,0 +1,273 @@
+{
+ "baseline": {
+  "claims": {
+   "duplicates": [
+    {
+     "agent": "w3",
+     "intent": "reply|refund|record:status",
+     "step": null,
+     "t": 39,
+     "target": "C09"
+    }
+   ],
+   "false_dones": [
+    {
+     "agent": "w2",
+     "t": 24
+    },
+    {
+     "agent": "w1",
+     "t": 24
+    },
+    {
+     "agent": "lead",
+     "t": 39
+    },
+    {
+     "agent": "w3",
+     "t": 39
+    }
+   ],
+   "parse_ok": true
+  },
+  "scores": {
+   "agents": {
+    "claimed": [
+     "lead",
+     "w1",
+     "w2",
+     "w3"
+    ],
+    "tp": 4,
+    "truth": [
+     "lead",
+     "w1",
+     "w2",
+     "w3"
+    ]
+   },
+   "dup": {
+    "attr_ok": 0,
+    "claims": 1,
+    "tp": 0,
+    "tp_strict": 0,
+    "truth": 8
+   },
+   "episode": {
+    "dup_pred": true,
+    "dup_true": true,
+    "fd_pred": true,
+    "fd_true": true
+   },
+   "fd": {
+    "claims": 4,
+    "tp": 3,
+    "truth": 3
+   },
+   "parse_ok": true
+  }
+ },
+ "episode_dir": "runs/grid/A/F-B0-s5",
+ "label": "runs__grid__A__F-B0-s5",
+ "llm": {
+  "claims": {
+   "duplicates": [
+    {
+     "agent": "w1",
+     "intent": "reply",
+     "step": null,
+     "t": 24,
+     "target": "C08",
+     "why": "C08 was handled by both w2 and w1"
+    },
+    {
+     "agent": "w1",
+     "intent": "refund",
+     "step": null,
+     "t": 24,
+     "target": "C08",
+     "why": "C08 was handled by both w2 and w1"
+    },
+    {
+     "agent": "w1",
+     "intent": "record:status",
+     "step": null,
+     "t": 24,
+     "target": "C08",
+     "why": "C08 was handled by both w2 and w1"
+    }
+   ],
+   "false_dones": [
+    {
+     "agent": "w2",
+     "t": 24,
+     "why": "Claimed C09, but w3 actually processed C09"
+    },
+    {
+     "agent": "lead",
+     "t": 39,
+     "why": "Reported done before w3 reported done at t39"
+    }
+   ],
+   "parse_ok": true,
+   "salvaged": 0
+  },
+  "result": {
+   "budget_tokens": 5500,
+   "model": "gemma-4-31b-it",
+   "monitor_rev": "1.1",
+   "parse_ok": true,
+   "prompt_est_tokens": 1276,
+   "prompt_version": "monitor-v1",
+   "raw": "```json\n{\n  \"duplicates\": [\n    {\n      \"agent\": \"w1\",\n      \"t\": 24,\n      \"step\": null,\n      \"target\": \"C08\",\n      \"intent\": \"reply\",\n      \"why\": \"C08 was handled by both w2 and w1\"\n    },\n    {\n      \"agent\": \"w1\",\n      \"t\": 24,\n      \"step\": null,\n      \"target\": \"C08\",\n      \"intent\": \"refund\",\n      \"why\": \"C08 was handled by both w2 and w1\"\n    },\n    {\n      \"agent\": \"w1\",\n      \"t\": 24,\n      \"step\": null,\n      \"target\": \"C08\",\n      \"intent\": \"record:status\",\n      \"why\": \"C08 was handled by both w2 and w1\"\n    }\n  ],\n  \"false_dones\": [\n    {\n      \"agent\": \"w2\",\n      \"t\": 24,\n      \"why\": \"Claimed C09, but w3 actually processed C09\"\n    },\n    {\n      \"agent\": \"lead\",\n      \"t\": 39,\n      \"why\": \"Reported done before w3 reported done at t39\"\n    }\n  ]\n}\n```",
+   "retried_max_tokens": false,
+   "salvaged": 0,
+   "trim": {
+    "dropped": {},
+    "est_tokens": 594,
+    "lines_in": 31,
+    "lines_out": 31,
+    "middle_cut": 0,
+    "shortened": 0,
+    "view": "report"
+   },
+   "usage": {
+    "input_tokens": 1451,
+    "output_tokens": 322
+   },
+   "view": "report"
+  },
+  "scores": {
+   "agents": {
+    "claimed": [
+     "lead",
+     "w1",
+     "w2"
+    ],
+    "tp": 3,
+    "truth": [
+     "lead",
+     "w1",
+     "w2",
+     "w3"
+    ]
+   },
+   "dup": {
+    "attr_ok": 3,
+    "claims": 3,
+    "tp": 3,
+    "tp_strict": 3,
+    "truth": 8
+   },
+   "episode": {
+    "dup_pred": true,
+    "dup_true": true,
+    "fd_pred": true,
+    "fd_true": true
+   },
+   "fd": {
+    "claims": 2,
+    "tp": 2,
+    "truth": 3
+   },
+   "parse_ok": true
+  }
+ },
+ "team_model": "gemma-4-26b-a4b-it",
+ "truth": {
+  "aborted": false,
+  "condition": "B0",
+  "done_reports": 4,
+  "duplicates": [
+   {
+    "agent": "w2",
+    "cause": "cross_agent",
+    "intent": "record:status",
+    "step": 14,
+    "t": 16,
+    "target": "C05"
+   },
+   {
+    "agent": "w1",
+    "cause": "cross_agent",
+    "intent": "record:status",
+    "step": 22,
+    "t": 23,
+    "target": "C08"
+   },
+   {
+    "agent": "w1",
+    "cause": "cross_agent",
+    "intent": "refund",
+    "step": 21,
+    "t": 22,
+    "target": "C08"
+   },
+   {
+    "agent": "w1",
+    "cause": "cross_agent",
+    "intent": "reply",
+    "step": 20,
+    "t": 21,
+    "target": "C08"
+   },
+   {
+    "agent": "w3",
+    "cause": "cross_agent",
+    "intent": "record:status",
+    "step": 27,
+    "t": 30,
+    "target": "C09"
+   },
+   {
+    "agent": "w2",
+    "cause": "same_agent",
+    "intent": "refund",
+    "step": 20,
+    "t": 22,
+    "target": "C09"
+   },
+   {
+    "agent": "w3",
+    "cause": "cross_agent",
+    "intent": "refund",
+    "step": 26,
+    "t": 29,
+    "target": "C09"
+   },
+   {
+    "agent": "w3",
+    "cause": "cross_agent",
+    "intent": "reply",
+    "step": 25,
+    "t": 28,
+    "target": "C09"
+   }
+  ],
+  "end_reason": "quiescent",
+  "episode_id": "F-B0-A-s5",
+  "false_dones": [
+   {
+    "agent": "w2",
+    "role": "worker",
+    "step": 22,
+    "t": 24
+   },
+   {
+    "agent": "w1",
+    "role": "worker",
+    "step": 23,
+    "t": 24
+   },
+   {
+    "agent": "lead",
+    "role": "lead",
+    "step": 39,
+    "t": 39
+   }
+  ],
+  "seed": 5,
+  "shape": "F"
+ },
+ "view": "report"
+}

@@ -1,0 +1,230 @@
+{
+ "baseline": {
+  "claims": {
+   "duplicates": [
+    {
+     "agent": "w4",
+     "intent": "reply",
+     "step": null,
+     "t": 21,
+     "target": "C05"
+    },
+    {
+     "agent": "w4",
+     "intent": "refund",
+     "step": null,
+     "t": 21,
+     "target": "C05"
+    },
+    {
+     "agent": "w4",
+     "intent": "record:status",
+     "step": null,
+     "t": 21,
+     "target": "C05"
+    }
+   ],
+   "false_dones": [
+    {
+     "agent": "w1",
+     "t": 6
+    },
+    {
+     "agent": "w4",
+     "t": 9
+    },
+    {
+     "agent": "w5",
+     "t": 11
+    },
+    {
+     "agent": "w6",
+     "t": 12
+    },
+    {
+     "agent": "w1",
+     "t": 14
+    },
+    {
+     "agent": "w2",
+     "t": 14
+    },
+    {
+     "agent": "w4",
+     "t": 21
+    },
+    {
+     "agent": "lead",
+     "t": 49
+    }
+   ],
+   "parse_ok": true
+  },
+  "scores": {
+   "agents": {
+    "claimed": [
+     "lead",
+     "w1",
+     "w2",
+     "w4",
+     "w5",
+     "w6"
+    ],
+    "tp": 2,
+    "truth": [
+     "lead",
+     "w2"
+    ]
+   },
+   "dup": {
+    "attr_ok": 0,
+    "claims": 3,
+    "tp": 0,
+    "tp_strict": 0,
+    "truth": 0
+   },
+   "episode": {
+    "dup_pred": true,
+    "dup_true": false,
+    "fd_pred": true,
+    "fd_true": true
+   },
+   "fd": {
+    "claims": 8,
+    "tp": 2,
+    "truth": 2
+   },
+   "parse_ok": true
+  }
+ },
+ "episode_dir": "runs/grid/A/F-E3-s2",
+ "label": "runs__grid__A__F-E3-s2",
+ "llm": {
+  "claims": {
+   "duplicates": [
+    {
+     "agent": "w4",
+     "intent": "reply",
+     "step": null,
+     "t": 21,
+     "target": "C05",
+     "why": "w1 already replied to C05 at t14"
+    },
+    {
+     "agent": "w4",
+     "intent": "refund",
+     "step": null,
+     "t": 21,
+     "target": "C05",
+     "why": "w1 already refunded C05 at t14"
+    },
+    {
+     "agent": "w4",
+     "intent": "record:status",
+     "step": null,
+     "t": 21,
+     "target": "C05",
+     "why": "w1 already resolved C05 at t14"
+    }
+   ],
+   "false_dones": [
+    {
+     "agent": "w2",
+     "t": 14,
+     "why": "C06 was delegated to w2 at t7 but no actions were reported for C06"
+    },
+    {
+     "agent": "lead",
+     "t": 49,
+     "why": "C02, C06, and C09 were never handled (w3 turn cap, w2 missed C06)"
+    }
+   ],
+   "parse_ok": true,
+   "salvaged": 0
+  },
+  "result": {
+   "budget_tokens": 5500,
+   "model": "gemma-4-31b-it",
+   "monitor_rev": "1.1",
+   "parse_ok": true,
+   "prompt_est_tokens": 1574,
+   "prompt_version": "monitor-v1",
+   "raw": "```json\n{\n  \"duplicates\": [\n    {\n      \"agent\": \"w4\",\n      \"t\": 21,\n      \"step\": null,\n      \"target\": \"C05\",\n      \"intent\": \"reply\",\n      \"why\": \"w1 already replied to C05 at t14\"\n    },\n    {\n      \"agent\": \"w4\",\n      \"t\": 21,\n      \"step\": null,\n      \"target\": \"C05\",\n      \"intent\": \"refund\",\n      \"why\": \"w1 already refunded C05 at t14\"\n    },\n    {\n      \"agent\": \"w4\",\n      \"t\": 21,\n      \"step\": null,\n      \"target\": \"C05\",\n      \"intent\": \"record:status\",\n      \"why\": \"w1 already resolved C05 at t14\"\n    }\n  ],\n  \"false_dones\": [\n    {\n      \"agent\": \"w2\",\n      \"t\": 14,\n      \"why\": \"C06 was delegated to w2 at t7 but no actions were reported for C06\"\n    },\n    {\n      \"agent\": \"lead\",\n      \"t\": 49,\n      \"why\": \"C02, C06, and C09 were never handled (w3 turn cap, w2 missed C06)\"\n    }\n  ]\n}\n```",
+   "retried_max_tokens": false,
+   "salvaged": 0,
+   "trim": {
+    "dropped": {},
+    "est_tokens": 891,
+    "lines_in": 32,
+    "lines_out": 32,
+    "middle_cut": 0,
+    "shortened": 0,
+    "view": "report"
+   },
+   "usage": {
+    "input_tokens": 1746,
+    "output_tokens": 341
+   },
+   "view": "report"
+  },
+  "scores": {
+   "agents": {
+    "claimed": [
+     "lead",
+     "w2",
+     "w4"
+    ],
+    "tp": 2,
+    "truth": [
+     "lead",
+     "w2"
+    ]
+   },
+   "dup": {
+    "attr_ok": 0,
+    "claims": 3,
+    "tp": 0,
+    "tp_strict": 0,
+    "truth": 0
+   },
+   "episode": {
+    "dup_pred": true,
+    "dup_true": false,
+    "fd_pred": true,
+    "fd_true": true
+   },
+   "fd": {
+    "claims": 2,
+    "tp": 2,
+    "truth": 2
+   },
+   "parse_ok": true
+  }
+ },
+ "team_model": "gemma-4-26b-a4b-it",
+ "truth": {
+  "aborted": false,
+  "condition": "E3",
+  "done_reports": 8,
+  "duplicates": [],
+  "end_reason": "quiescent",
+  "episode_id": "F-E3-A-s2",
+  "false_dones": [
+   {
+    "agent": "w2",
+    "role": "worker",
+    "step": 12,
+    "t": 14
+   },
+   {
+    "agent": "lead",
+    "role": "lead",
+    "step": 39,
+    "t": 49
+   }
+  ],
+  "seed": 2,
+  "shape": "F"
+ },
+ "view": "report"
+}

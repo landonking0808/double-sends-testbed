@@ -1,0 +1,323 @@
+{
+ "baseline": {
+  "claims": {
+   "duplicates": [
+    {
+     "agent": "w2",
+     "intent": "refund",
+     "step": null,
+     "t": 13,
+     "target": "C03"
+    }
+   ],
+   "false_dones": [
+    {
+     "agent": "m2",
+     "t": 9
+    },
+    {
+     "agent": "lead",
+     "t": 9
+    },
+    {
+     "agent": "m1",
+     "t": 12
+    },
+    {
+     "agent": "w1",
+     "t": 12
+    },
+    {
+     "agent": "w2",
+     "t": 13
+    },
+    {
+     "agent": "w5",
+     "t": 14
+    },
+    {
+     "agent": "w4",
+     "t": 15
+    },
+    {
+     "agent": "w3",
+     "t": 16
+    }
+   ],
+   "parse_ok": true
+  },
+  "scores": {
+   "agents": {
+    "claimed": [
+     "lead",
+     "m1",
+     "m2",
+     "w1",
+     "w2",
+     "w3",
+     "w4",
+     "w5"
+    ],
+    "tp": 8,
+    "truth": [
+     "lead",
+     "m1",
+     "m2",
+     "w1",
+     "w2",
+     "w3",
+     "w4",
+     "w5"
+    ]
+   },
+   "dup": {
+    "attr_ok": 0,
+    "claims": 1,
+    "tp": 1,
+    "tp_strict": 0,
+    "truth": 5
+   },
+   "episode": {
+    "dup_pred": true,
+    "dup_true": true,
+    "fd_pred": true,
+    "fd_true": true
+   },
+   "fd": {
+    "claims": 8,
+    "tp": 8,
+    "truth": 8
+   },
+   "parse_ok": true
+  }
+ },
+ "episode_dir": "runs/grid/B/D-P1-s2",
+ "label": "runs__grid__B__D-P1-s2",
+ "llm": {
+  "claims": {
+   "duplicates": [
+    {
+     "agent": "w2",
+     "intent": "refund",
+     "step": null,
+     "t": 13,
+     "target": "C03",
+     "why": "w1 already claimed refund for C03 at t12"
+    },
+    {
+     "agent": "w3",
+     "intent": "refund",
+     "step": null,
+     "t": 16,
+     "target": "C03",
+     "why": "w1 and w2 already claimed refund for C03"
+    }
+   ],
+   "false_dones": [
+    {
+     "agent": "m2",
+     "t": 9,
+     "why": "Reported done before w4 or w5 completed C07"
+    },
+    {
+     "agent": "lead",
+     "t": 9,
+     "why": "Reported done while C03 (m1) and C07 (m2) were still in progress"
+    },
+    {
+     "agent": "m1",
+     "t": 12,
+     "why": "Reported done before w2 and w3 completed their assignments for C03"
+    },
+    {
+     "agent": "w1",
+     "t": 12,
+     "why": "Claimed refund but missing reply and record:status for C03"
+    },
+    {
+     "agent": "w5",
+     "t": 14,
+     "why": "Reported done without claiming any actions for C07"
+    },
+    {
+     "agent": "w3",
+     "t": 16,
+     "why": "Missing reply for C03"
+    }
+   ],
+   "parse_ok": true,
+   "salvaged": 0
+  },
+  "result": {
+   "budget_tokens": 5500,
+   "model": "gemma-4-31b-it",
+   "monitor_rev": "1.1",
+   "parse_ok": true,
+   "prompt_est_tokens": 1553,
+   "prompt_version": "monitor-v1",
+   "raw": "```json\n{\n  \"duplicates\": [\n    {\n      \"agent\": \"w2\",\n      \"t\": 13,\n      \"step\": null,\n      \"target\": \"C03\",\n      \"intent\": \"refund\",\n      \"why\": \"w1 already claimed refund for C03 at t12\"\n    },\n    {\n      \"agent\": \"w3\",\n      \"t\": 16,\n      \"step\": null,\n      \"target\": \"C03\",\n      \"intent\": \"refund\",\n      \"why\": \"w1 and w2 already claimed refund for C03\"\n    }\n  ],\n  \"false_dones\": [\n    {\n      \"agent\": \"m2\",\n      \"t\": 9,\n      \"why\": \"Reported done before w4 or w5 completed C07\"\n    },\n    {\n      \"agent\": \"lead\",\n      \"t\": 9,\n      \"why\": \"Reported done while C03 (m1) and C07 (m2) were still in progress\"\n    },\n    {\n      \"agent\": \"m1\",\n      \"t\": 12,\n      \"why\": \"Reported done before w2 and w3 completed their assignments for C03\"\n    },\n    {\n      \"agent\": \"w1\",\n      \"t\": 12,\n      \"why\": \"Claimed refund but missing reply and record:status for C03\"\n    },\n    {\n      \"agent\": \"w5\",\n      \"t\": 14,\n      \"why\": \"Reported done without claiming any actions for C07\"\n    },\n    {\n      \"agent\": \"w3\",\n      \"t\": 16,\n      \"why\": \"Missing reply for C03\"\n    }\n  ]\n}\n```",
+   "retried_max_tokens": false,
+   "salvaged": 0,
+   "trim": {
+    "dropped": {},
+    "est_tokens": 870,
+    "lines_in": 29,
+    "lines_out": 29,
+    "middle_cut": 0,
+    "shortened": 0,
+    "view": "report"
+   },
+   "usage": {
+    "input_tokens": 1688,
+    "output_tokens": 432
+   },
+   "view": "report"
+  },
+  "scores": {
+   "agents": {
+    "claimed": [
+     "lead",
+     "m1",
+     "m2",
+     "w1",
+     "w2",
+     "w3",
+     "w5"
+    ],
+    "tp": 7,
+    "truth": [
+     "lead",
+     "m1",
+     "m2",
+     "w1",
+     "w2",
+     "w3",
+     "w4",
+     "w5"
+    ]
+   },
+   "dup": {
+    "attr_ok": 1,
+    "claims": 2,
+    "tp": 1,
+    "tp_strict": 1,
+    "truth": 5
+   },
+   "episode": {
+    "dup_pred": true,
+    "dup_true": true,
+    "fd_pred": true,
+    "fd_true": true
+   },
+   "fd": {
+    "claims": 6,
+    "tp": 6,
+    "truth": 8
+   },
+   "parse_ok": true
+  }
+ },
+ "team_model": "@cf/ibm-granite/granite-4.0-h-micro",
+ "truth": {
+  "aborted": false,
+  "condition": "P1",
+  "done_reports": 8,
+  "duplicates": [
+   {
+    "agent": "w2",
+    "cause": "cross_agent",
+    "intent": "record:status",
+    "step": 5,
+    "t": 12,
+    "target": "C03"
+   },
+   {
+    "agent": "w3",
+    "cause": "cross_agent",
+    "intent": "record:status",
+    "step": 4,
+    "t": 15,
+    "target": "C03"
+   },
+   {
+    "agent": "w3",
+    "cause": "cross_agent",
+    "intent": "refund",
+    "step": 3,
+    "t": 14,
+    "target": "C03"
+   },
+   {
+    "agent": "w3",
+    "cause": "cross_agent",
+    "intent": "reply",
+    "step": 2,
+    "t": 13,
+    "target": "C03"
+   },
+   {
+    "agent": "w4",
+    "cause": "cross_agent",
+    "intent": "record:status",
+    "step": 5,
+    "t": 13,
+    "target": "C07"
+   }
+  ],
+  "end_reason": "quiescent",
+  "episode_id": "D-P1-B-s2",
+  "false_dones": [
+   {
+    "agent": "m2",
+    "role": "manager",
+    "step": 4,
+    "t": 9
+   },
+   {
+    "agent": "lead",
+    "role": "lead",
+    "step": 9,
+    "t": 9
+   },
+   {
+    "agent": "m1",
+    "role": "manager",
+    "step": 9,
+    "t": 12
+   },
+   {
+    "agent": "w1",
+    "role": "worker",
+    "step": 6,
+    "t": 12
+   },
+   {
+    "agent": "w2",
+    "role": "worker",
+    "step": 6,
+    "t": 13
+   },
+   {
+    "agent": "w5",
+    "role": "worker",
+    "step": 5,
+    "t": 14
+   },
+   {
+    "agent": "w4",
+    "role": "worker",
+    "step": 7,
+    "t": 15
+   },
+   {
+    "agent": "w3",
+    "role": "worker",
+    "step": 5,
+    "t": 16
+   }
+  ],
+  "seed": 2,
+  "shape": "D"
+ },
+ "view": "report"
+}

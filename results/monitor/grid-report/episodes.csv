@@ -1,0 +1,321 @@
+label,episode_id,team_model,condition,shape,seed,monitor,view,dup_claims,dup_truth,dup_tp,dup_tp_strict,dup_attr_ok,fd_claims,fd_truth,fd_tp,agents_claimed,agents_truth,agents_tp,parse_ok,input_tokens,output_tokens,prompt_est_tokens,trimmed
+runs__grid__A__D-B0-s1,D-B0-A-s1,gemma-4-26b-a4b-it,B0,D,1,llm,report,14,19,13,13,10,1,3,1,lead w2 w3 w5,lead m1 w1 w2 w3 w4 w5,4,True,4294,2070,1697,False
+runs__grid__A__D-B0-s1,D-B0-A-s1,gemma-4-26b-a4b-it,B0,D,1,baseline,report,11,19,10,10,6,8,3,3,lead m1 m2 w1 w2 w3 w4 w5,lead m1 w1 w2 w3 w4 w5,7,True,,,,False
+runs__grid__A__D-B0-s2,D-B0-A-s2,gemma-4-26b-a4b-it,B0,D,2,llm,report,0,3,0,0,0,4,0,0,m1 m2 w1 w5,w2 w3 w6,0,True,1766,223,1541,False
+runs__grid__A__D-B0-s2,D-B0-A-s2,gemma-4-26b-a4b-it,B0,D,2,baseline,report,0,3,0,0,0,8,0,0,m1 m2 w1 w2 w3 w4 w5 w6,w2 w3 w6,3,True,,,,False
+runs__grid__A__D-B0-s3,D-B0-A-s3,gemma-4-26b-a4b-it,B0,D,3,llm,report,8,10,7,3,3,0,4,0,w3 w6,lead m1 w1 w2 w3 w4 w6,2,True,2116,576,1745,False
+runs__grid__A__D-B0-s3,D-B0-A-s3,gemma-4-26b-a4b-it,B0,D,3,baseline,report,8,10,7,3,3,9,4,4,lead m1 m2 w1 w2 w3 w4 w5 w6,lead m1 w1 w2 w3 w4 w6,7,True,,,,False
+runs__grid__A__D-B0-s4,D-B0-A-s4,gemma-4-26b-a4b-it,B0,D,4,llm,report,10,29,10,10,5,2,7,2,m1 m2 w3 w4,lead m1 m2 w1 w2 w3 w4,4,True,2015,882,1693,False
+runs__grid__A__D-B0-s4,D-B0-A-s4,gemma-4-26b-a4b-it,B0,D,4,baseline,report,14,29,13,11,9,8,7,7,lead m1 m2 w1 w2 w3 w4 w5,lead m1 m2 w1 w2 w3 w4,7,True,,,,False
+runs__grid__A__D-B0-s5,D-B0-A-s5,gemma-4-26b-a4b-it,B0,D,5,llm,report,8,9,8,4,4,1,2,0,m2 w2 w5,w1 w2 w4 w5 w6,2,True,1946,658,1662,False
+runs__grid__A__D-B0-s5,D-B0-A-s5,gemma-4-26b-a4b-it,B0,D,5,baseline,report,8,9,8,4,4,7,2,2,m2 w1 w2 w3 w4 w5 w6,w1 w2 w4 w5 w6,5,True,,,,False
+runs__grid__A__D-B0-s6,D-B0-A-s6,gemma-4-26b-a4b-it,B0,D,6,llm,report,6,11,6,6,4,0,2,0,w4 w5,m1 w1 w3 w4 w5 w6,2,True,1993,444,1646,False
+runs__grid__A__D-B0-s6,D-B0-A-s6,gemma-4-26b-a4b-it,B0,D,6,baseline,report,3,11,3,3,1,8,2,2,m1 m2 w1 w2 w3 w4 w5 w6,m1 w1 w3 w4 w5 w6,6,True,,,,False
+runs__grid__A__D-B0-s7,D-B0-A-s7,gemma-4-26b-a4b-it,B0,D,7,llm,report,3,8,3,3,3,1,2,1,m2 w4,m2 w3 w4 w5,2,True,1911,304,1603,False
+runs__grid__A__D-B0-s7,D-B0-A-s7,gemma-4-26b-a4b-it,B0,D,7,baseline,report,2,8,2,2,2,7,2,2,m2 w1 w2 w3 w4 w5 w6,m2 w3 w4 w5,4,True,,,,False
+runs__grid__A__D-B0-s8,D-B0-A-s8,gemma-4-26b-a4b-it,B0,D,8,llm,report,13,17,12,9,8,0,4,0,w4 w5 w6,lead m2 w3 w4 w5 w6,3,True,2095,907,1705,False
+runs__grid__A__D-B0-s8,D-B0-A-s8,gemma-4-26b-a4b-it,B0,D,8,baseline,report,8,17,7,7,3,9,4,4,lead m1 m2 w1 w2 w3 w4 w5 w6,lead m2 w3 w4 w5 w6,6,True,,,,False
+runs__grid__A__D-E1-s1,D-E1-A-s1,gemma-4-26b-a4b-it,E1,D,1,llm,report,0,0,0,0,0,1,1,0,m2,w2,0,True,1713,1111,1440,False
+runs__grid__A__D-E1-s1,D-E1-A-s1,gemma-4-26b-a4b-it,E1,D,1,baseline,report,0,0,0,0,0,5,1,1,m2 w2 w4 w5 w6,w2,1,True,,,,False
+runs__grid__A__D-E1-s2,D-E1-A-s2,gemma-4-26b-a4b-it,E1,D,2,llm,report,0,0,0,0,0,0,5,0,,lead m1 m2 w2 w4,0,True,1845,23,1567,False
+runs__grid__A__D-E1-s2,D-E1-A-s2,gemma-4-26b-a4b-it,E1,D,2,baseline,report,0,0,0,0,0,9,5,5,lead m1 m2 w1 w2 w3 w4 w5 w6,lead m1 m2 w2 w4,5,True,,,,False
+runs__grid__A__D-E1-s3,D-E1-A-s3,gemma-4-26b-a4b-it,E1,D,3,llm,report,3,0,0,0,0,1,3,0,m2 w6,lead m1 w1,0,True,2018,335,1742,False
+runs__grid__A__D-E1-s3,D-E1-A-s3,gemma-4-26b-a4b-it,E1,D,3,baseline,report,3,0,0,0,0,9,3,3,lead m1 m2 w1 w2 w3 w4 w5 w6,lead m1 w1,3,True,,,,False
+runs__grid__A__D-E1-s4,D-E1-A-s4,gemma-4-26b-a4b-it,E1,D,4,llm,report,0,0,0,0,0,3,5,1,m1 m2 w2,m1 w1 w3 w4 w5,1,True,1642,528,1421,False
+runs__grid__A__D-E1-s4,D-E1-A-s4,gemma-4-26b-a4b-it,E1,D,4,baseline,report,0,0,0,0,0,5,5,5,m1 w1 w3 w4 w5,m1 w1 w3 w4 w5,5,True,,,,False
+runs__grid__A__D-E1-s5,D-E1-A-s5,gemma-4-26b-a4b-it,E1,D,5,llm,report,0,0,0,0,0,2,4,2,m1 w4,m1 w3 w4 w6,2,True,1737,153,1510,False
+runs__grid__A__D-E1-s5,D-E1-A-s5,gemma-4-26b-a4b-it,E1,D,5,baseline,report,0,0,0,0,0,7,4,4,m1 w1 w2 w3 w4 w5 w6,m1 w3 w4 w6,4,True,,,,False
+runs__grid__A__D-E1-s6,D-E1-A-s6,gemma-4-26b-a4b-it,E1,D,6,llm,report,6,0,0,0,0,2,2,0,m2 w4 w6,w5 w6,1,True,1849,553,1585,False
+runs__grid__A__D-E1-s6,D-E1-A-s6,gemma-4-26b-a4b-it,E1,D,6,baseline,report,6,0,0,0,0,6,2,2,m1 w1 w2 w3 w5 w6,w5 w6,2,True,,,,False
+runs__grid__A__D-E1-s7,D-E1-A-s7,gemma-4-26b-a4b-it,E1,D,7,llm,report,0,0,0,0,0,2,4,2,m1 w6,m1 w1 w5 w6,2,True,1629,124,1435,False
+runs__grid__A__D-E1-s7,D-E1-A-s7,gemma-4-26b-a4b-it,E1,D,7,baseline,report,2,0,0,0,0,5,4,4,m1 w1 w2 w5 w6,m1 w1 w5 w6,4,True,,,,False
+runs__grid__A__D-E1-s8,D-E1-A-s8,gemma-4-26b-a4b-it,E1,D,8,llm,report,3,0,0,0,0,2,2,2,lead w5,lead w5,2,True,1654,440,1379,False
+runs__grid__A__D-E1-s8,D-E1-A-s8,gemma-4-26b-a4b-it,E1,D,8,baseline,report,3,0,0,0,0,4,2,2,lead w2 w3 w5,lead w5,2,True,,,,False
+runs__grid__A__D-E2-s1,D-E2-A-s1,gemma-4-26b-a4b-it,E2,D,1,llm,report,5,16,5,5,5,1,0,0,w1 w4,w1 w3 w4 w5 w6,2,True,1818,432,1498,False
+runs__grid__A__D-E2-s1,D-E2-A-s1,gemma-4-26b-a4b-it,E2,D,1,baseline,report,5,16,5,5,5,5,0,0,w2 w3 w4 w5 w6,w1 w3 w4 w5 w6,4,True,,,,False
+runs__grid__A__D-E2-s2,D-E2-A-s2,gemma-4-26b-a4b-it,E2,D,2,llm,report,0,10,0,0,0,2,0,0,lead m2,w2 w3 w5,0,True,1836,239,1571,False
+runs__grid__A__D-E2-s2,D-E2-A-s2,gemma-4-26b-a4b-it,E2,D,2,baseline,report,0,10,0,0,0,7,0,0,lead m2 w1 w2 w3 w4 w5,w2 w3 w5,3,True,,,,False
+runs__grid__A__D-E2-s3,D-E2-A-s3,gemma-4-26b-a4b-it,E2,D,3,llm,report,3,11,3,1,1,1,0,0,m1 w4,w1 w2 w3 w4 w5,1,True,1785,1020,1563,False
+runs__grid__A__D-E2-s3,D-E2-A-s3,gemma-4-26b-a4b-it,E2,D,3,baseline,report,3,11,3,1,1,7,0,0,m1 w1 w2 w3 w4 w5 w6,w1 w2 w3 w4 w5,5,True,,,,False
+runs__grid__A__D-E2-s4,D-E2-A-s4,gemma-4-26b-a4b-it,E2,D,4,llm,report,0,11,0,0,0,1,2,1,m2,m2 w1 w2 w4 w6,1,True,1641,1020,1405,False
+runs__grid__A__D-E2-s4,D-E2-A-s4,gemma-4-26b-a4b-it,E2,D,4,baseline,report,0,11,0,0,0,5,2,2,m2 w1 w4 w5 w6,m2 w1 w2 w4 w6,4,True,,,,False
+runs__grid__A__D-E2-s5,D-E2-A-s5,gemma-4-26b-a4b-it,E2,D,5,llm,report,3,5,3,3,3,2,3,1,m1 m2 w2,m1 w1 w2 w5 w6,2,True,1755,372,1497,False
+runs__grid__A__D-E2-s5,D-E2-A-s5,gemma-4-26b-a4b-it,E2,D,5,baseline,report,3,5,3,3,3,7,3,3,m1 w1 w2 w3 w4 w5 w6,m1 w1 w2 w5 w6,5,True,,,,False
+runs__grid__A__D-E2-s6,D-E2-A-s6,gemma-4-26b-a4b-it,E2,D,6,llm,report,8,12,6,6,6,0,0,0,w4 w5,w1 w2 w4 w5,2,True,2073,590,1726,False
+runs__grid__A__D-E2-s6,D-E2-A-s6,gemma-4-26b-a4b-it,E2,D,6,baseline,report,8,12,6,6,6,9,0,0,lead m1 m2 w1 w2 w3 w4 w5 w6,w1 w2 w4 w5,4,True,,,,False
+runs__grid__A__D-E2-s7,D-E2-A-s7,gemma-4-26b-a4b-it,E2,D,7,llm,report,10,26,10,10,7,0,1,0,w3 w4,w1 w2 w3 w4,2,True,1796,714,1494,False
+runs__grid__A__D-E2-s7,D-E2-A-s7,gemma-4-26b-a4b-it,E2,D,7,baseline,report,10,26,10,10,7,4,1,1,w1 w2 w3 w4,w1 w2 w3 w4,4,True,,,,False
+runs__grid__A__D-E2-s8,D-E2-A-s8,gemma-4-26b-a4b-it,E2,D,8,llm,report,12,18,12,11,9,1,0,0,m1 w4 w6,w2 w3 w4 w6,2,True,2170,1020,1730,False
+runs__grid__A__D-E2-s8,D-E2-A-s8,gemma-4-26b-a4b-it,E2,D,8,baseline,report,15,18,15,11,9,8,0,0,m1 m2 w1 w2 w3 w4 w5 w6,w2 w3 w4 w6,4,True,,,,False
+runs__grid__A__D-E3-s1,D-E3-A-s1,gemma-4-26b-a4b-it,E3,D,1,llm,report,0,0,0,0,0,2,1,0,m1 w2,w6,0,True,4260,1260,1669,False
+runs__grid__A__D-E3-s1,D-E3-A-s1,gemma-4-26b-a4b-it,E3,D,1,baseline,report,0,0,0,0,0,5,1,1,m1 w1 w2 w3 w6,w6,1,True,,,,False
+runs__grid__A__D-E3-s2,D-E3-A-s2,gemma-4-26b-a4b-it,E3,D,2,llm,report,0,0,0,0,0,1,1,0,m2,w4,0,True,1450,1049,1266,False
+runs__grid__A__D-E3-s2,D-E3-A-s2,gemma-4-26b-a4b-it,E3,D,2,baseline,report,0,0,0,0,0,5,1,1,m1 w1 w2 w3 w4,w4,1,True,,,,False
+runs__grid__A__D-E3-s3,D-E3-A-s3,gemma-4-26b-a4b-it,E3,D,3,llm,report,0,0,0,0,0,2,0,0,m1 w6,,0,True,1887,671,1535,False
+runs__grid__A__D-E3-s3,D-E3-A-s3,gemma-4-26b-a4b-it,E3,D,3,baseline,report,0,0,0,0,0,4,0,0,w1 w2 w4 w5,,0,True,,,,False
+runs__grid__A__D-E3-s4,D-E3-A-s4,gemma-4-26b-a4b-it,E3,D,4,llm,report,0,0,0,0,0,1,4,1,m1,m1 w2 w3 w4,1,True,2053,86,1706,False
+runs__grid__A__D-E3-s4,D-E3-A-s4,gemma-4-26b-a4b-it,E3,D,4,baseline,report,0,0,0,0,0,6,4,4,m1 w1 w2 w3 w4 w5,m1 w2 w3 w4,4,True,,,,False
+runs__grid__A__D-E3-s5,D-E3-A-s5,gemma-4-26b-a4b-it,E3,D,5,llm,report,8,0,0,0,0,0,4,0,w4,m1 w1 w3 w5,0,True,2057,576,1646,False
+runs__grid__A__D-E3-s5,D-E3-A-s5,gemma-4-26b-a4b-it,E3,D,5,baseline,report,8,0,0,0,0,7,4,4,m1 w1 w2 w3 w4 w5 w6,m1 w1 w3 w5,4,True,,,,False
+runs__grid__A__D-E3-s6,D-E3-A-s6,gemma-4-26b-a4b-it,E3,D,6,llm,report,6,0,0,0,0,1,3,1,m2 w4,lead m2 w4,2,True,1956,547,1623,False
+runs__grid__A__D-E3-s6,D-E3-A-s6,gemma-4-26b-a4b-it,E3,D,6,baseline,report,6,0,0,0,0,7,3,3,lead m2 w1 w2 w3 w4 w5,lead m2 w4,3,True,,,,False
+runs__grid__A__D-E3-s7,D-E3-A-s7,gemma-4-26b-a4b-it,E3,D,7,llm,report,3,0,0,0,0,2,1,0,m1 m2 w4,w4,1,True,1840,358,1520,False
+runs__grid__A__D-E3-s7,D-E3-A-s7,gemma-4-26b-a4b-it,E3,D,7,baseline,report,3,0,0,0,0,5,1,1,m1 w1 w2 w3 w4,w4,1,True,,,,False
+runs__grid__A__D-E3-s8,D-E3-A-s8,gemma-4-26b-a4b-it,E3,D,8,llm,report,6,0,0,0,0,1,3,1,m1 w4 w6,m1 w3 w6,2,True,1871,508,1578,False
+runs__grid__A__D-E3-s8,D-E3-A-s8,gemma-4-26b-a4b-it,E3,D,8,baseline,report,6,0,0,0,0,7,3,3,m1 w1 w2 w3 w4 w5 w6,m1 w3 w6,3,True,,,,False
+runs__grid__A__D-P1-s1,D-P1-A-s1,gemma-4-26b-a4b-it,P1,D,1,llm,report,3,7,3,2,2,1,1,0,w4 w5,w2 w3 w4 w5 w6,2,True,1656,762,1398,False
+runs__grid__A__D-P1-s1,D-P1-A-s1,gemma-4-26b-a4b-it,P1,D,1,baseline,report,3,7,3,2,2,4,1,1,w1 w2 w3 w4,w2 w3 w4 w5 w6,3,True,,,,False
+runs__grid__A__D-P1-s2,D-P1-A-s2,gemma-4-26b-a4b-it,P1,D,2,llm,report,0,0,0,0,0,1,0,0,m2,,0,True,2119,127,1749,False
+runs__grid__A__D-P1-s2,D-P1-A-s2,gemma-4-26b-a4b-it,P1,D,2,baseline,report,0,0,0,0,0,7,0,0,m2 w1 w2 w3 w4 w5 w6,,0,True,,,,False
+runs__grid__A__D-P1-s3,D-P1-A-s3,gemma-4-26b-a4b-it,P1,D,3,llm,report,0,5,0,0,0,3,2,2,m1 w1 w3,w1 w3 w4 w5,2,True,1550,1042,1301,False
+runs__grid__A__D-P1-s3,D-P1-A-s3,gemma-4-26b-a4b-it,P1,D,3,baseline,report,0,5,0,0,0,3,2,2,w1 w2 w3,w1 w3 w4 w5,2,True,,,,False
+runs__grid__A__D-P1-s4,D-P1-A-s4,gemma-4-26b-a4b-it,P1,D,4,llm,report,0,0,0,0,0,3,2,1,m1 m2 w1,w1 w4,1,True,1409,183,1225,False
+runs__grid__A__D-P1-s4,D-P1-A-s4,gemma-4-26b-a4b-it,P1,D,4,baseline,report,0,0,0,0,0,2,2,2,w1 w4,w1 w4,2,True,,,,False
+runs__grid__A__D-P1-s5,D-P1-A-s5,gemma-4-26b-a4b-it,P1,D,5,llm,report,0,0,0,0,0,1,2,1,m2,m2 w4,1,True,1889,78,1571,False
+runs__grid__A__D-P1-s5,D-P1-A-s5,gemma-4-26b-a4b-it,P1,D,5,baseline,report,0,0,0,0,0,7,2,2,m1 m2 w1 w2 w4 w5 w6,m2 w4,2,True,,,,False
+runs__grid__A__D-P1-s6,D-P1-A-s6,gemma-4-26b-a4b-it,P1,D,6,llm,report,0,2,0,0,0,2,2,0,w2 w6,w1 w2 w5 w6,2,True,1695,637,1431,False
+runs__grid__A__D-P1-s6,D-P1-A-s6,gemma-4-26b-a4b-it,P1,D,6,baseline,report,0,2,0,0,0,4,2,2,w1 w3 w4 w5,w1 w2 w5 w6,2,True,,,,False
+runs__grid__A__D-P1-s7,D-P1-A-s7,gemma-4-26b-a4b-it,P1,D,7,llm,report,0,8,0,0,0,1,0,0,w3,w4 w5 w6,0,True,1615,1038,1362,False
+runs__grid__A__D-P1-s7,D-P1-A-s7,gemma-4-26b-a4b-it,P1,D,7,baseline,report,0,8,0,0,0,3,0,0,w1 w3 w4,w4 w5 w6,1,True,,,,False
+runs__grid__A__D-P1-s8,D-P1-A-s8,gemma-4-26b-a4b-it,P1,D,8,llm,report,5,7,3,3,3,1,3,1,m2 w3 w4,m2 w1 w3 w4 w6,3,True,3620,1577,1504,False
+runs__grid__A__D-P1-s8,D-P1-A-s8,gemma-4-26b-a4b-it,P1,D,8,baseline,report,5,7,3,3,3,6,3,3,m2 w1 w3 w4 w5 w6,m2 w1 w3 w4 w6,5,True,,,,False
+runs__grid__A__F-B0-s1,F-B0-A-s1,gemma-4-26b-a4b-it,B0,F,1,llm,report,0,2,0,0,0,1,3,1,w5,lead w1 w4 w5,1,True,1444,80,1309,False
+runs__grid__A__F-B0-s1,F-B0-A-s1,gemma-4-26b-a4b-it,B0,F,1,baseline,report,0,2,0,0,0,6,3,3,lead w1 w2 w3 w4 w5,lead w1 w4 w5,4,True,,,,False
+runs__grid__A__F-B0-s2,F-B0-A-s2,gemma-4-26b-a4b-it,B0,F,2,llm,report,0,1,0,0,0,1,2,1,lead,lead w2 w3,1,True,1770,85,1604,False
+runs__grid__A__F-B0-s2,F-B0-A-s2,gemma-4-26b-a4b-it,B0,F,2,baseline,report,0,1,0,0,0,8,2,2,lead w1 w2 w3 w4 w5 w6,lead w2 w3,3,True,,,,False
+runs__grid__A__F-B0-s3,F-B0-A-s3,gemma-4-26b-a4b-it,B0,F,3,llm,report,12,21,12,9,6,2,3,2,lead w1 w4,lead w1 w2 w3 w4,3,True,1623,947,1398,False
+runs__grid__A__F-B0-s3,F-B0-A-s3,gemma-4-26b-a4b-it,B0,F,3,baseline,report,12,21,12,9,6,5,3,3,lead w1 w2 w3 w4,lead w1 w2 w3 w4,5,True,,,,False
+runs__grid__A__F-B0-s4,F-B0-A-s4,gemma-4-26b-a4b-it,B0,F,4,llm,report,2,17,0,0,0,2,5,1,w3 w4 w5 w6,lead w1 w2 w3 w4 w5 w6,4,True,2178,1038,1738,False
+runs__grid__A__F-B0-s4,F-B0-A-s4,gemma-4-26b-a4b-it,B0,F,4,baseline,report,10,17,5,3,3,6,5,5,lead w1 w2 w3 w4 w5,lead w1 w2 w3 w4 w5 w6,6,True,,,,False
+runs__grid__A__F-B0-s5,F-B0-A-s5,gemma-4-26b-a4b-it,B0,F,5,llm,report,3,8,3,3,3,2,3,2,lead w1 w2,lead w1 w2 w3,3,True,1451,322,1276,False
+runs__grid__A__F-B0-s5,F-B0-A-s5,gemma-4-26b-a4b-it,B0,F,5,baseline,report,1,8,0,0,0,4,3,3,lead w1 w2 w3,lead w1 w2 w3,4,True,,,,False
+runs__grid__A__F-B0-s6,F-B0-A-s6,gemma-4-26b-a4b-it,B0,F,6,llm,report,6,10,6,6,5,0,3,0,w1,lead w1 w2 w3,1,True,1370,434,1213,False
+runs__grid__A__F-B0-s6,F-B0-A-s6,gemma-4-26b-a4b-it,B0,F,6,baseline,report,0,10,0,0,0,4,3,3,lead w1 w2 w3,lead w1 w2 w3,4,True,,,,False
+runs__grid__A__F-B0-s7,F-B0-A-s7,gemma-4-26b-a4b-it,B0,F,7,llm,report,5,10,5,5,5,0,3,0,w1 w3,w1 w2 w3,2,True,1346,370,1172,False
+runs__grid__A__F-B0-s7,F-B0-A-s7,gemma-4-26b-a4b-it,B0,F,7,baseline,report,2,10,2,2,2,3,3,3,w1 w2 w3,w1 w2 w3,3,True,,,,False
+runs__grid__A__F-B0-s8,F-B0-A-s8,gemma-4-26b-a4b-it,B0,F,8,llm,report,8,11,8,6,4,0,4,0,w1 w2 w4,lead w1 w2 w3 w4,3,True,1508,576,1324,False
+runs__grid__A__F-B0-s8,F-B0-A-s8,gemma-4-26b-a4b-it,B0,F,8,baseline,report,0,11,0,0,0,5,4,4,lead w1 w2 w3 w4,lead w1 w2 w3 w4,5,True,,,,False
+runs__grid__A__F-E1-s1,F-E1-A-s1,gemma-4-26b-a4b-it,E1,F,1,llm,report,0,0,0,0,0,2,5,2,lead w1,lead w1 w4 w5 w6,2,True,1620,176,1500,False
+runs__grid__A__F-E1-s1,F-E1-A-s1,gemma-4-26b-a4b-it,E1,F,1,baseline,report,0,0,0,0,0,8,5,5,lead w1 w2 w3 w4 w5 w6,lead w1 w4 w5 w6,5,True,,,,False
+runs__grid__A__F-E1-s2,F-E1-A-s2,gemma-4-26b-a4b-it,E1,F,2,llm,report,0,0,0,0,0,2,3,2,lead w2,lead w2 w3,2,True,1646,105,1525,False
+runs__grid__A__F-E1-s2,F-E1-A-s2,gemma-4-26b-a4b-it,E1,F,2,baseline,report,0,0,0,0,0,8,3,3,lead w1 w2 w3 w4 w5 w6,lead w2 w3,3,True,,,,False
+runs__grid__A__F-E1-s3,F-E1-A-s3,gemma-4-26b-a4b-it,E1,F,3,llm,report,0,0,0,0,0,1,3,1,w2,lead w1 w2,1,True,1353,94,1208,False
+runs__grid__A__F-E1-s3,F-E1-A-s3,gemma-4-26b-a4b-it,E1,F,3,baseline,report,2,0,0,0,0,4,3,3,lead w1 w2 w3,lead w1 w2,3,True,,,,False
+runs__grid__A__F-E1-s4,F-E1-A-s4,gemma-4-26b-a4b-it,E1,F,4,llm,report,2,0,0,0,0,0,4,0,w1,lead w1 w2 w3,1,True,1413,168,1232,False
+runs__grid__A__F-E1-s4,F-E1-A-s4,gemma-4-26b-a4b-it,E1,F,4,baseline,report,2,0,0,0,0,4,4,4,lead w1 w2 w3,lead w1 w2 w3,4,True,,,,False
+runs__grid__A__F-E1-s5,F-E1-A-s5,gemma-4-26b-a4b-it,E1,F,5,llm,report,0,0,0,0,0,0,0,0,,,0,True,1156,17,1042,False
+runs__grid__A__F-E1-s5,F-E1-A-s5,gemma-4-26b-a4b-it,E1,F,5,baseline,report,0,0,0,0,0,0,0,0,,,0,True,,,,False
+runs__grid__A__F-E1-s6,F-E1-A-s6,gemma-4-26b-a4b-it,E1,F,6,llm,report,13,0,0,0,0,1,3,1,w1 w5,w1 w2 w3,1,True,1656,1061,1382,False
+runs__grid__A__F-E1-s6,F-E1-A-s6,gemma-4-26b-a4b-it,E1,F,6,baseline,report,9,0,0,0,0,4,3,3,w1 w2 w3 w5,w1 w2 w3,3,True,,,,False
+runs__grid__A__F-E1-s7,F-E1-A-s7,gemma-4-26b-a4b-it,E1,F,7,llm,report,0,0,0,0,0,2,2,1,lead w2,lead w1,1,True,1492,165,1272,False
+runs__grid__A__F-E1-s7,F-E1-A-s7,gemma-4-26b-a4b-it,E1,F,7,baseline,report,0,0,0,0,0,3,2,2,lead w1 w3,lead w1,2,True,,,,False
+runs__grid__A__F-E1-s8,F-E1-A-s8,gemma-4-26b-a4b-it,E1,F,8,llm,report,0,0,0,0,0,2,3,2,w1 w2,w1 w2 w4,2,True,1436,1101,1230,False
+runs__grid__A__F-E1-s8,F-E1-A-s8,gemma-4-26b-a4b-it,E1,F,8,baseline,report,1,0,0,0,0,3,3,3,w1 w2 w4,w1 w2 w4,3,True,,,,False
+runs__grid__A__F-E2-s1,F-E2-A-s1,gemma-4-26b-a4b-it,E2,F,1,llm,report,0,19,0,0,0,0,1,0,,w1 w4 w5 w6,0,True,1467,23,1368,False
+runs__grid__A__F-E2-s1,F-E2-A-s1,gemma-4-26b-a4b-it,E2,F,1,baseline,report,0,19,0,0,0,6,1,1,w1 w2 w3 w4 w5 w6,w1 w4 w5 w6,4,True,,,,False
+runs__grid__A__F-E2-s2,F-E2-A-s2,gemma-4-26b-a4b-it,E2,F,2,llm,report,0,4,0,0,0,1,1,0,w3,w2 w3 w4,1,True,1816,567,1614,False
+runs__grid__A__F-E2-s2,F-E2-A-s2,gemma-4-26b-a4b-it,E2,F,2,baseline,report,0,4,0,0,0,6,1,1,w1 w2 w4 w5 w6,w2 w3 w4,2,True,,,,False
+runs__grid__A__F-E2-s3,F-E2-A-s3,gemma-4-26b-a4b-it,E2,F,3,llm,report,0,7,0,0,0,1,0,0,w2,w1 w2 w3,1,True,1314,1020,1163,False
+runs__grid__A__F-E2-s3,F-E2-A-s3,gemma-4-26b-a4b-it,E2,F,3,baseline,report,3,7,3,1,0,2,0,0,w2 w3,w1 w2 w3,2,True,,,,False
+runs__grid__A__F-E2-s4,F-E2-A-s4,gemma-4-26b-a4b-it,E2,F,4,llm,report,2,9,2,0,0,2,4,1,lead w2 w4,lead w1 w2 w3 w4,3,True,1456,289,1267,False
+runs__grid__A__F-E2-s4,F-E2-A-s4,gemma-4-26b-a4b-it,E2,F,4,baseline,report,2,9,2,0,0,4,4,4,lead w1 w3 w4,lead w1 w2 w3 w4,4,True,,,,False
+runs__grid__A__F-E2-s5,F-E2-A-s5,gemma-4-26b-a4b-it,E2,F,5,llm,report,6,8,6,4,4,3,0,0,lead w1 w2,w1 w2,2,True,1425,607,1264,False
+runs__grid__A__F-E2-s5,F-E2-A-s5,gemma-4-26b-a4b-it,E2,F,5,baseline,report,7,8,7,2,2,4,0,0,lead w1 w2 w3,w1 w2,2,True,,,,False
+runs__grid__A__F-E2-s6,F-E2-A-s6,gemma-4-26b-a4b-it,E2,F,6,llm,report,0,8,0,0,0,1,2,1,w2,w1 w2 w3,1,True,1225,1020,1080,False
+runs__grid__A__F-E2-s6,F-E2-A-s6,gemma-4-26b-a4b-it,E2,F,6,baseline,report,0,8,0,0,0,2,2,2,w2 w3,w1 w2 w3,2,True,,,,False
+runs__grid__A__F-E2-s7,F-E2-A-s7,gemma-4-26b-a4b-it,E2,F,7,llm,report,4,20,4,2,2,1,0,0,lead w3,w1 w2 w3 w4,1,True,3058,1413,1314,False
+runs__grid__A__F-E2-s7,F-E2-A-s7,gemma-4-26b-a4b-it,E2,F,7,baseline,report,4,20,4,2,2,4,0,0,lead w2 w3 w4,w1 w2 w3 w4,3,True,,,,False
+runs__grid__A__F-E2-s8,F-E2-A-s8,gemma-4-26b-a4b-it,E2,F,8,llm,report,3,19,3,0,0,1,1,0,lead w3,w1 w2 w3 w4,1,True,1383,321,1212,False
+runs__grid__A__F-E2-s8,F-E2-A-s8,gemma-4-26b-a4b-it,E2,F,8,baseline,report,3,19,3,0,0,3,1,1,w1 w2 w3,w1 w2 w3 w4,3,True,,,,False
+runs__grid__A__F-E3-s1,F-E3-A-s1,gemma-4-26b-a4b-it,E3,F,1,llm,report,0,0,0,0,0,1,2,1,w5,lead w5,1,True,1547,60,1397,False
+runs__grid__A__F-E3-s1,F-E3-A-s1,gemma-4-26b-a4b-it,E3,F,1,baseline,report,0,0,0,0,0,6,2,2,lead w1 w2 w3 w4 w5,lead w5,2,True,,,,False
+runs__grid__A__F-E3-s2,F-E3-A-s2,gemma-4-26b-a4b-it,E3,F,2,llm,report,3,0,0,0,0,2,2,2,lead w2 w4,lead w2,2,True,1746,341,1574,False
+runs__grid__A__F-E3-s2,F-E3-A-s2,gemma-4-26b-a4b-it,E3,F,2,baseline,report,3,0,0,0,0,8,2,2,lead w1 w2 w4 w5 w6,lead w2,2,True,,,,False
+runs__grid__A__F-E3-s3,F-E3-A-s3,gemma-4-26b-a4b-it,E3,F,3,llm,report,10,0,0,0,0,0,1,0,w4 w5,w1,0,True,1669,714,1373,False
+runs__grid__A__F-E3-s3,F-E3-A-s3,gemma-4-26b-a4b-it,E3,F,3,baseline,report,10,0,0,0,0,4,1,1,w1 w2 w4 w5,w1,1,True,,,,False
+runs__grid__A__F-E3-s4,F-E3-A-s4,gemma-4-26b-a4b-it,E3,F,4,llm,report,0,0,0,0,0,2,2,1,lead w1,lead w2,1,True,1324,170,1167,False
+runs__grid__A__F-E3-s4,F-E3-A-s4,gemma-4-26b-a4b-it,E3,F,4,baseline,report,0,0,0,0,0,3,2,2,lead w1 w2,lead w2,2,True,,,,False
+runs__grid__A__F-E3-s5,F-E3-A-s5,gemma-4-26b-a4b-it,E3,F,5,llm,report,0,0,0,0,0,1,1,1,w3,w3,1,True,1202,1020,1067,False
+runs__grid__A__F-E3-s5,F-E3-A-s5,gemma-4-26b-a4b-it,E3,F,5,baseline,report,0,0,0,0,0,1,1,1,w3,w3,1,True,,,,False
+runs__grid__A__F-E3-s6,F-E3-A-s6,gemma-4-26b-a4b-it,E3,F,6,llm,report,0,0,0,0,0,1,1,0,w2,w3,0,True,1181,1020,1052,False
+runs__grid__A__F-E3-s6,F-E3-A-s6,gemma-4-26b-a4b-it,E3,F,6,baseline,report,0,0,0,0,0,2,1,1,w2 w3,w3,1,True,,,,False
+runs__grid__A__F-E3-s7,F-E3-A-s7,gemma-4-26b-a4b-it,E3,F,7,llm,report,0,0,0,0,0,1,1,1,w1,w1,1,True,1288,66,1134,False
+runs__grid__A__F-E3-s7,F-E3-A-s7,gemma-4-26b-a4b-it,E3,F,7,baseline,report,0,0,0,0,0,3,1,1,w1 w2 w3,w1,1,True,,,,False
+runs__grid__A__F-E3-s8,F-E3-A-s8,gemma-4-26b-a4b-it,E3,F,8,llm,report,0,0,0,0,0,0,1,0,,w4,0,True,1154,17,1034,False
+runs__grid__A__F-E3-s8,F-E3-A-s8,gemma-4-26b-a4b-it,E3,F,8,baseline,report,0,0,0,0,0,1,1,1,w4,w4,1,True,,,,False
+runs__grid__A__F-P1-s1,F-P1-A-s1,gemma-4-26b-a4b-it,P1,F,1,llm,report,0,5,0,0,0,1,1,0,lead,w1 w2 w5 w6,0,True,1512,107,1397,False
+runs__grid__A__F-P1-s1,F-P1-A-s1,gemma-4-26b-a4b-it,P1,F,1,baseline,report,0,5,0,0,0,4,1,1,w1 w3 w4 w5,w1 w2 w5 w6,2,True,,,,False
+runs__grid__A__F-P1-s2,F-P1-A-s2,gemma-4-26b-a4b-it,P1,F,2,llm,report,1,1,0,0,0,1,0,0,lead w1,w4,0,True,1501,694,1405,False
+runs__grid__A__F-P1-s2,F-P1-A-s2,gemma-4-26b-a4b-it,P1,F,2,baseline,report,0,1,0,0,0,5,0,0,w1 w3 w4 w5 w6,w4,1,True,,,,False
+runs__grid__A__F-P1-s3,F-P1-A-s3,gemma-4-26b-a4b-it,P1,F,3,llm,report,3,5,3,0,0,0,2,0,w1,w1 w2 w3,1,True,1317,235,1159,False
+runs__grid__A__F-P1-s3,F-P1-A-s3,gemma-4-26b-a4b-it,P1,F,3,baseline,report,3,5,3,0,0,3,2,2,w1 w2 w3,w1 w2 w3,3,True,,,,False
+runs__grid__A__F-P1-s4,F-P1-A-s4,gemma-4-26b-a4b-it,P1,F,4,llm,report,0,6,0,0,0,1,2,1,w2,w1 w2 w3,1,True,1460,110,1264,False
+runs__grid__A__F-P1-s4,F-P1-A-s4,gemma-4-26b-a4b-it,P1,F,4,baseline,report,0,6,0,0,0,2,2,2,w2 w3,w1 w2 w3,2,True,,,,False
+runs__grid__A__F-P1-s5,F-P1-A-s5,gemma-4-26b-a4b-it,P1,F,5,llm,report,0,3,0,0,0,3,1,1,lead w2 w3,w2 w4,1,True,1402,653,1214,False
+runs__grid__A__F-P1-s5,F-P1-A-s5,gemma-4-26b-a4b-it,P1,F,5,baseline,report,0,3,0,0,0,2,1,1,w2 w3,w2 w4,1,True,,,,False
+runs__grid__A__F-P1-s6,F-P1-A-s6,gemma-4-26b-a4b-it,P1,F,6,llm,report,0,4,0,0,0,2,2,2,w1 w3,w1 w2 w3,2,True,1420,119,1223,False
+runs__grid__A__F-P1-s6,F-P1-A-s6,gemma-4-26b-a4b-it,P1,F,6,baseline,report,0,4,0,0,0,2,2,2,w1 w3,w1 w2 w3,2,True,,,,False
+runs__grid__A__F-P1-s7,F-P1-A-s7,gemma-4-26b-a4b-it,P1,F,7,llm,report,0,2,0,0,0,1,1,1,w3,w2 w3,1,True,1340,1031,1148,False
+runs__grid__A__F-P1-s7,F-P1-A-s7,gemma-4-26b-a4b-it,P1,F,7,baseline,report,0,2,0,0,0,1,1,1,w3,w2 w3,1,True,,,,False
+runs__grid__A__F-P1-s8,F-P1-A-s8,gemma-4-26b-a4b-it,P1,F,8,llm,report,2,11,1,1,1,2,1,1,w3 w4,w1 w2 w3 w4,2,True,1404,971,1200,False
+runs__grid__A__F-P1-s8,F-P1-A-s8,gemma-4-26b-a4b-it,P1,F,8,baseline,report,2,11,1,1,1,2,1,1,w3 w4,w1 w2 w3 w4,2,True,,,,False
+runs__grid__B__D-B0-s1,D-B0-B-s1,@cf/ibm-granite/granite-4.0-h-micro,B0,D,1,llm,report,1,3,0,0,0,3,6,3,lead m1 m2 w2,lead m1 m2 w1 w2 w3,4,True,1275,248,1238,False
+runs__grid__B__D-B0-s1,D-B0-B-s1,@cf/ibm-granite/granite-4.0-h-micro,B0,D,1,baseline,report,1,3,0,0,0,6,6,6,lead m1 m2 w1 w2 w3,lead m1 m2 w1 w2 w3,6,True,,,,False
+runs__grid__B__D-B0-s2,D-B0-B-s2,@cf/ibm-granite/granite-4.0-h-micro,B0,D,2,llm,report,0,0,0,0,0,3,3,3,lead m1 m2,lead m1 m2,3,True,984,156,956,False
+runs__grid__B__D-B0-s2,D-B0-B-s2,@cf/ibm-granite/granite-4.0-h-micro,B0,D,2,baseline,report,0,0,0,0,0,3,3,3,lead m1 m2,lead m1 m2,3,True,,,,False
+runs__grid__B__D-B0-s3,D-B0-B-s3,@cf/ibm-granite/granite-4.0-h-micro,B0,D,3,llm,report,4,8,3,3,3,4,8,4,lead m1 m2 w2 w3 w5,lead m1 m2 w1 w2 w3 w4 w5 w6,6,True,1938,480,1699,False
+runs__grid__B__D-B0-s3,D-B0-B-s3,@cf/ibm-granite/granite-4.0-h-micro,B0,D,3,baseline,report,2,8,1,1,1,9,8,8,lead m1 m2 w1 w2 w3 w4 w5 w6,lead m1 m2 w1 w2 w3 w4 w5 w6,9,True,,,,False
+runs__grid__B__D-B0-s4,D-B0-B-s4,@cf/ibm-granite/granite-4.0-h-micro,B0,D,4,llm,report,0,0,0,0,0,7,12,7,lead m1 m2 w1 w5 w6,lead m1 m2 w1 w2 w3 w4 w5 w6,6,True,2003,417,1820,False
+runs__grid__B__D-B0-s4,D-B0-B-s4,@cf/ibm-granite/granite-4.0-h-micro,B0,D,4,baseline,report,0,0,0,0,0,12,12,12,lead m1 m2 w1 w2 w3 w4 w5 w6,lead m1 m2 w1 w2 w3 w4 w5 w6,9,True,,,,False
+runs__grid__B__D-B0-s5,D-B0-B-s5,@cf/ibm-granite/granite-4.0-h-micro,B0,D,5,llm,report,0,0,0,0,0,5,8,5,lead m1 m2 w1 w5,lead m1 m2 w1 w2 w4 w5 w6,5,True,1811,1095,1662,False
+runs__grid__B__D-B0-s5,D-B0-B-s5,@cf/ibm-granite/granite-4.0-h-micro,B0,D,5,baseline,report,0,0,0,0,0,9,8,8,lead m1 m2 w1 w2 w3 w4 w5 w6,lead m1 m2 w1 w2 w4 w5 w6,8,True,,,,False
+runs__grid__B__D-B0-s6,D-B0-B-s6,@cf/ibm-granite/granite-4.0-h-micro,B0,D,6,llm,report,1,2,0,0,0,8,8,7,lead m1 m2 w1 w2 w3 w4 w5 w6,lead m1 m2 w1 w3 w4 w5 w6,8,True,1745,457,1571,False
+runs__grid__B__D-B0-s6,D-B0-B-s6,@cf/ibm-granite/granite-4.0-h-micro,B0,D,6,baseline,report,1,2,0,0,0,9,8,8,lead m1 m2 w1 w2 w3 w4 w5 w6,lead m1 m2 w1 w3 w4 w5 w6,8,True,,,,False
+runs__grid__B__D-B0-s7,D-B0-B-s7,@cf/ibm-granite/granite-4.0-h-micro,B0,D,7,llm,report,0,8,0,0,0,8,8,8,lead m1 m2 w1 w2 w4 w5 w6,lead m1 m2 w1 w2 w4 w5 w6,8,True,2028,480,1777,False
+runs__grid__B__D-B0-s7,D-B0-B-s7,@cf/ibm-granite/granite-4.0-h-micro,B0,D,7,baseline,report,1,8,0,0,0,8,8,8,lead m1 m2 w1 w2 w4 w5 w6,lead m1 m2 w1 w2 w4 w5 w6,8,True,,,,False
+runs__grid__B__D-B0-s8,D-B0-B-s8,@cf/ibm-granite/granite-4.0-h-micro,B0,D,8,llm,report,0,7,0,0,0,8,9,8,lead m1 m2 w1 w2 w3 w4 w5,lead m1 m2 w1 w2 w3 w4 w5 w6,8,True,1982,509,1822,False
+runs__grid__B__D-B0-s8,D-B0-B-s8,@cf/ibm-granite/granite-4.0-h-micro,B0,D,8,baseline,report,1,7,1,1,0,9,9,9,lead m1 m2 w1 w2 w3 w4 w5 w6,lead m1 m2 w1 w2 w3 w4 w5 w6,9,True,,,,False
+runs__grid__B__D-E1-s1,D-E1-B-s1,@cf/ibm-granite/granite-4.0-h-micro,E1,D,1,llm,report,1,0,0,0,0,6,7,5,lead m1 m2 w2 w3 w5,lead m1 m2 w2 w4 w5 w6,5,True,1763,389,1618,False
+runs__grid__B__D-E1-s1,D-E1-B-s1,@cf/ibm-granite/granite-4.0-h-micro,E1,D,1,baseline,report,1,0,0,0,0,9,7,7,lead m1 m2 w1 w2 w3 w4 w5 w6,lead m1 m2 w2 w4 w5 w6,7,True,,,,False
+runs__grid__B__D-E1-s2,D-E1-B-s2,@cf/ibm-granite/granite-4.0-h-micro,E1,D,2,llm,report,0,0,0,0,0,4,7,4,lead m1 m2 w4,lead m1 m2 w2 w4 w5 w6,4,True,1427,1031,1364,False
+runs__grid__B__D-E1-s2,D-E1-B-s2,@cf/ibm-granite/granite-4.0-h-micro,E1,D,2,baseline,report,0,0,0,0,0,8,7,7,lead m1 m2 w1 w2 w4 w5 w6,lead m1 m2 w2 w4 w5 w6,7,True,,,,False
+runs__grid__B__D-E1-s3,D-E1-B-s3,@cf/ibm-granite/granite-4.0-h-micro,E1,D,3,llm,report,0,0,0,0,0,8,6,6,lead m1 m2 w1 w2 w4 w5 w6,lead m1 m2 w4 w5 w6,6,True,1604,364,1421,False
+runs__grid__B__D-E1-s3,D-E1-B-s3,@cf/ibm-granite/granite-4.0-h-micro,E1,D,3,baseline,report,0,0,0,0,0,8,6,6,lead m1 m2 w1 w2 w4 w5 w6,lead m1 m2 w4 w5 w6,6,True,,,,False
+runs__grid__B__D-E1-s4,D-E1-B-s4,@cf/ibm-granite/granite-4.0-h-micro,E1,D,4,llm,report,0,0,0,0,0,4,9,4,lead m1 m2 w2,lead m1 m2 w1 w2 w3 w4 w5 w6,4,True,1614,237,1491,False
+runs__grid__B__D-E1-s4,D-E1-B-s4,@cf/ibm-granite/granite-4.0-h-micro,E1,D,4,baseline,report,0,0,0,0,0,9,9,9,lead m1 m2 w1 w2 w3 w4 w5 w6,lead m1 m2 w1 w2 w3 w4 w5 w6,9,True,,,,False
+runs__grid__B__D-E1-s5,D-E1-B-s5,@cf/ibm-granite/granite-4.0-h-micro,E1,D,5,llm,report,0,0,0,0,0,6,5,4,lead m1 m2 w2 w3 w4,lead m1 m2 w2 w5,4,True,1581,387,1390,False
+runs__grid__B__D-E1-s5,D-E1-B-s5,@cf/ibm-granite/granite-4.0-h-micro,E1,D,5,baseline,report,0,0,0,0,0,9,5,5,lead m1 m2 w1 w2 w3 w4 w5 w6,lead m1 m2 w2 w5,5,True,,,,False
+runs__grid__B__D-E1-s6,D-E1-B-s6,@cf/ibm-granite/granite-4.0-h-micro,E1,D,6,llm,report,0,0,0,0,0,9,6,6,lead m1 m2 w1 w2 w3 w4 w5 w6,lead m1 m2 w1 w4 w6,6,True,1765,437,1596,False
+runs__grid__B__D-E1-s6,D-E1-B-s6,@cf/ibm-granite/granite-4.0-h-micro,E1,D,6,baseline,report,0,0,0,0,0,9,6,6,lead m1 m2 w1 w2 w3 w4 w5 w6,lead m1 m2 w1 w4 w6,6,True,,,,False
+runs__grid__B__D-E1-s7,D-E1-B-s7,@cf/ibm-granite/granite-4.0-h-micro,E1,D,7,llm,report,0,0,0,0,0,5,7,5,lead m1 m2 w1 w4,lead m1 m2 w1 w2 w4 w6,5,True,1736,335,1490,False
+runs__grid__B__D-E1-s7,D-E1-B-s7,@cf/ibm-granite/granite-4.0-h-micro,E1,D,7,baseline,report,0,0,0,0,0,8,7,7,lead m1 m2 w1 w2 w4 w5 w6,lead m1 m2 w1 w2 w4 w6,7,True,,,,False
+runs__grid__B__D-E1-s8,D-E1-B-s8,@cf/ibm-granite/granite-4.0-h-micro,E1,D,8,llm,report,0,0,0,0,0,8,5,5,lead m1 m2 w1 w2 w4 w5 w6,lead m1 m2 w4 w5,5,True,2001,467,1740,False
+runs__grid__B__D-E1-s8,D-E1-B-s8,@cf/ibm-granite/granite-4.0-h-micro,E1,D,8,baseline,report,0,0,0,0,0,9,5,5,lead m1 m2 w1 w2 w4 w5 w6,lead m1 m2 w4 w5,5,True,,,,False
+runs__grid__B__D-E2-s1,D-E2-B-s1,@cf/ibm-granite/granite-4.0-h-micro,E2,D,1,llm,report,2,10,2,2,1,6,4,3,lead m2 w1 w2 w4 w5 w6,lead m1 m2 w1 w2 w3 w5,5,True,1490,473,1415,False
+runs__grid__B__D-E2-s1,D-E2-B-s1,@cf/ibm-granite/granite-4.0-h-micro,E2,D,1,baseline,report,0,10,0,0,0,9,4,4,lead m1 m2 w1 w2 w3 w4 w5 w6,lead m1 m2 w1 w2 w3 w5,7,True,,,,False
+runs__grid__B__D-E2-s2,D-E2-B-s2,@cf/ibm-granite/granite-4.0-h-micro,E2,D,2,llm,report,0,2,0,0,0,5,5,5,m1 w1 w2 w3 w6,m1 w1 w2 w3 w6,5,True,1691,328,1447,False
+runs__grid__B__D-E2-s2,D-E2-B-s2,@cf/ibm-granite/granite-4.0-h-micro,E2,D,2,baseline,report,0,2,0,0,0,5,5,5,m1 w1 w2 w3 w6,m1 w1 w2 w3 w6,5,True,,,,False
+runs__grid__B__D-E2-s3,D-E2-B-s3,@cf/ibm-granite/granite-4.0-h-micro,E2,D,3,llm,report,0,5,0,0,0,8,6,5,lead m1 m2 w1 w3 w4 w5 w6,lead m1 m2 w1 w2 w3 w4,6,True,2174,483,1968,False
+runs__grid__B__D-E2-s3,D-E2-B-s3,@cf/ibm-granite/granite-4.0-h-micro,E2,D,3,baseline,report,0,5,0,0,0,8,6,6,lead m1 m2 w1 w2 w4 w5 w6,lead m1 m2 w1 w2 w3 w4,6,True,,,,False
+runs__grid__B__D-E2-s4,D-E2-B-s4,@cf/ibm-granite/granite-4.0-h-micro,E2,D,4,llm,report,0,3,0,0,0,8,5,5,m1 m2 unassigned w1 w3 w4 w5,m2 w1 w3 w4 w5,5,True,2384,782,2257,False
+runs__grid__B__D-E2-s4,D-E2-B-s4,@cf/ibm-granite/granite-4.0-h-micro,E2,D,4,baseline,report,0,3,0,0,0,5,5,5,m2 w1 w3 w4 w5,m2 w1 w3 w4 w5,5,True,,,,False
+runs__grid__B__D-E2-s5,D-E2-B-s5,@cf/ibm-granite/granite-4.0-h-micro,E2,D,5,llm,report,3,3,2,2,1,5,8,5,lead m1 m2 w1 w2 w5,lead m1 m2 w1 w2 w4 w5 w6,6,True,2011,549,1758,False
+runs__grid__B__D-E2-s5,D-E2-B-s5,@cf/ibm-granite/granite-4.0-h-micro,E2,D,5,baseline,report,3,3,2,2,1,9,8,8,lead m1 m2 w1 w2 w3 w4 w5 w6,lead m1 m2 w1 w2 w4 w5 w6,8,True,,,,False
+runs__grid__B__D-E2-s6,D-E2-B-s6,@cf/ibm-granite/granite-4.0-h-micro,E2,D,6,llm,report,0,0,0,0,0,5,4,3,m1 m2 t13 w1 w4,lead m1 m2 w4,3,True,1657,929,1519,False
+runs__grid__B__D-E2-s6,D-E2-B-s6,@cf/ibm-granite/granite-4.0-h-micro,E2,D,6,baseline,report,0,0,0,0,0,5,4,4,lead m1 m2 w2 w4,lead m1 m2 w4,4,True,,,,False
+runs__grid__B__D-E2-s7,D-E2-B-s7,@cf/ibm-granite/granite-4.0-h-micro,E2,D,7,llm,report,0,0,0,0,0,4,4,3,m1 m2 w4 w5,m1 m2 w5 w6,3,True,1560,264,1403,False
+runs__grid__B__D-E2-s7,D-E2-B-s7,@cf/ibm-granite/granite-4.0-h-micro,E2,D,7,baseline,report,0,0,0,0,0,5,4,4,m1 m2 w4 w5 w6,m1 m2 w5 w6,4,True,,,,False
+runs__grid__B__D-E2-s8,D-E2-B-s8,@cf/ibm-granite/granite-4.0-h-micro,E2,D,8,llm,report,0,4,0,0,0,8,7,7,lead m1 m2 w1 w2 w4 w5 w6,lead m1 m2 w1 w2 w4 w5 w6,8,True,1483,463,1425,False
+runs__grid__B__D-E2-s8,D-E2-B-s8,@cf/ibm-granite/granite-4.0-h-micro,E2,D,8,baseline,report,0,4,0,0,0,8,7,7,lead m1 m2 w1 w2 w4 w5 w6,lead m1 m2 w1 w2 w4 w5 w6,8,True,,,,False
+runs__grid__B__D-E3-s1,D-E3-B-s1,@cf/ibm-granite/granite-4.0-h-micro,E3,D,1,llm,report,6,0,0,0,0,5,3,2,lead m1 m2 w2 w3 w4 w6,lead m2 w5,2,True,1856,765,1873,False
+runs__grid__B__D-E3-s1,D-E3-B-s1,@cf/ibm-granite/granite-4.0-h-micro,E3,D,1,baseline,report,6,0,0,0,0,9,3,3,lead m1 m2 w1 w2 w3 w4 w5 w6,lead m2 w5,3,True,,,,False
+runs__grid__B__D-E3-s2,D-E3-B-s2,@cf/ibm-granite/granite-4.0-h-micro,E3,D,2,llm,report,0,0,0,0,0,6,4,4,m1 m2 w4 w5 w6,m2 w4 w5 w6,4,True,1428,404,1365,False
+runs__grid__B__D-E3-s2,D-E3-B-s2,@cf/ibm-granite/granite-4.0-h-micro,E3,D,2,baseline,report,0,0,0,0,0,4,4,4,m2 w4 w5 w6,m2 w4 w5 w6,4,True,,,,False
+runs__grid__B__D-E3-s3,D-E3-B-s3,@cf/ibm-granite/granite-4.0-h-micro,E3,D,3,llm,report,0,0,0,0,0,7,7,7,m1 w1 w2 w3 w4 w6,m1 w1 w2 w3 w4 w6,6,True,2579,419,2228,False
+runs__grid__B__D-E3-s3,D-E3-B-s3,@cf/ibm-granite/granite-4.0-h-micro,E3,D,3,baseline,report,0,0,0,0,0,7,7,7,m1 w1 w2 w3 w4 w6,m1 w1 w2 w3 w4 w6,6,True,,,,False
+runs__grid__B__D-E3-s4,D-E3-B-s4,@cf/ibm-granite/granite-4.0-h-micro,E3,D,4,llm,report,0,0,0,0,0,9,8,8,lead m1 m2 w1 w2 w3 w4 w5 w6,lead m1 m2 w2 w3 w4 w5 w6,8,True,2089,523,1905,False
+runs__grid__B__D-E3-s4,D-E3-B-s4,@cf/ibm-granite/granite-4.0-h-micro,E3,D,4,baseline,report,0,0,0,0,0,9,8,8,lead m1 m2 w1 w2 w3 w4 w5 w6,lead m1 m2 w2 w3 w4 w5 w6,8,True,,,,False
+runs__grid__B__D-E3-s5,D-E3-B-s5,@cf/ibm-granite/granite-4.0-h-micro,E3,D,5,llm,report,0,0,0,0,0,3,8,3,lead m1 m2,lead m1 m2 w1 w2 w3 w4 w5,3,True,2013,200,1691,False
+runs__grid__B__D-E3-s5,D-E3-B-s5,@cf/ibm-granite/granite-4.0-h-micro,E3,D,5,baseline,report,0,0,0,0,0,8,8,8,lead m1 m2 w1 w2 w3 w4 w5,lead m1 m2 w1 w2 w3 w4 w5,8,True,,,,False
+runs__grid__B__D-E3-s6,D-E3-B-s6,@cf/ibm-granite/granite-4.0-h-micro,E3,D,6,llm,report,0,0,0,0,0,4,5,2,lead m1 m2 w2,m1 m2 w1 w5 w6,2,True,1676,217,1527,False
+runs__grid__B__D-E3-s6,D-E3-B-s6,@cf/ibm-granite/granite-4.0-h-micro,E3,D,6,baseline,report,0,0,0,0,0,7,5,5,m1 m2 w1 w2 w3 w5 w6,m1 m2 w1 w5 w6,5,True,,,,False
+runs__grid__B__D-E3-s7,D-E3-B-s7,@cf/ibm-granite/granite-4.0-h-micro,E3,D,7,llm,report,0,0,0,0,0,6,8,6,lead m1 m2 w2 w3 w6,lead m1 m2 w2 w3 w4 w5 w6,6,True,1723,377,1661,False
+runs__grid__B__D-E3-s7,D-E3-B-s7,@cf/ibm-granite/granite-4.0-h-micro,E3,D,7,baseline,report,0,0,0,0,0,9,8,8,lead m1 m2 w1 w2 w3 w4 w5 w6,lead m1 m2 w2 w3 w4 w5 w6,8,True,,,,False
+runs__grid__B__D-E3-s8,D-E3-B-s8,@cf/ibm-granite/granite-4.0-h-micro,E3,D,8,llm,report,0,0,0,0,0,3,5,3,lead m1 m2,lead m1 m2 w3 w5,3,True,1807,220,1702,False
+runs__grid__B__D-E3-s8,D-E3-B-s8,@cf/ibm-granite/granite-4.0-h-micro,E3,D,8,baseline,report,0,0,0,0,0,9,5,5,lead m1 m2 w1 w2 w3 w4 w5 w6,lead m1 m2 w3 w5,5,True,,,,False
+runs__grid__B__D-P1-s1,D-P1-B-s1,@cf/ibm-granite/granite-4.0-h-micro,P1,D,1,llm,report,0,3,0,0,0,7,4,3,lead m1 m2 w1 w2 w4 w6,lead m1 m2 w3 w5,3,True,1846,342,1702,False
+runs__grid__B__D-P1-s1,D-P1-B-s1,@cf/ibm-granite/granite-4.0-h-micro,P1,D,1,baseline,report,0,3,0,0,0,9,4,4,lead m1 m2 w1 w2 w3 w4 w5 w6,lead m1 m2 w3 w5,5,True,,,,False
+runs__grid__B__D-P1-s2,D-P1-B-s2,@cf/ibm-granite/granite-4.0-h-micro,P1,D,2,llm,report,2,5,1,1,1,6,8,6,lead m1 m2 w1 w2 w3 w5,lead m1 m2 w1 w2 w3 w4 w5,7,True,1688,432,1553,False
+runs__grid__B__D-P1-s2,D-P1-B-s2,@cf/ibm-granite/granite-4.0-h-micro,P1,D,2,baseline,report,1,5,1,0,0,8,8,8,lead m1 m2 w1 w2 w3 w4 w5,lead m1 m2 w1 w2 w3 w4 w5,8,True,,,,False
+runs__grid__B__D-P1-s3,D-P1-B-s3,@cf/ibm-granite/granite-4.0-h-micro,P1,D,3,llm,report,3,3,3,2,2,6,9,6,lead m1 m2 w3 w4 w5 w6,lead m1 m2 w1 w2 w3 w4 w5 w6,7,True,2454,500,2011,False
+runs__grid__B__D-P1-s3,D-P1-B-s3,@cf/ibm-granite/granite-4.0-h-micro,P1,D,3,baseline,report,3,3,3,2,2,9,9,9,lead m1 m2 w1 w2 w3 w4 w5 w6,lead m1 m2 w1 w2 w3 w4 w5 w6,9,True,,,,False
+runs__grid__B__D-P1-s4,D-P1-B-s4,@cf/ibm-granite/granite-4.0-h-micro,P1,D,4,llm,report,0,0,0,0,0,6,5,5,lead m1 m2 w4 w5 w6,lead m1 m2 w5 w6,5,True,1803,311,1650,False
+runs__grid__B__D-P1-s4,D-P1-B-s4,@cf/ibm-granite/granite-4.0-h-micro,P1,D,4,baseline,report,0,0,0,0,0,8,5,5,lead m1 m2 w1 w2 w4 w5 w6,lead m1 m2 w5 w6,5,True,,,,False
+runs__grid__B__D-P1-s5,D-P1-B-s5,@cf/ibm-granite/granite-4.0-h-micro,P1,D,5,llm,report,0,3,0,0,0,9,8,8,lead m1 m2 w1 w2 w3 w4 w5 w6,lead m1 m2 w1 w3 w4 w5 w6,8,True,1741,536,1623,False
+runs__grid__B__D-P1-s5,D-P1-B-s5,@cf/ibm-granite/granite-4.0-h-micro,P1,D,5,baseline,report,0,3,0,0,0,9,8,8,lead m1 m2 w1 w2 w3 w4 w5 w6,lead m1 m2 w1 w3 w4 w5 w6,8,True,,,,False
+runs__grid__B__D-P1-s6,D-P1-B-s6,@cf/ibm-granite/granite-4.0-h-micro,P1,D,6,llm,report,2,1,1,1,1,3,7,3,lead m1 m2 w3,lead m1 m2 w1 w2 w3 w5,4,True,1621,348,1500,False
+runs__grid__B__D-P1-s6,D-P1-B-s6,@cf/ibm-granite/granite-4.0-h-micro,P1,D,6,baseline,report,0,1,0,0,0,8,7,7,lead m1 m2 w1 w2 w3 w4 w5,lead m1 m2 w1 w2 w3 w5,7,True,,,,False
+runs__grid__B__D-P1-s7,D-P1-B-s7,@cf/ibm-granite/granite-4.0-h-micro,P1,D,7,llm,report,0,4,0,0,0,8,7,7,lead m1 m2 w1 w2 w3 w5 w6,lead m1 m2 w1 w3 w5 w6,7,True,1558,488,1428,False
+runs__grid__B__D-P1-s7,D-P1-B-s7,@cf/ibm-granite/granite-4.0-h-micro,P1,D,7,baseline,report,0,4,0,0,0,8,7,7,lead m1 m2 w1 w2 w3 w5 w6,lead m1 m2 w1 w3 w5 w6,7,True,,,,False
+runs__grid__B__D-P1-s8,D-P1-B-s8,@cf/ibm-granite/granite-4.0-h-micro,P1,D,8,llm,report,3,7,2,2,1,4,7,4,lead m1 m2 w1 w3,lead m1 m2 w1 w3 w4 w5 w6,5,True,1690,456,1548,False
+runs__grid__B__D-P1-s8,D-P1-B-s8,@cf/ibm-granite/granite-4.0-h-micro,P1,D,8,baseline,report,3,7,1,1,1,9,7,7,lead m1 m2 w1 w2 w3 w4 w5 w6,lead m1 m2 w1 w3 w4 w5 w6,8,True,,,,False
+runs__grid__B__F-B0-s1,F-B0-B-s1,@cf/ibm-granite/granite-4.0-h-micro,B0,F,1,llm,report,0,0,0,0,0,6,6,6,lead w1 w2 w3 w4 w5,lead w1 w2 w3 w4 w5,6,True,1225,428,1236,False
+runs__grid__B__F-B0-s1,F-B0-B-s1,@cf/ibm-granite/granite-4.0-h-micro,B0,F,1,baseline,report,0,0,0,0,0,6,6,6,lead w1 w2 w3 w4 w5,lead w1 w2 w3 w4 w5,6,True,,,,False
+runs__grid__B__F-B0-s2,F-B0-B-s2,@cf/ibm-granite/granite-4.0-h-micro,B0,F,2,llm,report,3,5,0,0,0,6,7,6,lead w1 w2 w4 w5 w6,lead w1 w2 w3 w4 w5 w6,6,True,1679,639,1529,False
+runs__grid__B__F-B0-s2,F-B0-B-s2,@cf/ibm-granite/granite-4.0-h-micro,B0,F,2,baseline,report,0,5,0,0,0,7,7,7,lead w1 w2 w3 w4 w5 w6,lead w1 w2 w3 w4 w5 w6,7,True,,,,False
+runs__grid__B__F-B0-s3,F-B0-B-s3,@cf/ibm-granite/granite-4.0-h-micro,B0,F,3,llm,report,0,2,0,0,0,7,6,6,lead w1 w2 w3 w4 w5 w6,lead w1 w2 w3 w5 w6,6,True,1194,327,1193,False
+runs__grid__B__F-B0-s3,F-B0-B-s3,@cf/ibm-granite/granite-4.0-h-micro,B0,F,3,baseline,report,0,2,0,0,0,7,6,6,lead w1 w2 w3 w4 w5 w6,lead w1 w2 w3 w5 w6,6,True,,,,False
+runs__grid__B__F-B0-s4,F-B0-B-s4,@cf/ibm-granite/granite-4.0-h-micro,B0,F,4,llm,report,0,1,0,0,0,2,6,2,lead w2,lead w1 w2 w3 w4 w5,2,True,1215,192,1192,False
+runs__grid__B__F-B0-s4,F-B0-B-s4,@cf/ibm-granite/granite-4.0-h-micro,B0,F,4,baseline,report,0,1,0,0,0,6,6,6,lead w1 w2 w3 w4 w5,lead w1 w2 w3 w4 w5,6,True,,,,False
+runs__grid__B__F-B0-s5,F-B0-B-s5,@cf/ibm-granite/granite-4.0-h-micro,B0,F,5,llm,report,3,3,1,1,1,7,3,3,lead w2 w3 w4 w5 w6,lead w2 w5 w6,4,True,1446,576,1372,False
+runs__grid__B__F-B0-s5,F-B0-B-s5,@cf/ibm-granite/granite-4.0-h-micro,B0,F,5,baseline,report,0,3,0,0,0,8,3,3,lead w1 w2 w3 w4 w5 w6,lead w2 w5 w6,4,True,,,,False
+runs__grid__B__F-B0-s6,F-B0-B-s6,@cf/ibm-granite/granite-4.0-h-micro,B0,F,6,llm,report,0,1,0,0,0,7,6,6,lead w1 w2 w3 w4 w5 w6,lead w1 w2 w3 w4 w5 w6,7,True,1331,411,1264,False
+runs__grid__B__F-B0-s6,F-B0-B-s6,@cf/ibm-granite/granite-4.0-h-micro,B0,F,6,baseline,report,0,1,0,0,0,7,6,6,lead w1 w2 w3 w4 w5 w6,lead w1 w2 w3 w4 w5 w6,7,True,,,,False
+runs__grid__B__F-B0-s7,F-B0-B-s7,@cf/ibm-granite/granite-4.0-h-micro,B0,F,7,llm,report,0,3,0,0,0,6,5,5,lead w1 w2 w3 w4 w5,lead w1 w3 w4 w5,5,True,1186,1048,1140,False
+runs__grid__B__F-B0-s7,F-B0-B-s7,@cf/ibm-granite/granite-4.0-h-micro,B0,F,7,baseline,report,1,3,0,0,0,6,5,5,lead w1 w2 w3 w4 w5,lead w1 w3 w4 w5,5,True,,,,False
+runs__grid__B__F-B0-s8,F-B0-B-s8,@cf/ibm-granite/granite-4.0-h-micro,B0,F,8,llm,report,0,6,0,0,0,5,5,4,lead w1 w2 w3 w5,lead w1 w2 w4 w5,4,True,1218,334,1160,False
+runs__grid__B__F-B0-s8,F-B0-B-s8,@cf/ibm-granite/granite-4.0-h-micro,B0,F,8,baseline,report,3,6,1,1,0,6,5,5,lead w1 w2 w3 w4 w5,lead w1 w2 w4 w5,5,True,,,,False
+runs__grid__B__F-E1-s1,F-E1-B-s1,@cf/ibm-granite/granite-4.0-h-micro,E1,F,1,llm,report,0,0,0,0,0,5,5,4,lead w2 w3 w4 w5,lead w1 w2 w3 w5,4,True,1256,315,1214,False
+runs__grid__B__F-E1-s1,F-E1-B-s1,@cf/ibm-granite/granite-4.0-h-micro,E1,F,1,baseline,report,0,0,0,0,0,6,5,5,lead w1 w2 w3 w4 w5,lead w1 w2 w3 w5,5,True,,,,False
+runs__grid__B__F-E1-s2,F-E1-B-s2,@cf/ibm-granite/granite-4.0-h-micro,E1,F,2,llm,report,0,0,0,0,0,7,7,7,lead w1 w2 w3 w4 w5 w6,lead w1 w2 w3 w4 w5 w6,7,True,1542,401,1493,False
+runs__grid__B__F-E1-s2,F-E1-B-s2,@cf/ibm-granite/granite-4.0-h-micro,E1,F,2,baseline,report,0,0,0,0,0,7,7,7,lead w1 w2 w3 w4 w5 w6,lead w1 w2 w3 w4 w5 w6,7,True,,,,False
+runs__grid__B__F-E1-s3,F-E1-B-s3,@cf/ibm-granite/granite-4.0-h-micro,E1,F,3,llm,report,0,0,0,0,0,6,6,6,lead w1 w2 w3 w4 w5,lead w1 w2 w3 w4 w5,6,True,1208,335,1191,False
+runs__grid__B__F-E1-s3,F-E1-B-s3,@cf/ibm-granite/granite-4.0-h-micro,E1,F,3,baseline,report,0,0,0,0,0,6,6,6,lead w1 w2 w3 w4 w5,lead w1 w2 w3 w4 w5,6,True,,,,False
+runs__grid__B__F-E1-s4,F-E1-B-s4,@cf/ibm-granite/granite-4.0-h-micro,E1,F,4,llm,report,0,0,0,0,0,7,6,6,lead w1 w2 w3 w4 w5 w6,lead w1 w2 w3 w5 w6,6,True,1293,270,1206,False
+runs__grid__B__F-E1-s4,F-E1-B-s4,@cf/ibm-granite/granite-4.0-h-micro,E1,F,4,baseline,report,0,0,0,0,0,7,6,6,lead w1 w2 w3 w4 w5 w6,lead w1 w2 w3 w5 w6,6,True,,,,False
+runs__grid__B__F-E1-s5,F-E1-B-s5,@cf/ibm-granite/granite-4.0-h-micro,E1,F,5,llm,report,0,0,0,0,0,6,6,6,lead w1 w2 w3 w4 w5,lead w1 w2 w3 w4 w5,6,True,1328,298,1198,False
+runs__grid__B__F-E1-s5,F-E1-B-s5,@cf/ibm-granite/granite-4.0-h-micro,E1,F,5,baseline,report,1,0,0,0,0,6,6,6,lead w1 w2 w3 w4 w5,lead w1 w2 w3 w4 w5,6,True,,,,False
+runs__grid__B__F-E1-s6,F-E1-B-s6,@cf/ibm-granite/granite-4.0-h-micro,E1,F,6,llm,report,0,0,0,0,0,5,7,5,lead w1 w3 w5 w6,lead w1 w2 w3 w4 w5 w6,5,True,1322,254,1256,False
+runs__grid__B__F-E1-s6,F-E1-B-s6,@cf/ibm-granite/granite-4.0-h-micro,E1,F,6,baseline,report,1,0,0,0,0,7,7,7,lead w1 w2 w3 w4 w5 w6,lead w1 w2 w3 w4 w5 w6,7,True,,,,False
+runs__grid__B__F-E1-s7,F-E1-B-s7,@cf/ibm-granite/granite-4.0-h-micro,E1,F,7,llm,report,0,0,0,0,0,5,7,5,lead w1 w2 w3 w4,lead w1 w2 w3 w4 w5 w6,5,True,1632,361,1442,False
+runs__grid__B__F-E1-s7,F-E1-B-s7,@cf/ibm-granite/granite-4.0-h-micro,E1,F,7,baseline,report,0,0,0,0,0,7,7,7,lead w1 w2 w3 w4 w5 w6,lead w1 w2 w3 w4 w5 w6,7,True,,,,False
+runs__grid__B__F-E1-s8,F-E1-B-s8,@cf/ibm-granite/granite-4.0-h-micro,E1,F,8,llm,report,0,0,0,0,0,6,6,5,agent w1 w2 w3 w4 w5,lead w1 w2 w3 w4 w5,5,True,1148,1049,1135,False
+runs__grid__B__F-E1-s8,F-E1-B-s8,@cf/ibm-granite/granite-4.0-h-micro,E1,F,8,baseline,report,2,0,0,0,0,6,6,6,lead w1 w2 w3 w4 w5,lead w1 w2 w3 w4 w5,6,True,,,,False
+runs__grid__B__F-E2-s1,F-E2-B-s1,@cf/ibm-granite/granite-4.0-h-micro,E2,F,1,llm,report,0,0,0,0,0,4,4,4,lead w1 w2 w3,lead w1 w2 w3,4,True,1069,165,1028,False
+runs__grid__B__F-E2-s1,F-E2-B-s1,@cf/ibm-granite/granite-4.0-h-micro,E2,F,1,baseline,report,0,0,0,0,0,4,4,4,lead w1 w2 w3,lead w1 w2 w3,4,True,,,,False
+runs__grid__B__F-E2-s2,F-E2-B-s2,@cf/ibm-granite/granite-4.0-h-micro,E2,F,2,llm,report,0,1,0,0,0,6,4,4,lead w1 w2 w4 w5 w6,lead w1 w5 w6,4,True,1215,317,1189,False
+runs__grid__B__F-E2-s2,F-E2-B-s2,@cf/ibm-granite/granite-4.0-h-micro,E2,F,2,baseline,report,0,1,0,0,0,5,4,4,lead w1 w4 w5 w6,lead w1 w5 w6,4,True,,,,False
+runs__grid__B__F-E2-s3,F-E2-B-s3,@cf/ibm-granite/granite-4.0-h-micro,E2,F,3,llm,report,0,3,0,0,0,4,4,3,w1 w2 w5 w6,w1 w3 w5 w6,3,True,1267,225,1217,False
+runs__grid__B__F-E2-s3,F-E2-B-s3,@cf/ibm-granite/granite-4.0-h-micro,E2,F,3,baseline,report,0,3,0,0,0,5,4,4,w1 w2 w3 w5 w6,w1 w3 w5 w6,4,True,,,,False
+runs__grid__B__F-E2-s4,F-E2-B-s4,@cf/ibm-granite/granite-4.0-h-micro,E2,F,4,llm,report,0,0,0,0,0,3,3,3,w1 w4 w5,w1 w4 w5,3,True,1441,137,1431,False
+runs__grid__B__F-E2-s4,F-E2-B-s4,@cf/ibm-granite/granite-4.0-h-micro,E2,F,4,baseline,report,0,0,0,0,0,3,3,3,w1 w4 w5,w1 w4 w5,3,True,,,,False
+runs__grid__B__F-E2-s5,F-E2-B-s5,@cf/ibm-granite/granite-4.0-h-micro,E2,F,5,llm,report,0,1,0,0,0,6,6,6,lead w1 w2 w3 w4 w5,lead w1 w2 w3 w4 w5,6,True,1251,405,1199,False
+runs__grid__B__F-E2-s5,F-E2-B-s5,@cf/ibm-granite/granite-4.0-h-micro,E2,F,5,baseline,report,0,1,0,0,0,6,6,6,lead w1 w2 w3 w4 w5,lead w1 w2 w3 w4 w5,6,True,,,,False
+runs__grid__B__F-E2-s6,F-E2-B-s6,@cf/ibm-granite/granite-4.0-h-micro,E2,F,6,llm,report,0,2,0,0,0,4,5,4,w1 w4 w5 w6,w1 w2 w4 w5 w6,4,True,1325,243,1272,False
+runs__grid__B__F-E2-s6,F-E2-B-s6,@cf/ibm-granite/granite-4.0-h-micro,E2,F,6,baseline,report,0,2,0,0,0,5,5,5,w1 w2 w4 w5 w6,w1 w2 w4 w5 w6,5,True,,,,False
+runs__grid__B__F-E2-s7,F-E2-B-s7,@cf/ibm-granite/granite-4.0-h-micro,E2,F,7,llm,report,0,4,0,0,0,7,7,7,lead w1 w2 w3 w4 w5 w6,lead w1 w2 w3 w4 w5 w6,7,True,1410,398,1315,False
+runs__grid__B__F-E2-s7,F-E2-B-s7,@cf/ibm-granite/granite-4.0-h-micro,E2,F,7,baseline,report,0,4,0,0,0,7,7,7,lead w1 w2 w3 w4 w5 w6,lead w1 w2 w3 w4 w5 w6,7,True,,,,False
+runs__grid__B__F-E2-s8,F-E2-B-s8,@cf/ibm-granite/granite-4.0-h-micro,E2,F,8,llm,report,2,7,2,2,1,4,5,2,lead w2 w3 w4 w5,lead w1 w2 w4 w5 w6,4,True,1270,383,1210,False
+runs__grid__B__F-E2-s8,F-E2-B-s8,@cf/ibm-granite/granite-4.0-h-micro,E2,F,8,baseline,report,0,7,0,0,0,7,5,5,lead w1 w2 w3 w4 w5 w6,lead w1 w2 w4 w5 w6,6,True,,,,False
+runs__grid__B__F-E3-s1,F-E3-B-s1,@cf/ibm-granite/granite-4.0-h-micro,E3,F,1,llm,report,0,0,0,0,0,5,4,3,w1 w2 w3 w5 w6,w2 w3 w4 w5,3,True,1272,254,1194,False
+runs__grid__B__F-E3-s1,F-E3-B-s1,@cf/ibm-granite/granite-4.0-h-micro,E3,F,1,baseline,report,0,0,0,0,0,6,4,4,w1 w2 w3 w4 w5 w6,w2 w3 w4 w5,4,True,,,,False
+runs__grid__B__F-E3-s2,F-E3-B-s2,@cf/ibm-granite/granite-4.0-h-micro,E3,F,2,llm,report,0,0,0,0,0,5,2,2,lead w1 w3 w4 w5,lead w1,2,True,1248,232,1225,False
+runs__grid__B__F-E3-s2,F-E3-B-s2,@cf/ibm-granite/granite-4.0-h-micro,E3,F,2,baseline,report,0,0,0,0,0,7,2,2,lead w1 w2 w3 w4 w5 w6,lead w1,2,True,,,,False
+runs__grid__B__F-E3-s3,F-E3-B-s3,@cf/ibm-granite/granite-4.0-h-micro,E3,F,3,llm,report,0,0,0,0,0,4,5,3,lead w1 w4 w6,lead w1 w2 w3 w6,3,True,1408,212,1328,False
+runs__grid__B__F-E3-s3,F-E3-B-s3,@cf/ibm-granite/granite-4.0-h-micro,E3,F,3,baseline,report,0,0,0,0,0,7,5,5,lead w1 w2 w3 w4 w5 w6,lead w1 w2 w3 w6,5,True,,,,False
+runs__grid__B__F-E3-s4,F-E3-B-s4,@cf/ibm-granite/granite-4.0-h-micro,E3,F,4,llm,report,0,0,0,0,0,7,5,5,lead w1 w2 w3 w4 w5 w6,lead w1 w2 w4 w5,5,True,1242,244,1252,False
+runs__grid__B__F-E3-s4,F-E3-B-s4,@cf/ibm-granite/granite-4.0-h-micro,E3,F,4,baseline,report,0,0,0,0,0,7,5,5,lead w1 w2 w3 w4 w5 w6,lead w1 w2 w4 w5,5,True,,,,False
+runs__grid__B__F-E3-s5,F-E3-B-s5,@cf/ibm-granite/granite-4.0-h-micro,E3,F,5,llm,report,0,0,0,0,0,4,5,4,lead w1 w2 w3,lead w1 w2 w3 w5,4,True,1304,279,1249,False
+runs__grid__B__F-E3-s5,F-E3-B-s5,@cf/ibm-granite/granite-4.0-h-micro,E3,F,5,baseline,report,0,0,0,0,0,6,5,5,lead w1 w2 w3 w4 w5,lead w1 w2 w3 w5,5,True,,,,False
+runs__grid__B__F-E3-s6,F-E3-B-s6,@cf/ibm-granite/granite-4.0-h-micro,E3,F,6,llm,report,0,0,0,0,0,5,6,5,lead w1 w3 w5 w6,lead w1 w2 w3 w5 w6,5,True,1508,281,1407,False
+runs__grid__B__F-E3-s6,F-E3-B-s6,@cf/ibm-granite/granite-4.0-h-micro,E3,F,6,baseline,report,0,0,0,0,0,6,6,6,lead w1 w2 w3 w5 w6,lead w1 w2 w3 w5 w6,6,True,,,,False
+runs__grid__B__F-E3-s7,F-E3-B-s7,@cf/ibm-granite/granite-4.0-h-micro,E3,F,7,llm,report,0,0,0,0,0,5,7,5,lead w1 w3 w4 w5,lead w1 w2 w3 w4 w5 w6,5,True,1523,324,1383,False
+runs__grid__B__F-E3-s7,F-E3-B-s7,@cf/ibm-granite/granite-4.0-h-micro,E3,F,7,baseline,report,0,0,0,0,0,7,7,7,lead w1 w2 w3 w4 w5 w6,lead w1 w2 w3 w4 w5 w6,7,True,,,,False
+runs__grid__B__F-E3-s8,F-E3-B-s8,@cf/ibm-granite/granite-4.0-h-micro,E3,F,8,llm,report,0,0,0,0,0,5,6,5,w2 w3 w4 w5 w6,w1 w2 w3 w4 w5 w6,5,True,1330,347,1286,False
+runs__grid__B__F-E3-s8,F-E3-B-s8,@cf/ibm-granite/granite-4.0-h-micro,E3,F,8,baseline,report,0,0,0,0,0,6,6,6,w1 w2 w3 w4 w5 w6,w1 w2 w3 w4 w5 w6,6,True,,,,False
+runs__grid__B__F-P1-s1,F-P1-B-s1,@cf/ibm-granite/granite-4.0-h-micro,P1,F,1,llm,report,0,1,0,0,0,7,5,5,lead w1 w2 w3 w4 w5 w6,lead w3 w4 w5 w6,5,True,1274,343,1213,False
+runs__grid__B__F-P1-s1,F-P1-B-s1,@cf/ibm-granite/granite-4.0-h-micro,P1,F,1,baseline,report,0,1,0,0,0,7,5,5,lead w1 w2 w3 w4 w5 w6,lead w3 w4 w5 w6,5,True,,,,False
+runs__grid__B__F-P1-s2,F-P1-B-s2,@cf/ibm-granite/granite-4.0-h-micro,P1,F,2,llm,report,1,0,0,0,0,5,6,4,w Lead w2 w3 w5 w6,lead w1 w2 w3 w5 w6,4,True,1368,1032,1257,False
+runs__grid__B__F-P1-s2,F-P1-B-s2,@cf/ibm-granite/granite-4.0-h-micro,P1,F,2,baseline,report,1,0,0,0,0,7,6,6,lead w1 w2 w3 w4 w5 w6,lead w1 w2 w3 w5 w6,6,True,,,,False
+runs__grid__B__F-P1-s3,F-P1-B-s3,@cf/ibm-granite/granite-4.0-h-micro,P1,F,3,llm,report,0,2,0,0,0,6,7,6,lead w1 w2 w4 w5 w6,lead w1 w2 w3 w4 w5 w6,6,True,1295,305,1184,False
+runs__grid__B__F-P1-s3,F-P1-B-s3,@cf/ibm-granite/granite-4.0-h-micro,P1,F,3,baseline,report,0,2,0,0,0,7,7,7,lead w1 w2 w3 w4 w5 w6,lead w1 w2 w3 w4 w5 w6,7,True,,,,False
+runs__grid__B__F-P1-s4,F-P1-B-s4,@cf/ibm-granite/granite-4.0-h-micro,P1,F,4,llm,report,0,0,0,0,0,7,6,6,lead w1 w2 w3 w4 w5 w6,lead w2 w3 w4 w5 w6,6,True,1310,413,1299,False
+runs__grid__B__F-P1-s4,F-P1-B-s4,@cf/ibm-granite/granite-4.0-h-micro,P1,F,4,baseline,report,0,0,0,0,0,7,6,6,lead w1 w2 w3 w4 w5 w6,lead w2 w3 w4 w5 w6,6,True,,,,False
+runs__grid__B__F-P1-s5,F-P1-B-s5,@cf/ibm-granite/granite-4.0-h-micro,P1,F,5,llm,report,0,3,0,0,0,6,6,6,lead w1 w2 w3 w4 w5,lead w1 w2 w3 w4 w5 w6,6,True,1315,441,1235,False
+runs__grid__B__F-P1-s5,F-P1-B-s5,@cf/ibm-granite/granite-4.0-h-micro,P1,F,5,baseline,report,0,3,0,0,0,7,6,6,lead w1 w2 w3 w4 w5 w6,lead w1 w2 w3 w4 w5 w6,7,True,,,,False
+runs__grid__B__F-P1-s6,F-P1-B-s6,@cf/ibm-granite/granite-4.0-h-micro,P1,F,6,llm,report,0,1,0,0,0,6,6,5,lead w2 w3 w4 w5 w6,lead w1 w2 w3 w4 w5,5,True,1398,373,1371,False
+runs__grid__B__F-P1-s6,F-P1-B-s6,@cf/ibm-granite/granite-4.0-h-micro,P1,F,6,baseline,report,0,1,0,0,0,7,6,6,lead w1 w2 w3 w4 w5 w6,lead w1 w2 w3 w4 w5,6,True,,,,False
+runs__grid__B__F-P1-s7,F-P1-B-s7,@cf/ibm-granite/granite-4.0-h-micro,P1,F,7,llm,report,0,1,0,0,0,7,6,6,lead w1 w2 w3 w4 w5 w6,lead w1 w2 w3 w4 w6,6,True,1319,387,1232,False
+runs__grid__B__F-P1-s7,F-P1-B-s7,@cf/ibm-granite/granite-4.0-h-micro,P1,F,7,baseline,report,0,1,0,0,0,7,6,6,lead w1 w2 w3 w4 w5 w6,lead w1 w2 w3 w4 w6,6,True,,,,False
+runs__grid__B__F-P1-s8,F-P1-B-s8,@cf/ibm-granite/granite-4.0-h-micro,P1,F,8,llm,report,0,3,0,0,0,5,4,4,lead w1 w3 w4 w5,lead w1 w4 w5,4,True,1266,363,1212,False
+runs__grid__B__F-P1-s8,F-P1-B-s8,@cf/ibm-granite/granite-4.0-h-micro,P1,F,8,baseline,report,0,3,0,0,0,7,4,4,lead w1 w2 w3 w4 w5 w6,lead w1 w4 w5,4,True,,,,False

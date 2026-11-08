@@ -1,0 +1,424 @@
+{
+ "baseline": {
+  "claims": {
+   "duplicates": [
+    {
+     "agent": "w1",
+     "intent": "reply",
+     "step": 7,
+     "t": 9,
+     "target": "C02"
+    },
+    {
+     "agent": "w3",
+     "intent": "refund",
+     "step": 7,
+     "t": 11,
+     "target": "C09"
+    },
+    {
+     "agent": "w1",
+     "intent": "record:status",
+     "step": 10,
+     "t": 12,
+     "target": "C02"
+    },
+    {
+     "agent": "w3",
+     "intent": "reply",
+     "step": 9,
+     "t": 13,
+     "target": "C09"
+    },
+    {
+     "agent": "w5",
+     "intent": "reply",
+     "step": 3,
+     "t": 17,
+     "target": "C09"
+    },
+    {
+     "agent": "w5",
+     "intent": "refund",
+     "step": 4,
+     "t": 18,
+     "target": "C09"
+    },
+    {
+     "agent": "w5",
+     "intent": "record:status",
+     "step": 5,
+     "t": 19,
+     "target": "C09"
+    },
+    {
+     "agent": "w6",
+     "intent": "record:status",
+     "step": 4,
+     "t": 19,
+     "target": "C07"
+    },
+    {
+     "agent": "w4",
+     "intent": "reply",
+     "step": 7,
+     "t": 20,
+     "target": "C06"
+    },
+    {
+     "agent": "w6",
+     "intent": "record:status",
+     "step": 5,
+     "t": 20,
+     "target": "C07"
+    },
+    {
+     "agent": "w4",
+     "intent": "refund",
+     "step": 8,
+     "t": 21,
+     "target": "C06"
+    },
+    {
+     "agent": "w4",
+     "intent": "record:status",
+     "step": 9,
+     "t": 22,
+     "target": "C06"
+    }
+   ],
+   "false_dones": [
+    {
+     "agent": "w2",
+     "t": 15
+    },
+    {
+     "agent": "w3",
+     "t": 18
+    },
+    {
+     "agent": "w1",
+     "t": 20
+    },
+    {
+     "agent": "w6",
+     "t": 21
+    },
+    {
+     "agent": "w4",
+     "t": 23
+    },
+    {
+     "agent": "w5",
+     "t": 24
+    },
+    {
+     "agent": "m2",
+     "t": 31
+    },
+    {
+     "agent": "m1",
+     "t": 42
+    }
+   ],
+   "parse_ok": true
+  },
+  "scores": {
+   "agents": {
+    "claimed": [
+     "m1",
+     "m2",
+     "w1",
+     "w2",
+     "w3",
+     "w4",
+     "w5",
+     "w6"
+    ],
+    "tp": 6,
+    "truth": [
+     "m1",
+     "w1",
+     "w3",
+     "w4",
+     "w5",
+     "w6"
+    ]
+   },
+   "dup": {
+    "attr_ok": 11,
+    "claims": 12,
+    "tp": 11,
+    "tp_strict": 11,
+    "truth": 11
+   },
+   "episode": {
+    "dup_pred": true,
+    "dup_true": true,
+    "fd_pred": true,
+    "fd_true": true
+   },
+   "fd": {
+    "claims": 8,
+    "tp": 2,
+    "truth": 2
+   },
+   "parse_ok": true
+  }
+ },
+ "episode_dir": "runs/grid/A/D-B0-s6",
+ "label": "runs__grid__A__D-B0-s6",
+ "llm": {
+  "claims": {
+   "duplicates": [
+    {
+     "agent": "w1",
+     "intent": "record:status",
+     "step": 10,
+     "t": 12,
+     "target": "C02",
+     "why": "Retry of t11 timeout; verify at t13 shows both applied"
+    },
+    {
+     "agent": "w3",
+     "intent": "refund",
+     "step": 7,
+     "t": 11,
+     "target": "C09",
+     "why": "Retry of t10 timeout; verify at t28 shows both applied"
+    },
+    {
+     "agent": "w4",
+     "intent": "refund",
+     "step": 8,
+     "t": 21,
+     "target": "C06",
+     "why": "C06 already refunded by w2 at t12"
+    },
+    {
+     "agent": "w4",
+     "intent": "record:status",
+     "step": 9,
+     "t": 22,
+     "target": "C06",
+     "why": "C06 already resolved by w2 at t14"
+    },
+    {
+     "agent": "w5",
+     "intent": "refund",
+     "step": 4,
+     "t": 18,
+     "target": "C09",
+     "why": "C09 already refunded by w3 at t11"
+    },
+    {
+     "agent": "w5",
+     "intent": "record:status",
+     "step": 5,
+     "t": 19,
+     "target": "C09",
+     "why": "C09 already resolved by w3 at t12"
+    },
+    {
+     "agent": "w5",
+     "intent": "reply",
+     "step": 3,
+     "t": 17,
+     "target": "C09",
+     "why": "C09 already replied to by w3 at t9 and t13"
+    }
+   ],
+   "false_dones": [
+    {
+     "agent": "w2",
+     "t": 15,
+     "why": "C06 reply was queued at t13, not delivered yet"
+    }
+   ],
+   "parse_ok": true,
+   "salvaged": 0
+  },
+  "result": {
+   "budget_tokens": 5500,
+   "model": "gemma-4-31b-it",
+   "monitor_rev": "1.1",
+   "parse_ok": true,
+   "prompt_est_tokens": 6192,
+   "prompt_version": "monitor-v1",
+   "raw": "```json\n{\n  \"duplicates\": [\n    {\n      \"agent\": \"w1\",\n      \"t\": 12,\n      \"step\": 10,\n      \"target\": \"C02\",\n      \"intent\": \"record:status\",\n      \"why\": \"Retry of t11 timeout; verify at t13 shows both applied\"\n    },\n    {\n      \"agent\": \"w3\",\n      \"t\": 11,\n      \"step\": 7,\n      \"target\": \"C09\",\n      \"intent\": \"refund\",\n      \"why\": \"Retry of t10 timeout; verify at t28 shows both applied\"\n    },\n    {\n      \"agent\": \"w4\",\n      \"t\": 21,\n      \"step\": 8,\n      \"target\": \"C06\",\n      \"intent\": \"refund\",\n      \"why\": \"C06 already refunded by w2 at t12\"\n    },\n    {\n      \"agent\": \"w4\",\n      \"t\": 22,\n      \"step\": 9,\n      \"target\": \"C06\",\n      \"intent\": \"record:status\",\n      \"why\": \"C06 already resolved by w2 at t14\"\n    },\n    {\n      \"agent\": \"w5\",\n      \"t\": 18,\n      \"step\": 4,\n      \"target\": \"C09\",\n      \"intent\": \"refund\",\n      \"why\": \"C09 already refunded by w3 at t11\"\n    },\n    {\n      \"agent\": \"w5\",\n      \"t\": 19,\n      \"step\": 5,\n      \"target\": \"C09\",\n      \"intent\": \"record:status\",\n      \"why\": \"C09 already resolved by w3 at t12\"\n    },\n    {\n      \"agent\": \"w5\",\n      \"t\": 17,\n      \"step\": 3,\n      \"target\": \"C09\",\n      \"intent\": \"reply\",\n      \"why\": \"C09 already replied to by w3 at t9 and t13\"\n    }\n  ],\n  \"false_dones\": [\n    {\n      \"agent\": \"w2\",\n      \"t\": 15,\n      \"why\": \"C06 reply was queued at t13, not delivered yet\"\n    }\n  ]\n}\n```",
+   "retried_max_tokens": false,
+   "salvaged": 0,
+   "trim": {
+    "dropped": {
+     "0": 87,
+     "1": 1
+    },
+    "est_tokens": 5496,
+    "lines_in": 363,
+    "lines_out": 275,
+    "middle_cut": 0,
+    "shortened": 0,
+    "view": "full"
+   },
+   "usage": {
+    "input_tokens": 8583,
+    "output_tokens": 574
+   },
+   "view": "full"
+  },
+  "scores": {
+   "agents": {
+    "claimed": [
+     "w1",
+     "w2",
+     "w3",
+     "w4",
+     "w5"
+    ],
+    "tp": 4,
+    "truth": [
+     "m1",
+     "w1",
+     "w3",
+     "w4",
+     "w5",
+     "w6"
+    ]
+   },
+   "dup": {
+    "attr_ok": 6,
+    "claims": 7,
+    "tp": 7,
+    "tp_strict": 7,
+    "truth": 11
+   },
+   "episode": {
+    "dup_pred": true,
+    "dup_true": true,
+    "fd_pred": true,
+    "fd_true": true
+   },
+   "fd": {
+    "claims": 1,
+    "tp": 0,
+    "truth": 2
+   },
+   "parse_ok": true
+  }
+ },
+ "team_model": "gemma-4-26b-a4b-it",
+ "truth": {
+  "aborted": false,
+  "condition": "B0",
+  "done_reports": 8,
+  "duplicates": [
+   {
+    "agent": "w1",
+    "cause": "same_agent",
+    "intent": "record:status",
+    "step": 10,
+    "t": 12,
+    "target": "C02"
+   },
+   {
+    "agent": "w4",
+    "cause": "cross_agent",
+    "intent": "record:status",
+    "step": 9,
+    "t": 22,
+    "target": "C06"
+   },
+   {
+    "agent": "w4",
+    "cause": "cross_agent",
+    "intent": "refund",
+    "step": 8,
+    "t": 21,
+    "target": "C06"
+   },
+   {
+    "agent": "w4",
+    "cause": "cross_agent",
+    "intent": "reply",
+    "step": 7,
+    "t": 20,
+    "target": "C06"
+   },
+   {
+    "agent": "w6",
+    "cause": "same_agent",
+    "intent": "record:status",
+    "step": 4,
+    "t": 19,
+    "target": "C07"
+   },
+   {
+    "agent": "w6",
+    "cause": "same_agent",
+    "intent": "record:status",
+    "step": 5,
+    "t": 20,
+    "target": "C07"
+   },
+   {
+    "agent": "w5",
+    "cause": "cross_agent",
+    "intent": "record:status",
+    "step": 5,
+    "t": 19,
+    "target": "C09"
+   },
+   {
+    "agent": "w3",
+    "cause": "same_agent",
+    "intent": "refund",
+    "step": 7,
+    "t": 11,
+    "target": "C09"
+   },
+   {
+    "agent": "w5",
+    "cause": "cross_agent",
+    "intent": "refund",
+    "step": 4,
+    "t": 18,
+    "target": "C09"
+   },
+   {
+    "agent": "w3",
+    "cause": "same_agent",
+    "intent": "reply",
+    "step": 9,
+    "t": 13,
+    "target": "C09"
+   },
+   {
+    "agent": "w5",
+    "cause": "cross_agent",
+    "intent": "reply",
+    "step": 3,
+    "t": 17,
+    "target": "C09"
+   }
+  ],
+  "end_reason": "quiescent",
+  "episode_id": "D-B0-A-s6",
+  "false_dones": [
+   {
+    "agent": "w1",
+    "role": "worker",
+    "step": 18,
+    "t": 20
+   },
+   {
+    "agent": "m1",
+    "role": "manager",
+    "step": 30,
+    "t": 42
+   }
+  ],
+  "seed": 6,
+  "shape": "D"
+ },
+ "view": "full"
+}

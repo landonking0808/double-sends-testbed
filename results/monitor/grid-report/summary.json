@@ -5,9 +5,9 @@
   "llm_calls": {
    "cached": 0,
    "errors": 0,
-   "input_tokens": 2454,
-   "new": 1,
-   "output_tokens": 500
+   "input_tokens": 0,
+   "new": 0,
+   "output_tokens": 0
   },
   "llm_errors": [],
   "monitor_model": "gemma-4-31b-it",

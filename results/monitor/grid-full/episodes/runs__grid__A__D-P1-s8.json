@@ -1,0 +1,347 @@
+{
+ "baseline": {
+  "claims": {
+   "duplicates": [
+    {
+     "agent": "w1",
+     "intent": "reply",
+     "step": 7,
+     "t": 11,
+     "target": "C06"
+    },
+    {
+     "agent": "w3",
+     "intent": "reply",
+     "step": 10,
+     "t": 16,
+     "target": "C07"
+    },
+    {
+     "agent": "w1",
+     "intent": "reply",
+     "step": 12,
+     "t": 16,
+     "target": "C02"
+    },
+    {
+     "agent": "w4",
+     "intent": "reply",
+     "step": 13,
+     "t": 17,
+     "target": "C09"
+    },
+    {
+     "agent": "w4",
+     "intent": "refund",
+     "step": 14,
+     "t": 18,
+     "target": "C09"
+    },
+    {
+     "agent": "w4",
+     "intent": "record:status",
+     "step": 15,
+     "t": 19,
+     "target": "C09"
+    },
+    {
+     "agent": "w4",
+     "intent": "reply",
+     "step": 18,
+     "t": 22,
+     "target": "C05"
+    },
+    {
+     "agent": "w4",
+     "intent": "record:status",
+     "step": 19,
+     "t": 23,
+     "target": "C05"
+    }
+   ],
+   "false_dones": [
+    {
+     "agent": "w6",
+     "t": 13
+    },
+    {
+     "agent": "w5",
+     "t": 17
+    },
+    {
+     "agent": "w3",
+     "t": 21
+    },
+    {
+     "agent": "w1",
+     "t": 26
+    },
+    {
+     "agent": "w4",
+     "t": 29
+    },
+    {
+     "agent": "m2",
+     "t": 38
+    }
+   ],
+   "parse_ok": true
+  },
+  "scores": {
+   "agents": {
+    "claimed": [
+     "m2",
+     "w1",
+     "w3",
+     "w4",
+     "w5",
+     "w6"
+    ],
+    "tp": 5,
+    "truth": [
+     "m2",
+     "w1",
+     "w3",
+     "w4",
+     "w6"
+    ]
+   },
+   "dup": {
+    "attr_ok": 7,
+    "claims": 8,
+    "tp": 7,
+    "tp_strict": 7,
+    "truth": 7
+   },
+   "episode": {
+    "dup_pred": true,
+    "dup_true": true,
+    "fd_pred": true,
+    "fd_true": true
+   },
+   "fd": {
+    "claims": 6,
+    "tp": 3,
+    "truth": 3
+   },
+   "parse_ok": true
+  }
+ },
+ "episode_dir": "runs/grid/A/D-P1-s8",
+ "label": "runs__grid__A__D-P1-s8",
+ "llm": {
+  "claims": {
+   "duplicates": [
+    {
+     "agent": "w1",
+     "intent": "reply",
+     "step": 7,
+     "t": 11,
+     "target": "C06",
+     "why": "The first attempt at t9 timed out, but the verify at t22 shows both t9 and t11 were delivered."
+    },
+    {
+     "agent": "w4",
+     "intent": "refund",
+     "step": 14,
+     "t": 18,
+     "target": "C09",
+     "why": "w2 already issued a refund for C09 at t11."
+    },
+    {
+     "agent": "w4",
+     "intent": "record:status",
+     "step": 15,
+     "t": 19,
+     "target": "C09",
+     "why": "w2 already set record status to resolved for C09 at t12."
+    },
+    {
+     "agent": "w4",
+     "intent": "reply",
+     "step": 18,
+     "t": 22,
+     "target": "C05",
+     "why": "w5 already sent a delivered reply to C05 at t12."
+    },
+    {
+     "agent": "w4",
+     "intent": "record:status",
+     "step": 19,
+     "t": 23,
+     "target": "C05",
+     "why": "w5 already set record status to resolved for C05 at t14."
+    }
+   ],
+   "false_dones": [
+    {
+     "agent": "w5",
+     "t": 17,
+     "why": "C05 was missing a reply (w5's t12 reply was delivered, but w5 reported done before verifying if C05 was fully handled; however, the prompt requires a reply, refund if eligible, and status resolved. C0"
+    },
+    {
+     "agent": "w3",
+     "t": 21,
+     "why": "w3 reported done for C07, but w3 only sent a reply at t16; the refund and record status for C07 were done by w5."
+    }
+   ],
+   "parse_ok": true,
+   "salvaged": 0
+  },
+  "result": {
+   "budget_tokens": 5500,
+   "model": "gemma-4-31b-it",
+   "monitor_rev": "1.1",
+   "parse_ok": true,
+   "prompt_est_tokens": 5467,
+   "prompt_version": "monitor-v1",
+   "raw": "```json\n{\n \"duplicates\": [\n  {\n   \"agent\": \"w1\",\n   \"t\": 11,\n   \"step\": 7,\n   \"target\": \"C06\",\n   \"intent\": \"reply\",\n   \"why\": \"The first attempt at t9 timed out, but the verify at t22 shows both t9 and t11 were delivered.\"\n  },\n  {\n   \"agent\": \"w4\",\n   \"t\": 18,\n   \"step\": 14,\n   \"target\": \"C09\",\n   \"intent\": \"refund\",\n   \"why\": \"w2 already issued a refund for C09 at t11.\"\n  },\n  {\n   \"agent\": \"w4\",\n   \"t\": 19,\n   \"step\": 15,\n   \"target\": \"C09\",\n   \"intent\": \"record:status\",\n   \"why\": \"w2 already set record status to resolved for C09 at t12.\"\n  },\n  {\n   \"agent\": \"w4\",\n   \"t\": 22,\n   \"step\": 18,\n   \"target\": \"C05\",\n   \"intent\": \"reply\",\n   \"why\": \"w5 already sent a delivered reply to C05 at t12.\"\n  },\n  {\n   \"agent\": \"w4\",\n   \"t\": 23,\n   \"step\": 19,\n   \"target\": \"C05\",\n   \"intent\": \"record:status\",\n   \"why\": \"w5 already set record status to resolved for C05 at t14.\"\n  }\n ],\n \"false_dones\": [\n  {\n   \"agent\": \"w5\",\n   \"t\": 17,\n   \"why\": \"C05 was missing a reply (w5's t12 reply was delivered, but w5 reported done before verifying if C05 was fully handled; however, the prompt requires a reply, refund if eligible, and status resolved. C05 had no refund attempt, but the main issue is w5 reported done while w4 later performed actions on C05, and w5's own report claims C05:reply and C05:record:status, but C05 was assigned to w5 via m2. Wait, w5 handled M11(C05). w5 did reply(t12) and record:status(t14). C05 is handled. Let's check C07. w5 did reply(t9-queued), refund(t10), record:status(t13). But t9 was queued; did it deliver? w3 sent another reply at t16. w5's report at t17 claims C07:reply. If t9 bounced or stayed queued, it's a false done. However, w3 also handled C07. The most obvious false done is w3.\"\n  },\n  {\n   \"agent\": \"w3\",\n   \"t\": 21,\n   \"why\": \"w3 reported done for C07, but w3 only sent a reply at t16; the refund and record status for C07 were done by w5.\"\n  }\n ]\n}\n```",
+   "retried_max_tokens": false,
+   "salvaged": 0,
+   "trim": {
+    "dropped": {
+     "0": 77,
+     "1": 77,
+     "2": 44
+    },
+    "est_tokens": 4771,
+    "lines_in": 408,
+    "lines_out": 210,
+    "middle_cut": 0,
+    "shortened": 32,
+    "view": "full"
+   },
+   "usage": {
+    "input_tokens": 7731,
+    "output_tokens": 753
+   },
+   "view": "full"
+  },
+  "scores": {
+   "agents": {
+    "claimed": [
+     "w1",
+     "w3",
+     "w4",
+     "w5"
+    ],
+    "tp": 3,
+    "truth": [
+     "m2",
+     "w1",
+     "w3",
+     "w4",
+     "w6"
+    ]
+   },
+   "dup": {
+    "attr_ok": 5,
+    "claims": 5,
+    "tp": 5,
+    "tp_strict": 5,
+    "truth": 7
+   },
+   "episode": {
+    "dup_pred": true,
+    "dup_true": true,
+    "fd_pred": true,
+    "fd_true": true
+   },
+   "fd": {
+    "claims": 2,
+    "tp": 0,
+    "truth": 3
+   },
+   "parse_ok": true
+  }
+ },
+ "team_model": "gemma-4-26b-a4b-it",
+ "truth": {
+  "aborted": false,
+  "condition": "P1",
+  "done_reports": 6,
+  "duplicates": [
+   {
+    "agent": "w4",
+    "cause": "cross_agent",
+    "intent": "record:status",
+    "step": 19,
+    "t": 23,
+    "target": "C05"
+   },
+   {
+    "agent": "w4",
+    "cause": "cross_agent",
+    "intent": "reply",
+    "step": 18,
+    "t": 22,
+    "target": "C05"
+   },
+   {
+    "agent": "w1",
+    "cause": "same_agent",
+    "intent": "reply",
+    "step": 7,
+    "t": 11,
+    "target": "C06"
+   },
+   {
+    "agent": "w3",
+    "cause": "cross_agent",
+    "intent": "reply",
+    "step": 10,
+    "t": 16,
+    "target": "C07"
+   },
+   {
+    "agent": "w4",
+    "cause": "cross_agent",
+    "intent": "record:status",
+    "step": 15,
+    "t": 19,
+    "target": "C09"
+   },
+   {
+    "agent": "w4",
+    "cause": "cross_agent",
+    "intent": "refund",
+    "step": 14,
+    "t": 18,
+    "target": "C09"
+   },
+   {
+    "agent": "w4",
+    "cause": "cross_agent",
+    "intent": "reply",
+    "step": 13,
+    "t": 17,
+    "target": "C09"
+   }
+  ],
+  "end_reason": "call_cap",
+  "episode_id": "D-P1-A-s8",
+  "false_dones": [
+   {
+    "agent": "w6",
+    "role": "worker",
+    "step": 7,
+    "t": 13
+   },
+   {
+    "agent": "w4",
+    "role": "worker",
+    "step": 25,
+    "t": 29
+   },
+   {
+    "agent": "m2",
+    "role": "manager",
+    "step": 28,
+    "t": 38
+   }
+  ],
+  "seed": 8,
+  "shape": "D"
+ },
+ "view": "full"
+}

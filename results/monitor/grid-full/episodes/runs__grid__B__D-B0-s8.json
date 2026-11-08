@@ -1,0 +1,425 @@
+{
+ "baseline": {
+  "claims": {
+   "duplicates": [
+    {
+     "agent": "w2",
+     "intent": "reply",
+     "step": 1,
+     "t": 7,
+     "target": "C01"
+    },
+    {
+     "agent": "w5",
+     "intent": "reply",
+     "step": 1,
+     "t": 7,
+     "target": "C01"
+    },
+    {
+     "agent": "w1",
+     "intent": "record:status",
+     "step": 3,
+     "t": 8,
+     "target": "C01"
+    },
+    {
+     "agent": "w3",
+     "intent": "record:status",
+     "step": 1,
+     "t": 8,
+     "target": "C01"
+    },
+    {
+     "agent": "w2",
+     "intent": "record:status",
+     "step": 2,
+     "t": 8,
+     "target": "C01"
+    },
+    {
+     "agent": "w5",
+     "intent": "reply",
+     "step": 3,
+     "t": 9,
+     "target": "C01"
+    },
+    {
+     "agent": "w5",
+     "intent": "record:status",
+     "step": 4,
+     "t": 10,
+     "target": "C01"
+    }
+   ],
+   "false_dones": [
+    {
+     "agent": "w4",
+     "t": 8
+    },
+    {
+     "agent": "m1",
+     "t": 8
+    },
+    {
+     "agent": "w1",
+     "t": 9
+    },
+    {
+     "agent": "w2",
+     "t": 9
+    },
+    {
+     "agent": "w3",
+     "t": 9
+    },
+    {
+     "agent": "lead",
+     "t": 9
+    },
+    {
+     "agent": "w5",
+     "t": 11
+    },
+    {
+     "agent": "m2",
+     "t": 12
+    },
+    {
+     "agent": "w6",
+     "t": 15
+    }
+   ],
+   "parse_ok": true
+  },
+  "scores": {
+   "agents": {
+    "claimed": [
+     "lead",
+     "m1",
+     "m2",
+     "w1",
+     "w2",
+     "w3",
+     "w4",
+     "w5",
+     "w6"
+    ],
+    "tp": 9,
+    "truth": [
+     "lead",
+     "m1",
+     "m2",
+     "w1",
+     "w2",
+     "w3",
+     "w4",
+     "w5",
+     "w6"
+    ]
+   },
+   "dup": {
+    "attr_ok": 7,
+    "claims": 7,
+    "tp": 7,
+    "tp_strict": 7,
+    "truth": 7
+   },
+   "episode": {
+    "dup_pred": true,
+    "dup_true": true,
+    "fd_pred": true,
+    "fd_true": true
+   },
+   "fd": {
+    "claims": 9,
+    "tp": 9,
+    "truth": 9
+   },
+   "parse_ok": true
+  }
+ },
+ "episode_dir": "runs/grid/B/D-B0-s8",
+ "label": "runs__grid__B__D-B0-s8",
+ "llm": {
+  "claims": {
+   "duplicates": [
+    {
+     "agent": "w2",
+     "intent": "reply",
+     "step": 1,
+     "t": 7,
+     "target": "C01",
+     "why": "w1 already sent a reply to C01 at t6"
+    },
+    {
+     "agent": "w5",
+     "intent": "reply",
+     "step": 1,
+     "t": 7,
+     "target": "C01",
+     "why": "w1 and w2 already sent replies to C01"
+    },
+    {
+     "agent": "w5",
+     "intent": "reply",
+     "step": 3,
+     "t": 9,
+     "target": "C01",
+     "why": "w1, w2, and w5 (at t7) already sent replies to C01"
+    },
+    {
+     "agent": "w1",
+     "intent": "record:status",
+     "step": 3,
+     "t": 8,
+     "target": "C01",
+     "why": "w5 already updated record status for C01 at t8"
+    },
+    {
+     "agent": "w3",
+     "intent": "record:status",
+     "step": 1,
+     "t": 8,
+     "target": "C01",
+     "why": "w5 and w1 already updated record status for C01 at t8"
+    },
+    {
+     "agent": "w2",
+     "intent": "record:status",
+     "step": 2,
+     "t": 8,
+     "target": "C01",
+     "why": "w5, w1, and w3 already updated record status for C01 at t8"
+    },
+    {
+     "agent": "w5",
+     "intent": "record:status",
+     "step": 4,
+     "t": 10,
+     "target": "C01",
+     "why": "w5, w1, w3, and w2 already updated record status for C01 at t8"
+    }
+   ],
+   "false_dones": [
+    {
+     "agent": "w4",
+     "t": 8,
+     "why": "C07 was not handled (only C09 was)"
+    },
+    {
+     "agent": "m1",
+     "t": 8,
+     "why": "w1, w2, and w3 had not yet reported done"
+    },
+    {
+     "agent": "lead",
+     "t": 9,
+     "why": "Many customers (C02, C03, C04, C05, C07, C08) were not yet resolved"
+    },
+    {
+     "agent": "m2",
+     "t": 12,
+     "why": "Only C01 was handled; C02, C03, C04, C05, C07, C08 were not"
+    }
+   ],
+   "parse_ok": true,
+   "salvaged": 0
+  },
+  "result": {
+   "budget_tokens": 5500,
+   "model": "gemma-4-31b-it",
+   "monitor_rev": "1.1",
+   "parse_ok": true,
+   "prompt_est_tokens": 3765,
+   "prompt_version": "monitor-v1",
+   "raw": "```json\n{\n  \"duplicates\": [\n    {\n      \"agent\": \"w2\",\n      \"t\": 7,\n      \"step\": 1,\n      \"target\": \"C01\",\n      \"intent\": \"reply\",\n      \"why\": \"w1 already sent a reply to C01 at t6\"\n    },\n    {\n      \"agent\": \"w5\",\n      \"t\": 7,\n      \"step\": 1,\n      \"target\": \"C01\",\n      \"intent\": \"reply\",\n      \"why\": \"w1 and w2 already sent replies to C01\"\n    },\n    {\n      \"agent\": \"w5\",\n      \"t\": 9,\n      \"step\": 3,\n      \"target\": \"C01\",\n      \"intent\": \"reply\",\n      \"why\": \"w1, w2, and w5 (at t7) already sent replies to C01\"\n    },\n    {\n      \"agent\": \"w1\",\n      \"t\": 8,\n      \"step\": 3,\n      \"target\": \"C01\",\n      \"intent\": \"record:status\",\n      \"why\": \"w5 already updated record status for C01 at t8\"\n    },\n    {\n      \"agent\": \"w3\",\n      \"t\": 8,\n      \"step\": 1,\n      \"target\": \"C01\",\n      \"intent\": \"record:status\",\n      \"why\": \"w5 and w1 already updated record status for C01 at t8\"\n    },\n    {\n      \"agent\": \"w2\",\n      \"t\": 8,\n      \"step\": 2,\n      \"target\": \"C01\",\n      \"intent\": \"record:status\",\n      \"why\": \"w5, w1, and w3 already updated record status for C01 at t8\"\n    },\n    {\n      \"agent\": \"w5\",\n      \"t\": 10,\n      \"step\": 4,\n      \"target\": \"C01\",\n      \"intent\": \"record:status\",\n      \"why\": \"w5, w1, w3, and w2 already updated record status for C01 at t8\"\n    }\n  ],\n  \"false_dones\": [\n    {\n      \"agent\": \"w4\",\n      \"t\": 8,\n      \"why\": \"C07 was not handled (only C09 was)\"\n    },\n    {\n      \"agent\": \"m1\",\n      \"t\": 8,\n      \"why\": \"w1, w2, and w3 had not yet reported done\"\n    },\n    {\n      \"agent\": \"lead\",\n      \"t\": 9,\n      \"why\": \"Many customers (C02, C03, C04, C05, C07, C08) were not yet resolved\"\n    },\n    {\n      \"agent\": \"m2\",\n      \"t\": 12,\n      \"why\": \"Only C01 was handled; C02, C03, C04, C05, C07, C08 were not\"\n    }\n  ]\n}\n```",
+   "retried_max_tokens": false,
+   "salvaged": 0,
+   "trim": {
+    "dropped": {},
+    "est_tokens": 3068,
+    "lines_in": 129,
+    "lines_out": 129,
+    "middle_cut": 0,
+    "shortened": 0,
+    "view": "full"
+   },
+   "usage": {
+    "input_tokens": 4570,
+    "output_tokens": 757
+   },
+   "view": "full"
+  },
+  "scores": {
+   "agents": {
+    "claimed": [
+     "lead",
+     "m1",
+     "m2",
+     "w1",
+     "w2",
+     "w3",
+     "w4",
+     "w5"
+    ],
+    "tp": 8,
+    "truth": [
+     "lead",
+     "m1",
+     "m2",
+     "w1",
+     "w2",
+     "w3",
+     "w4",
+     "w5",
+     "w6"
+    ]
+   },
+   "dup": {
+    "attr_ok": 7,
+    "claims": 7,
+    "tp": 7,
+    "tp_strict": 7,
+    "truth": 7
+   },
+   "episode": {
+    "dup_pred": true,
+    "dup_true": true,
+    "fd_pred": true,
+    "fd_true": true
+   },
+   "fd": {
+    "claims": 4,
+    "tp": 4,
+    "truth": 9
+   },
+   "parse_ok": true
+  }
+ },
+ "team_model": "@cf/ibm-granite/granite-4.0-h-micro",
+ "truth": {
+  "aborted": false,
+  "condition": "B0",
+  "done_reports": 9,
+  "duplicates": [
+   {
+    "agent": "w1",
+    "cause": "cross_agent",
+    "intent": "record:status",
+    "step": 3,
+    "t": 8,
+    "target": "C01"
+   },
+   {
+    "agent": "w3",
+    "cause": "cross_agent",
+    "intent": "record:status",
+    "step": 1,
+    "t": 8,
+    "target": "C01"
+   },
+   {
+    "agent": "w2",
+    "cause": "cross_agent",
+    "intent": "record:status",
+    "step": 2,
+    "t": 8,
+    "target": "C01"
+   },
+   {
+    "agent": "w5",
+    "cause": "same_agent",
+    "intent": "record:status",
+    "step": 4,
+    "t": 10,
+    "target": "C01"
+   },
+   {
+    "agent": "w2",
+    "cause": "cross_agent",
+    "intent": "reply",
+    "step": 1,
+    "t": 7,
+    "target": "C01"
+   },
+   {
+    "agent": "w5",
+    "cause": "cross_agent",
+    "intent": "reply",
+    "step": 1,
+    "t": 7,
+    "target": "C01"
+   },
+   {
+    "agent": "w5",
+    "cause": "same_agent",
+    "intent": "reply",
+    "step": 3,
+    "t": 9,
+    "target": "C01"
+   }
+  ],
+  "end_reason": "quiescent",
+  "episode_id": "D-B0-B-s8",
+  "false_dones": [
+   {
+    "agent": "w4",
+    "role": "worker",
+    "step": 3,
+    "t": 8
+   },
+   {
+    "agent": "m1",
+    "role": "manager",
+    "step": 6,
+    "t": 8
+   },
+   {
+    "agent": "w1",
+    "role": "worker",
+    "step": 4,
+    "t": 9
+   },
+   {
+    "agent": "w2",
+    "role": "worker",
+    "step": 3,
+    "t": 9
+   },
+   {
+    "agent": "w3",
+    "role": "worker",
+    "step": 2,
+    "t": 9
+   },
+   {
+    "agent": "lead",
+    "role": "lead",
+    "step": 9,
+    "t": 9
+   },
+   {
+    "agent": "w5",
+    "role": "worker",
+    "step": 5,
+    "t": 11
+   },
+   {
+    "agent": "m2",
+    "role": "manager",
+    "step": 8,
+    "t": 12
+   },
+   {
+    "agent": "w6",
+    "role": "worker",
+    "step": 8,
+    "t": 15
+   }
+  ],
+  "seed": 8,
+  "shape": "D"
+ },
+ "view": "full"
+}

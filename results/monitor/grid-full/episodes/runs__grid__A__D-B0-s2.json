@@ -1,0 +1,237 @@
+{
+ "baseline": {
+  "claims": {
+   "duplicates": [
+    {
+     "agent": "w2",
+     "intent": "refund",
+     "step": 4,
+     "t": 8,
+     "target": "C02"
+    },
+    {
+     "agent": "w6",
+     "intent": "reply",
+     "step": 3,
+     "t": 9,
+     "target": "C09"
+    },
+    {
+     "agent": "w3",
+     "intent": "reply",
+     "step": 4,
+     "t": 9,
+     "target": "C04"
+    }
+   ],
+   "false_dones": [
+    {
+     "agent": "w1",
+     "t": 7
+    },
+    {
+     "agent": "w3",
+     "t": 11
+    },
+    {
+     "agent": "w6",
+     "t": 11
+    },
+    {
+     "agent": "w4",
+     "t": 14
+    },
+    {
+     "agent": "w2",
+     "t": 15
+    },
+    {
+     "agent": "m1",
+     "t": 16
+    },
+    {
+     "agent": "w5",
+     "t": 16
+    },
+    {
+     "agent": "m2",
+     "t": 25
+    }
+   ],
+   "parse_ok": true
+  },
+  "scores": {
+   "agents": {
+    "claimed": [
+     "m1",
+     "m2",
+     "w1",
+     "w2",
+     "w3",
+     "w4",
+     "w5",
+     "w6"
+    ],
+    "tp": 3,
+    "truth": [
+     "w2",
+     "w3",
+     "w6"
+    ]
+   },
+   "dup": {
+    "attr_ok": 3,
+    "claims": 3,
+    "tp": 3,
+    "tp_strict": 3,
+    "truth": 3
+   },
+   "episode": {
+    "dup_pred": true,
+    "dup_true": true,
+    "fd_pred": true,
+    "fd_true": false
+   },
+   "fd": {
+    "claims": 8,
+    "tp": 0,
+    "truth": 0
+   },
+   "parse_ok": true
+  }
+ },
+ "episode_dir": "runs/grid/A/D-B0-s2",
+ "label": "runs__grid__A__D-B0-s2",
+ "llm": {
+  "claims": {
+   "duplicates": [
+    {
+     "agent": "w2",
+     "intent": "refund",
+     "step": 4,
+     "t": 8,
+     "target": "C02",
+     "why": "The refund at t7 timed out but was applied; the call at t8 is a duplicate."
+    },
+    {
+     "agent": "w6",
+     "intent": "reply",
+     "step": 3,
+     "t": 9,
+     "target": "C09",
+     "why": "The message at t8 timed out but was delivered; the call at t9 is a duplicate."
+    },
+    {
+     "agent": "w3",
+     "intent": "reply",
+     "step": 4,
+     "t": 9,
+     "target": "C04",
+     "why": "The message at t8 timed out but was delivered; the call at t9 is a duplicate."
+    }
+   ],
+   "false_dones": [],
+   "parse_ok": true,
+   "salvaged": 0
+  },
+  "result": {
+   "budget_tokens": 5500,
+   "model": "gemma-4-31b-it",
+   "monitor_rev": "1.1",
+   "parse_ok": true,
+   "prompt_est_tokens": 6192,
+   "prompt_version": "monitor-v1",
+   "raw": "```json\n{\n  \"duplicates\": [\n    {\n      \"agent\": \"w2\",\n      \"t\": 8,\n      \"step\": 4,\n      \"target\": \"C02\",\n      \"intent\": \"refund\",\n      \"why\": \"The refund at t7 timed out but was applied; the call at t8 is a duplicate.\"\n    },\n    {\n      \"agent\": \"w6\",\n      \"t\": 9,\n      \"step\": 3,\n      \"target\": \"C09\",\n      \"intent\": \"reply\",\n      \"why\": \"The message at t8 timed out but was delivered; the call at t9 is a duplicate.\"\n    },\n    {\n      \"agent\": \"w3\",\n      \"t\": 9,\n      \"step\": 4,\n      \"target\": \"C04\",\n      \"intent\": \"reply\",\n      \"why\": \"The message at t8 timed out but was delivered; the call at t9 is a duplicate.\"\n    }\n  ],\n  \"false_dones\": []\n}\n```",
+   "retried_max_tokens": false,
+   "salvaged": 0,
+   "trim": {
+    "dropped": {
+     "0": 5
+    },
+    "est_tokens": 5495,
+    "lines_in": 257,
+    "lines_out": 252,
+    "middle_cut": 0,
+    "shortened": 0,
+    "view": "full"
+   },
+   "usage": {
+    "input_tokens": 9064,
+    "output_tokens": 251
+   },
+   "view": "full"
+  },
+  "scores": {
+   "agents": {
+    "claimed": [
+     "w2",
+     "w3",
+     "w6"
+    ],
+    "tp": 3,
+    "truth": [
+     "w2",
+     "w3",
+     "w6"
+    ]
+   },
+   "dup": {
+    "attr_ok": 3,
+    "claims": 3,
+    "tp": 3,
+    "tp_strict": 3,
+    "truth": 3
+   },
+   "episode": {
+    "dup_pred": true,
+    "dup_true": true,
+    "fd_pred": false,
+    "fd_true": false
+   },
+   "fd": {
+    "claims": 0,
+    "tp": 0,
+    "truth": 0
+   },
+   "parse_ok": true
+  }
+ },
+ "team_model": "gemma-4-26b-a4b-it",
+ "truth": {
+  "aborted": false,
+  "condition": "B0",
+  "done_reports": 8,
+  "duplicates": [
+   {
+    "agent": "w2",
+    "cause": "same_agent",
+    "intent": "refund",
+    "step": 4,
+    "t": 8,
+    "target": "C02"
+   },
+   {
+    "agent": "w3",
+    "cause": "same_agent",
+    "intent": "reply",
+    "step": 4,
+    "t": 9,
+    "target": "C04"
+   },
+   {
+    "agent": "w6",
+    "cause": "same_agent",
+    "intent": "reply",
+    "step": 3,
+    "t": 9,
+    "target": "C09"
+   }
+  ],
+  "end_reason": "quiescent",
+  "episode_id": "D-B0-A-s2",
+  "false_dones": [],
+  "seed": 2,
+  "shape": "D"
+ },
+ "view": "full"
+}

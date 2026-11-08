@@ -1,0 +1,252 @@
+{
+ "baseline": {
+  "claims": {
+   "duplicates": [
+    {
+     "agent": "w5",
+     "intent": "reply",
+     "step": 1,
+     "t": 6,
+     "target": "C01"
+    },
+    {
+     "agent": "w5",
+     "intent": "record:status",
+     "step": 3,
+     "t": 8,
+     "target": "C01"
+    }
+   ],
+   "false_dones": [
+    {
+     "agent": "w2",
+     "t": 5
+    },
+    {
+     "agent": "lead",
+     "t": 5
+    },
+    {
+     "agent": "w1",
+     "t": 7
+    },
+    {
+     "agent": "w4",
+     "t": 7
+    },
+    {
+     "agent": "w5",
+     "t": 9
+    },
+    {
+     "agent": "w3",
+     "t": 9
+    }
+   ],
+   "parse_ok": true
+  },
+  "scores": {
+   "agents": {
+    "claimed": [
+     "lead",
+     "w1",
+     "w2",
+     "w3",
+     "w4",
+     "w5"
+    ],
+    "tp": 6,
+    "truth": [
+     "lead",
+     "w1",
+     "w2",
+     "w3",
+     "w4",
+     "w5"
+    ]
+   },
+   "dup": {
+    "attr_ok": 1,
+    "claims": 2,
+    "tp": 1,
+    "tp_strict": 1,
+    "truth": 1
+   },
+   "episode": {
+    "dup_pred": true,
+    "dup_true": true,
+    "fd_pred": true,
+    "fd_true": true
+   },
+   "fd": {
+    "claims": 6,
+    "tp": 6,
+    "truth": 6
+   },
+   "parse_ok": true
+  }
+ },
+ "episode_dir": "runs/grid/B/F-B0-s4",
+ "label": "runs__grid__B__F-B0-s4",
+ "llm": {
+  "claims": {
+   "duplicates": [
+    {
+     "agent": "w5",
+     "intent": "record:status",
+     "step": 3,
+     "t": 8,
+     "target": "C01",
+     "why": "C01 status was already set to resolved by w2 at t4"
+    }
+   ],
+   "false_dones": [
+    {
+     "agent": "w2",
+     "t": 5,
+     "why": "Assigned M03(C04), M04(C05), M05(C06); only handled C01 (which was not assigned to w2)"
+    },
+    {
+     "agent": "lead",
+     "t": 5,
+     "why": "Reported done while w1, w3, w4, w5 were still working"
+    },
+    {
+     "agent": "w4",
+     "t": 7,
+     "why": "Assigned M08(C03), M09(C09), M10(C09); failed to handle C03"
+    },
+    {
+     "agent": "w3",
+     "t": 9,
+     "why": "Missing refund for C02 (only lookup, message, and status update performed)"
+    }
+   ],
+   "parse_ok": true,
+   "salvaged": 0
+  },
+  "result": {
+   "budget_tokens": 5500,
+   "model": "gemma-4-31b-it",
+   "monitor_rev": "1.1",
+   "parse_ok": true,
+   "prompt_est_tokens": 2239,
+   "prompt_version": "monitor-v1",
+   "raw": "```json\n{\n  \"duplicates\": [\n    {\n      \"agent\": \"w5\",\n      \"t\": 8,\n      \"step\": 3,\n      \"target\": \"C01\",\n      \"intent\": \"record:status\",\n      \"why\": \"C01 status was already set to resolved by w2 at t4\"\n    }\n  ],\n  \"false_dones\": [\n    {\n      \"agent\": \"w2\",\n      \"t\": 5,\n      \"why\": \"Assigned M03(C04), M04(C05), M05(C06); only handled C01 (which was not assigned to w2)\"\n    },\n    {\n      \"agent\": \"lead\",\n      \"t\": 5,\n      \"why\": \"Reported done while w1, w3, w4, w5 were still working\"\n    },\n    {\n      \"agent\": \"w4\",\n      \"t\": 7,\n      \"why\": \"Assigned M08(C03), M09(C09), M10(C09); failed to handle C03\"\n    },\n    {\n      \"agent\": \"w3\",\n      \"t\": 9,\n      \"why\": \"Missing refund for C02 (only lookup, message, and status update performed)\"\n    }\n  ]\n}\n```",
+   "retried_max_tokens": false,
+   "salvaged": 0,
+   "trim": {
+    "dropped": {},
+    "est_tokens": 1542,
+    "lines_in": 73,
+    "lines_out": 73,
+    "middle_cut": 0,
+    "shortened": 0,
+    "view": "full"
+   },
+   "usage": {
+    "input_tokens": 2611,
+    "output_tokens": 326
+   },
+   "view": "full"
+  },
+  "scores": {
+   "agents": {
+    "claimed": [
+     "lead",
+     "w2",
+     "w3",
+     "w4",
+     "w5"
+    ],
+    "tp": 5,
+    "truth": [
+     "lead",
+     "w1",
+     "w2",
+     "w3",
+     "w4",
+     "w5"
+    ]
+   },
+   "dup": {
+    "attr_ok": 1,
+    "claims": 1,
+    "tp": 1,
+    "tp_strict": 1,
+    "truth": 1
+   },
+   "episode": {
+    "dup_pred": true,
+    "dup_true": true,
+    "fd_pred": true,
+    "fd_true": true
+   },
+   "fd": {
+    "claims": 4,
+    "tp": 4,
+    "truth": 6
+   },
+   "parse_ok": true
+  }
+ },
+ "team_model": "@cf/ibm-granite/granite-4.0-h-micro",
+ "truth": {
+  "aborted": false,
+  "condition": "B0",
+  "done_reports": 6,
+  "duplicates": [
+   {
+    "agent": "w5",
+    "cause": "cross_agent",
+    "intent": "record:status",
+    "step": 3,
+    "t": 8,
+    "target": "C01"
+   }
+  ],
+  "end_reason": "quiescent",
+  "episode_id": "F-B0-B-s4",
+  "false_dones": [
+   {
+    "agent": "w2",
+    "role": "worker",
+    "step": 3,
+    "t": 5
+   },
+   {
+    "agent": "lead",
+    "role": "lead",
+    "step": 5,
+    "t": 5
+   },
+   {
+    "agent": "w1",
+    "role": "worker",
+    "step": 6,
+    "t": 7
+   },
+   {
+    "agent": "w4",
+    "role": "worker",
+    "step": 3,
+    "t": 7
+   },
+   {
+    "agent": "w5",
+    "role": "worker",
+    "step": 4,
+    "t": 9
+   },
+   {
+    "agent": "w3",
+    "role": "worker",
+    "step": 6,
+    "t": 9
+   }
+  ],
+  "seed": 4,
+  "shape": "F"
+ },
+ "view": "full"
+}

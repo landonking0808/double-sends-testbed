@@ -1,0 +1,105 @@
+{
+ "aborted": false,
+ "agent_stats": {
+  "lead": {
+   "calls": 40,
+   "client_errors": 0,
+   "parse_failures": 1
+  },
+  "m1": {
+   "calls": 17,
+   "client_errors": 0,
+   "parse_failures": 0
+  },
+  "m2": {
+   "calls": 40,
+   "client_errors": 0,
+   "parse_failures": 0
+  },
+  "w1": {
+   "calls": 14,
+   "client_errors": 0,
+   "parse_failures": 0
+  },
+  "w2": {
+   "calls": 11,
+   "client_errors": 0,
+   "parse_failures": 0
+  },
+  "w3": {
+   "calls": 14,
+   "client_errors": 0,
+   "parse_failures": 0
+  },
+  "w4": {
+   "calls": 6,
+   "client_errors": 0,
+   "parse_failures": 0
+  },
+  "w5": {
+   "calls": 40,
+   "client_errors": 0,
+   "parse_failures": 6
+  },
+  "w6": {
+   "calls": 16,
+   "client_errors": 0,
+   "parse_failures": 0
+  }
+ },
+ "agents": "llm",
+ "batch": {
+  "n_messages": 12,
+  "n_repeat": 3,
+  "task_id": "batch-3"
+ },
+ "client_usage": {
+  "cache_hits": 134,
+  "calls": 64,
+  "completions": 64,
+  "input_tokens": 119783,
+  "output_tokens": 2941,
+  "retries": 0,
+  "wait_s": 0.0
+ },
+ "condition": "E3",
+ "created_at": "2026-11-07T10:59:56-06:00",
+ "end_reason": "quiescent",
+ "episode_id": "D-E3-B-s3",
+ "faults": {
+  "delivery_delay": 2,
+  "p_bounce": 0.15,
+  "p_stale_board": 0.5,
+  "p_timeout": 0.1
+ },
+ "files_sha256": {
+  "episode.jsonl": "db559f34d5171240ee947d58a704bff2d95aadd9cccd5547d1e19c7646ade2cc",
+  "ledger.json": "8ccf0bcd97078ec6dcd911a68a8119b6538a569b9c7306f612efd30ca1b53054",
+  "scheduler.jsonl": "bd143cfb96ceadc21d264998962ad40e72f1006737fe0b90ce98906558aa6886"
+ },
+ "git_commit": "34690be5a6d960ed64c8911dac1705c40e9feb38",
+ "git_dirty_dst": false,
+ "grid": {
+  "config": "configs/frozen.json",
+  "model_key": "B"
+ },
+ "history_turns": 3,
+ "lease_ticks": 6,
+ "llm": {
+  "max_consecutive_errors": 1,
+  "max_llm_calls": 200,
+  "max_prompt_tokens": 1200,
+  "max_tokens": 256
+ },
+ "max_retries": 3,
+ "max_ticks": 300,
+ "model": "@cf/ibm-granite/granite-4.0-h-micro",
+ "platform": "linux",
+ "provider": "cloudflare",
+ "python": "3.12.3",
+ "seed": 3,
+ "shape": "D",
+ "temperature": 0.7,
+ "turn_cap": 40,
+ "wall_s": 331.7
+}

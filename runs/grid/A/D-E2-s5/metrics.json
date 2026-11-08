@@ -1,0 +1,161 @@
+{
+ "aborted": false,
+ "attribution": {
+  "duplicates": [
+   {
+    "agent": "w6",
+    "cause": "same_agent",
+    "effect": "e0026",
+    "first_agent": "w6",
+    "first_effect": "e0025",
+    "intent": "record:status",
+    "step": 12,
+    "t": 55,
+    "target": "C03"
+   },
+   {
+    "agent": "w1",
+    "cause": "same_agent",
+    "effect": "e0009",
+    "first_agent": "w1",
+    "first_effect": "e0008",
+    "intent": "refund",
+    "step": 8,
+    "t": 11,
+    "target": "C07"
+   },
+   {
+    "agent": "w2",
+    "cause": "cross_agent",
+    "effect": "e0017",
+    "first_agent": "w4",
+    "first_effect": "e0016",
+    "intent": "record:status",
+    "step": 11,
+    "t": 15,
+    "target": "C08"
+   },
+   {
+    "agent": "w2",
+    "cause": "cross_agent",
+    "effect": "e0012",
+    "first_agent": "w4",
+    "first_effect": "e0011",
+    "intent": "refund",
+    "step": 9,
+    "t": 13,
+    "target": "C08"
+   },
+   {
+    "agent": "w2",
+    "cause": "cross_agent",
+    "effect": "e0015",
+    "first_agent": "w4",
+    "first_effect": "e0014",
+    "intent": "reply",
+    "step": 10,
+    "t": 14,
+    "target": "C08"
+   }
+  ],
+  "false_dones": [
+   {
+    "agent": "w1",
+    "report": "r003",
+    "role": "worker",
+    "step": 13,
+    "t": 16,
+    "unmet": [
+     "C07:no_refund"
+    ]
+   },
+   {
+    "agent": "m1",
+    "report": "r005",
+    "role": "manager",
+    "step": 11,
+    "t": 18,
+    "unmet": [
+     "C07:no_refund"
+    ]
+   },
+   {
+    "agent": "w5",
+    "report": "r006",
+    "role": "worker",
+    "step": 6,
+    "t": 21,
+    "unmet": [
+     "C05:no_refund"
+    ]
+   }
+  ],
+  "premature": []
+ },
+ "condition": "E2",
+ "cost": {
+  "blocked": 0,
+  "client_errors": 0,
+  "effects": 29,
+  "estimated_token_calls": 0,
+  "input_tokens": 213105,
+  "llm_calls": 161,
+  "output_tokens": 4784,
+  "parse_failures": 0,
+  "refused_reports": 0,
+  "steps": 161,
+  "steps_scheduler": 161,
+  "suppressed": 0,
+  "ticks": 64
+ },
+ "dar": {
+  "any_duplicate": true,
+  "by_cause": {
+   "cross_agent": 3,
+   "same_agent": 2
+  },
+  "extras": 5,
+  "per100": 22.727272727272727,
+  "required": 22
+ },
+ "end_reason": "quiescent",
+ "episode_id": "D-E2-A-s5",
+ "fcr": {
+  "all": [
+   3,
+   7
+  ],
+  "manager": [
+   1,
+   1
+  ],
+  "worker": [
+   2,
+   6
+  ]
+ },
+ "fidelity": {
+  "claimed": 32,
+  "claimed_true": 32,
+  "lead": null,
+  "met": 37,
+  "met_claimed": 30
+ },
+ "lead_done": false,
+ "pcr": {
+  "all": [
+   0,
+   1
+  ],
+  "manager": [
+   0,
+   1
+  ]
+ },
+ "seed": 5,
+ "shape": "D",
+ "task_success": {
+  "met": 25,
+  "total": 27
+ }
+}

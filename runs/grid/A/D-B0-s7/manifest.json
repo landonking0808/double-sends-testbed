@@ -1,0 +1,105 @@
+{
+ "aborted": false,
+ "agent_stats": {
+  "lead": {
+   "calls": 34,
+   "client_errors": 0,
+   "parse_failures": 0
+  },
+  "m1": {
+   "calls": 40,
+   "client_errors": 0,
+   "parse_failures": 0
+  },
+  "m2": {
+   "calls": 40,
+   "client_errors": 0,
+   "parse_failures": 0
+  },
+  "w1": {
+   "calls": 11,
+   "client_errors": 0,
+   "parse_failures": 0
+  },
+  "w2": {
+   "calls": 12,
+   "client_errors": 0,
+   "parse_failures": 0
+  },
+  "w3": {
+   "calls": 6,
+   "client_errors": 0,
+   "parse_failures": 0
+  },
+  "w4": {
+   "calls": 15,
+   "client_errors": 0,
+   "parse_failures": 0
+  },
+  "w5": {
+   "calls": 37,
+   "client_errors": 0,
+   "parse_failures": 0
+  },
+  "w6": {
+   "calls": 5,
+   "client_errors": 0,
+   "parse_failures": 0
+  }
+ },
+ "agents": "llm",
+ "batch": {
+  "n_messages": 12,
+  "n_repeat": 3,
+  "task_id": "batch-7"
+ },
+ "client_usage": {
+  "cache_hits": 126,
+  "calls": 118,
+  "completions": 74,
+  "input_tokens": 135231,
+  "output_tokens": 1340,
+  "retries": 44,
+  "wait_s": 2035.4
+ },
+ "condition": "B0",
+ "created_at": "2026-11-07T11:42:17-06:00",
+ "end_reason": "call_cap",
+ "episode_id": "D-B0-A-s7",
+ "faults": {
+  "delivery_delay": 2,
+  "p_bounce": 0.15,
+  "p_stale_board": 0.5,
+  "p_timeout": 0.1
+ },
+ "files_sha256": {
+  "episode.jsonl": "a8f57d72e3757f2f85c434d9d99e111d70c033673052d99b2fad153dbc58693d",
+  "ledger.json": "4b672c52a66ad6bf342cd3def3f180664f7f0387cf0ab4c35cb3eb5aa0304dca",
+  "scheduler.jsonl": "79e4f9c3d9d2fba2bfea5f27be89ea300b125098eb17309974ec8755aff8d7d8"
+ },
+ "git_commit": "34690be5a6d960ed64c8911dac1705c40e9feb38",
+ "git_dirty_dst": false,
+ "grid": {
+  "config": "configs/frozen.json",
+  "model_key": "A"
+ },
+ "history_turns": 3,
+ "lease_ticks": 6,
+ "llm": {
+  "max_consecutive_errors": 1,
+  "max_llm_calls": 200,
+  "max_prompt_tokens": 1200,
+  "max_tokens": 256
+ },
+ "max_retries": 3,
+ "max_ticks": 300,
+ "model": "gemma-4-26b-a4b-it",
+ "platform": "linux",
+ "provider": "gemini",
+ "python": "3.12.3",
+ "seed": 7,
+ "shape": "D",
+ "temperature": 0.7,
+ "turn_cap": 40,
+ "wall_s": 2583.8
+}

@@ -1,0 +1,144 @@
+{
+ "aborted": false,
+ "attribution": {
+  "duplicates": [
+   {
+    "agent": "w4",
+    "cause": "cross_agent",
+    "effect": "e0025",
+    "first_agent": "w3",
+    "first_effect": "e0024",
+    "intent": "reply",
+    "step": 18,
+    "t": 23,
+    "target": "C03"
+   },
+   {
+    "agent": "w4",
+    "cause": "same_agent",
+    "effect": "e0020",
+    "first_agent": "w4",
+    "first_effect": "e0016",
+    "intent": "reply",
+    "step": 13,
+    "t": 18,
+    "target": "C04"
+   },
+   {
+    "agent": "w5",
+    "cause": "cross_agent",
+    "effect": "e0018",
+    "first_agent": "w1",
+    "first_effect": "e0008",
+    "intent": "record:status",
+    "step": 12,
+    "t": 18,
+    "target": "C05"
+   },
+   {
+    "agent": "w5",
+    "cause": "cross_agent",
+    "effect": "e0017",
+    "first_agent": "w1",
+    "first_effect": "e0006",
+    "intent": "refund",
+    "step": 11,
+    "t": 17,
+    "target": "C05"
+   },
+   {
+    "agent": "w5",
+    "cause": "cross_agent",
+    "effect": "e0015",
+    "first_agent": "w1",
+    "first_effect": "e0001",
+    "intent": "reply",
+    "step": 10,
+    "t": 16,
+    "target": "C05"
+   }
+  ],
+  "false_dones": [
+   {
+    "agent": "w1",
+    "report": "r002",
+    "role": "worker",
+    "step": 15,
+    "t": 19,
+    "unmet": [
+     "C09:record:status"
+    ]
+   },
+   {
+    "agent": "w3",
+    "report": "r003",
+    "role": "worker",
+    "step": 21,
+    "t": 27,
+    "unmet": [
+     "C02:no_refund",
+     "C03:no_refund"
+    ]
+   }
+  ],
+  "premature": []
+ },
+ "condition": "P1",
+ "cost": {
+  "blocked": 0,
+  "client_errors": 0,
+  "effects": 28,
+  "estimated_token_calls": 0,
+  "input_tokens": 294844,
+  "llm_calls": 200,
+  "output_tokens": 5097,
+  "parse_failures": 0,
+  "refused_reports": 0,
+  "steps": 200,
+  "steps_scheduler": 201,
+  "suppressed": 0,
+  "ticks": 59
+ },
+ "dar": {
+  "any_duplicate": true,
+  "by_cause": {
+   "cross_agent": 4,
+   "same_agent": 1
+  },
+  "extras": 5,
+  "per100": 22.727272727272727,
+  "required": 22
+ },
+ "end_reason": "call_cap",
+ "episode_id": "D-P1-A-s3",
+ "fcr": {
+  "all": [
+   2,
+   3
+  ],
+  "worker": [
+   2,
+   3
+  ]
+ },
+ "fidelity": {
+  "claimed": 14,
+  "claimed_true": 14,
+  "lead": null,
+  "met": 12,
+  "met_claimed": 12
+ },
+ "lead_done": false,
+ "pcr": {
+  "all": [
+   0,
+   0
+  ]
+ },
+ "seed": 3,
+ "shape": "D",
+ "task_success": {
+  "met": 22,
+  "total": 27
+ }
+}

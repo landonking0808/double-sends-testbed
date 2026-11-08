@@ -59,6 +59,12 @@ def _ordered(vals, ref):
     return sorted(vals, key=lambda x: (ref.index(x) if x in ref else len(ref), str(x)))
 
 
+def _short(model) -> str:
+    """Display name for a model: drop a provider path prefix ("@cf/ibm-granite/granite-4.0-h-micro" ->
+    "granite-4.0-h-micro") so titles and legends fit the column width."""
+    return str(model).rsplit("/", 1)[-1]
+
+
 def _model_style(models):
     return {m: (SERIES[i % len(SERIES)], MARKERS[i % len(MARKERS)]) for i, m in enumerate(models)}
 
@@ -107,7 +113,7 @@ def fig1(t1: pd.DataFrame, out: Path, label: str) -> list:
                     r = dm.loc[c]
                     x = j + (i - (len(models) - 1) / 2) * off
                     _errdot(ax, x, s * r[col], s * r[lo_c], s * r[hi_c], *sty[m],
-                            label=m if (col == "dar_per100" and j == 0) else None)
+                            label=_short(m) if (col == "dar_per100" and j == 0) else None)
             ax.set_ylabel(ylab)
             ax.set_ylim(bottom=-0.04 * max(1.0, ax.get_ylim()[1]))
         axes[-1].set_xticks(range(len(conds)), [COND_NAMES.get(c, c) for c in conds])
@@ -130,7 +136,7 @@ def _label_points(ax, pts, multi=False):
     for (x, y), items in spots.items():
         models = list(dict.fromkeys(m for m, _ in items))
         if multi and len(models) > 1:
-            text = "; ".join(m.replace("scripted-", "") + " " + ",".join(c for mm, c in items if mm == m) for m in models)
+            text = "; ".join(_short(m).replace("scripted-", "") + " " + ",".join(c for mm, c in items if mm == m) for m in models)
         else:
             text = ",".join(dict.fromkeys(c for _, c in items))
         ax.annotate(text, (x, y), xytext=(4, 3), textcoords="offset points", fontsize=5.8, color=INK2)
@@ -162,7 +168,7 @@ def fig2(t1: pd.DataFrame, out: Path, label: str) -> list:
                         continue
                     x, y = 100 * r["cost_overhead_vs_b0"], s * r[col]
                     ax.plot([x], [y], sty[m][1], color=sty[m][0], ms=max(2.8, 5.6 - 1.6 * mi), mec="white", mew=0.6, zorder=10 + mi,
-                            label=m if (col == panels[0][0] and first) else None)
+                            label=_short(m) if (col == panels[0][0] and first) else None)
                     first = False
                     pts.append((x, y, r["condition"], m))
             _label_points(ax, pts, multi=len(models) > 1)
@@ -210,7 +216,7 @@ def fig3(t1: pd.DataFrame, out: Path, label: str) -> list:
                 if ci == 0:
                     ax.set_ylabel(ylab)
                 if ri == 0:
-                    ax.set_title(m, loc="left")
+                    ax.set_title(_short(m), loc="left")
                 ax.set_xticks(range(len(conds)), conds)
                 ax.set_xlim(-0.5, len(conds) - 0.5)
         for row in axes:

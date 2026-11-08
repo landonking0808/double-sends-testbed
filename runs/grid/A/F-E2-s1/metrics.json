@@ -1,0 +1,287 @@
+{
+ "aborted": false,
+ "attribution": {
+  "duplicates": [
+   {
+    "agent": "w6",
+    "cause": "same_agent",
+    "effect": "e0032",
+    "first_agent": "w6",
+    "first_effect": "e0031",
+    "intent": "reply",
+    "step": 16,
+    "t": 22,
+    "target": "C02"
+   },
+   {
+    "agent": "w6",
+    "cause": "same_agent",
+    "effect": "e0033",
+    "first_agent": "w6",
+    "first_effect": "e0031",
+    "intent": "reply",
+    "step": 17,
+    "t": 23,
+    "target": "C02"
+   },
+   {
+    "agent": "w4",
+    "cause": "same_agent",
+    "effect": "e0014",
+    "first_agent": "w4",
+    "first_effect": "e0013",
+    "intent": "record:status",
+    "step": 5,
+    "t": 9,
+    "target": "C03"
+   },
+   {
+    "agent": "w1",
+    "cause": "same_agent",
+    "effect": "e0023",
+    "first_agent": "w1",
+    "first_effect": "e0021",
+    "intent": "record:status",
+    "step": 12,
+    "t": 13,
+    "target": "C06"
+   },
+   {
+    "agent": "w5",
+    "cause": "same_agent",
+    "effect": "e0016",
+    "first_agent": "w5",
+    "first_effect": "e0011",
+    "intent": "reply",
+    "step": 5,
+    "t": 10,
+    "target": "C09"
+   },
+   {
+    "agent": "w5",
+    "cause": "same_agent",
+    "effect": "e0024",
+    "first_agent": "w5",
+    "first_effect": "e0011",
+    "intent": "reply",
+    "step": 9,
+    "t": 14,
+    "target": "C09"
+   },
+   {
+    "agent": "w5",
+    "cause": "same_agent",
+    "effect": "e0026",
+    "first_agent": "w5",
+    "first_effect": "e0011",
+    "intent": "reply",
+    "step": 11,
+    "t": 16,
+    "target": "C09"
+   },
+   {
+    "agent": "w5",
+    "cause": "same_agent",
+    "effect": "e0027",
+    "first_agent": "w5",
+    "first_effect": "e0011",
+    "intent": "reply",
+    "step": 12,
+    "t": 17,
+    "target": "C09"
+   },
+   {
+    "agent": "w5",
+    "cause": "same_agent",
+    "effect": "e0029",
+    "first_agent": "w5",
+    "first_effect": "e0011",
+    "intent": "reply",
+    "step": 14,
+    "t": 19,
+    "target": "C09"
+   },
+   {
+    "agent": "w5",
+    "cause": "same_agent",
+    "effect": "e0030",
+    "first_agent": "w5",
+    "first_effect": "e0011",
+    "intent": "reply",
+    "step": 16,
+    "t": 21,
+    "target": "C09"
+   },
+   {
+    "agent": "w5",
+    "cause": "same_agent",
+    "effect": "e0034",
+    "first_agent": "w5",
+    "first_effect": "e0011",
+    "intent": "reply",
+    "step": 18,
+    "t": 23,
+    "target": "C09"
+   },
+   {
+    "agent": "w5",
+    "cause": "same_agent",
+    "effect": "e0036",
+    "first_agent": "w5",
+    "first_effect": "e0011",
+    "intent": "reply",
+    "step": 20,
+    "t": 25,
+    "target": "C09"
+   },
+   {
+    "agent": "w5",
+    "cause": "same_agent",
+    "effect": "e0038",
+    "first_agent": "w5",
+    "first_effect": "e0011",
+    "intent": "reply",
+    "step": 22,
+    "t": 27,
+    "target": "C09"
+   },
+   {
+    "agent": "w5",
+    "cause": "same_agent",
+    "effect": "e0039",
+    "first_agent": "w5",
+    "first_effect": "e0011",
+    "intent": "reply",
+    "step": 24,
+    "t": 29,
+    "target": "C09"
+   },
+   {
+    "agent": "w5",
+    "cause": "same_agent",
+    "effect": "e0040",
+    "first_agent": "w5",
+    "first_effect": "e0011",
+    "intent": "reply",
+    "step": 26,
+    "t": 31,
+    "target": "C09"
+   },
+   {
+    "agent": "w5",
+    "cause": "same_agent",
+    "effect": "e0041",
+    "first_agent": "w5",
+    "first_effect": "e0011",
+    "intent": "reply",
+    "step": 28,
+    "t": 33,
+    "target": "C09"
+   },
+   {
+    "agent": "w5",
+    "cause": "same_agent",
+    "effect": "e0042",
+    "first_agent": "w5",
+    "first_effect": "e0011",
+    "intent": "reply",
+    "step": 30,
+    "t": 35,
+    "target": "C09"
+   },
+   {
+    "agent": "w5",
+    "cause": "same_agent",
+    "effect": "e0043",
+    "first_agent": "w5",
+    "first_effect": "e0011",
+    "intent": "reply",
+    "step": 32,
+    "t": 37,
+    "target": "C09"
+   },
+   {
+    "agent": "w5",
+    "cause": "same_agent",
+    "effect": "e0044",
+    "first_agent": "w5",
+    "first_effect": "e0011",
+    "intent": "reply",
+    "step": 34,
+    "t": 39,
+    "target": "C09"
+   }
+  ],
+  "false_dones": [
+   {
+    "agent": "w6",
+    "report": "r005",
+    "role": "worker",
+    "step": 21,
+    "t": 27,
+    "unmet": [
+     "C02:no_refund"
+    ]
+   }
+  ],
+  "premature": []
+ },
+ "condition": "E2",
+ "cost": {
+  "blocked": 0,
+  "client_errors": 0,
+  "effects": 45,
+  "estimated_token_calls": 0,
+  "input_tokens": 186187,
+  "llm_calls": 136,
+  "output_tokens": 4940,
+  "parse_failures": 0,
+  "refused_reports": 1,
+  "steps": 136,
+  "steps_scheduler": 136,
+  "suppressed": 0,
+  "ticks": 43
+ },
+ "dar": {
+  "any_duplicate": true,
+  "by_cause": {
+   "cross_agent": 0,
+   "same_agent": 19
+  },
+  "extras": 19,
+  "per100": 82.6086956521739,
+  "required": 23
+ },
+ "end_reason": "quiescent",
+ "episode_id": "F-E2-A-s1",
+ "fcr": {
+  "all": [
+   1,
+   6
+  ],
+  "worker": [
+   1,
+   6
+  ]
+ },
+ "fidelity": {
+  "claimed": 23,
+  "claimed_true": 23,
+  "lead": null,
+  "met": 23,
+  "met_claimed": 23
+ },
+ "lead_done": false,
+ "pcr": {
+  "all": [
+   0,
+   0
+  ]
+ },
+ "seed": 1,
+ "shape": "F",
+ "task_success": {
+  "met": 26,
+  "total": 27
+ }
+}

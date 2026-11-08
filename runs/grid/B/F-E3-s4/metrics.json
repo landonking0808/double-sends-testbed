@@ -1,0 +1,144 @@
+{
+ "aborted": false,
+ "attribution": {
+  "duplicates": [],
+  "false_dones": [
+   {
+    "agent": "w1",
+    "report": "r003",
+    "role": "worker",
+    "step": 5,
+    "t": 7,
+    "unmet": [
+     "C07:refund"
+    ]
+   },
+   {
+    "agent": "w2",
+    "report": "r011",
+    "role": "worker",
+    "step": 8,
+    "t": 11,
+    "unmet": [
+     "C08:no_refund"
+    ]
+   },
+   {
+    "agent": "w4",
+    "report": "r013",
+    "role": "worker",
+    "step": 5,
+    "t": 11,
+    "unmet": [
+     "C05:reply",
+     "C05:no_refund"
+    ]
+   },
+   {
+    "agent": "w5",
+    "report": "r018",
+    "role": "worker",
+    "step": 6,
+    "t": 13,
+    "unmet": [
+     "C06:reply",
+     "C06:no_refund"
+    ]
+   },
+   {
+    "agent": "lead",
+    "report": "r019",
+    "role": "lead",
+    "step": 14,
+    "t": 14,
+    "unmet": [
+     "C01:reply",
+     "C01:record:status",
+     "C03:reply",
+     "C03:record:status",
+     "C05:reply",
+     "C05:no_refund",
+     "C06:reply",
+     "C06:no_refund",
+     "C07:refund",
+     "C08:no_refund",
+     "C09:reply",
+     "C09:record:status",
+     "C09:refund"
+    ]
+   }
+  ],
+  "premature": []
+ },
+ "condition": "E3",
+ "cost": {
+  "blocked": 0,
+  "client_errors": 0,
+  "effects": 13,
+  "estimated_token_calls": 0,
+  "input_tokens": 57141,
+  "llm_calls": 55,
+  "output_tokens": 2934,
+  "parse_failures": 0,
+  "refused_reports": 11,
+  "steps": 55,
+  "steps_scheduler": 55,
+  "suppressed": 1,
+  "ticks": 15
+ },
+ "dar": {
+  "any_duplicate": false,
+  "by_cause": {
+   "cross_agent": 0,
+   "same_agent": 0
+  },
+  "extras": 0,
+  "per100": 0.0,
+  "required": 20
+ },
+ "end_reason": "quiescent",
+ "episode_id": "F-E3-B-s4",
+ "fcr": {
+  "all": [
+   5,
+   7
+  ],
+  "lead": [
+   1,
+   1
+  ],
+  "worker": [
+   4,
+   6
+  ]
+ },
+ "fidelity": {
+  "claimed": 33,
+  "claimed_true": 20,
+  "lead": {
+   "claimed": 20,
+   "claimed_true": 10,
+   "met": 10,
+   "met_claimed": 10
+  },
+  "met": 20,
+  "met_claimed": 20
+ },
+ "lead_done": true,
+ "pcr": {
+  "all": [
+   0,
+   1
+  ],
+  "lead": [
+   0,
+   1
+  ]
+ },
+ "seed": 4,
+ "shape": "F",
+ "task_success": {
+  "met": 14,
+  "total": 27
+ }
+}

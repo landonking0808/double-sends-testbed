@@ -1,0 +1,158 @@
+{
+ "aborted": false,
+ "attribution": {
+  "duplicates": [],
+  "false_dones": [
+   {
+    "agent": "w5",
+    "report": "r006",
+    "role": "worker",
+    "step": 6,
+    "t": 13,
+    "unmet": [
+     "C09:record:status",
+     "C09:refund"
+    ]
+   },
+   {
+    "agent": "w6",
+    "report": "r010",
+    "role": "worker",
+    "step": 6,
+    "t": 14,
+    "unmet": [
+     "C08:reply",
+     "C08:no_refund"
+    ]
+   },
+   {
+    "agent": "w3",
+    "report": "r011",
+    "role": "worker",
+    "step": 9,
+    "t": 14,
+    "unmet": [
+     "C06:reply"
+    ]
+   },
+   {
+    "agent": "w2",
+    "report": "r014",
+    "role": "worker",
+    "step": 12,
+    "t": 16,
+    "unmet": [
+     "C03:refund",
+     "C07:record:status",
+     "C07:no_refund"
+    ]
+   },
+   {
+    "agent": "w1",
+    "report": "r017",
+    "role": "worker",
+    "step": 15,
+    "t": 17,
+    "unmet": [
+     "C02:no_refund",
+     "C05:reply",
+     "C05:record:status"
+    ]
+   },
+   {
+    "agent": "lead",
+    "report": "r036",
+    "role": "lead",
+    "step": 32,
+    "t": 32,
+    "unmet": [
+     "C01:reply",
+     "C01:record:status",
+     "C02:no_refund",
+     "C03:refund",
+     "C05:reply",
+     "C05:record:status",
+     "C06:reply",
+     "C07:record:status",
+     "C07:no_refund",
+     "C08:reply",
+     "C08:no_refund",
+     "C09:record:status",
+     "C09:refund"
+    ]
+   }
+  ],
+  "premature": []
+ },
+ "condition": "E3",
+ "cost": {
+  "blocked": 2,
+  "client_errors": 0,
+  "effects": 18,
+  "estimated_token_calls": 0,
+  "input_tokens": 143774,
+  "llm_calls": 113,
+  "output_tokens": 7369,
+  "parse_failures": 0,
+  "refused_reports": 29,
+  "steps": 113,
+  "steps_scheduler": 113,
+  "suppressed": 5,
+  "ticks": 33
+ },
+ "dar": {
+  "any_duplicate": false,
+  "by_cause": {
+   "cross_agent": 0,
+   "same_agent": 0
+  },
+  "extras": 0,
+  "per100": 0.0,
+  "required": 22
+ },
+ "end_reason": "quiescent",
+ "episode_id": "F-E3-B-s6",
+ "fcr": {
+  "all": [
+   6,
+   6
+  ],
+  "lead": [
+   1,
+   1
+  ],
+  "worker": [
+   5,
+   5
+  ]
+ },
+ "fidelity": {
+  "claimed": 40,
+  "claimed_true": 25,
+  "lead": {
+   "claimed": 22,
+   "claimed_true": 13,
+   "met": 12,
+   "met_claimed": 12
+  },
+  "met": 24,
+  "met_claimed": 23
+ },
+ "lead_done": true,
+ "pcr": {
+  "all": [
+   0,
+   1
+  ],
+  "lead": [
+   0,
+   1
+  ]
+ },
+ "seed": 6,
+ "shape": "F",
+ "task_success": {
+  "met": 14,
+  "total": 27
+ }
+}

@@ -1,0 +1,105 @@
+{
+ "aborted": false,
+ "agent_stats": {
+  "lead": {
+   "calls": 7,
+   "client_errors": 0,
+   "parse_failures": 0
+  },
+  "m1": {
+   "calls": 6,
+   "client_errors": 0,
+   "parse_failures": 0
+  },
+  "m2": {
+   "calls": 7,
+   "client_errors": 0,
+   "parse_failures": 0
+  },
+  "w1": {
+   "calls": 5,
+   "client_errors": 0,
+   "parse_failures": 0
+  },
+  "w2": {
+   "calls": 6,
+   "client_errors": 0,
+   "parse_failures": 0
+  },
+  "w3": {
+   "calls": 5,
+   "client_errors": 0,
+   "parse_failures": 0
+  },
+  "w4": {
+   "calls": 8,
+   "client_errors": 0,
+   "parse_failures": 0
+  },
+  "w5": {
+   "calls": 5,
+   "client_errors": 0,
+   "parse_failures": 0
+  },
+  "w6": {
+   "calls": 5,
+   "client_errors": 0,
+   "parse_failures": 0
+  }
+ },
+ "agents": "llm",
+ "batch": {
+  "n_messages": 12,
+  "n_repeat": 3,
+  "task_id": "batch-3"
+ },
+ "client_usage": {
+  "cache_hits": 0,
+  "calls": 54,
+  "completions": 54,
+  "input_tokens": 52017,
+  "output_tokens": 3306,
+  "retries": 0,
+  "wait_s": 0.0
+ },
+ "condition": "B0",
+ "created_at": "2026-11-07T09:04:40-06:00",
+ "end_reason": "quiescent",
+ "episode_id": "D-B0-B-s3",
+ "faults": {
+  "delivery_delay": 2,
+  "p_bounce": 0.15,
+  "p_stale_board": 0.5,
+  "p_timeout": 0.1
+ },
+ "files_sha256": {
+  "episode.jsonl": "ffa6c41b099e18cc6566ae718195aee606ca270c9df56d2406884616f1d1561e",
+  "ledger.json": "c462b3968006850ff54c2a5ed570edff96ee9f0cb40b0d1627478e56039d3c13",
+  "scheduler.jsonl": "b0ee1e7774e91e8f357b66fa9bfdd6ee0afb9f1097dd8f58e493ed5cab4a98d4"
+ },
+ "git_commit": "34690be5a6d960ed64c8911dac1705c40e9feb38",
+ "git_dirty_dst": false,
+ "grid": {
+  "config": "configs/frozen.json",
+  "model_key": "B"
+ },
+ "history_turns": 3,
+ "lease_ticks": 6,
+ "llm": {
+  "max_consecutive_errors": 1,
+  "max_llm_calls": 200,
+  "max_prompt_tokens": 1200,
+  "max_tokens": 256
+ },
+ "max_retries": 3,
+ "max_ticks": 300,
+ "model": "@cf/ibm-granite/granite-4.0-h-micro",
+ "platform": "linux",
+ "provider": "cloudflare",
+ "python": "3.12.3",
+ "seed": 3,
+ "shape": "D",
+ "temperature": 0.7,
+ "turn_cap": 40,
+ "wall_s": 130.2
+}

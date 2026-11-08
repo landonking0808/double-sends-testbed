@@ -1,0 +1,151 @@
+{
+ "aborted": false,
+ "attribution": {
+  "duplicates": [],
+  "false_dones": [
+   {
+    "agent": "w1",
+    "report": "r001",
+    "role": "worker",
+    "step": 5,
+    "t": 6,
+    "unmet": [
+     "C04:reply",
+     "C04:record:status",
+     "C04:refund"
+    ]
+   },
+   {
+    "agent": "w4",
+    "report": "r004",
+    "role": "worker",
+    "step": 6,
+    "t": 10,
+    "unmet": [
+     "C07:reply",
+     "C07:record:status"
+    ]
+   },
+   {
+    "agent": "w6",
+    "report": "r005",
+    "role": "worker",
+    "step": 5,
+    "t": 11,
+    "unmet": [
+     "C09:reply",
+     "C09:no_refund"
+    ]
+   },
+   {
+    "agent": "w5",
+    "report": "r006",
+    "role": "worker",
+    "step": 8,
+    "t": 13,
+    "unmet": [
+     "C02:reply",
+     "C02:record:status"
+    ]
+   },
+   {
+    "agent": "w1",
+    "report": "r007",
+    "role": "worker",
+    "step": 12,
+    "t": 13,
+    "unmet": [
+     "C04:reply"
+    ]
+   },
+   {
+    "agent": "lead",
+    "report": "r008",
+    "role": "lead",
+    "step": 39,
+    "t": 39,
+    "unmet": [
+     "C02:reply",
+     "C02:record:status",
+     "C04:reply",
+     "C07:reply",
+     "C07:record:status",
+     "C09:reply",
+     "C09:no_refund"
+    ]
+   }
+  ],
+  "premature": []
+ },
+ "condition": "E1",
+ "cost": {
+  "blocked": 0,
+  "client_errors": 0,
+  "effects": 20,
+  "estimated_token_calls": 0,
+  "input_tokens": 114726,
+  "llm_calls": 86,
+  "output_tokens": 3082,
+  "parse_failures": 0,
+  "refused_reports": 0,
+  "steps": 86,
+  "steps_scheduler": 86,
+  "suppressed": 2,
+  "ticks": 40
+ },
+ "dar": {
+  "any_duplicate": false,
+  "by_cause": {
+   "cross_agent": 0,
+   "same_agent": 0
+  },
+  "extras": 0,
+  "per100": 0.0,
+  "required": 23
+ },
+ "end_reason": "quiescent",
+ "episode_id": "F-E1-A-s1",
+ "fcr": {
+  "all": [
+   6,
+   8
+  ],
+  "lead": [
+   1,
+   1
+  ],
+  "worker": [
+   5,
+   7
+  ]
+ },
+ "fidelity": {
+  "claimed": 26,
+  "claimed_true": 20,
+  "lead": {
+   "claimed": 8,
+   "claimed_true": 5,
+   "met": 17,
+   "met_claimed": 5
+  },
+  "met": 37,
+  "met_claimed": 20
+ },
+ "lead_done": true,
+ "pcr": {
+  "all": [
+   0,
+   1
+  ],
+  "lead": [
+   0,
+   1
+  ]
+ },
+ "seed": 1,
+ "shape": "F",
+ "task_success": {
+  "met": 20,
+  "total": 27
+ }
+}

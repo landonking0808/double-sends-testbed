@@ -1,0 +1,164 @@
+{
+ "aborted": false,
+ "attribution": {
+  "duplicates": [],
+  "false_dones": [
+   {
+    "agent": "m1",
+    "report": "r002",
+    "role": "manager",
+    "step": 2,
+    "t": 4,
+    "unmet": [
+     "C03:reply",
+     "C03:record:status"
+    ]
+   },
+   {
+    "agent": "lead",
+    "report": "r003",
+    "role": "lead",
+    "step": 4,
+    "t": 4,
+    "unmet": [
+     "C01:reply",
+     "C01:record:status",
+     "C02:reply",
+     "C02:record:status",
+     "C02:refund",
+     "C03:reply",
+     "C03:record:status",
+     "C04:reply",
+     "C04:record:status",
+     "C04:refund",
+     "C05:reply",
+     "C05:record:status",
+     "C05:refund",
+     "C06:reply",
+     "C06:record:status",
+     "C07:reply",
+     "C07:record:status",
+     "C08:reply",
+     "C08:record:status",
+     "C08:refund",
+     "C09:reply",
+     "C09:record:status"
+    ]
+   },
+   {
+    "agent": "m2",
+    "report": "r004",
+    "role": "manager",
+    "step": 1,
+    "t": 5,
+    "unmet": [
+     "C01:reply",
+     "C01:record:status",
+     "C02:reply",
+     "C02:record:status",
+     "C02:refund",
+     "C04:reply",
+     "C04:record:status",
+     "C04:refund",
+     "C05:reply",
+     "C05:record:status",
+     "C05:refund",
+     "C06:reply",
+     "C06:record:status",
+     "C08:reply",
+     "C08:record:status",
+     "C08:refund",
+     "C09:reply",
+     "C09:record:status"
+    ]
+   }
+  ],
+  "premature": [
+   {
+    "agent": "lead",
+    "report": "r003",
+    "role": "lead",
+    "running": [
+     "m2"
+    ],
+    "step": 4,
+    "t": 4
+   }
+  ]
+ },
+ "condition": "B0",
+ "cost": {
+  "blocked": 0,
+  "client_errors": 0,
+  "effects": 0,
+  "estimated_token_calls": 0,
+  "input_tokens": 9188,
+  "llm_calls": 10,
+  "output_tokens": 942,
+  "parse_failures": 0,
+  "refused_reports": 0,
+  "steps": 10,
+  "steps_scheduler": 10,
+  "suppressed": 0,
+  "ticks": 6
+ },
+ "dar": {
+  "any_duplicate": false,
+  "by_cause": {
+   "cross_agent": 0,
+   "same_agent": 0
+  },
+  "extras": 0,
+  "per100": 0.0,
+  "required": 22
+ },
+ "end_reason": "quiescent",
+ "episode_id": "D-B0-B-s2",
+ "fcr": {
+  "all": [
+   3,
+   3
+  ],
+  "lead": [
+   1,
+   1
+  ],
+  "manager": [
+   2,
+   2
+  ]
+ },
+ "fidelity": {
+  "claimed": 42,
+  "claimed_true": 0,
+  "lead": {
+   "claimed": 22,
+   "claimed_true": 0,
+   "met": 0,
+   "met_claimed": 0
+  },
+  "met": 0,
+  "met_claimed": 0
+ },
+ "lead_done": true,
+ "pcr": {
+  "all": [
+   1,
+   3
+  ],
+  "lead": [
+   1,
+   1
+  ],
+  "manager": [
+   0,
+   2
+  ]
+ },
+ "seed": 2,
+ "shape": "D",
+ "task_success": {
+  "met": 5,
+  "total": 27
+ }
+}

@@ -1,0 +1,95 @@
+{
+ "aborted": false,
+ "agent_stats": {
+  "lead": {
+   "calls": 8,
+   "client_errors": 0,
+   "parse_failures": 0
+  },
+  "w1": {
+   "calls": 9,
+   "client_errors": 0,
+   "parse_failures": 0
+  },
+  "w2": {
+   "calls": 9,
+   "client_errors": 0,
+   "parse_failures": 0
+  },
+  "w3": {
+   "calls": 7,
+   "client_errors": 0,
+   "parse_failures": 0
+  },
+  "w4": {
+   "calls": 12,
+   "client_errors": 0,
+   "parse_failures": 0
+  },
+  "w5": {
+   "calls": 8,
+   "client_errors": 0,
+   "parse_failures": 1
+  },
+  "w6": {
+   "calls": 6,
+   "client_errors": 0,
+   "parse_failures": 0
+  }
+ },
+ "agents": "llm",
+ "batch": {
+  "n_messages": 12,
+  "n_repeat": 3,
+  "task_id": "batch-6"
+ },
+ "client_usage": {
+  "cache_hits": 0,
+  "calls": 59,
+  "completions": 59,
+  "input_tokens": 60473,
+  "output_tokens": 2988,
+  "retries": 0,
+  "wait_s": 0.0
+ },
+ "condition": "P1",
+ "created_at": "2026-11-07T13:09:09-06:00",
+ "end_reason": "quiescent",
+ "episode_id": "F-P1-B-s6",
+ "faults": {
+  "delivery_delay": 2,
+  "p_bounce": 0.15,
+  "p_stale_board": 0.5,
+  "p_timeout": 0.1
+ },
+ "files_sha256": {
+  "episode.jsonl": "d4accbe3daa62e354be6bf5e3fbfcec663841bcb8761a2c579d774461ef76c2f",
+  "ledger.json": "6350e373f2878b5223f5cee82b4c7663ae5a6a7ced1f13711bfbd9cbc6b3bb41",
+  "scheduler.jsonl": "d21ede53bb3b49cdffb30224f4efb7973fd9597290de80d792fc222638d31627"
+ },
+ "git_commit": "34690be5a6d960ed64c8911dac1705c40e9feb38",
+ "git_dirty_dst": false,
+ "grid": {
+  "config": "configs/frozen.json",
+  "model_key": "B"
+ },
+ "history_turns": 3,
+ "lease_ticks": 6,
+ "llm": {
+  "max_consecutive_errors": 1,
+  "max_llm_calls": 200,
+  "max_prompt_tokens": 1200,
+  "max_tokens": 256
+ },
+ "max_retries": 3,
+ "max_ticks": 300,
+ "model": "@cf/ibm-granite/granite-4.0-h-micro",
+ "platform": "linux",
+ "provider": "cloudflare",
+ "python": "3.12.3",
+ "seed": 6,
+ "shape": "F",
+ "temperature": 0.7,
+ "turn_cap": 40,
+ "wall_s": 116.1
+}

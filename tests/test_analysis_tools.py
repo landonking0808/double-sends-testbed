@@ -127,3 +127,10 @@ def test_this_repository_is_clean():
         pytest.skip("not a git checkout")
     hits = scan_repo(ROOT, history=True)
     assert hits == [], [(w, line, n) for w, line, n in hits]
+
+
+def test_figure_model_names_drop_provider_prefix():
+    from analysis.figures import _short
+    assert _short("@cf/ibm-granite/granite-4.0-h-micro") == "granite-4.0-h-micro"
+    assert _short("gemma-4-26b-a4b-it") == "gemma-4-26b-a4b-it"
+    assert _short("scripted-naive") == "scripted-naive"

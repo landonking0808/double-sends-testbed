@@ -1,0 +1,99 @@
+{
+ "aborted": false,
+ "attribution": {
+  "duplicates": [],
+  "false_dones": [
+   {
+    "agent": "w3",
+    "report": "r001",
+    "role": "worker",
+    "step": 10,
+    "t": 13,
+    "unmet": [
+     "C01:no_refund",
+     "C07:reply",
+     "C07:no_refund"
+    ]
+   },
+   {
+    "agent": "w2",
+    "report": "r002",
+    "role": "worker",
+    "step": 18,
+    "t": 20,
+    "unmet": [
+     "C05:reply"
+    ]
+   },
+   {
+    "agent": "w1",
+    "report": "r003",
+    "role": "worker",
+    "step": 33,
+    "t": 34,
+    "unmet": [
+     "C03:reply"
+    ]
+   }
+  ],
+  "premature": []
+ },
+ "condition": "E1",
+ "cost": {
+  "blocked": 5,
+  "client_errors": 0,
+  "effects": 27,
+  "estimated_token_calls": 0,
+  "input_tokens": 240894,
+  "llm_calls": 162,
+  "output_tokens": 9348,
+  "parse_failures": 17,
+  "refused_reports": 0,
+  "steps": 162,
+  "steps_scheduler": 162,
+  "suppressed": 28,
+  "ticks": 69
+ },
+ "dar": {
+  "any_duplicate": false,
+  "by_cause": {
+   "cross_agent": 0,
+   "same_agent": 0
+  },
+  "extras": 0,
+  "per100": 0.0,
+  "required": 22
+ },
+ "end_reason": "quiescent",
+ "episode_id": "F-E1-A-s6",
+ "fcr": {
+  "all": [
+   3,
+   4
+  ],
+  "worker": [
+   3,
+   4
+  ]
+ },
+ "fidelity": {
+  "claimed": 30,
+  "claimed_true": 23,
+  "lead": null,
+  "met": 35,
+  "met_claimed": 21
+ },
+ "lead_done": false,
+ "pcr": {
+  "all": [
+   0,
+   0
+  ]
+ },
+ "seed": 6,
+ "shape": "F",
+ "task_success": {
+  "met": 24,
+  "total": 27
+ }
+}

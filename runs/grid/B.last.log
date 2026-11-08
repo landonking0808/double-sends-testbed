@@ -1,0 +1,4 @@
+[2026-11-07T18:03:56-06:00] grid B (cloudflare:@cf/ibm-granite/granite-4.0-h-micro): 80 episodes, 78 finished, 2 to run, parallel 2; faults {'p_timeout': 0.1, 'p_bounce': 0.15, 'p_stale_board': 0.5, 'delivery_delay': 2}
+[2026-11-07T18:04:30-06:00] D-E2-s8: end quiescent | dup 4 | false done 7/8 | success 13/27 | calls 83 | tokens in 86651
+[2026-11-07T18:05:12-06:00] D-E3-s8: end quiescent | dup 0 | false done 5/9 | success 16/27 | calls 76 | tokens in 81112
+[2026-11-07T18:05:13-06:00] 80/80 episodes done; 0 left; manifest /home/king/apart-swarm/double-sends-testbed/runs/grid/B/grid_manifest.json

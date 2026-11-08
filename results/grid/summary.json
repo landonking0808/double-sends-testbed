@@ -1,0 +1,42 @@
+{
+ "bootstrap": {
+  "n_boot": 5000,
+  "seed": 0,
+  "unit": "seed (cluster)"
+ },
+ "episode_git_commits": [
+  "2476c0d8ce84",
+  "34690be5a6d9",
+  "4703437a3190"
+ ],
+ "episodes_excluded": 0,
+ "episodes_found": 160,
+ "episodes_included": 160,
+ "exclude_client_errors": false,
+ "excluded_by_reason": {},
+ "fault_profiles": [
+  "t0.1-b0.15-s0.5-d2"
+ ],
+ "files": [
+  "episodes.csv",
+  "excluded.csv",
+  "table1.csv",
+  "table1.md",
+  "tests.csv"
+ ],
+ "hit_call_cap_included": 20,
+ "hit_max_ticks_included": 0,
+ "inputs": [
+  "runs/grid/A",
+  "runs/grid/B"
+ ],
+ "label": "",
+ "models": [
+  "@cf/ibm-granite/granite-4.0-h-micro",
+  "gemma-4-26b-a4b-it"
+ ],
+ "permutation": {
+  "n_perm": 10000,
+  "seed": 0
+ }
+}

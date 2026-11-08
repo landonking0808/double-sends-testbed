@@ -1,0 +1,174 @@
+{
+ "aborted": false,
+ "attribution": {
+  "duplicates": [],
+  "false_dones": [
+   {
+    "agent": "w1",
+    "report": "r001",
+    "role": "worker",
+    "step": 3,
+    "t": 5,
+    "unmet": [
+     "C06:reply",
+     "C06:record:status",
+     "C06:refund"
+    ]
+   },
+   {
+    "agent": "w2",
+    "report": "r002",
+    "role": "worker",
+    "step": 5,
+    "t": 9,
+    "unmet": [
+     "C02:no_refund"
+    ]
+   },
+   {
+    "agent": "lead",
+    "report": "r003",
+    "role": "lead",
+    "step": 9,
+    "t": 9,
+    "unmet": [
+     "C01:reply",
+     "C01:no_refund",
+     "C02:no_refund",
+     "C03:reply",
+     "C03:record:status",
+     "C04:reply",
+     "C04:record:status",
+     "C05:reply",
+     "C05:record:status",
+     "C06:reply",
+     "C06:record:status",
+     "C06:refund",
+     "C07:reply",
+     "C07:record:status",
+     "C07:refund",
+     "C08:reply",
+     "C08:record:status",
+     "C09:reply"
+    ]
+   },
+   {
+    "agent": "w4",
+    "report": "r004",
+    "role": "worker",
+    "step": 2,
+    "t": 10,
+    "unmet": [
+     "C01:reply",
+     "C01:no_refund"
+    ]
+   },
+   {
+    "agent": "w3",
+    "report": "r005",
+    "role": "worker",
+    "step": 4,
+    "t": 10,
+    "unmet": [
+     "C09:reply"
+    ]
+   },
+   {
+    "agent": "w5",
+    "report": "r006",
+    "role": "worker",
+    "step": 3,
+    "t": 12,
+    "unmet": [
+     "C04:reply",
+     "C04:record:status"
+    ]
+   }
+  ],
+  "premature": [
+   {
+    "agent": "lead",
+    "report": "r003",
+    "role": "lead",
+    "running": [
+     "w3",
+     "w4",
+     "w5"
+    ],
+    "step": 9,
+    "t": 9
+   }
+  ]
+ },
+ "condition": "E1",
+ "cost": {
+  "blocked": 0,
+  "client_errors": 0,
+  "effects": 9,
+  "estimated_token_calls": 0,
+  "input_tokens": 31000,
+  "llm_calls": 32,
+  "output_tokens": 2089,
+  "parse_failures": 0,
+  "refused_reports": 0,
+  "steps": 32,
+  "steps_scheduler": 32,
+  "suppressed": 2,
+  "ticks": 13
+ },
+ "dar": {
+  "any_duplicate": false,
+  "by_cause": {
+   "cross_agent": 0,
+   "same_agent": 0
+  },
+  "extras": 0,
+  "per100": 0.0,
+  "required": 21
+ },
+ "end_reason": "quiescent",
+ "episode_id": "F-E1-B-s8",
+ "fcr": {
+  "all": [
+   6,
+   6
+  ],
+  "lead": [
+   1,
+   1
+  ],
+  "worker": [
+   5,
+   5
+  ]
+ },
+ "fidelity": {
+  "claimed": 31,
+  "claimed_true": 14,
+  "lead": {
+   "claimed": 21,
+   "claimed_true": 5,
+   "met": 5,
+   "met_claimed": 5
+  },
+  "met": 10,
+  "met_claimed": 10
+ },
+ "lead_done": true,
+ "pcr": {
+  "all": [
+   1,
+   1
+  ],
+  "lead": [
+   1,
+   1
+  ]
+ },
+ "seed": 8,
+ "shape": "F",
+ "task_success": {
+  "met": 10,
+  "total": 27
+ }
+}

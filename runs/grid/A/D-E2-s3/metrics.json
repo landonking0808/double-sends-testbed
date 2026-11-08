@@ -1,0 +1,196 @@
+{
+ "aborted": false,
+ "attribution": {
+  "duplicates": [
+   {
+    "agent": "w3",
+    "cause": "same_agent",
+    "effect": "e0007",
+    "first_agent": "w3",
+    "first_effect": "e0001",
+    "intent": "reply",
+    "step": 5,
+    "t": 10,
+    "target": "C02"
+   },
+   {
+    "agent": "w3",
+    "cause": "same_agent",
+    "effect": "e0009",
+    "first_agent": "w3",
+    "first_effect": "e0001",
+    "intent": "reply",
+    "step": 7,
+    "t": 12,
+    "target": "C02"
+   },
+   {
+    "agent": "w3",
+    "cause": "same_agent",
+    "effect": "e0017",
+    "first_agent": "w3",
+    "first_effect": "e0001",
+    "intent": "reply",
+    "step": 9,
+    "t": 14,
+    "target": "C02"
+   },
+   {
+    "agent": "w3",
+    "cause": "same_agent",
+    "effect": "e0024",
+    "first_agent": "w3",
+    "first_effect": "e0001",
+    "intent": "reply",
+    "step": 11,
+    "t": 16,
+    "target": "C02"
+   },
+   {
+    "agent": "w1",
+    "cause": "cross_agent",
+    "effect": "e0019",
+    "first_agent": "w4",
+    "first_effect": "e0018",
+    "intent": "record:status",
+    "step": 11,
+    "t": 14,
+    "target": "C05"
+   },
+   {
+    "agent": "w4",
+    "cause": "cross_agent",
+    "effect": "e0013",
+    "first_agent": "w1",
+    "first_effect": "e0008",
+    "intent": "refund",
+    "step": 4,
+    "t": 13,
+    "target": "C05"
+   },
+   {
+    "agent": "w1",
+    "cause": "cross_agent",
+    "effect": "e0014",
+    "first_agent": "w4",
+    "first_effect": "e0010",
+    "intent": "reply",
+    "step": 10,
+    "t": 13,
+    "target": "C05"
+   },
+   {
+    "agent": "w2",
+    "cause": "same_agent",
+    "effect": "e0025",
+    "first_agent": "w2",
+    "first_effect": "e0006",
+    "intent": "reply",
+    "step": 12,
+    "t": 16,
+    "target": "C07"
+   },
+   {
+    "agent": "w5",
+    "cause": "same_agent",
+    "effect": "e0030",
+    "first_agent": "w5",
+    "first_effect": "e0029",
+    "intent": "reply",
+    "step": 10,
+    "t": 20,
+    "target": "C08"
+   },
+   {
+    "agent": "w5",
+    "cause": "same_agent",
+    "effect": "e0032",
+    "first_agent": "w5",
+    "first_effect": "e0029",
+    "intent": "reply",
+    "step": 11,
+    "t": 21,
+    "target": "C08"
+   },
+   {
+    "agent": "w5",
+    "cause": "same_agent",
+    "effect": "e0034",
+    "first_agent": "w5",
+    "first_effect": "e0029",
+    "intent": "reply",
+    "step": 12,
+    "t": 22,
+    "target": "C08"
+   }
+  ],
+  "false_dones": [],
+  "premature": []
+ },
+ "condition": "E2",
+ "cost": {
+  "blocked": 0,
+  "client_errors": 0,
+  "effects": 37,
+  "estimated_token_calls": 0,
+  "input_tokens": 270876,
+  "llm_calls": 200,
+  "output_tokens": 6426,
+  "parse_failures": 1,
+  "refused_reports": 0,
+  "steps": 200,
+  "steps_scheduler": 201,
+  "suppressed": 0,
+  "ticks": 57
+ },
+ "dar": {
+  "any_duplicate": true,
+  "by_cause": {
+   "cross_agent": 3,
+   "same_agent": 8
+  },
+  "extras": 11,
+  "per100": 50.0,
+  "required": 22
+ },
+ "end_reason": "call_cap",
+ "episode_id": "D-E2-A-s3",
+ "fcr": {
+  "all": [
+   0,
+   7
+  ],
+  "manager": [
+   0,
+   1
+  ],
+  "worker": [
+   0,
+   6
+  ]
+ },
+ "fidelity": {
+  "claimed": 31,
+  "claimed_true": 31,
+  "lead": null,
+  "met": 36,
+  "met_claimed": 31
+ },
+ "lead_done": false,
+ "pcr": {
+  "all": [
+   0,
+   1
+  ],
+  "manager": [
+   0,
+   1
+  ]
+ },
+ "seed": 3,
+ "shape": "D",
+ "task_success": {
+  "met": 27,
+  "total": 27
+ }
+}

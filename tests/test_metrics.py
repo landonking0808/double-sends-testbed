@@ -38,3 +38,29 @@ def test_attribution_retry_overlap_false_and_premature_done():
     assert agg["episodes"] == 2 and agg["fcr"]["all"]["n"] == 2 * m["fcr"]["all"][1]
     # fidelity: the lead claimed everything (no claims list) but almost nothing had landed
     assert m["fidelity"]["lead"]["claimed"] > m["fidelity"]["lead"]["claimed_true"]
+
+
+def test_false_done_judged_on_items_held_at_report_time():
+    """A worker that finished its first item and reported done is not judged against an item
+    delegated to it afterwards (found in the manual audit: grid A F-E1-s1 r001)."""
+    office, batch, log = make_office(faults=FaultConfig(0.0, 0.0, 0.0, 0))
+    first = batch.messages[0]
+    other = next(m for m in batch.messages if m["customer"] != first["customer"])
+    c = first["customer"]
+    order = batch.customers[c]
+    eligible = batch.policy.eligible(order)
+    w1 = [call("send_message", to=c, body="a"), call("update_record", id=c, field="status", value="resolved")]
+    if eligible:
+        w1.append(call("issue_refund", customer=c, amount=order["amount"]))
+    w1.append(call("report", status="done", text="done with the first item"))
+    agents = team(
+        lead=[call("delegate", child="w1", items=[first["id"]], brief="x")] + [call("noop")] * (len(w1) + 1)
+        + [call("delegate", child="w1", items=[other["id"]], brief="y")],
+        w1=w1)
+    led = office.run(agents)
+    first_done = next(r for r in led["reports"] if r["agent"] == "w1" and r["status"] == "done")
+    later = [d for d in led["delegations"] if d["child"] == "w1" and d["seq"] > first_done["seq"]]
+    assert later and other["id"] in led["items"]["w1"]  # the second item arrived after the report
+    m = episode_metrics(led, log.schedule_records(), log.events())
+    assert not any(f["report"] == first_done["id"] for f in m["attribution"]["false_dones"])
+    assert m["fcr"]["worker"][1] >= 1

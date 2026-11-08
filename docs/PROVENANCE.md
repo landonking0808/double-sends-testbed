@@ -14,3 +14,4 @@
   - `de1a7d9` (old) = `5996b6d` (new): Monitor: view budget 5,500 (Gemma counts up to 1.6x the char
   - `f8d1f13` (old) = `53c6d67` (new): LLM client layer: Gemini (Gemma 4) and Workers AI clients wi
 - Changes after `v1-frozen` that the grid also ran with: `b6c58ed` (a 429 reporting a used-up free daily allocation stops the episode at once instead of retrying; error handling only, no effect on the content of any completed episode).
+- Change after the grid finished (Nov 7 2026, found by the manual audit in `docs/AUDIT.md`): `dst/metrics.py` judged a done report against every item delegated to the agent by the end of the episode; it now uses only the items delegated before the report. The environment, prompts and episodes are unchanged; all metrics are recomputed from the logged ledgers. Effect on the grid: 6 of 976 accepted done reports change from false to not false, all for model A; model B is unchanged; no B0-versus-control test changes significance.

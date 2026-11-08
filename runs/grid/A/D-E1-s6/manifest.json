@@ -1,0 +1,105 @@
+{
+ "aborted": false,
+ "agent_stats": {
+  "lead": {
+   "calls": 40,
+   "client_errors": 0,
+   "parse_failures": 1
+  },
+  "m1": {
+   "calls": 33,
+   "client_errors": 0,
+   "parse_failures": 1
+  },
+  "m2": {
+   "calls": 40,
+   "client_errors": 0,
+   "parse_failures": 0
+  },
+  "w1": {
+   "calls": 11,
+   "client_errors": 0,
+   "parse_failures": 0
+  },
+  "w2": {
+   "calls": 13,
+   "client_errors": 0,
+   "parse_failures": 0
+  },
+  "w3": {
+   "calls": 13,
+   "client_errors": 0,
+   "parse_failures": 0
+  },
+  "w4": {
+   "calls": 14,
+   "client_errors": 0,
+   "parse_failures": 0
+  },
+  "w5": {
+   "calls": 18,
+   "client_errors": 0,
+   "parse_failures": 0
+  },
+  "w6": {
+   "calls": 13,
+   "client_errors": 0,
+   "parse_failures": 0
+  }
+ },
+ "agents": "llm",
+ "batch": {
+  "n_messages": 12,
+  "n_repeat": 3,
+  "task_id": "batch-6"
+ },
+ "client_usage": {
+  "cache_hits": 184,
+  "calls": 12,
+  "completions": 11,
+  "input_tokens": 21953,
+  "output_tokens": 401,
+  "retries": 1,
+  "wait_s": 138.7
+ },
+ "condition": "E1",
+ "created_at": "2026-11-07T08:15:24-06:00",
+ "end_reason": "quiescent",
+ "episode_id": "D-E1-A-s6",
+ "faults": {
+  "delivery_delay": 2,
+  "p_bounce": 0.15,
+  "p_stale_board": 0.5,
+  "p_timeout": 0.1
+ },
+ "files_sha256": {
+  "episode.jsonl": "2b366dd69473b373408198baa4d4f70053622656a5b6b5c0719d3b6d8b6ce1c2",
+  "ledger.json": "8ebae7f56881eba33e34572bcd7ab6b6020111a0cc00885474ca55b860e6d6b7",
+  "scheduler.jsonl": "b53c7c5140ebfdfb38dd668e306a016f41a97553ca28634400375718e9151520"
+ },
+ "git_commit": "34690be5a6d960ed64c8911dac1705c40e9feb38",
+ "git_dirty_dst": false,
+ "grid": {
+  "config": "configs/frozen.json",
+  "model_key": "A"
+ },
+ "history_turns": 3,
+ "lease_ticks": 6,
+ "llm": {
+  "max_consecutive_errors": 1,
+  "max_llm_calls": 200,
+  "max_prompt_tokens": 1200,
+  "max_tokens": 256
+ },
+ "max_retries": 3,
+ "max_ticks": 300,
+ "model": "gemma-4-26b-a4b-it",
+ "platform": "linux",
+ "provider": "gemini",
+ "python": "3.12.3",
+ "seed": 6,
+ "shape": "D",
+ "temperature": 0.7,
+ "turn_cap": 40,
+ "wall_s": 181.1
+}

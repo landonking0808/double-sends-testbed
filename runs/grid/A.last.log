@@ -1,0 +1,4 @@
+[2026-11-07T16:10:01-06:00] grid A (gemini:gemma-4-26b-a4b-it): 80 episodes, 78 finished, 2 to run, parallel 3; faults {'p_timeout': 0.1, 'p_bounce': 0.15, 'p_stale_board': 0.5, 'delivery_delay': 2}
+[2026-11-07T16:12:09-06:00] D-E2-s8: end quiescent | dup 18 | false done 0/8 | success 27/27 | calls 185 | tokens in 257468
+[2026-11-07T16:26:38-06:00] D-E3-s8: end quiescent | dup 0 | false done 3/7 | success 25/27 | calls 195 | tokens in 277856
+[2026-11-07T16:26:38-06:00] 80/80 episodes done; 0 left; manifest /home/king/apart-swarm/double-sends-testbed/runs/grid/A/grid_manifest.json

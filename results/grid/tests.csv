@@ -1,0 +1,121 @@
+model,faults,shape,outcome,test,control,n_b0,n_control,b0_value,control_value,effect,effect_kind,odds_ratio,p,description,p_holm,holm_family_size,reject_holm_0.05
+@cf/ibm-granite/granite-4.0-h-micro,t0.1-b0.15-s0.5-d2,F,any_duplicate,fisher_exact,P1,8,8,0.875,0.75,-0.125,risk_difference,2.33333,1,episode has >= 1 duplicate effect,1,4,0
+@cf/ibm-granite/granite-4.0-h-micro,t0.1-b0.15-s0.5-d2,F,any_duplicate,fisher_exact,E1,8,8,0.875,0,-0.875,risk_difference,inf,0.0013986,episode has >= 1 duplicate effect,0.00559441,4,1
+@cf/ibm-granite/granite-4.0-h-micro,t0.1-b0.15-s0.5-d2,F,any_duplicate,fisher_exact,E2,8,8,0.875,0.75,-0.125,risk_difference,2.33333,1,episode has >= 1 duplicate effect,1,4,0
+@cf/ibm-granite/granite-4.0-h-micro,t0.1-b0.15-s0.5-d2,F,any_duplicate,fisher_exact,E3,8,8,0.875,0,-0.875,risk_difference,inf,0.0013986,episode has >= 1 duplicate effect,0.00559441,4,1
+@cf/ibm-granite/granite-4.0-h-micro,t0.1-b0.15-s0.5-d2,F,any_false_done,fisher_exact,P1,8,8,1,1,0,risk_difference,,1,episode has >= 1 false done report,1,4,0
+@cf/ibm-granite/granite-4.0-h-micro,t0.1-b0.15-s0.5-d2,F,any_false_done,fisher_exact,E1,8,8,1,1,0,risk_difference,,1,episode has >= 1 false done report,1,4,0
+@cf/ibm-granite/granite-4.0-h-micro,t0.1-b0.15-s0.5-d2,F,any_false_done,fisher_exact,E2,8,8,1,1,0,risk_difference,,1,episode has >= 1 false done report,1,4,0
+@cf/ibm-granite/granite-4.0-h-micro,t0.1-b0.15-s0.5-d2,F,any_false_done,fisher_exact,E3,8,8,1,1,0,risk_difference,,1,episode has >= 1 false done report,1,4,0
+@cf/ibm-granite/granite-4.0-h-micro,t0.1-b0.15-s0.5-d2,F,any_premature,fisher_exact,P1,8,8,0.875,1,0.125,risk_difference,0,1,episode has >= 1 premature done report,1,4,0
+@cf/ibm-granite/granite-4.0-h-micro,t0.1-b0.15-s0.5-d2,F,any_premature,fisher_exact,E1,8,8,0.875,1,0.125,risk_difference,0,1,episode has >= 1 premature done report,1,4,0
+@cf/ibm-granite/granite-4.0-h-micro,t0.1-b0.15-s0.5-d2,F,any_premature,fisher_exact,E2,8,8,0.875,0,-0.875,risk_difference,inf,0.0013986,episode has >= 1 premature done report,0.00559441,4,1
+@cf/ibm-granite/granite-4.0-h-micro,t0.1-b0.15-s0.5-d2,F,any_premature,fisher_exact,E3,8,8,0.875,0,-0.875,risk_difference,inf,0.0013986,episode has >= 1 premature done report,0.00559441,4,1
+@cf/ibm-granite/granite-4.0-h-micro,t0.1-b0.15-s0.5-d2,F,dar_per100,permutation,P1,8,8,12.151,6.30647,-5.84451,mean_difference,,0.167583,"per-episode DAR per 100, 10000 permutations",0.335166,4,0
+@cf/ibm-granite/granite-4.0-h-micro,t0.1-b0.15-s0.5-d2,F,dar_per100,permutation,E1,8,8,12.151,0,-12.151,mean_difference,,0.00169983,"per-episode DAR per 100, 10000 permutations",0.00509949,4,1
+@cf/ibm-granite/granite-4.0-h-micro,t0.1-b0.15-s0.5-d2,F,dar_per100,permutation,E2,8,8,12.151,10.4167,-1.73431,mean_difference,,0.753725,"per-episode DAR per 100, 10000 permutations",0.753725,4,0
+@cf/ibm-granite/granite-4.0-h-micro,t0.1-b0.15-s0.5-d2,F,dar_per100,permutation,E3,8,8,12.151,0,-12.151,mean_difference,,0.00109989,"per-episode DAR per 100, 10000 permutations",0.00439956,4,1
+@cf/ibm-granite/granite-4.0-h-micro,t0.1-b0.15-s0.5-d2,F,task_incomplete,fisher_exact,P1,8,8,1,1,0,risk_difference,,1,episode ends with an unmet requirement,1,4,0
+@cf/ibm-granite/granite-4.0-h-micro,t0.1-b0.15-s0.5-d2,F,task_incomplete,fisher_exact,E1,8,8,1,1,0,risk_difference,,1,episode ends with an unmet requirement,1,4,0
+@cf/ibm-granite/granite-4.0-h-micro,t0.1-b0.15-s0.5-d2,F,task_incomplete,fisher_exact,E2,8,8,1,1,0,risk_difference,,1,episode ends with an unmet requirement,1,4,0
+@cf/ibm-granite/granite-4.0-h-micro,t0.1-b0.15-s0.5-d2,F,task_incomplete,fisher_exact,E3,8,8,1,1,0,risk_difference,,1,episode ends with an unmet requirement,1,4,0
+@cf/ibm-granite/granite-4.0-h-micro,t0.1-b0.15-s0.5-d2,D,any_duplicate,fisher_exact,P1,8,8,0.625,0.875,0.25,risk_difference,0.238095,0.569231,episode has >= 1 duplicate effect,1,4,0
+@cf/ibm-granite/granite-4.0-h-micro,t0.1-b0.15-s0.5-d2,D,any_duplicate,fisher_exact,E1,8,8,0.625,0,-0.625,risk_difference,inf,0.025641,episode has >= 1 duplicate effect,0.102564,4,0
+@cf/ibm-granite/granite-4.0-h-micro,t0.1-b0.15-s0.5-d2,D,any_duplicate,fisher_exact,E2,8,8,0.625,0.75,0.125,risk_difference,0.555556,1,episode has >= 1 duplicate effect,1,4,0
+@cf/ibm-granite/granite-4.0-h-micro,t0.1-b0.15-s0.5-d2,D,any_duplicate,fisher_exact,E3,8,8,0.625,0,-0.625,risk_difference,inf,0.025641,episode has >= 1 duplicate effect,0.102564,4,0
+@cf/ibm-granite/granite-4.0-h-micro,t0.1-b0.15-s0.5-d2,D,any_false_done,fisher_exact,P1,8,8,1,1,0,risk_difference,,1,episode has >= 1 false done report,1,4,0
+@cf/ibm-granite/granite-4.0-h-micro,t0.1-b0.15-s0.5-d2,D,any_false_done,fisher_exact,E1,8,8,1,1,0,risk_difference,,1,episode has >= 1 false done report,1,4,0
+@cf/ibm-granite/granite-4.0-h-micro,t0.1-b0.15-s0.5-d2,D,any_false_done,fisher_exact,E2,8,8,1,1,0,risk_difference,,1,episode has >= 1 false done report,1,4,0
+@cf/ibm-granite/granite-4.0-h-micro,t0.1-b0.15-s0.5-d2,D,any_false_done,fisher_exact,E3,8,8,1,1,0,risk_difference,,1,episode has >= 1 false done report,1,4,0
+@cf/ibm-granite/granite-4.0-h-micro,t0.1-b0.15-s0.5-d2,D,any_premature,fisher_exact,P1,8,8,1,1,0,risk_difference,,1,episode has >= 1 premature done report,1,4,0
+@cf/ibm-granite/granite-4.0-h-micro,t0.1-b0.15-s0.5-d2,D,any_premature,fisher_exact,E1,8,8,1,1,0,risk_difference,,1,episode has >= 1 premature done report,1,4,0
+@cf/ibm-granite/granite-4.0-h-micro,t0.1-b0.15-s0.5-d2,D,any_premature,fisher_exact,E2,8,8,1,0,-1,risk_difference,inf,0.0001554,episode has >= 1 premature done report,0.000621601,4,1
+@cf/ibm-granite/granite-4.0-h-micro,t0.1-b0.15-s0.5-d2,D,any_premature,fisher_exact,E3,8,8,1,0,-1,risk_difference,inf,0.0001554,episode has >= 1 premature done report,0.000621601,4,1
+@cf/ibm-granite/granite-4.0-h-micro,t0.1-b0.15-s0.5-d2,D,dar_per100,permutation,P1,8,8,16.0244,14.888,-1.13636,mean_difference,,0.89591,"per-episode DAR per 100, 10000 permutations",1,4,0
+@cf/ibm-granite/granite-4.0-h-micro,t0.1-b0.15-s0.5-d2,D,dar_per100,permutation,E1,8,8,16.0244,0,-16.0244,mean_difference,,0.0249975,"per-episode DAR per 100, 10000 permutations",0.09999,4,0
+@cf/ibm-granite/granite-4.0-h-micro,t0.1-b0.15-s0.5-d2,D,dar_per100,permutation,E2,8,8,16.0244,15.3726,-0.651821,mean_difference,,0.934207,"per-episode DAR per 100, 10000 permutations",1,4,0
+@cf/ibm-granite/granite-4.0-h-micro,t0.1-b0.15-s0.5-d2,D,dar_per100,permutation,E3,8,8,16.0244,0,-16.0244,mean_difference,,0.0274973,"per-episode DAR per 100, 10000 permutations",0.09999,4,0
+@cf/ibm-granite/granite-4.0-h-micro,t0.1-b0.15-s0.5-d2,D,task_incomplete,fisher_exact,P1,8,8,1,1,0,risk_difference,,1,episode ends with an unmet requirement,1,4,0
+@cf/ibm-granite/granite-4.0-h-micro,t0.1-b0.15-s0.5-d2,D,task_incomplete,fisher_exact,E1,8,8,1,1,0,risk_difference,,1,episode ends with an unmet requirement,1,4,0
+@cf/ibm-granite/granite-4.0-h-micro,t0.1-b0.15-s0.5-d2,D,task_incomplete,fisher_exact,E2,8,8,1,1,0,risk_difference,,1,episode ends with an unmet requirement,1,4,0
+@cf/ibm-granite/granite-4.0-h-micro,t0.1-b0.15-s0.5-d2,D,task_incomplete,fisher_exact,E3,8,8,1,1,0,risk_difference,,1,episode ends with an unmet requirement,1,4,0
+@cf/ibm-granite/granite-4.0-h-micro,t0.1-b0.15-s0.5-d2,all,any_duplicate,fisher_exact,P1,16,16,0.75,0.8125,0.0625,risk_difference,0.692308,1,episode has >= 1 duplicate effect,1,4,0
+@cf/ibm-granite/granite-4.0-h-micro,t0.1-b0.15-s0.5-d2,all,any_duplicate,fisher_exact,E1,16,16,0.75,0,-0.75,risk_difference,inf,1.6121e-05,episode has >= 1 duplicate effect,6.44839e-05,4,1
+@cf/ibm-granite/granite-4.0-h-micro,t0.1-b0.15-s0.5-d2,all,any_duplicate,fisher_exact,E2,16,16,0.75,0.75,0,risk_difference,1,1,episode has >= 1 duplicate effect,1,4,0
+@cf/ibm-granite/granite-4.0-h-micro,t0.1-b0.15-s0.5-d2,all,any_duplicate,fisher_exact,E3,16,16,0.75,0,-0.75,risk_difference,inf,1.6121e-05,episode has >= 1 duplicate effect,6.44839e-05,4,1
+@cf/ibm-granite/granite-4.0-h-micro,t0.1-b0.15-s0.5-d2,all,any_false_done,fisher_exact,P1,16,16,1,1,0,risk_difference,,1,episode has >= 1 false done report,1,4,0
+@cf/ibm-granite/granite-4.0-h-micro,t0.1-b0.15-s0.5-d2,all,any_false_done,fisher_exact,E1,16,16,1,1,0,risk_difference,,1,episode has >= 1 false done report,1,4,0
+@cf/ibm-granite/granite-4.0-h-micro,t0.1-b0.15-s0.5-d2,all,any_false_done,fisher_exact,E2,16,16,1,1,0,risk_difference,,1,episode has >= 1 false done report,1,4,0
+@cf/ibm-granite/granite-4.0-h-micro,t0.1-b0.15-s0.5-d2,all,any_false_done,fisher_exact,E3,16,16,1,1,0,risk_difference,,1,episode has >= 1 false done report,1,4,0
+@cf/ibm-granite/granite-4.0-h-micro,t0.1-b0.15-s0.5-d2,all,any_premature,fisher_exact,P1,16,16,0.9375,1,0.0625,risk_difference,0,1,episode has >= 1 premature done report,1,4,0
+@cf/ibm-granite/granite-4.0-h-micro,t0.1-b0.15-s0.5-d2,all,any_premature,fisher_exact,E1,16,16,0.9375,1,0.0625,risk_difference,0,1,episode has >= 1 premature done report,1,4,0
+@cf/ibm-granite/granite-4.0-h-micro,t0.1-b0.15-s0.5-d2,all,any_premature,fisher_exact,E2,16,16,0.9375,0,-0.9375,risk_difference,inf,5.65648e-08,episode has >= 1 premature done report,2.26259e-07,4,1
+@cf/ibm-granite/granite-4.0-h-micro,t0.1-b0.15-s0.5-d2,all,any_premature,fisher_exact,E3,16,16,0.9375,0,-0.9375,risk_difference,inf,5.65648e-08,episode has >= 1 premature done report,2.26259e-07,4,1
+@cf/ibm-granite/granite-4.0-h-micro,t0.1-b0.15-s0.5-d2,all,dar_per100,permutation,P1,16,16,14.0877,10.5972,-3.49044,mean_difference,,0.377462,"per-episode DAR per 100, 10000 permutations within shape",0.754925,4,0
+@cf/ibm-granite/granite-4.0-h-micro,t0.1-b0.15-s0.5-d2,all,dar_per100,permutation,E1,16,16,14.0877,0,-14.0877,mean_difference,,9.999e-05,"per-episode DAR per 100, 10000 permutations within shape",0.00039996,4,1
+@cf/ibm-granite/granite-4.0-h-micro,t0.1-b0.15-s0.5-d2,all,dar_per100,permutation,E2,16,16,14.0877,12.8946,-1.19306,mean_difference,,0.80182,"per-episode DAR per 100, 10000 permutations within shape",0.80182,4,0
+@cf/ibm-granite/granite-4.0-h-micro,t0.1-b0.15-s0.5-d2,all,dar_per100,permutation,E3,16,16,14.0877,0,-14.0877,mean_difference,,9.999e-05,"per-episode DAR per 100, 10000 permutations within shape",0.00039996,4,1
+@cf/ibm-granite/granite-4.0-h-micro,t0.1-b0.15-s0.5-d2,all,task_incomplete,fisher_exact,P1,16,16,1,1,0,risk_difference,,1,episode ends with an unmet requirement,1,4,0
+@cf/ibm-granite/granite-4.0-h-micro,t0.1-b0.15-s0.5-d2,all,task_incomplete,fisher_exact,E1,16,16,1,1,0,risk_difference,,1,episode ends with an unmet requirement,1,4,0
+@cf/ibm-granite/granite-4.0-h-micro,t0.1-b0.15-s0.5-d2,all,task_incomplete,fisher_exact,E2,16,16,1,1,0,risk_difference,,1,episode ends with an unmet requirement,1,4,0
+@cf/ibm-granite/granite-4.0-h-micro,t0.1-b0.15-s0.5-d2,all,task_incomplete,fisher_exact,E3,16,16,1,1,0,risk_difference,,1,episode ends with an unmet requirement,1,4,0
+gemma-4-26b-a4b-it,t0.1-b0.15-s0.5-d2,F,any_duplicate,fisher_exact,P1,8,8,1,1,0,risk_difference,,1,episode has >= 1 duplicate effect,1,4,0
+gemma-4-26b-a4b-it,t0.1-b0.15-s0.5-d2,F,any_duplicate,fisher_exact,E1,8,8,1,0,-1,risk_difference,inf,0.0001554,episode has >= 1 duplicate effect,0.000621601,4,1
+gemma-4-26b-a4b-it,t0.1-b0.15-s0.5-d2,F,any_duplicate,fisher_exact,E2,8,8,1,1,0,risk_difference,,1,episode has >= 1 duplicate effect,1,4,0
+gemma-4-26b-a4b-it,t0.1-b0.15-s0.5-d2,F,any_duplicate,fisher_exact,E3,8,8,1,0,-1,risk_difference,inf,0.0001554,episode has >= 1 duplicate effect,0.000621601,4,1
+gemma-4-26b-a4b-it,t0.1-b0.15-s0.5-d2,F,any_false_done,fisher_exact,P1,8,8,1,0.875,-0.125,risk_difference,inf,1,episode has >= 1 false done report,1,4,0
+gemma-4-26b-a4b-it,t0.1-b0.15-s0.5-d2,F,any_false_done,fisher_exact,E1,8,8,1,0.875,-0.125,risk_difference,inf,1,episode has >= 1 false done report,1,4,0
+gemma-4-26b-a4b-it,t0.1-b0.15-s0.5-d2,F,any_false_done,fisher_exact,E2,8,8,1,0.625,-0.375,risk_difference,inf,0.2,episode has >= 1 false done report,0.8,4,0
+gemma-4-26b-a4b-it,t0.1-b0.15-s0.5-d2,F,any_false_done,fisher_exact,E3,8,8,1,1,0,risk_difference,,1,episode has >= 1 false done report,1,4,0
+gemma-4-26b-a4b-it,t0.1-b0.15-s0.5-d2,F,any_premature,fisher_exact,P1,8,8,0.25,0,-0.25,risk_difference,inf,0.466667,episode has >= 1 premature done report,1,4,0
+gemma-4-26b-a4b-it,t0.1-b0.15-s0.5-d2,F,any_premature,fisher_exact,E1,8,8,0.25,0,-0.25,risk_difference,inf,0.466667,episode has >= 1 premature done report,1,4,0
+gemma-4-26b-a4b-it,t0.1-b0.15-s0.5-d2,F,any_premature,fisher_exact,E2,8,8,0.25,0,-0.25,risk_difference,inf,0.466667,episode has >= 1 premature done report,1,4,0
+gemma-4-26b-a4b-it,t0.1-b0.15-s0.5-d2,F,any_premature,fisher_exact,E3,8,8,0.25,0,-0.25,risk_difference,inf,0.466667,episode has >= 1 premature done report,1,4,0
+gemma-4-26b-a4b-it,t0.1-b0.15-s0.5-d2,F,dar_per100,permutation,P1,8,8,46.6687,21.5377,-25.1309,mean_difference,,0.0654935,"per-episode DAR per 100, 10000 permutations",0.130987,4,0
+gemma-4-26b-a4b-it,t0.1-b0.15-s0.5-d2,F,dar_per100,permutation,E1,8,8,46.6687,0,-46.6687,mean_difference,,0.00019998,"per-episode DAR per 100, 10000 permutations",0.00079992,4,1
+gemma-4-26b-a4b-it,t0.1-b0.15-s0.5-d2,F,dar_per100,permutation,E2,8,8,46.6687,53.9652,7.29649,mean_difference,,0.643536,"per-episode DAR per 100, 10000 permutations",0.643536,4,0
+gemma-4-26b-a4b-it,t0.1-b0.15-s0.5-d2,F,dar_per100,permutation,E3,8,8,46.6687,0,-46.6687,mean_difference,,0.00019998,"per-episode DAR per 100, 10000 permutations",0.00079992,4,1
+gemma-4-26b-a4b-it,t0.1-b0.15-s0.5-d2,F,task_incomplete,fisher_exact,P1,8,8,1,1,0,risk_difference,,1,episode ends with an unmet requirement,1,4,0
+gemma-4-26b-a4b-it,t0.1-b0.15-s0.5-d2,F,task_incomplete,fisher_exact,E1,8,8,1,1,0,risk_difference,,1,episode ends with an unmet requirement,1,4,0
+gemma-4-26b-a4b-it,t0.1-b0.15-s0.5-d2,F,task_incomplete,fisher_exact,E2,8,8,1,0.625,-0.375,risk_difference,inf,0.2,episode ends with an unmet requirement,0.8,4,0
+gemma-4-26b-a4b-it,t0.1-b0.15-s0.5-d2,F,task_incomplete,fisher_exact,E3,8,8,1,1,0,risk_difference,,1,episode ends with an unmet requirement,1,4,0
+gemma-4-26b-a4b-it,t0.1-b0.15-s0.5-d2,D,any_duplicate,fisher_exact,P1,8,8,1,0.625,-0.375,risk_difference,inf,0.2,episode has >= 1 duplicate effect,0.4,4,0
+gemma-4-26b-a4b-it,t0.1-b0.15-s0.5-d2,D,any_duplicate,fisher_exact,E1,8,8,1,0,-1,risk_difference,inf,0.0001554,episode has >= 1 duplicate effect,0.000621601,4,1
+gemma-4-26b-a4b-it,t0.1-b0.15-s0.5-d2,D,any_duplicate,fisher_exact,E2,8,8,1,1,0,risk_difference,,1,episode has >= 1 duplicate effect,1,4,0
+gemma-4-26b-a4b-it,t0.1-b0.15-s0.5-d2,D,any_duplicate,fisher_exact,E3,8,8,1,0,-1,risk_difference,inf,0.0001554,episode has >= 1 duplicate effect,0.000621601,4,1
+gemma-4-26b-a4b-it,t0.1-b0.15-s0.5-d2,D,any_false_done,fisher_exact,P1,8,8,0.875,0.75,-0.125,risk_difference,2.33333,1,episode has >= 1 false done report,1,4,0
+gemma-4-26b-a4b-it,t0.1-b0.15-s0.5-d2,D,any_false_done,fisher_exact,E1,8,8,0.875,1,0.125,risk_difference,0,1,episode has >= 1 false done report,1,4,0
+gemma-4-26b-a4b-it,t0.1-b0.15-s0.5-d2,D,any_false_done,fisher_exact,E2,8,8,0.875,0.375,-0.5,risk_difference,11.6667,0.118881,episode has >= 1 false done report,0.475524,4,0
+gemma-4-26b-a4b-it,t0.1-b0.15-s0.5-d2,D,any_false_done,fisher_exact,E3,8,8,0.875,0.875,0,risk_difference,1,1,episode has >= 1 false done report,1,4,0
+gemma-4-26b-a4b-it,t0.1-b0.15-s0.5-d2,D,any_premature,fisher_exact,P1,8,8,0.125,0,-0.125,risk_difference,inf,1,episode has >= 1 premature done report,1,4,0
+gemma-4-26b-a4b-it,t0.1-b0.15-s0.5-d2,D,any_premature,fisher_exact,E1,8,8,0.125,0.375,0.25,risk_difference,0.238095,0.569231,episode has >= 1 premature done report,1,4,0
+gemma-4-26b-a4b-it,t0.1-b0.15-s0.5-d2,D,any_premature,fisher_exact,E2,8,8,0.125,0,-0.125,risk_difference,inf,1,episode has >= 1 premature done report,1,4,0
+gemma-4-26b-a4b-it,t0.1-b0.15-s0.5-d2,D,any_premature,fisher_exact,E3,8,8,0.125,0,-0.125,risk_difference,inf,1,episode has >= 1 premature done report,1,4,0
+gemma-4-26b-a4b-it,t0.1-b0.15-s0.5-d2,D,dar_per100,permutation,P1,8,8,61.8656,16.4937,-45.3718,mean_difference,,0.00539946,"per-episode DAR per 100, 10000 permutations",0.0107989,4,1
+gemma-4-26b-a4b-it,t0.1-b0.15-s0.5-d2,D,dar_per100,permutation,E1,8,8,61.8656,0,-61.8656,mean_difference,,0.00029997,"per-episode DAR per 100, 10000 permutations",0.00089991,4,1
+gemma-4-26b-a4b-it,t0.1-b0.15-s0.5-d2,D,dar_per100,permutation,E2,8,8,61.8656,62.6486,0.782985,mean_difference,,0.963104,"per-episode DAR per 100, 10000 permutations",0.963104,4,0
+gemma-4-26b-a4b-it,t0.1-b0.15-s0.5-d2,D,dar_per100,permutation,E3,8,8,61.8656,0,-61.8656,mean_difference,,0.00019998,"per-episode DAR per 100, 10000 permutations",0.00079992,4,1
+gemma-4-26b-a4b-it,t0.1-b0.15-s0.5-d2,D,task_incomplete,fisher_exact,P1,8,8,0.875,0.875,0,risk_difference,1,1,episode ends with an unmet requirement,1,4,0
+gemma-4-26b-a4b-it,t0.1-b0.15-s0.5-d2,D,task_incomplete,fisher_exact,E1,8,8,0.875,1,0.125,risk_difference,0,1,episode ends with an unmet requirement,1,4,0
+gemma-4-26b-a4b-it,t0.1-b0.15-s0.5-d2,D,task_incomplete,fisher_exact,E2,8,8,0.875,0.375,-0.5,risk_difference,11.6667,0.118881,episode ends with an unmet requirement,0.475524,4,0
+gemma-4-26b-a4b-it,t0.1-b0.15-s0.5-d2,D,task_incomplete,fisher_exact,E3,8,8,0.875,0.875,0,risk_difference,1,1,episode ends with an unmet requirement,1,4,0
+gemma-4-26b-a4b-it,t0.1-b0.15-s0.5-d2,all,any_duplicate,fisher_exact,P1,16,16,1,0.8125,-0.1875,risk_difference,inf,0.225806,episode has >= 1 duplicate effect,0.451613,4,0
+gemma-4-26b-a4b-it,t0.1-b0.15-s0.5-d2,all,any_duplicate,fisher_exact,E1,16,16,1,0,-1,risk_difference,inf,3.32734e-09,episode has >= 1 duplicate effect,1.33094e-08,4,1
+gemma-4-26b-a4b-it,t0.1-b0.15-s0.5-d2,all,any_duplicate,fisher_exact,E2,16,16,1,1,0,risk_difference,,1,episode has >= 1 duplicate effect,1,4,0
+gemma-4-26b-a4b-it,t0.1-b0.15-s0.5-d2,all,any_duplicate,fisher_exact,E3,16,16,1,0,-1,risk_difference,inf,3.32734e-09,episode has >= 1 duplicate effect,1.33094e-08,4,1
+gemma-4-26b-a4b-it,t0.1-b0.15-s0.5-d2,all,any_false_done,fisher_exact,P1,16,16,0.9375,0.8125,-0.125,risk_difference,3.46154,0.599555,episode has >= 1 false done report,1,4,0
+gemma-4-26b-a4b-it,t0.1-b0.15-s0.5-d2,all,any_false_done,fisher_exact,E1,16,16,0.9375,0.9375,0,risk_difference,1,1,episode has >= 1 false done report,1,4,0
+gemma-4-26b-a4b-it,t0.1-b0.15-s0.5-d2,all,any_false_done,fisher_exact,E2,16,16,0.9375,0.5,-0.4375,risk_difference,15,0.0154987,episode has >= 1 false done report,0.0619948,4,0
+gemma-4-26b-a4b-it,t0.1-b0.15-s0.5-d2,all,any_false_done,fisher_exact,E3,16,16,0.9375,0.9375,0,risk_difference,1,1,episode has >= 1 false done report,1,4,0
+gemma-4-26b-a4b-it,t0.1-b0.15-s0.5-d2,all,any_premature,fisher_exact,P1,16,16,0.1875,0,-0.1875,risk_difference,inf,0.225806,episode has >= 1 premature done report,0.903226,4,0
+gemma-4-26b-a4b-it,t0.1-b0.15-s0.5-d2,all,any_premature,fisher_exact,E1,16,16,0.1875,0.1875,0,risk_difference,1,1,episode has >= 1 premature done report,1,4,0
+gemma-4-26b-a4b-it,t0.1-b0.15-s0.5-d2,all,any_premature,fisher_exact,E2,16,16,0.1875,0,-0.1875,risk_difference,inf,0.225806,episode has >= 1 premature done report,0.903226,4,0
+gemma-4-26b-a4b-it,t0.1-b0.15-s0.5-d2,all,any_premature,fisher_exact,E3,16,16,0.1875,0,-0.1875,risk_difference,inf,0.225806,episode has >= 1 premature done report,0.903226,4,0
+gemma-4-26b-a4b-it,t0.1-b0.15-s0.5-d2,all,dar_per100,permutation,P1,16,16,54.2671,19.0157,-35.2514,mean_difference,,0.00019998,"per-episode DAR per 100, 10000 permutations within shape",0.00039996,4,1
+gemma-4-26b-a4b-it,t0.1-b0.15-s0.5-d2,all,dar_per100,permutation,E1,16,16,54.2671,0,-54.2671,mean_difference,,9.999e-05,"per-episode DAR per 100, 10000 permutations within shape",0.00039996,4,1
+gemma-4-26b-a4b-it,t0.1-b0.15-s0.5-d2,all,dar_per100,permutation,E2,16,16,54.2671,58.3069,4.03974,mean_difference,,0.726627,"per-episode DAR per 100, 10000 permutations within shape",0.726627,4,0
+gemma-4-26b-a4b-it,t0.1-b0.15-s0.5-d2,all,dar_per100,permutation,E3,16,16,54.2671,0,-54.2671,mean_difference,,9.999e-05,"per-episode DAR per 100, 10000 permutations within shape",0.00039996,4,1
+gemma-4-26b-a4b-it,t0.1-b0.15-s0.5-d2,all,task_incomplete,fisher_exact,P1,16,16,0.9375,0.9375,0,risk_difference,1,1,episode ends with an unmet requirement,1,4,0
+gemma-4-26b-a4b-it,t0.1-b0.15-s0.5-d2,all,task_incomplete,fisher_exact,E1,16,16,0.9375,1,0.0625,risk_difference,0,1,episode ends with an unmet requirement,1,4,0
+gemma-4-26b-a4b-it,t0.1-b0.15-s0.5-d2,all,task_incomplete,fisher_exact,E2,16,16,0.9375,0.5,-0.4375,risk_difference,15,0.0154987,episode ends with an unmet requirement,0.0619948,4,0
+gemma-4-26b-a4b-it,t0.1-b0.15-s0.5-d2,all,task_incomplete,fisher_exact,E3,16,16,0.9375,0.9375,0,risk_difference,1,1,episode ends with an unmet requirement,1,4,0

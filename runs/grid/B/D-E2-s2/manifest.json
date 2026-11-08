@@ -1,0 +1,105 @@
+{
+ "aborted": false,
+ "agent_stats": {
+  "lead": {
+   "calls": 40,
+   "client_errors": 0,
+   "parse_failures": 0
+  },
+  "m1": {
+   "calls": 13,
+   "client_errors": 0,
+   "parse_failures": 0
+  },
+  "m2": {
+   "calls": 34,
+   "client_errors": 0,
+   "parse_failures": 5
+  },
+  "w1": {
+   "calls": 7,
+   "client_errors": 0,
+   "parse_failures": 0
+  },
+  "w2": {
+   "calls": 6,
+   "client_errors": 0,
+   "parse_failures": 0
+  },
+  "w3": {
+   "calls": 7,
+   "client_errors": 0,
+   "parse_failures": 0
+  },
+  "w4": {
+   "calls": 32,
+   "client_errors": 0,
+   "parse_failures": 0
+  },
+  "w5": {
+   "calls": 31,
+   "client_errors": 0,
+   "parse_failures": 1
+  },
+  "w6": {
+   "calls": 30,
+   "client_errors": 0,
+   "parse_failures": 2
+  }
+ },
+ "agents": "llm",
+ "batch": {
+  "n_messages": 12,
+  "n_repeat": 3,
+  "task_id": "batch-2"
+ },
+ "client_usage": {
+  "cache_hits": 0,
+  "calls": 200,
+  "completions": 200,
+  "input_tokens": 258717,
+  "output_tokens": 7892,
+  "retries": 0,
+  "wait_s": 0.0
+ },
+ "condition": "E2",
+ "created_at": "2026-11-06T13:38:29-06:00",
+ "end_reason": "call_cap",
+ "episode_id": "D-E2-B-s2",
+ "faults": {
+  "delivery_delay": 2,
+  "p_bounce": 0.15,
+  "p_stale_board": 0.5,
+  "p_timeout": 0.1
+ },
+ "files_sha256": {
+  "episode.jsonl": "a3ec3bff16876093a65ce420e75df082aa0d09a24f1b2ee44e1fd324010001bf",
+  "ledger.json": "406c1edace662d9930b449014eb0cea48ea8f397ef6e6ee13e08f342e86cff1e",
+  "scheduler.jsonl": "1a160cccfff9df830020e303110a25a4fa3196a90f82decb55fe18ce68097f67"
+ },
+ "git_commit": "4703437a319017fd10b1b60f22aabbad66115dd3",
+ "git_dirty_dst": false,
+ "grid": {
+  "config": "configs/frozen.json",
+  "model_key": "B"
+ },
+ "history_turns": 3,
+ "lease_ticks": 6,
+ "llm": {
+  "max_consecutive_errors": 1,
+  "max_llm_calls": 200,
+  "max_prompt_tokens": 1200,
+  "max_tokens": 256
+ },
+ "max_retries": 3,
+ "max_ticks": 300,
+ "model": "@cf/ibm-granite/granite-4.0-h-micro",
+ "platform": "linux",
+ "provider": "cloudflare",
+ "python": "3.12.3",
+ "seed": 2,
+ "shape": "D",
+ "temperature": 0.7,
+ "turn_cap": 40,
+ "wall_s": 363.4
+}

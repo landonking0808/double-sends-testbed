@@ -1,0 +1,164 @@
+{
+ "aborted": false,
+ "attribution": {
+  "duplicates": [],
+  "false_dones": [
+   {
+    "agent": "w4",
+    "report": "r007",
+    "role": "worker",
+    "step": 5,
+    "t": 9,
+    "unmet": [
+     "C04:reply",
+     "C04:record:status",
+     "C04:refund",
+     "C06:reply",
+     "C06:record:status",
+     "C06:refund"
+    ]
+   },
+   {
+    "agent": "m2",
+    "report": "r012",
+    "role": "manager",
+    "step": 7,
+    "t": 10,
+    "unmet": [
+     "C04:reply",
+     "C04:record:status",
+     "C04:refund",
+     "C05:reply",
+     "C05:record:status",
+     "C06:reply",
+     "C06:record:status",
+     "C06:refund",
+     "C07:reply",
+     "C07:record:status",
+     "C08:reply",
+     "C08:record:status",
+     "C09:reply",
+     "C09:record:status",
+     "C09:refund"
+    ]
+   },
+   {
+    "agent": "m1",
+    "report": "r019",
+    "role": "manager",
+    "step": 10,
+    "t": 12,
+    "unmet": [
+     "C02:reply",
+     "C02:no_refund"
+    ]
+   },
+   {
+    "agent": "lead",
+    "report": "r020",
+    "role": "lead",
+    "step": 13,
+    "t": 13,
+    "unmet": [
+     "C02:reply",
+     "C02:no_refund",
+     "C04:reply",
+     "C04:record:status",
+     "C04:refund",
+     "C05:reply",
+     "C05:record:status",
+     "C06:reply",
+     "C06:record:status",
+     "C06:refund",
+     "C07:reply",
+     "C07:record:status",
+     "C08:reply",
+     "C08:record:status",
+     "C09:reply",
+     "C09:record:status",
+     "C09:refund"
+    ]
+   }
+  ],
+  "premature": []
+ },
+ "condition": "E2",
+ "cost": {
+  "blocked": 0,
+  "client_errors": 0,
+  "effects": 8,
+  "estimated_token_calls": 0,
+  "input_tokens": 59092,
+  "llm_calls": 55,
+  "output_tokens": 2837,
+  "parse_failures": 0,
+  "refused_reports": 12,
+  "steps": 55,
+  "steps_scheduler": 55,
+  "suppressed": 0,
+  "ticks": 14
+ },
+ "dar": {
+  "any_duplicate": false,
+  "by_cause": {
+   "cross_agent": 0,
+   "same_agent": 0
+  },
+  "extras": 0,
+  "per100": 0.0,
+  "required": 22
+ },
+ "end_reason": "quiescent",
+ "episode_id": "D-E2-B-s6",
+ "fcr": {
+  "all": [
+   4,
+   5
+  ],
+  "lead": [
+   1,
+   1
+  ],
+  "manager": [
+   2,
+   2
+  ],
+  "worker": [
+   1,
+   2
+  ]
+ },
+ "fidelity": {
+  "claimed": 55,
+  "claimed_true": 17,
+  "lead": {
+   "claimed": 22,
+   "claimed_true": 6,
+   "met": 6,
+   "met_claimed": 6
+  },
+  "met": 17,
+  "met_claimed": 17
+ },
+ "lead_done": true,
+ "pcr": {
+  "all": [
+   0,
+   3
+  ],
+  "lead": [
+   0,
+   1
+  ],
+  "manager": [
+   0,
+   2
+  ]
+ },
+ "seed": 6,
+ "shape": "D",
+ "task_success": {
+  "met": 10,
+  "total": 27
+ }
+}

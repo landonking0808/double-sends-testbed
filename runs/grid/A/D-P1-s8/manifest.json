@@ -1,0 +1,105 @@
+{
+ "aborted": false,
+ "agent_stats": {
+  "lead": {
+   "calls": 14,
+   "client_errors": 0,
+   "parse_failures": 0
+  },
+  "m1": {
+   "calls": 31,
+   "client_errors": 0,
+   "parse_failures": 0
+  },
+  "m2": {
+   "calls": 29,
+   "client_errors": 0,
+   "parse_failures": 0
+  },
+  "w1": {
+   "calls": 23,
+   "client_errors": 0,
+   "parse_failures": 0
+  },
+  "w2": {
+   "calls": 40,
+   "client_errors": 0,
+   "parse_failures": 0
+  },
+  "w3": {
+   "calls": 16,
+   "client_errors": 0,
+   "parse_failures": 0
+  },
+  "w4": {
+   "calls": 26,
+   "client_errors": 0,
+   "parse_failures": 1
+  },
+  "w5": {
+   "calls": 13,
+   "client_errors": 0,
+   "parse_failures": 0
+  },
+  "w6": {
+   "calls": 8,
+   "client_errors": 0,
+   "parse_failures": 0
+  }
+ },
+ "agents": "llm",
+ "batch": {
+  "n_messages": 12,
+  "n_repeat": 3,
+  "task_id": "batch-8"
+ },
+ "client_usage": {
+  "cache_hits": 105,
+  "calls": 97,
+  "completions": 95,
+  "input_tokens": 162816,
+  "output_tokens": 2388,
+  "retries": 2,
+  "wait_s": 2654.7
+ },
+ "condition": "P1",
+ "created_at": "2026-11-07T15:54:06-06:00",
+ "end_reason": "call_cap",
+ "episode_id": "D-P1-A-s8",
+ "faults": {
+  "delivery_delay": 2,
+  "p_bounce": 0.15,
+  "p_stale_board": 0.5,
+  "p_timeout": 0.1
+ },
+ "files_sha256": {
+  "episode.jsonl": "ea29d2819f2aeb4a852aabe0abd7afae70324903462c2d10cdc332be55a6b7a8",
+  "ledger.json": "69a3d003bb109db78ac909163a8869f18144dbc5eac5870905dadb869b5e4f90",
+  "scheduler.jsonl": "88831739504e87957ff95c4998af8a84a8a87aaa4d57d4d9fbe7f118e68e4902"
+ },
+ "git_commit": "34690be5a6d960ed64c8911dac1705c40e9feb38",
+ "git_dirty_dst": false,
+ "grid": {
+  "config": "configs/frozen.json",
+  "model_key": "A"
+ },
+ "history_turns": 3,
+ "lease_ticks": 6,
+ "llm": {
+  "max_consecutive_errors": 1,
+  "max_llm_calls": 200,
+  "max_prompt_tokens": 1200,
+  "max_tokens": 256
+ },
+ "max_retries": 3,
+ "max_ticks": 300,
+ "model": "gemma-4-26b-a4b-it",
+ "platform": "linux",
+ "provider": "gemini",
+ "python": "3.12.3",
+ "seed": 8,
+ "shape": "D",
+ "temperature": 0.7,
+ "turn_cap": 40,
+ "wall_s": 2773.5
+}

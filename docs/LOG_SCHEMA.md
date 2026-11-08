@@ -109,6 +109,8 @@ calls, tokens and parse failures). See `dst/metrics.py`:
 - duplicates: effective effects (final `delivered` or `applied`) grouped by `(target, intent)`; every
   one after the first is a duplicate, attributed to its `agent` and `step`;
 - false done: an accepted `done` report whose node's requirements were not met by the effects with a
-  smaller `seq` (judged by their final status);
+  smaller `seq` (judged by their final status); the node's requirements are those of the customers in
+  the items delegated to it before the report (`delegations` with a smaller `seq`), so work delegated
+  after a report does not count against it;
 - premature done: an accepted `done` report by a node with descendants, issued while one of them was
   `running` or `sleeping` according to `status_changes`.

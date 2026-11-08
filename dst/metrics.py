@@ -7,8 +7,9 @@ Per episode (``episode_metrics``):
   the first, per 100 required effects (a bounced send never reached anyone, so a resend
   after a bounce is not a duplicate). Also ``any_duplicate``.
 * FCR - false completion rate: share of accepted ``done`` reports where the ledger did not
-  satisfy that node's requirements at report time (effects with ``seq`` before the report,
-  judged by their final status). Split by role.
+  satisfy the requirements of the customers the node held at report time (items delegated to
+  it before the report; effects with ``seq`` before the report, judged by their final
+  status). Split by role.
 * PCR - premature completion rate: share of accepted done reports by a node with children
   that were issued while a descendant was still running (from status changes).
 * Task success - share of requirements met at episode end.
@@ -47,10 +48,19 @@ def _rate(k, n):
     return {"k": k, "n": n, "rate": (k / n) if n else float("nan"), "ci95": wilson(k, n)}
 
 
-def _node_customers(ledger: dict, agent: str) -> list:
+def _node_customers(ledger: dict, agent: str, before_seq: int | None = None) -> list:
+    """Customers of the messages assigned to ``agent``. With ``before_seq``, only messages
+    delegated to it before that ledger seq: a done report is judged against the work the node
+    held when it reported, not against items delegated to it afterwards. A node no one
+    delegated to (the lead) holds its initial items."""
     by_id = {m["id"]: m["customer"] for m in ledger["batch"]["messages"]}
+    dels = [d for d in ledger.get("delegations", []) if d["child"] == agent]
+    if before_seq is None or not dels:
+        mids = ledger["items"].get(agent, [])
+    else:
+        mids = [i for d in sorted(dels, key=lambda d: d["seq"]) if d["seq"] < before_seq for i in d["items"]]
     out = []
-    for mid in ledger["items"].get(agent, []):
+    for mid in mids:
         c = by_id[mid]
         if c not in out:
             out.append(c)
@@ -117,7 +127,7 @@ def episode_metrics(ledger: dict, schedule: list | None = None, events: list | N
         a = rep["agent"]
         role = roles[a]
         before = [e for e in effects if e["seq"] < rep["seq"]]
-        custs = set(_node_customers(ledger, a))
+        custs = set(_node_customers(ledger, a, rep["seq"]))
         node_reqs = [r for r in reqs if r["customer"] in custs]
         unmet = [r["id"] for r in node_reqs if not requirement_met(r, before)]
         fcr_counts[role][1] += 1

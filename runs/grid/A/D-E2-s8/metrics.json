@@ -1,0 +1,273 @@
+{
+ "aborted": false,
+ "attribution": {
+  "duplicates": [
+   {
+    "agent": "w2",
+    "cause": "same_agent",
+    "effect": "e0025",
+    "first_agent": "w2",
+    "first_effect": "e0021",
+    "intent": "reply",
+    "step": 12,
+    "t": 16,
+    "target": "C01"
+   },
+   {
+    "agent": "w6",
+    "cause": "cross_agent",
+    "effect": "e0035",
+    "first_agent": "w4",
+    "first_effect": "e0010",
+    "intent": "record:status",
+    "step": 5,
+    "t": 28,
+    "target": "C03"
+   },
+   {
+    "agent": "w6",
+    "cause": "cross_agent",
+    "effect": "e0034",
+    "first_agent": "w4",
+    "first_effect": "e0005",
+    "intent": "reply",
+    "step": 4,
+    "t": 27,
+    "target": "C03"
+   },
+   {
+    "agent": "w4",
+    "cause": "cross_agent",
+    "effect": "e0033",
+    "first_agent": "w5",
+    "first_effect": "e0020",
+    "intent": "record:status",
+    "step": 19,
+    "t": 23,
+    "target": "C05"
+   },
+   {
+    "agent": "w6",
+    "cause": "cross_agent",
+    "effect": "e0040",
+    "first_agent": "w5",
+    "first_effect": "e0020",
+    "intent": "record:status",
+    "step": 16,
+    "t": 39,
+    "target": "C05"
+   },
+   {
+    "agent": "w4",
+    "cause": "cross_agent",
+    "effect": "e0032",
+    "first_agent": "w5",
+    "first_effect": "e0018",
+    "intent": "reply",
+    "step": 18,
+    "t": 22,
+    "target": "C05"
+   },
+   {
+    "agent": "w6",
+    "cause": "cross_agent",
+    "effect": "e0039",
+    "first_agent": "w5",
+    "first_effect": "e0018",
+    "intent": "reply",
+    "step": 15,
+    "t": 38,
+    "target": "C05"
+   },
+   {
+    "agent": "w3",
+    "cause": "cross_agent",
+    "effect": "e0024",
+    "first_agent": "w5",
+    "first_effect": "e0012",
+    "intent": "record:status",
+    "step": 11,
+    "t": 16,
+    "target": "C07"
+   },
+   {
+    "agent": "w3",
+    "cause": "cross_agent",
+    "effect": "e0022",
+    "first_agent": "w5",
+    "first_effect": "e0006",
+    "intent": "refund",
+    "step": 10,
+    "t": 15,
+    "target": "C07"
+   },
+   {
+    "agent": "w3",
+    "cause": "cross_agent",
+    "effect": "e0017",
+    "first_agent": "w5",
+    "first_effect": "e0003",
+    "intent": "reply",
+    "step": 8,
+    "t": 13,
+    "target": "C07"
+   },
+   {
+    "agent": "w4",
+    "cause": "cross_agent",
+    "effect": "e0027",
+    "first_agent": "w2",
+    "first_effect": "e0014",
+    "intent": "record:status",
+    "step": 13,
+    "t": 17,
+    "target": "C09"
+   },
+   {
+    "agent": "w4",
+    "cause": "same_agent",
+    "effect": "e0028",
+    "first_agent": "w2",
+    "first_effect": "e0014",
+    "intent": "record:status",
+    "step": 14,
+    "t": 18,
+    "target": "C09"
+   },
+   {
+    "agent": "w6",
+    "cause": "cross_agent",
+    "effect": "e0038",
+    "first_agent": "w2",
+    "first_effect": "e0014",
+    "intent": "record:status",
+    "step": 11,
+    "t": 34,
+    "target": "C09"
+   },
+   {
+    "agent": "w4",
+    "cause": "cross_agent",
+    "effect": "e0026",
+    "first_agent": "w2",
+    "first_effect": "e0011",
+    "intent": "refund",
+    "step": 12,
+    "t": 16,
+    "target": "C09"
+   },
+   {
+    "agent": "w6",
+    "cause": "cross_agent",
+    "effect": "e0037",
+    "first_agent": "w2",
+    "first_effect": "e0011",
+    "intent": "refund",
+    "step": 10,
+    "t": 33,
+    "target": "C09"
+   },
+   {
+    "agent": "w2",
+    "cause": "same_agent",
+    "effect": "e0008",
+    "first_agent": "w2",
+    "first_effect": "e0004",
+    "intent": "reply",
+    "step": 4,
+    "t": 8,
+    "target": "C09"
+   },
+   {
+    "agent": "w4",
+    "cause": "cross_agent",
+    "effect": "e0019",
+    "first_agent": "w2",
+    "first_effect": "e0004",
+    "intent": "reply",
+    "step": 9,
+    "t": 13,
+    "target": "C09"
+   },
+   {
+    "agent": "w4",
+    "cause": "same_agent",
+    "effect": "e0023",
+    "first_agent": "w2",
+    "first_effect": "e0004",
+    "intent": "reply",
+    "step": 11,
+    "t": 15,
+    "target": "C09"
+   }
+  ],
+  "false_dones": [],
+  "premature": []
+ },
+ "condition": "E2",
+ "cost": {
+  "blocked": 0,
+  "client_errors": 0,
+  "effects": 40,
+  "estimated_token_calls": 0,
+  "input_tokens": 257468,
+  "llm_calls": 185,
+  "output_tokens": 6771,
+  "parse_failures": 2,
+  "refused_reports": 0,
+  "steps": 185,
+  "steps_scheduler": 185,
+  "suppressed": 0,
+  "ticks": 61
+ },
+ "dar": {
+  "any_duplicate": true,
+  "by_cause": {
+   "cross_agent": 14,
+   "same_agent": 4
+  },
+  "extras": 18,
+  "per100": 85.71428571428571,
+  "required": 21
+ },
+ "end_reason": "quiescent",
+ "episode_id": "D-E2-A-s8",
+ "fcr": {
+  "all": [
+   0,
+   8
+  ],
+  "manager": [
+   0,
+   2
+  ],
+  "worker": [
+   0,
+   6
+  ]
+ },
+ "fidelity": {
+  "claimed": 47,
+  "claimed_true": 47,
+  "lead": null,
+  "met": 63,
+  "met_claimed": 47
+ },
+ "lead_done": false,
+ "pcr": {
+  "all": [
+   0,
+   2
+  ],
+  "manager": [
+   0,
+   2
+  ]
+ },
+ "seed": 8,
+ "shape": "D",
+ "task_success": {
+  "met": 27,
+  "total": 27
+ }
+}

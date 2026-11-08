@@ -1,0 +1,347 @@
+{
+ "aborted": false,
+ "attribution": {
+  "duplicates": [
+   {
+    "agent": "w4",
+    "cause": "cross_agent",
+    "effect": "e0039",
+    "first_agent": "w3",
+    "first_effect": "e0020",
+    "intent": "record:status",
+    "step": 12,
+    "t": 31,
+    "target": "C01"
+   },
+   {
+    "agent": "w4",
+    "cause": "cross_agent",
+    "effect": "e0038",
+    "first_agent": "w3",
+    "first_effect": "e0017",
+    "intent": "refund",
+    "step": 11,
+    "t": 30,
+    "target": "C01"
+   },
+   {
+    "agent": "w4",
+    "cause": "cross_agent",
+    "effect": "e0037",
+    "first_agent": "w3",
+    "first_effect": "e0015",
+    "intent": "reply",
+    "step": 10,
+    "t": 29,
+    "target": "C01"
+   },
+   {
+    "agent": "w3",
+    "cause": "cross_agent",
+    "effect": "e0027",
+    "first_agent": "w1",
+    "first_effect": "e0013",
+    "intent": "record:status",
+    "step": 17,
+    "t": 20,
+    "target": "C05"
+   },
+   {
+    "agent": "w4",
+    "cause": "cross_agent",
+    "effect": "e0045",
+    "first_agent": "w1",
+    "first_effect": "e0013",
+    "intent": "record:status",
+    "step": 17,
+    "t": 36,
+    "target": "C05"
+   },
+   {
+    "agent": "w3",
+    "cause": "cross_agent",
+    "effect": "e0025",
+    "first_agent": "w1",
+    "first_effect": "e0011",
+    "intent": "refund",
+    "step": 16,
+    "t": 19,
+    "target": "C05"
+   },
+   {
+    "agent": "w4",
+    "cause": "cross_agent",
+    "effect": "e0043",
+    "first_agent": "w1",
+    "first_effect": "e0011",
+    "intent": "refund",
+    "step": 16,
+    "t": 35,
+    "target": "C05"
+   },
+   {
+    "agent": "w3",
+    "cause": "cross_agent",
+    "effect": "e0024",
+    "first_agent": "w1",
+    "first_effect": "e0010",
+    "intent": "reply",
+    "step": 15,
+    "t": 18,
+    "target": "C05"
+   },
+   {
+    "agent": "w4",
+    "cause": "cross_agent",
+    "effect": "e0042",
+    "first_agent": "w1",
+    "first_effect": "e0010",
+    "intent": "reply",
+    "step": 15,
+    "t": 34,
+    "target": "C05"
+   },
+   {
+    "agent": "w1",
+    "cause": "same_agent",
+    "effect": "e0028",
+    "first_agent": "w1",
+    "first_effect": "e0026",
+    "intent": "reply",
+    "step": 20,
+    "t": 21,
+    "target": "C07"
+   },
+   {
+    "agent": "w1",
+    "cause": "same_agent",
+    "effect": "e0030",
+    "first_agent": "w1",
+    "first_effect": "e0026",
+    "intent": "reply",
+    "step": 22,
+    "t": 23,
+    "target": "C07"
+   },
+   {
+    "agent": "w1",
+    "cause": "same_agent",
+    "effect": "e0036",
+    "first_agent": "w1",
+    "first_effect": "e0026",
+    "intent": "reply",
+    "step": 28,
+    "t": 29,
+    "target": "C07"
+   },
+   {
+    "agent": "w1",
+    "cause": "same_agent",
+    "effect": "e0040",
+    "first_agent": "w1",
+    "first_effect": "e0026",
+    "intent": "reply",
+    "step": 30,
+    "t": 31,
+    "target": "C07"
+   },
+   {
+    "agent": "w1",
+    "cause": "same_agent",
+    "effect": "e0041",
+    "first_agent": "w1",
+    "first_effect": "e0026",
+    "intent": "reply",
+    "step": 32,
+    "t": 33,
+    "target": "C07"
+   },
+   {
+    "agent": "w1",
+    "cause": "same_agent",
+    "effect": "e0044",
+    "first_agent": "w1",
+    "first_effect": "e0026",
+    "intent": "reply",
+    "step": 34,
+    "t": 35,
+    "target": "C07"
+   },
+   {
+    "agent": "w1",
+    "cause": "same_agent",
+    "effect": "e0046",
+    "first_agent": "w1",
+    "first_effect": "e0026",
+    "intent": "reply",
+    "step": 36,
+    "t": 37,
+    "target": "C07"
+   },
+   {
+    "agent": "w4",
+    "cause": "cross_agent",
+    "effect": "e0034",
+    "first_agent": "w3",
+    "first_effect": "e0009",
+    "intent": "record:status",
+    "step": 7,
+    "t": 26,
+    "target": "C08"
+   },
+   {
+    "agent": "w4",
+    "cause": "cross_agent",
+    "effect": "e0031",
+    "first_agent": "w3",
+    "first_effect": "e0008",
+    "intent": "refund",
+    "step": 5,
+    "t": 24,
+    "target": "C08"
+   },
+   {
+    "agent": "w4",
+    "cause": "same_agent",
+    "effect": "e0033",
+    "first_agent": "w3",
+    "first_effect": "e0008",
+    "intent": "refund",
+    "step": 6,
+    "t": 25,
+    "target": "C08"
+   },
+   {
+    "agent": "w4",
+    "cause": "cross_agent",
+    "effect": "e0029",
+    "first_agent": "w3",
+    "first_effect": "e0006",
+    "intent": "reply",
+    "step": 4,
+    "t": 23,
+    "target": "C08"
+   },
+   {
+    "agent": "w1",
+    "cause": "same_agent",
+    "effect": "e0002",
+    "first_agent": "w1",
+    "first_effect": "e0001",
+    "intent": "reply",
+    "step": 3,
+    "t": 4,
+    "target": "C09"
+   }
+  ],
+  "false_dones": [
+   {
+    "agent": "w2",
+    "report": "r001",
+    "role": "worker",
+    "step": 15,
+    "t": 17,
+    "unmet": [
+     "C02:reply"
+    ]
+   },
+   {
+    "agent": "w1",
+    "report": "r004",
+    "role": "worker",
+    "step": 39,
+    "t": 40,
+    "unmet": [
+     "C06:reply",
+     "C06:no_refund",
+     "C09:no_refund"
+    ]
+   },
+   {
+    "agent": "lead",
+    "report": "r005",
+    "role": "lead",
+    "step": 39,
+    "t": 53,
+    "unmet": [
+     "C02:reply",
+     "C06:reply",
+     "C06:no_refund",
+     "C09:no_refund"
+    ]
+   }
+  ],
+  "premature": []
+ },
+ "condition": "B0",
+ "cost": {
+  "blocked": 0,
+  "client_errors": 0,
+  "effects": 47,
+  "estimated_token_calls": 0,
+  "input_tokens": 191259,
+  "llm_calls": 134,
+  "output_tokens": 4704,
+  "parse_failures": 0,
+  "refused_reports": 0,
+  "steps": 134,
+  "steps_scheduler": 134,
+  "suppressed": 0,
+  "ticks": 54
+ },
+ "dar": {
+  "any_duplicate": true,
+  "by_cause": {
+   "cross_agent": 12,
+   "same_agent": 9
+  },
+  "extras": 21,
+  "per100": 95.45454545454545,
+  "required": 22
+ },
+ "end_reason": "quiescent",
+ "episode_id": "F-B0-A-s3",
+ "fcr": {
+  "all": [
+   3,
+   5
+  ],
+  "lead": [
+   1,
+   1
+  ],
+  "worker": [
+   2,
+   4
+  ]
+ },
+ "fidelity": {
+  "claimed": 37,
+  "claimed_true": 31,
+  "lead": {
+   "claimed": 9,
+   "claimed_true": 7,
+   "met": 20,
+   "met_claimed": 7
+  },
+  "met": 52,
+  "met_claimed": 31
+ },
+ "lead_done": true,
+ "pcr": {
+  "all": [
+   0,
+   1
+  ],
+  "lead": [
+   0,
+   1
+  ]
+ },
+ "seed": 3,
+ "shape": "F",
+ "task_success": {
+  "met": 23,
+  "total": 27
+ }
+}

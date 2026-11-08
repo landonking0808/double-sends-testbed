@@ -1,0 +1,98 @@
+{
+ "aborted": false,
+ "attribution": {
+  "duplicates": [],
+  "false_dones": [
+   {
+    "agent": "w1",
+    "report": "r003",
+    "role": "worker",
+    "step": 7,
+    "t": 9,
+    "unmet": [
+     "C07:refund"
+    ]
+   },
+   {
+    "agent": "w4",
+    "report": "r004",
+    "role": "worker",
+    "step": 2,
+    "t": 10,
+    "unmet": [
+     "C06:reply",
+     "C06:record:status"
+    ]
+   },
+   {
+    "agent": "w5",
+    "report": "r017",
+    "role": "worker",
+    "step": 7,
+    "t": 17,
+    "unmet": [
+     "C02:no_refund"
+    ]
+   }
+  ],
+  "premature": []
+ },
+ "condition": "E2",
+ "cost": {
+  "blocked": 0,
+  "client_errors": 0,
+  "effects": 13,
+  "estimated_token_calls": 0,
+  "input_tokens": 196161,
+  "llm_calls": 147,
+  "output_tokens": 7555,
+  "parse_failures": 2,
+  "refused_reports": 47,
+  "steps": 147,
+  "steps_scheduler": 147,
+  "suppressed": 0,
+  "ticks": 46
+ },
+ "dar": {
+  "any_duplicate": false,
+  "by_cause": {
+   "cross_agent": 0,
+   "same_agent": 0
+  },
+  "extras": 0,
+  "per100": 0.0,
+  "required": 20
+ },
+ "end_reason": "quiescent",
+ "episode_id": "F-E2-B-s4",
+ "fcr": {
+  "all": [
+   3,
+   3
+  ],
+  "worker": [
+   3,
+   3
+  ]
+ },
+ "fidelity": {
+  "claimed": 7,
+  "claimed_true": 4,
+  "lead": null,
+  "met": 4,
+  "met_claimed": 4
+ },
+ "lead_done": false,
+ "pcr": {
+  "all": [
+   0,
+   0
+  ]
+ },
+ "seed": 4,
+ "shape": "F",
+ "task_success": {
+  "met": 13,
+  "total": 27
+ }
+}

@@ -1,0 +1,139 @@
+{
+ "aborted": false,
+ "attribution": {
+  "duplicates": [],
+  "false_dones": [
+   {
+    "agent": "w1",
+    "report": "r015",
+    "role": "worker",
+    "step": 8,
+    "t": 12,
+    "unmet": [
+     "C02:no_refund"
+    ]
+   },
+   {
+    "agent": "m1",
+    "report": "r016",
+    "role": "manager",
+    "step": 11,
+    "t": 13,
+    "unmet": [
+     "C02:no_refund",
+     "C06:record:status",
+     "C06:refund"
+    ]
+   },
+   {
+    "agent": "w5",
+    "report": "r021",
+    "role": "worker",
+    "step": 7,
+    "t": 16,
+    "unmet": [
+     "C05:record:status",
+     "C06:record:status",
+     "C06:refund"
+    ]
+   },
+   {
+    "agent": "w6",
+    "report": "r025",
+    "role": "worker",
+    "step": 8,
+    "t": 18,
+    "unmet": [
+     "C05:record:status",
+     "C06:record:status",
+     "C06:refund"
+    ]
+   },
+   {
+    "agent": "m2",
+    "report": "r029",
+    "role": "manager",
+    "step": 13,
+    "t": 20,
+    "unmet": [
+     "C01:reply",
+     "C01:record:status",
+     "C05:record:status",
+     "C06:record:status",
+     "C06:refund",
+     "C07:reply",
+     "C07:record:status",
+     "C09:reply",
+     "C09:refund"
+    ]
+   }
+  ],
+  "premature": []
+ },
+ "condition": "E3",
+ "cost": {
+  "blocked": 1,
+  "client_errors": 0,
+  "effects": 17,
+  "estimated_token_calls": 0,
+  "input_tokens": 93318,
+  "llm_calls": 90,
+  "output_tokens": 4195,
+  "parse_failures": 1,
+  "refused_reports": 17,
+  "steps": 90,
+  "steps_scheduler": 90,
+  "suppressed": 1,
+  "ticks": 21
+ },
+ "dar": {
+  "any_duplicate": false,
+  "by_cause": {
+   "cross_agent": 0,
+   "same_agent": 0
+  },
+  "extras": 0,
+  "per100": 0.0,
+  "required": 22
+ },
+ "end_reason": "quiescent",
+ "episode_id": "D-E3-B-s6",
+ "fcr": {
+  "all": [
+   5,
+   7
+  ],
+  "manager": [
+   2,
+   2
+  ],
+  "worker": [
+   3,
+   5
+  ]
+ },
+ "fidelity": {
+  "claimed": 44,
+  "claimed_true": 27,
+  "lead": null,
+  "met": 26,
+  "met_claimed": 26
+ },
+ "lead_done": false,
+ "pcr": {
+  "all": [
+   0,
+   2
+  ],
+  "manager": [
+   0,
+   2
+  ]
+ },
+ "seed": 6,
+ "shape": "D",
+ "task_success": {
+  "met": 17,
+  "total": 27
+ }
+}

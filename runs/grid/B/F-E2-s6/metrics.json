@@ -1,0 +1,148 @@
+{
+ "aborted": false,
+ "attribution": {
+  "duplicates": [
+   {
+    "agent": "w4",
+    "cause": "cross_agent",
+    "effect": "e0004",
+    "first_agent": "w1",
+    "first_effect": "e0001",
+    "intent": "record:status",
+    "step": 1,
+    "t": 6,
+    "target": "C01"
+   },
+   {
+    "agent": "w6",
+    "cause": "same_agent",
+    "effect": "e0010",
+    "first_agent": "w6",
+    "first_effect": "e0009",
+    "intent": "reply",
+    "step": 2,
+    "t": 9,
+    "target": "C08"
+   }
+  ],
+  "false_dones": [
+   {
+    "agent": "w1",
+    "report": "r002",
+    "role": "worker",
+    "step": 4,
+    "t": 6,
+    "unmet": [
+     "C02:reply",
+     "C02:record:status"
+    ]
+   },
+   {
+    "agent": "w4",
+    "report": "r006",
+    "role": "worker",
+    "step": 4,
+    "t": 9,
+    "unmet": [
+     "C06:reply",
+     "C06:record:status",
+     "C06:refund"
+    ]
+   },
+   {
+    "agent": "w2",
+    "report": "r009",
+    "role": "worker",
+    "step": 8,
+    "t": 11,
+    "unmet": [
+     "C03:refund"
+    ]
+   },
+   {
+    "agent": "w5",
+    "report": "r011",
+    "role": "worker",
+    "step": 6,
+    "t": 12,
+    "unmet": [
+     "C09:refund"
+    ]
+   },
+   {
+    "agent": "w6",
+    "report": "r018",
+    "role": "worker",
+    "step": 10,
+    "t": 17,
+    "unmet": [
+     "C05:reply",
+     "C05:record:status",
+     "C06:reply",
+     "C06:record:status",
+     "C06:refund",
+     "C08:no_refund"
+    ]
+   }
+  ],
+  "premature": []
+ },
+ "condition": "E2",
+ "cost": {
+  "blocked": 0,
+  "client_errors": 0,
+  "effects": 13,
+  "estimated_token_calls": 0,
+  "input_tokens": 156267,
+  "llm_calls": 117,
+  "output_tokens": 5108,
+  "parse_failures": 0,
+  "refused_reports": 39,
+  "steps": 117,
+  "steps_scheduler": 117,
+  "suppressed": 0,
+  "ticks": 44
+ },
+ "dar": {
+  "any_duplicate": true,
+  "by_cause": {
+   "cross_agent": 1,
+   "same_agent": 1
+  },
+  "extras": 2,
+  "per100": 9.090909090909092,
+  "required": 22
+ },
+ "end_reason": "quiescent",
+ "episode_id": "F-E2-B-s6",
+ "fcr": {
+  "all": [
+   5,
+   5
+  ],
+  "worker": [
+   5,
+   5
+  ]
+ },
+ "fidelity": {
+  "claimed": 18,
+  "claimed_true": 6,
+  "lead": null,
+  "met": 6,
+  "met_claimed": 6
+ },
+ "lead_done": false,
+ "pcr": {
+  "all": [
+   0,
+   0
+  ]
+ },
+ "seed": 6,
+ "shape": "F",
+ "task_success": {
+  "met": 13,
+  "total": 27
+ }
+}

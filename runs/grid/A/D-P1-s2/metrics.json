@@ -1,0 +1,74 @@
+{
+ "aborted": false,
+ "attribution": {
+  "duplicates": [],
+  "false_dones": [],
+  "premature": []
+ },
+ "condition": "P1",
+ "cost": {
+  "blocked": 0,
+  "client_errors": 0,
+  "effects": 22,
+  "estimated_token_calls": 2,
+  "input_tokens": 268928,
+  "llm_calls": 184,
+  "output_tokens": 5751,
+  "parse_failures": 0,
+  "refused_reports": 0,
+  "steps": 184,
+  "steps_scheduler": 184,
+  "suppressed": 0,
+  "ticks": 77
+ },
+ "dar": {
+  "any_duplicate": false,
+  "by_cause": {
+   "cross_agent": 0,
+   "same_agent": 0
+  },
+  "extras": 0,
+  "per100": 0.0,
+  "required": 22
+ },
+ "end_reason": "quiescent",
+ "episode_id": "D-P1-A-s2",
+ "fcr": {
+  "all": [
+   0,
+   7
+  ],
+  "manager": [
+   0,
+   1
+  ],
+  "worker": [
+   0,
+   6
+  ]
+ },
+ "fidelity": {
+  "claimed": 29,
+  "claimed_true": 29,
+  "lead": null,
+  "met": 34,
+  "met_claimed": 29
+ },
+ "lead_done": false,
+ "pcr": {
+  "all": [
+   0,
+   1
+  ],
+  "manager": [
+   0,
+   1
+  ]
+ },
+ "seed": 2,
+ "shape": "D",
+ "task_success": {
+  "met": 27,
+  "total": 27
+ }
+}

@@ -1,0 +1,135 @@
+{
+ "aborted": false,
+ "attribution": {
+  "duplicates": [],
+  "false_dones": [
+   {
+    "agent": "w2",
+    "report": "r004",
+    "role": "worker",
+    "step": 6,
+    "t": 10,
+    "unmet": [
+     "C02:no_refund"
+    ]
+   },
+   {
+    "agent": "w4",
+    "report": "r008",
+    "role": "worker",
+    "step": 6,
+    "t": 15,
+    "unmet": [
+     "C01:no_refund"
+    ]
+   },
+   {
+    "agent": "w1",
+    "report": "r009",
+    "role": "worker",
+    "step": 13,
+    "t": 15,
+    "unmet": [
+     "C06:refund",
+     "C09:refund"
+    ]
+   },
+   {
+    "agent": "w3",
+    "report": "r010",
+    "role": "worker",
+    "step": 8,
+    "t": 15,
+    "unmet": [
+     "C03:reply",
+     "C03:record:status",
+     "C09:refund"
+    ]
+   },
+   {
+    "agent": "w6",
+    "report": "r016",
+    "role": "worker",
+    "step": 6,
+    "t": 21,
+    "unmet": [
+     "C05:record:status",
+     "C07:record:status",
+     "C07:refund"
+    ]
+   },
+   {
+    "agent": "w5",
+    "report": "r041",
+    "role": "worker",
+    "step": 37,
+    "t": 50,
+    "unmet": [
+     "C04:reply",
+     "C04:record:status",
+     "C07:refund",
+     "C09:refund"
+    ]
+   }
+  ],
+  "premature": []
+ },
+ "condition": "E3",
+ "cost": {
+  "blocked": 3,
+  "client_errors": 0,
+  "effects": 16,
+  "estimated_token_calls": 0,
+  "input_tokens": 158523,
+  "llm_calls": 122,
+  "output_tokens": 5707,
+  "parse_failures": 3,
+  "refused_reports": 33,
+  "steps": 122,
+  "steps_scheduler": 122,
+  "suppressed": 6,
+  "ticks": 51
+ },
+ "dar": {
+  "any_duplicate": false,
+  "by_cause": {
+   "cross_agent": 0,
+   "same_agent": 0
+  },
+  "extras": 0,
+  "per100": 0.0,
+  "required": 21
+ },
+ "end_reason": "quiescent",
+ "episode_id": "F-E3-B-s8",
+ "fcr": {
+  "all": [
+   6,
+   6
+  ],
+  "worker": [
+   6,
+   6
+  ]
+ },
+ "fidelity": {
+  "claimed": 25,
+  "claimed_true": 18,
+  "lead": null,
+  "met": 18,
+  "met_claimed": 16
+ },
+ "lead_done": false,
+ "pcr": {
+  "all": [
+   0,
+   0
+  ]
+ },
+ "seed": 8,
+ "shape": "F",
+ "task_success": {
+  "met": 18,
+  "total": 27
+ }
+}

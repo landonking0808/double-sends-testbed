@@ -1,0 +1,105 @@
+{
+ "aborted": false,
+ "attribution": {
+  "duplicates": [],
+  "false_dones": [
+   {
+    "agent": "w2",
+    "report": "r001",
+    "role": "worker",
+    "step": 23,
+    "t": 25,
+    "unmet": [
+     "C02:no_refund",
+     "C03:no_refund"
+    ]
+   },
+   {
+    "agent": "lead",
+    "report": "r003",
+    "role": "lead",
+    "step": 31,
+    "t": 53,
+    "unmet": [
+     "C01:no_refund",
+     "C02:no_refund",
+     "C03:no_refund",
+     "C04:no_refund",
+     "C09:reply"
+    ]
+   }
+  ],
+  "premature": []
+ },
+ "condition": "E3",
+ "cost": {
+  "blocked": 3,
+  "client_errors": 0,
+  "effects": 26,
+  "estimated_token_calls": 0,
+  "input_tokens": 191679,
+  "llm_calls": 126,
+  "output_tokens": 4177,
+  "parse_failures": 0,
+  "refused_reports": 0,
+  "steps": 126,
+  "steps_scheduler": 126,
+  "suppressed": 14,
+  "ticks": 54
+ },
+ "dar": {
+  "any_duplicate": false,
+  "by_cause": {
+   "cross_agent": 0,
+   "same_agent": 0
+  },
+  "extras": 0,
+  "per100": 0.0,
+  "required": 20
+ },
+ "end_reason": "quiescent",
+ "episode_id": "F-E3-A-s4",
+ "fcr": {
+  "all": [
+   2,
+   3
+  ],
+  "lead": [
+   1,
+   1
+  ],
+  "worker": [
+   1,
+   2
+  ]
+ },
+ "fidelity": {
+  "claimed": 26,
+  "claimed_true": 26,
+  "lead": {
+   "claimed": 9,
+   "claimed_true": 9,
+   "met": 19,
+   "met_claimed": 6
+  },
+  "met": 34,
+  "met_claimed": 21
+ },
+ "lead_done": true,
+ "pcr": {
+  "all": [
+   0,
+   1
+  ],
+  "lead": [
+   0,
+   1
+  ]
+ },
+ "seed": 4,
+ "shape": "F",
+ "task_success": {
+  "met": 22,
+  "total": 27
+ }
+}

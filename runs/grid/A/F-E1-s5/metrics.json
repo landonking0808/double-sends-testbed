@@ -1,0 +1,62 @@
+{
+ "aborted": false,
+ "attribution": {
+  "duplicates": [],
+  "false_dones": [],
+  "premature": []
+ },
+ "condition": "E1",
+ "cost": {
+  "blocked": 4,
+  "client_errors": 0,
+  "effects": 24,
+  "estimated_token_calls": 0,
+  "input_tokens": 181600,
+  "llm_calls": 119,
+  "output_tokens": 3109,
+  "parse_failures": 1,
+  "refused_reports": 0,
+  "steps": 119,
+  "steps_scheduler": 119,
+  "suppressed": 0,
+  "ticks": 77
+ },
+ "dar": {
+  "any_duplicate": false,
+  "by_cause": {
+   "cross_agent": 0,
+   "same_agent": 0
+  },
+  "extras": 0,
+  "per100": 0.0,
+  "required": 22
+ },
+ "end_reason": "quiescent",
+ "episode_id": "F-E1-A-s5",
+ "fcr": {
+  "all": [
+   0,
+   0
+  ]
+ },
+ "fidelity": {
+  "claimed": 0,
+  "claimed_true": 0,
+  "lead": null,
+  "met": 0,
+  "met_claimed": 0
+ },
+ "lead_done": false,
+ "pcr": {
+  "all": [
+   0,
+   0
+  ]
+ },
+ "seed": 5,
+ "shape": "F",
+ "task_success": {
+  "met": 21,
+  "total": 27
+ }
+}

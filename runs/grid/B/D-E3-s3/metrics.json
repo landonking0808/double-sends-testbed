@@ -1,0 +1,158 @@
+{
+ "aborted": false,
+ "attribution": {
+  "duplicates": [],
+  "false_dones": [
+   {
+    "agent": "w4",
+    "report": "r009",
+    "role": "worker",
+    "step": 5,
+    "t": 8,
+    "unmet": [
+     "C04:refund"
+    ]
+   },
+   {
+    "agent": "w2",
+    "report": "r029",
+    "role": "worker",
+    "step": 10,
+    "t": 13,
+    "unmet": [
+     "C03:reply",
+     "C05:record:status",
+     "C05:refund"
+    ]
+   },
+   {
+    "agent": "w1",
+    "report": "r039",
+    "role": "worker",
+    "step": 13,
+    "t": 15,
+    "unmet": [
+     "C02:record:status"
+    ]
+   },
+   {
+    "agent": "w3",
+    "report": "r047",
+    "role": "worker",
+    "step": 13,
+    "t": 17,
+    "unmet": [
+     "C07:record:status"
+    ]
+   },
+   {
+    "agent": "m1",
+    "report": "r048",
+    "role": "manager",
+    "step": 16,
+    "t": 17,
+    "unmet": [
+     "C02:record:status",
+     "C03:reply",
+     "C04:refund",
+     "C05:record:status",
+     "C05:refund",
+     "C07:record:status"
+    ]
+   },
+   {
+    "agent": "w6",
+    "report": "r055",
+    "role": "worker",
+    "step": 14,
+    "t": 20,
+    "unmet": [
+     "C01:refund",
+     "C08:reply",
+     "C08:record:status",
+     "C08:refund"
+    ]
+   },
+   {
+    "agent": "w6",
+    "report": "r072",
+    "role": "worker",
+    "step": 15,
+    "t": 27,
+    "unmet": [
+     "C01:refund",
+     "C08:reply",
+     "C08:record:status",
+     "C08:refund"
+    ]
+   }
+  ],
+  "premature": []
+ },
+ "condition": "E3",
+ "cost": {
+  "blocked": 1,
+  "client_errors": 0,
+  "effects": 15,
+  "estimated_token_calls": 0,
+  "input_tokens": 277759,
+  "llm_calls": 198,
+  "output_tokens": 9672,
+  "parse_failures": 7,
+  "refused_reports": 85,
+  "steps": 198,
+  "steps_scheduler": 198,
+  "suppressed": 3,
+  "ticks": 45
+ },
+ "dar": {
+  "any_duplicate": false,
+  "by_cause": {
+   "cross_agent": 0,
+   "same_agent": 0
+  },
+  "extras": 0,
+  "per100": 0.0,
+  "required": 22
+ },
+ "end_reason": "quiescent",
+ "episode_id": "D-E3-B-s3",
+ "fcr": {
+  "all": [
+   7,
+   7
+  ],
+  "manager": [
+   1,
+   1
+  ],
+  "worker": [
+   6,
+   6
+  ]
+ },
+ "fidelity": {
+  "claimed": 41,
+  "claimed_true": 25,
+  "lead": null,
+  "met": 24,
+  "met_claimed": 23
+ },
+ "lead_done": false,
+ "pcr": {
+  "all": [
+   0,
+   1
+  ],
+  "manager": [
+   0,
+   1
+  ]
+ },
+ "seed": 3,
+ "shape": "D",
+ "task_success": {
+  "met": 16,
+  "total": 27
+ }
+}

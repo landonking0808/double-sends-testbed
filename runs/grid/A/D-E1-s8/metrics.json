@@ -1,0 +1,115 @@
+{
+ "aborted": false,
+ "attribution": {
+  "duplicates": [],
+  "false_dones": [
+   {
+    "agent": "w5",
+    "report": "r003",
+    "role": "worker",
+    "step": 17,
+    "t": 21,
+    "unmet": [
+     "C05:reply",
+     "C08:no_refund"
+    ]
+   },
+   {
+    "agent": "lead",
+    "report": "r004",
+    "role": "lead",
+    "step": 36,
+    "t": 79,
+    "unmet": [
+     "C03:reply",
+     "C05:reply",
+     "C08:no_refund"
+    ]
+   }
+  ],
+  "premature": [
+   {
+    "agent": "lead",
+    "report": "r004",
+    "role": "lead",
+    "running": [
+     "w1",
+     "w4"
+    ],
+    "step": 36,
+    "t": 79
+   }
+  ]
+ },
+ "condition": "E1",
+ "cost": {
+  "blocked": 7,
+  "client_errors": 0,
+  "effects": 22,
+  "estimated_token_calls": 0,
+  "input_tokens": 265872,
+  "llm_calls": 181,
+  "output_tokens": 5434,
+  "parse_failures": 3,
+  "refused_reports": 0,
+  "steps": 181,
+  "steps_scheduler": 181,
+  "suppressed": 4,
+  "ticks": 80
+ },
+ "dar": {
+  "any_duplicate": false,
+  "by_cause": {
+   "cross_agent": 0,
+   "same_agent": 0
+  },
+  "extras": 0,
+  "per100": 0.0,
+  "required": 21
+ },
+ "end_reason": "quiescent",
+ "episode_id": "D-E1-A-s8",
+ "fcr": {
+  "all": [
+   2,
+   4
+  ],
+  "lead": [
+   1,
+   1
+  ],
+  "worker": [
+   1,
+   3
+  ]
+ },
+ "fidelity": {
+  "claimed": 24,
+  "claimed_true": 23,
+  "lead": {
+   "claimed": 9,
+   "claimed_true": 9,
+   "met": 19,
+   "met_claimed": 9
+  },
+  "met": 32,
+  "met_claimed": 22
+ },
+ "lead_done": true,
+ "pcr": {
+  "all": [
+   1,
+   1
+  ],
+  "lead": [
+   1,
+   1
+  ]
+ },
+ "seed": 8,
+ "shape": "D",
+ "task_success": {
+  "met": 24,
+  "total": 27
+ }
+}

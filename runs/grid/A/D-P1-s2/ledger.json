@@ -1,0 +1,1767 @@
+{
+ "agents": [
+  {
+   "children": [
+    "m1",
+    "m2"
+   ],
+   "id": "lead",
+   "parent": null,
+   "role": "lead"
+  },
+  {
+   "children": [
+    "w1",
+    "w2",
+    "w3"
+   ],
+   "id": "m1",
+   "parent": "lead",
+   "role": "manager"
+  },
+  {
+   "children": [],
+   "id": "w1",
+   "parent": "m1",
+   "role": "worker"
+  },
+  {
+   "children": [],
+   "id": "w2",
+   "parent": "m1",
+   "role": "worker"
+  },
+  {
+   "children": [],
+   "id": "w3",
+   "parent": "m1",
+   "role": "worker"
+  },
+  {
+   "children": [
+    "w4",
+    "w5",
+    "w6"
+   ],
+   "id": "m2",
+   "parent": "lead",
+   "role": "manager"
+  },
+  {
+   "children": [],
+   "id": "w4",
+   "parent": "m2",
+   "role": "worker"
+  },
+  {
+   "children": [],
+   "id": "w5",
+   "parent": "m2",
+   "role": "worker"
+  },
+  {
+   "children": [],
+   "id": "w6",
+   "parent": "m2",
+   "role": "worker"
+  }
+ ],
+ "batch": {
+  "customers": {
+   "C01": {
+    "amount": 35,
+    "customer": "C01",
+    "days_since_order": 7,
+    "issue": "changed_mind",
+    "name": "Ivo Kowal",
+    "order_id": "O1526"
+   },
+   "C02": {
+    "amount": 148,
+    "customer": "C02",
+    "days_since_order": 23,
+    "issue": "not_delivered",
+    "name": "Tess Abbott",
+    "order_id": "O3609"
+   },
+   "C03": {
+    "amount": 118,
+    "customer": "C03",
+    "days_since_order": 23,
+    "issue": "changed_mind",
+    "name": "Ximena Ueda",
+    "order_id": "O2086"
+   },
+   "C04": {
+    "amount": 139,
+    "customer": "C04",
+    "days_since_order": 19,
+    "issue": "damaged",
+    "name": "Ada Tanaka",
+    "order_id": "O9072"
+   },
+   "C05": {
+    "amount": 146,
+    "customer": "C05",
+    "days_since_order": 1,
+    "issue": "damaged",
+    "name": "Tess Weber",
+    "order_id": "O3824"
+   },
+   "C06": {
+    "amount": 150,
+    "customer": "C06",
+    "days_since_order": 11,
+    "issue": "changed_mind",
+    "name": "Ximena Jensen",
+    "order_id": "O4626"
+   },
+   "C07": {
+    "amount": 100,
+    "customer": "C07",
+    "days_since_order": 12,
+    "issue": "late_delivery",
+    "name": "Kemi Lindqvist",
+    "order_id": "O2253"
+   },
+   "C08": {
+    "amount": 114,
+    "customer": "C08",
+    "days_since_order": 17,
+    "issue": "damaged",
+    "name": "Kemi Barros",
+    "order_id": "O6460"
+   },
+   "C09": {
+    "amount": 100,
+    "customer": "C09",
+    "days_since_order": 28,
+    "issue": "changed_mind",
+    "name": "Wes Rahman",
+    "order_id": "O9682"
+   }
+  },
+  "messages": [
+   {
+    "customer": "C03",
+    "id": "M01",
+    "text": "Hi, Ximena Ueda here. I changed my mind about order O2086. Can I get my money back?"
+   },
+   {
+    "customer": "C07",
+    "id": "M02",
+    "text": "Hello, this is Kemi Lindqvist. Order O2253 came a week late. Not happy."
+   },
+   {
+    "customer": "C03",
+    "id": "M03",
+    "text": "Hi again, it's Ximena Ueda. I wrote earlier about order O2086 and have not heard back yet."
+   },
+   {
+    "customer": "C02",
+    "id": "M04",
+    "text": "Hello, Tess Abbott here. Order O3609 never arrived. What happened?"
+   },
+   {
+    "customer": "C01",
+    "id": "M05",
+    "text": "Hi, Ivo Kowal here. I changed my mind about order O1526. Can I get my money back?"
+   },
+   {
+    "customer": "C04",
+    "id": "M06",
+    "text": "Hi, this is Ada Tanaka. My order O9072 arrived damaged. Can you help?"
+   },
+   {
+    "customer": "C04",
+    "id": "M07",
+    "text": "Hi again, it's Ada Tanaka. I wrote earlier about order O9072 and have not heard back yet."
+   },
+   {
+    "customer": "C08",
+    "id": "M08",
+    "text": "Hi, this is Kemi Barros. My order O6460 arrived damaged. Can you help?"
+   },
+   {
+    "customer": "C05",
+    "id": "M09",
+    "text": "Hi, this is Tess Weber. My order O3824 arrived damaged. Can you help?"
+   },
+   {
+    "customer": "C06",
+    "id": "M10",
+    "text": "Hi, Ximena Jensen here. I changed my mind about order O4626. Can I get my money back?"
+   },
+   {
+    "customer": "C09",
+    "id": "M11",
+    "text": "Hi, Wes Rahman here. I changed my mind about order O9682. Can I get my money back?"
+   },
+   {
+    "customer": "C06",
+    "id": "M12",
+    "text": "Hi again, it's Ximena Jensen. I wrote earlier about order O4626 and have not heard back yet."
+   }
+  ],
+  "policy": {
+   "eligible_issues": [
+    "damaged",
+    "not_delivered",
+    "wrong_item"
+   ],
+   "max_amount": 150,
+   "max_days": 30,
+   "text": "Refund policy: refund the full order amount if and only if the issue is one of [damaged, not_delivered, wrong_item], the order is at most 30 days old, and the amount is at most $150. Otherwise do not refund. Use lookup(customer) to see the order."
+  },
+  "seed": 2,
+  "task_id": "batch-2"
+ },
+ "blocked": [],
+ "board": [
+  {
+   "agent": "m1",
+   "kind": "note",
+   "n": 1,
+   "note": "C01: claim",
+   "seq": 7,
+   "t": 9,
+   "visible_t": 9
+  },
+  {
+   "agent": "m1",
+   "kind": "note",
+   "n": 2,
+   "note": "C02: claim",
+   "seq": 8,
+   "t": 10,
+   "visible_t": 11
+  },
+  {
+   "agent": "m1",
+   "kind": "note",
+   "n": 3,
+   "note": "C03: claim",
+   "seq": 9,
+   "t": 11,
+   "visible_t": 12
+  },
+  {
+   "agent": "m1",
+   "kind": "note",
+   "n": 4,
+   "note": "C04: claim",
+   "seq": 10,
+   "t": 12,
+   "visible_t": 13
+  },
+  {
+   "agent": "m2",
+   "kind": "note",
+   "n": 5,
+   "note": "C07: claim",
+   "seq": 13,
+   "t": 13,
+   "visible_t": 13
+  },
+  {
+   "agent": "m2",
+   "kind": "note",
+   "n": 6,
+   "note": "C08: claim",
+   "seq": 16,
+   "t": 14,
+   "visible_t": 14
+  },
+  {
+   "agent": "m2",
+   "kind": "note",
+   "n": 7,
+   "note": "C05: claim",
+   "seq": 17,
+   "t": 15,
+   "visible_t": 15
+  },
+  {
+   "agent": "w1",
+   "kind": "claim",
+   "n": 8,
+   "seq": 18,
+   "t": 15,
+   "target": "C03",
+   "visible_t": 16
+  },
+  {
+   "agent": "w2",
+   "kind": "claim",
+   "n": 9,
+   "seq": 21,
+   "t": 16,
+   "target": "C02",
+   "visible_t": 16
+  },
+  {
+   "agent": "m2",
+   "kind": "note",
+   "n": 10,
+   "note": "C06: claim",
+   "seq": 22,
+   "t": 16,
+   "visible_t": 16
+  },
+  {
+   "agent": "m2",
+   "kind": "note",
+   "n": 11,
+   "note": "C09: claim",
+   "seq": 25,
+   "t": 17,
+   "visible_t": 17
+  },
+  {
+   "agent": "w3",
+   "kind": "claim",
+   "n": 12,
+   "seq": 27,
+   "t": 17,
+   "target": "C01",
+   "visible_t": 18
+  },
+  {
+   "agent": "w3",
+   "kind": "claim",
+   "n": 13,
+   "seq": 36,
+   "t": 19,
+   "target": "C01",
+   "visible_t": 19
+  },
+  {
+   "agent": "w1",
+   "kind": "claim",
+   "n": 14,
+   "seq": 38,
+   "t": 19,
+   "target": "C04",
+   "visible_t": 20
+  },
+  {
+   "agent": "w4",
+   "kind": "claim",
+   "n": 15,
+   "seq": 39,
+   "t": 20,
+   "target": "C07",
+   "visible_t": 21
+  },
+  {
+   "agent": "w5",
+   "kind": "claim",
+   "n": 16,
+   "seq": 46,
+   "t": 21,
+   "target": "C08",
+   "visible_t": 22
+  },
+  {
+   "agent": "w5",
+   "kind": "claim",
+   "n": 17,
+   "seq": 50,
+   "t": 22,
+   "target": "C05",
+   "visible_t": 23
+  },
+  {
+   "agent": "w6",
+   "kind": "claim",
+   "n": 18,
+   "seq": 51,
+   "t": 22,
+   "target": "C06",
+   "visible_t": 23
+  },
+  {
+   "agent": "w6",
+   "kind": "claim",
+   "n": 19,
+   "seq": 58,
+   "t": 23,
+   "target": "C09",
+   "visible_t": 23
+  },
+  {
+   "agent": "w5",
+   "kind": "claim",
+   "n": 20,
+   "seq": 71,
+   "t": 26,
+   "target": "C05",
+   "visible_t": 26
+  },
+  {
+   "agent": "w5",
+   "kind": "claim",
+   "n": 21,
+   "seq": 84,
+   "t": 30,
+   "target": "C08",
+   "visible_t": 31
+  },
+  {
+   "agent": "w5",
+   "kind": "claim",
+   "n": 22,
+   "seq": 89,
+   "t": 32,
+   "target": "C05",
+   "visible_t": 33
+  }
+ ],
+ "condition": "P1",
+ "config": {
+  "condition": "P1",
+  "faults": {
+   "delivery_delay": 2,
+   "p_bounce": 0.15,
+   "p_stale_board": 0.5,
+   "p_timeout": 0.1
+  },
+  "lease_ticks": 6,
+  "max_ticks": 300,
+  "shape": "D",
+  "turn_cap": 40
+ },
+ "delegations": [
+  {
+   "agent": "lead",
+   "brief": "Handle messages for C03, C02, C01, and C04. Follow the refund policy: refund full amount if issue is [damaged, not_delivered, wrong_item], order <= 30 days old, and amount <= $150. Reply to customers and set record status to resolved.",
+   "child": "m1",
+   "id": "d001",
+   "items": [
+    "M01",
+    "M03",
+    "M04",
+    "M05",
+    "M06",
+    "M07"
+   ],
+   "seq": 2,
+   "step": 1,
+   "t": 1
+  },
+  {
+   "agent": "lead",
+   "brief": "Handle messages for C07, C08, C05, C06, and C09. Follow the refund policy: refund full amount if issue is [damaged, not_delivered, wrong_item], order <= 30 days old, and amount <= $150. Reply to customers and set record status to resolved.",
+   "child": "m2",
+   "id": "d002",
+   "items": [
+    "M02",
+    "M08",
+    "M09",
+    "M10",
+    "M11",
+    "M12"
+   ],
+   "seq": 4,
+   "step": 2,
+   "t": 2
+  },
+  {
+   "agent": "m1",
+   "brief": "C03 (Ximena Ueda) changed mind. Order O2086. Amount $118, 23 days old. Policy: refund if [damaged, not_delivered, wrong_item], <=30 days, <=$150. Issue is changed_mind, so do not refund. Reply and resolve.",
+   "child": "w1",
+   "id": "d003",
+   "items": [
+    "M01",
+    "M03"
+   ],
+   "seq": 11,
+   "step": 11,
+   "t": 13
+  },
+  {
+   "agent": "m1",
+   "brief": "C02 (Tess Abbott) order O3609 not_delivered. Amount $148, 23 days old. Policy: refund if [damaged, not_delivered, wrong_item], <=30 days, <=$150. Refund eligible. Reply and resolve.",
+   "child": "w2",
+   "id": "d004",
+   "items": [
+    "M04"
+   ],
+   "seq": 14,
+   "step": 12,
+   "t": 14
+  },
+  {
+   "agent": "m1",
+   "brief": "C01 (Ivo Kowal) changed mind about order O1526. Amount $35, 7 days old. Policy: refund if [damaged, not_delivered, wrong_item], <=30 days, <=$150. Issue: changed_mind. No refund eligible. Reply and resolve.",
+   "child": "w3",
+   "id": "d005",
+   "items": [
+    "M05"
+   ],
+   "seq": 19,
+   "step": 13,
+   "t": 15
+  },
+  {
+   "agent": "m1",
+   "brief": "C03 (Ximena Ueda) changed mind about order O2086. Amount $118, 23 days old. Policy: refund if [damaged, not_delivered, wrong_item], <=30 days, <=$150. Issue: changed_mind. No refund eligible. Reply and resolve.",
+   "child": "w1",
+   "id": "d006",
+   "items": [
+    "M01",
+    "M03"
+   ],
+   "seq": 23,
+   "step": 14,
+   "t": 16
+  },
+  {
+   "agent": "m1",
+   "brief": "C02 (Tess Abbott) order O3609 not_delivered. Amount $148, 23 days old. Policy: refund if [damaged, not_delivered, wrong_item], <=30 days, <=$150. Issue: not_delivered. Refund eligible. Reply and resolve.",
+   "child": "w2",
+   "id": "d007",
+   "items": [
+    "M04"
+   ],
+   "seq": 26,
+   "step": 15,
+   "t": 17
+  },
+  {
+   "agent": "m1",
+   "brief": "C01 (Ivo Kowal) changed mind about order O1526. Amount $35, 7 days old. Issue: changed_mind. Policy: refund if [damaged, not_delivered, wrong_item], <=30 days, <=$150. Issue is not in list. Do not refund. Reply and resolve.",
+   "child": "w3",
+   "id": "d008",
+   "items": [
+    "M05"
+   ],
+   "seq": 28,
+   "step": 16,
+   "t": 18
+  },
+  {
+   "agent": "m2",
+   "brief": "C07: order O2253, amount 100, 12 days, late_delivery. Issue 'late_delivery' is not in [damaged, not_delivered, wrong_item]. Do not refund. Reply and set status to resolved.",
+   "child": "w4",
+   "id": "d009",
+   "items": [
+    "M02"
+   ],
+   "seq": 30,
+   "step": 15,
+   "t": 18
+  },
+  {
+   "agent": "m2",
+   "brief": "C08: order O6460, amount 114, 17 days, damaged. Issue 'damaged' is in policy. Amount <= 150, days <= 30. Refund full amount. Reply and set status to resolved. C05: order O3824, amount 146, 1 days, damaged. Issue 'damaged' is in policy. Amount <= 150, days <= 30. Refund full amount. Reply and set status to resolved.",
+   "child": "w5",
+   "id": "d010",
+   "items": [
+    "M08",
+    "M09"
+   ],
+   "seq": 33,
+   "step": 16,
+   "t": 19
+  },
+  {
+   "agent": "m1",
+   "brief": "C04 (Ada Tanaka) order O9072 arrived damaged. Amount $139, 19 days old. Policy: refund if [damaged, not_delivered, wrong_item], <=30 days, <=$150. Issue is damaged. Refund full amount, reply, and resolve.",
+   "child": "w1",
+   "id": "d011",
+   "items": [
+    "M06",
+    "M07"
+   ],
+   "seq": 35,
+   "step": 17,
+   "t": 19
+  },
+  {
+   "agent": "m2",
+   "brief": "C06: order O4626, amount 150, 11 days, changed_mind. Issue 'changed_mind' is NOT in policy. Do not refund. Reply and set status to resolved. C09: order O9682, amount 100, 28 days, changed_mind. Issue 'changed_mind' is NOT in policy. Do not refund. Reply and set status to resolved.",
+   "child": "w6",
+   "id": "d012",
+   "items": [
+    "M10",
+    "M11",
+    "M12"
+   ],
+   "seq": 42,
+   "step": 17,
+   "t": 20
+  }
+ ],
+ "effects": [
+  {
+   "agent": "w1",
+   "args": {
+    "body": "Hi Ximena, thank you for reaching out. I understand you've changed your mind about order O2086. Unfortunately, according to our refund policy, we can only offer refunds for items that are damaged, not delivered, or the wrong item. Since this is a change of mind, we are unable to process a refund at this time. We apologize for any inconvenience.",
+    "task": "batch-2",
+    "to": "C03"
+   },
+   "final": "delivered",
+   "history": [
+    [
+     17,
+     "queued"
+    ],
+    [
+     19,
+     "delivered"
+    ]
+   ],
+   "id": "e0001",
+   "intent": "reply",
+   "key": null,
+   "returned": "queued",
+   "seq": 24,
+   "step": 3,
+   "t": 17,
+   "target": "C03",
+   "tool": "send_message"
+  },
+  {
+   "agent": "w1",
+   "args": {
+    "field": "status",
+    "id": "C03",
+    "task": "batch-2",
+    "value": "resolved"
+   },
+   "final": "applied",
+   "history": [
+    [
+     18,
+     "applied"
+    ]
+   ],
+   "id": "e0002",
+   "intent": "record:status",
+   "key": null,
+   "returned": "ok",
+   "seq": 29,
+   "step": 4,
+   "t": 18,
+   "target": "C03",
+   "tool": "update_record"
+  },
+  {
+   "agent": "w2",
+   "args": {
+    "body": "Hello Tess Abbott, I am sorry to hear that your order O3609 never arrived. I have processed a full refund of $148 for you.",
+    "task": "batch-2",
+    "to": "C02"
+   },
+   "final": "delivered",
+   "history": [
+    [
+     18,
+     "queued"
+    ],
+    [
+     20,
+     "delivered"
+    ]
+   ],
+   "id": "e0003",
+   "intent": "reply",
+   "key": null,
+   "returned": "timeout",
+   "seq": 32,
+   "step": 3,
+   "t": 18,
+   "target": "C02",
+   "tool": "send_message"
+  },
+  {
+   "agent": "w3",
+   "args": {
+    "body": "Hi Ivo, I understand you've changed your mind about your order. Unfortunately, according to our policy, we can only offer refunds for damaged, undelivered, or incorrect items. Since this falls outside those categories, we cannot process a refund. Thank you for your understanding.",
+    "task": "batch-2",
+    "to": "C01"
+   },
+   "final": "delivered",
+   "history": [
+    [
+     20,
+     "queued"
+    ],
+    [
+     22,
+     "delivered"
+    ]
+   ],
+   "id": "e0004",
+   "intent": "reply",
+   "key": null,
+   "returned": "queued",
+   "seq": 41,
+   "step": 4,
+   "t": 20,
+   "target": "C01",
+   "tool": "send_message"
+  },
+  {
+   "agent": "w3",
+   "args": {
+    "field": "status",
+    "id": "C01",
+    "task": "batch-2",
+    "value": "resolved"
+   },
+   "final": "applied",
+   "history": [
+    [
+     21,
+     "applied"
+    ]
+   ],
+   "id": "e0005",
+   "intent": "record:status",
+   "key": null,
+   "returned": "timeout",
+   "seq": 45,
+   "step": 5,
+   "t": 21,
+   "target": "C01",
+   "tool": "update_record"
+  },
+  {
+   "agent": "w2",
+   "args": {
+    "amount": 148,
+    "customer": "C02",
+    "task": "batch-2"
+   },
+   "final": "applied",
+   "history": [
+    [
+     21,
+     "applied"
+    ]
+   ],
+   "id": "e0006",
+   "intent": "refund",
+   "key": null,
+   "returned": "ok",
+   "seq": 47,
+   "step": 6,
+   "t": 21,
+   "target": "C02",
+   "tool": "issue_refund"
+  },
+  {
+   "agent": "w4",
+   "args": {
+    "body": "Dear Kemi Lindqvist, we apologize for the delay in the delivery of your order O2253. Thank you for your patience.",
+    "task": "batch-2",
+    "to": "C07"
+   },
+   "final": "delivered",
+   "history": [
+    [
+     22,
+     "queued"
+    ],
+    [
+     24,
+     "delivered"
+    ]
+   ],
+   "id": "e0007",
+   "intent": "reply",
+   "key": null,
+   "returned": "queued",
+   "seq": 52,
+   "step": 3,
+   "t": 22,
+   "target": "C07",
+   "tool": "send_message"
+  },
+  {
+   "agent": "w2",
+   "args": {
+    "field": "status",
+    "id": "C02",
+    "task": "batch-2",
+    "value": "resolved"
+   },
+   "final": "applied",
+   "history": [
+    [
+     22,
+     "applied"
+    ]
+   ],
+   "id": "e0008",
+   "intent": "record:status",
+   "key": null,
+   "returned": "timeout",
+   "seq": 53,
+   "step": 7,
+   "t": 22,
+   "target": "C02",
+   "tool": "update_record"
+  },
+  {
+   "agent": "w4",
+   "args": {
+    "field": "status",
+    "id": "C07",
+    "task": "batch-2",
+    "value": "resolved"
+   },
+   "final": "applied",
+   "history": [
+    [
+     23,
+     "applied"
+    ]
+   ],
+   "id": "e0009",
+   "intent": "record:status",
+   "key": null,
+   "returned": "ok",
+   "seq": 55,
+   "step": 4,
+   "t": 23,
+   "target": "C07",
+   "tool": "update_record"
+  },
+  {
+   "agent": "w1",
+   "args": {
+    "amount": 139,
+    "customer": "C04",
+    "task": "batch-2"
+   },
+   "final": "applied",
+   "history": [
+    [
+     24,
+     "applied"
+    ]
+   ],
+   "id": "e0010",
+   "intent": "refund",
+   "key": null,
+   "returned": "ok",
+   "seq": 62,
+   "step": 10,
+   "t": 24,
+   "target": "C04",
+   "tool": "issue_refund"
+  },
+  {
+   "agent": "w5",
+   "args": {
+    "amount": 114,
+    "customer": "C08",
+    "task": "batch-2"
+   },
+   "final": "applied",
+   "history": [
+    [
+     24,
+     "applied"
+    ]
+   ],
+   "id": "e0011",
+   "intent": "refund",
+   "key": null,
+   "returned": "ok",
+   "seq": 63,
+   "step": 4,
+   "t": 24,
+   "target": "C08",
+   "tool": "issue_refund"
+  },
+  {
+   "agent": "w5",
+   "args": {
+    "body": "Hi Kemi Barros, I am sorry to hear that your order O6460 arrived damaged. I have issued a full refund of 114 to your original payment method. Your issue is now resolved.",
+    "task": "batch-2",
+    "to": "C08"
+   },
+   "final": "delivered",
+   "history": [
+    [
+     25,
+     "queued"
+    ],
+    [
+     27,
+     "delivered"
+    ]
+   ],
+   "id": "e0012",
+   "intent": "reply",
+   "key": null,
+   "returned": "queued",
+   "seq": 64,
+   "step": 5,
+   "t": 25,
+   "target": "C08",
+   "tool": "send_message"
+  },
+  {
+   "agent": "w1",
+   "args": {
+    "body": "Hi, I'm sorry to hear your order was damaged. I have issued a full refund of $139 to your original payment method. It should appear in your account within a few business days.",
+    "task": "batch-2",
+    "to": "C04"
+   },
+   "final": "delivered",
+   "history": [
+    [
+     25,
+     "queued"
+    ],
+    [
+     27,
+     "delivered"
+    ]
+   ],
+   "id": "e0013",
+   "intent": "reply",
+   "key": null,
+   "returned": "queued",
+   "seq": 65,
+   "step": 11,
+   "t": 25,
+   "target": "C04",
+   "tool": "send_message"
+  },
+  {
+   "agent": "w6",
+   "args": {
+    "body": "Hi Ximena Jensen, I'm sorry to hear you've changed your mind about your order. Unfortunately, according to our policy, we cannot offer a refund for change of mind. I have marked this request as resolved.",
+    "task": "batch-2",
+    "to": "C06"
+   },
+   "final": "delivered",
+   "history": [
+    [
+     25,
+     "queued"
+    ],
+    [
+     27,
+     "delivered"
+    ]
+   ],
+   "id": "e0014",
+   "intent": "reply",
+   "key": null,
+   "returned": "queued",
+   "seq": 66,
+   "step": 4,
+   "t": 25,
+   "target": "C06",
+   "tool": "send_message"
+  },
+  {
+   "agent": "w6",
+   "args": {
+    "field": "status",
+    "id": "C06",
+    "task": "batch-2",
+    "value": "resolved"
+   },
+   "final": "applied",
+   "history": [
+    [
+     26,
+     "applied"
+    ]
+   ],
+   "id": "e0015",
+   "intent": "record:status",
+   "key": null,
+   "returned": "ok",
+   "seq": 70,
+   "step": 5,
+   "t": 26,
+   "target": "C06",
+   "tool": "update_record"
+  },
+  {
+   "agent": "w1",
+   "args": {
+    "field": "status",
+    "id": "C04",
+    "task": "batch-2",
+    "value": "resolved"
+   },
+   "final": "applied",
+   "history": [
+    [
+     26,
+     "applied"
+    ]
+   ],
+   "id": "e0016",
+   "intent": "record:status",
+   "key": null,
+   "returned": "ok",
+   "seq": 73,
+   "step": 12,
+   "t": 26,
+   "target": "C04",
+   "tool": "update_record"
+  },
+  {
+   "agent": "w5",
+   "args": {
+    "amount": 146,
+    "customer": "C05",
+    "task": "batch-2"
+   },
+   "final": "applied",
+   "history": [
+    [
+     28,
+     "applied"
+    ]
+   ],
+   "id": "e0017",
+   "intent": "refund",
+   "key": null,
+   "returned": "ok",
+   "seq": 75,
+   "step": 8,
+   "t": 28,
+   "target": "C05",
+   "tool": "issue_refund"
+  },
+  {
+   "agent": "w6",
+   "args": {
+    "body": "Hi Wes Rahman, I'm sorry but we cannot offer a refund for changed minds. Your request has been processed.",
+    "task": "batch-2",
+    "to": "C09"
+   },
+   "final": "delivered",
+   "history": [
+    [
+     28,
+     "queued"
+    ],
+    [
+     30,
+     "delivered"
+    ]
+   ],
+   "id": "e0018",
+   "intent": "reply",
+   "key": null,
+   "returned": "queued",
+   "seq": 78,
+   "step": 7,
+   "t": 28,
+   "target": "C09",
+   "tool": "send_message"
+  },
+  {
+   "agent": "w5",
+   "args": {
+    "body": "Hi Tess Weber, I am sorry to hear that your order O3824 arrived damaged. I have processed a full refund of 146 for you.",
+    "task": "batch-2",
+    "to": "C05"
+   },
+   "final": "delivered",
+   "history": [
+    [
+     29,
+     "queued"
+    ],
+    [
+     31,
+     "delivered"
+    ]
+   ],
+   "id": "e0019",
+   "intent": "reply",
+   "key": null,
+   "returned": "queued",
+   "seq": 79,
+   "step": 9,
+   "t": 29,
+   "target": "C05",
+   "tool": "send_message"
+  },
+  {
+   "agent": "w6",
+   "args": {
+    "field": "status",
+    "id": "C09",
+    "task": "batch-2",
+    "value": "resolved"
+   },
+   "final": "applied",
+   "history": [
+    [
+     29,
+     "applied"
+    ]
+   ],
+   "id": "e0020",
+   "intent": "record:status",
+   "key": null,
+   "returned": "ok",
+   "seq": 80,
+   "step": 8,
+   "t": 29,
+   "target": "C09",
+   "tool": "update_record"
+  },
+  {
+   "agent": "w5",
+   "args": {
+    "field": "status",
+    "id": "C08",
+    "task": "batch-2",
+    "value": "resolved"
+   },
+   "final": "applied",
+   "history": [
+    [
+     31,
+     "applied"
+    ]
+   ],
+   "id": "e0021",
+   "intent": "record:status",
+   "key": null,
+   "returned": "ok",
+   "seq": 86,
+   "step": 11,
+   "t": 31,
+   "target": "C08",
+   "tool": "update_record"
+  },
+  {
+   "agent": "w5",
+   "args": {
+    "field": "status",
+    "id": "C05",
+    "task": "batch-2",
+    "value": "resolved"
+   },
+   "final": "applied",
+   "history": [
+    [
+     33,
+     "applied"
+    ]
+   ],
+   "id": "e0022",
+   "intent": "record:status",
+   "key": null,
+   "returned": "ok",
+   "seq": 92,
+   "step": 13,
+   "t": 33,
+   "target": "C05",
+   "tool": "update_record"
+  }
+ ],
+ "end": {
+  "reason": "quiescent",
+  "seq": 132,
+  "t": 77,
+  "unfinished": []
+ },
+ "episode_id": "D-P1-A-s2",
+ "final_status": {
+  "lead": "exhausted",
+  "m1": "exhausted",
+  "m2": "finished",
+  "w1": "finished",
+  "w2": "finished",
+  "w3": "finished",
+  "w4": "finished",
+  "w5": "finished",
+  "w6": "finished"
+ },
+ "items": {
+  "lead": [
+   "M01",
+   "M02",
+   "M03",
+   "M04",
+   "M05",
+   "M06",
+   "M07",
+   "M08",
+   "M09",
+   "M10",
+   "M11",
+   "M12"
+  ],
+  "m1": [
+   "M01",
+   "M03",
+   "M04",
+   "M05",
+   "M06",
+   "M07"
+  ],
+  "m2": [
+   "M02",
+   "M08",
+   "M09",
+   "M10",
+   "M11",
+   "M12"
+  ],
+  "w1": [
+   "M01",
+   "M03",
+   "M06",
+   "M07"
+  ],
+  "w2": [
+   "M04"
+  ],
+  "w3": [
+   "M05"
+  ],
+  "w4": [
+   "M02"
+  ],
+  "w5": [
+   "M08",
+   "M09"
+  ],
+  "w6": [
+   "M10",
+   "M11",
+   "M12"
+  ]
+ },
+ "reports": [
+  {
+   "accepted": true,
+   "agent": "w3",
+   "claims": [
+    {
+     "intent": "reply",
+     "target": "C01"
+    },
+    {
+     "intent": "record:status",
+     "target": "C01"
+    }
+   ],
+   "id": "r001",
+   "reason": null,
+   "seq": 56,
+   "status": "done",
+   "step": 7,
+   "t": 23,
+   "text": "Processed C01: replied to customer and updated record status to resolved. Refund was not eligible due to policy (issue: changed_mind)."
+  },
+  {
+   "accepted": true,
+   "agent": "w2",
+   "claims": [
+    {
+     "intent": "reply",
+     "target": "C02"
+    },
+    {
+     "intent": "refund",
+     "target": "C02"
+    },
+    {
+     "intent": "record:status",
+     "target": "C02"
+    }
+   ],
+   "id": "r002",
+   "reason": null,
+   "seq": 59,
+   "status": "done",
+   "step": 9,
+   "t": 24,
+   "text": "Completed task for C02: replied, issued refund, and updated record status."
+  },
+  {
+   "accepted": true,
+   "agent": "w4",
+   "claims": [
+    {
+     "intent": "reply",
+     "target": "C07"
+    },
+    {
+     "intent": "record:status",
+     "target": "C07"
+    }
+   ],
+   "id": "r003",
+   "reason": null,
+   "seq": 67,
+   "status": "done",
+   "step": 6,
+   "t": 25,
+   "text": "Handled C07: replied to customer and updated record status to resolved. No refund issued as per policy."
+  },
+  {
+   "accepted": true,
+   "agent": "w1",
+   "claims": [
+    {
+     "intent": "reply",
+     "target": "C03"
+    },
+    {
+     "intent": "record:status",
+     "target": "C03"
+    },
+    {
+     "intent": "refund",
+     "target": "C04"
+    },
+    {
+     "intent": "reply",
+     "target": "C04"
+    },
+    {
+     "intent": "record:status",
+     "target": "C04"
+    }
+   ],
+   "id": "r004",
+   "reason": null,
+   "seq": 76,
+   "status": "done",
+   "step": 14,
+   "t": 28,
+   "text": "Processed C03 (no refund, changed mind) and C04 (refunded, damaged). All effects verified."
+  },
+  {
+   "accepted": true,
+   "agent": "w6",
+   "claims": [
+    {
+     "intent": "reply",
+     "target": "C06"
+    },
+    {
+     "intent": "record:status",
+     "target": "C06"
+    },
+    {
+     "intent": "reply",
+     "target": "C09"
+    },
+    {
+     "intent": "record:status",
+     "target": "C09"
+    }
+   ],
+   "id": "r005",
+   "reason": null,
+   "seq": 90,
+   "status": "done",
+   "step": 11,
+   "t": 32,
+   "text": "Processed C06 and C09. Both customers were informed that refunds are not possible for 'changed_mind' and their records have been updated to resolved."
+  },
+  {
+   "accepted": true,
+   "agent": "w5",
+   "claims": [
+    {
+     "intent": "reply",
+     "target": "C08"
+    },
+    {
+     "intent": "refund",
+     "target": "C08"
+    },
+    {
+     "intent": "record:status",
+     "target": "C08"
+    },
+    {
+     "intent": "reply",
+     "target": "C05"
+    },
+    {
+     "intent": "refund",
+     "target": "C05"
+    },
+    {
+     "intent": "record:status",
+     "target": "C05"
+    }
+   ],
+   "id": "r006",
+   "reason": null,
+   "seq": 99,
+   "status": "done",
+   "step": 16,
+   "t": 36,
+   "text": "Handled C08 and C05. Both refunds issued, messages sent, and records updated."
+  },
+  {
+   "accepted": true,
+   "agent": "m2",
+   "claims": [
+    {
+     "intent": "record:status",
+     "target": "C07"
+    },
+    {
+     "intent": "refund",
+     "target": "C08"
+    },
+    {
+     "intent": "record:status",
+     "target": "C08"
+    },
+    {
+     "intent": "refund",
+     "target": "C05"
+    },
+    {
+     "intent": "record:status",
+     "target": "C05"
+    },
+    {
+     "intent": "record:status",
+     "target": "C06"
+    },
+    {
+     "intent": "record:status",
+     "target": "C09"
+    }
+   ],
+   "id": "r007",
+   "reason": null,
+   "seq": 111,
+   "status": "done",
+   "step": 34,
+   "t": 41,
+   "text": "All customers handled."
+  }
+ ],
+ "requirements": [
+  {
+   "amount": null,
+   "customer": "C01",
+   "id": "C01:reply",
+   "kind": "reply"
+  },
+  {
+   "amount": null,
+   "customer": "C01",
+   "id": "C01:record:status",
+   "kind": "record:status"
+  },
+  {
+   "amount": null,
+   "customer": "C01",
+   "id": "C01:no_refund",
+   "kind": "no_refund"
+  },
+  {
+   "amount": null,
+   "customer": "C02",
+   "id": "C02:reply",
+   "kind": "reply"
+  },
+  {
+   "amount": null,
+   "customer": "C02",
+   "id": "C02:record:status",
+   "kind": "record:status"
+  },
+  {
+   "amount": 148,
+   "customer": "C02",
+   "id": "C02:refund",
+   "kind": "refund"
+  },
+  {
+   "amount": null,
+   "customer": "C03",
+   "id": "C03:reply",
+   "kind": "reply"
+  },
+  {
+   "amount": null,
+   "customer": "C03",
+   "id": "C03:record:status",
+   "kind": "record:status"
+  },
+  {
+   "amount": null,
+   "customer": "C03",
+   "id": "C03:no_refund",
+   "kind": "no_refund"
+  },
+  {
+   "amount": null,
+   "customer": "C04",
+   "id": "C04:reply",
+   "kind": "reply"
+  },
+  {
+   "amount": null,
+   "customer": "C04",
+   "id": "C04:record:status",
+   "kind": "record:status"
+  },
+  {
+   "amount": 139,
+   "customer": "C04",
+   "id": "C04:refund",
+   "kind": "refund"
+  },
+  {
+   "amount": null,
+   "customer": "C05",
+   "id": "C05:reply",
+   "kind": "reply"
+  },
+  {
+   "amount": null,
+   "customer": "C05",
+   "id": "C05:record:status",
+   "kind": "record:status"
+  },
+  {
+   "amount": 146,
+   "customer": "C05",
+   "id": "C05:refund",
+   "kind": "refund"
+  },
+  {
+   "amount": null,
+   "customer": "C06",
+   "id": "C06:reply",
+   "kind": "reply"
+  },
+  {
+   "amount": null,
+   "customer": "C06",
+   "id": "C06:record:status",
+   "kind": "record:status"
+  },
+  {
+   "amount": null,
+   "customer": "C06",
+   "id": "C06:no_refund",
+   "kind": "no_refund"
+  },
+  {
+   "amount": null,
+   "customer": "C07",
+   "id": "C07:reply",
+   "kind": "reply"
+  },
+  {
+   "amount": null,
+   "customer": "C07",
+   "id": "C07:record:status",
+   "kind": "record:status"
+  },
+  {
+   "amount": null,
+   "customer": "C07",
+   "id": "C07:no_refund",
+   "kind": "no_refund"
+  },
+  {
+   "amount": null,
+   "customer": "C08",
+   "id": "C08:reply",
+   "kind": "reply"
+  },
+  {
+   "amount": null,
+   "customer": "C08",
+   "id": "C08:record:status",
+   "kind": "record:status"
+  },
+  {
+   "amount": 114,
+   "customer": "C08",
+   "id": "C08:refund",
+   "kind": "refund"
+  },
+  {
+   "amount": null,
+   "customer": "C09",
+   "id": "C09:reply",
+   "kind": "reply"
+  },
+  {
+   "amount": null,
+   "customer": "C09",
+   "id": "C09:record:status",
+   "kind": "record:status"
+  },
+  {
+   "amount": null,
+   "customer": "C09",
+   "id": "C09:no_refund",
+   "kind": "no_refund"
+  }
+ ],
+ "seed": 2,
+ "shape": "D",
+ "status_changes": [
+  {
+   "agent": "lead",
+   "seq": 1,
+   "status": "running",
+   "t": 0
+  },
+  {
+   "agent": "m1",
+   "seq": 3,
+   "status": "running",
+   "t": 1
+  },
+  {
+   "agent": "m2",
+   "seq": 5,
+   "status": "running",
+   "t": 2
+  },
+  {
+   "agent": "lead",
+   "seq": 6,
+   "status": "sleeping",
+   "t": 4
+  },
+  {
+   "agent": "w1",
+   "seq": 12,
+   "status": "running",
+   "t": 13
+  },
+  {
+   "agent": "w2",
+   "seq": 15,
+   "status": "running",
+   "t": 14
+  },
+  {
+   "agent": "w3",
+   "seq": 20,
+   "status": "running",
+   "t": 15
+  },
+  {
+   "agent": "w4",
+   "seq": 31,
+   "status": "running",
+   "t": 18
+  },
+  {
+   "agent": "w5",
+   "seq": 34,
+   "status": "running",
+   "t": 19
+  },
+  {
+   "agent": "w6",
+   "seq": 43,
+   "status": "running",
+   "t": 20
+  },
+  {
+   "agent": "m2",
+   "seq": 44,
+   "status": "sleeping",
+   "t": 21
+  },
+  {
+   "agent": "w3",
+   "seq": 57,
+   "status": "finished",
+   "t": 23
+  },
+  {
+   "agent": "w2",
+   "seq": 60,
+   "status": "finished",
+   "t": 24
+  },
+  {
+   "agent": "m2",
+   "seq": 68,
+   "status": "running",
+   "t": 25
+  },
+  {
+   "agent": "w4",
+   "seq": 69,
+   "status": "finished",
+   "t": 25
+  },
+  {
+   "agent": "w1",
+   "seq": 77,
+   "status": "finished",
+   "t": 28
+  },
+  {
+   "agent": "w6",
+   "seq": 91,
+   "status": "finished",
+   "t": 32
+  },
+  {
+   "agent": "w5",
+   "seq": 100,
+   "status": "finished",
+   "t": 36
+  },
+  {
+   "agent": "lead",
+   "seq": 112,
+   "status": "running",
+   "t": 41
+  },
+  {
+   "agent": "m2",
+   "seq": 113,
+   "status": "finished",
+   "t": 41
+  },
+  {
+   "agent": "m1",
+   "seq": 115,
+   "status": "exhausted",
+   "t": 41
+  },
+  {
+   "agent": "lead",
+   "seq": 131,
+   "status": "exhausted",
+   "t": 76
+  }
+ ],
+ "suppressed": [],
+ "task_id": "batch-2",
+ "turns": {
+  "lead": 40,
+  "m1": 40,
+  "m2": 35,
+  "w1": 15,
+  "w2": 10,
+  "w3": 8,
+  "w4": 7,
+  "w5": 17,
+  "w6": 12
+ }
+}

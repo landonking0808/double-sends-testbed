@@ -1,0 +1,202 @@
+{
+ "aborted": false,
+ "attribution": {
+  "duplicates": [],
+  "false_dones": [
+   {
+    "agent": "w1",
+    "report": "r001",
+    "role": "worker",
+    "step": 3,
+    "t": 5,
+    "unmet": [
+     "C02:reply"
+    ]
+   },
+   {
+    "agent": "w4",
+    "report": "r002",
+    "role": "worker",
+    "step": 3,
+    "t": 6,
+    "unmet": [
+     "C06:refund"
+    ]
+   },
+   {
+    "agent": "m1",
+    "report": "r003",
+    "role": "manager",
+    "step": 7,
+    "t": 8,
+    "unmet": [
+     "C02:reply",
+     "C06:refund"
+    ]
+   },
+   {
+    "agent": "m2",
+    "report": "r004",
+    "role": "manager",
+    "step": 6,
+    "t": 8,
+    "unmet": [
+     "C05:reply",
+     "C05:record:status",
+     "C06:refund",
+     "C07:reply",
+     "C07:record:status",
+     "C08:reply",
+     "C08:record:status"
+    ]
+   },
+   {
+    "agent": "lead",
+    "report": "r005",
+    "role": "lead",
+    "step": 8,
+    "t": 8,
+    "unmet": [
+     "C02:reply",
+     "C05:reply",
+     "C05:record:status",
+     "C06:refund",
+     "C07:reply",
+     "C07:record:status",
+     "C08:reply",
+     "C08:record:status"
+    ]
+   },
+   {
+    "agent": "w6",
+    "report": "r008",
+    "role": "worker",
+    "step": 4,
+    "t": 9,
+    "unmet": [
+     "C06:refund",
+     "C07:reply",
+     "C07:record:status",
+     "C08:reply",
+     "C08:record:status"
+    ]
+   }
+  ],
+  "premature": [
+   {
+    "agent": "m1",
+    "report": "r003",
+    "role": "manager",
+    "running": [
+     "w2",
+     "w3"
+    ],
+    "step": 7,
+    "t": 8
+   },
+   {
+    "agent": "m2",
+    "report": "r004",
+    "role": "manager",
+    "running": [
+     "w5",
+     "w6"
+    ],
+    "step": 6,
+    "t": 8
+   },
+   {
+    "agent": "lead",
+    "report": "r005",
+    "role": "lead",
+    "running": [
+     "w2",
+     "w3",
+     "w5",
+     "w6"
+    ],
+    "step": 8,
+    "t": 8
+   }
+  ]
+ },
+ "condition": "E1",
+ "cost": {
+  "blocked": 0,
+  "client_errors": 0,
+  "effects": 15,
+  "estimated_token_calls": 0,
+  "input_tokens": 57450,
+  "llm_calls": 57,
+  "output_tokens": 3520,
+  "parse_failures": 0,
+  "refused_reports": 0,
+  "steps": 57,
+  "steps_scheduler": 57,
+  "suppressed": 5,
+  "ticks": 11
+ },
+ "dar": {
+  "any_duplicate": false,
+  "by_cause": {
+   "cross_agent": 0,
+   "same_agent": 0
+  },
+  "extras": 0,
+  "per100": 0.0,
+  "required": 22
+ },
+ "end_reason": "quiescent",
+ "episode_id": "D-E1-B-s6",
+ "fcr": {
+  "all": [
+   6,
+   9
+  ],
+  "lead": [
+   1,
+   1
+  ],
+  "manager": [
+   2,
+   2
+  ],
+  "worker": [
+   3,
+   6
+  ]
+ },
+ "fidelity": {
+  "claimed": 68,
+  "claimed_true": 43,
+  "lead": {
+   "claimed": 22,
+   "claimed_true": 14,
+   "met": 14,
+   "met_claimed": 14
+  },
+  "met": 46,
+  "met_claimed": 43
+ },
+ "lead_done": true,
+ "pcr": {
+  "all": [
+   3,
+   3
+  ],
+  "lead": [
+   1,
+   1
+  ],
+  "manager": [
+   2,
+   2
+  ]
+ },
+ "seed": 6,
+ "shape": "D",
+ "task_success": {
+  "met": 19,
+  "total": 27
+ }
+}

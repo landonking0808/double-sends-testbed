@@ -1,0 +1,244 @@
+{
+ "aborted": false,
+ "attribution": {
+  "duplicates": [
+   {
+    "agent": "w6",
+    "cause": "cross_agent",
+    "effect": "e0036",
+    "first_agent": "w5",
+    "first_effect": "e0029",
+    "intent": "record:status",
+    "step": 11,
+    "t": 17,
+    "target": "C01"
+   },
+   {
+    "agent": "w6",
+    "cause": "cross_agent",
+    "effect": "e0032",
+    "first_agent": "w5",
+    "first_effect": "e0026",
+    "intent": "refund",
+    "step": 9,
+    "t": 15,
+    "target": "C01"
+   },
+   {
+    "agent": "w6",
+    "cause": "same_agent",
+    "effect": "e0033",
+    "first_agent": "w5",
+    "first_effect": "e0026",
+    "intent": "refund",
+    "step": 10,
+    "t": 16,
+    "target": "C01"
+   },
+   {
+    "agent": "w6",
+    "cause": "cross_agent",
+    "effect": "e0025",
+    "first_agent": "w5",
+    "first_effect": "e0020",
+    "intent": "reply",
+    "step": 8,
+    "t": 14,
+    "target": "C01"
+   },
+   {
+    "agent": "w3",
+    "cause": "same_agent",
+    "effect": "e0035",
+    "first_agent": "w3",
+    "first_effect": "e0034",
+    "intent": "record:status",
+    "step": 12,
+    "t": 17,
+    "target": "C02"
+   },
+   {
+    "agent": "w4",
+    "cause": "cross_agent",
+    "effect": "e0027",
+    "first_agent": "w3",
+    "first_effect": "e0013",
+    "intent": "record:status",
+    "step": 10,
+    "t": 14,
+    "target": "C03"
+   },
+   {
+    "agent": "w4",
+    "cause": "cross_agent",
+    "effect": "e0022",
+    "first_agent": "w3",
+    "first_effect": "e0009",
+    "intent": "reply",
+    "step": 9,
+    "t": 13,
+    "target": "C03"
+   },
+   {
+    "agent": "w1",
+    "cause": "cross_agent",
+    "effect": "e0023",
+    "first_agent": "w6",
+    "first_effect": "e0011",
+    "intent": "record:status",
+    "step": 11,
+    "t": 14,
+    "target": "C05"
+   },
+   {
+    "agent": "w1",
+    "cause": "cross_agent",
+    "effect": "e0019",
+    "first_agent": "w6",
+    "first_effect": "e0006",
+    "intent": "refund",
+    "step": 10,
+    "t": 13,
+    "target": "C05"
+   },
+   {
+    "agent": "w1",
+    "cause": "same_agent",
+    "effect": "e0002",
+    "first_agent": "w1",
+    "first_effect": "e0001",
+    "intent": "reply",
+    "step": 4,
+    "t": 7,
+    "target": "C09"
+   }
+  ],
+  "false_dones": [
+   {
+    "agent": "w2",
+    "report": "r003",
+    "role": "worker",
+    "step": 12,
+    "t": 16,
+    "unmet": [
+     "C06:no_refund",
+     "C07:no_refund"
+    ]
+   },
+   {
+    "agent": "w3",
+    "report": "r006",
+    "role": "worker",
+    "step": 15,
+    "t": 20,
+    "unmet": [
+     "C02:no_refund"
+    ]
+   },
+   {
+    "agent": "m1",
+    "report": "r007",
+    "role": "manager",
+    "step": 11,
+    "t": 23,
+    "unmet": [
+     "C02:no_refund",
+     "C06:no_refund",
+     "C07:no_refund"
+    ]
+   },
+   {
+    "agent": "lead",
+    "report": "r009",
+    "role": "lead",
+    "step": 7,
+    "t": 26,
+    "unmet": [
+     "C02:no_refund",
+     "C06:no_refund",
+     "C07:no_refund"
+    ]
+   }
+  ],
+  "premature": []
+ },
+ "condition": "B0",
+ "cost": {
+  "blocked": 0,
+  "client_errors": 0,
+  "effects": 36,
+  "estimated_token_calls": 0,
+  "input_tokens": 145682,
+  "llm_calls": 123,
+  "output_tokens": 4967,
+  "parse_failures": 0,
+  "refused_reports": 0,
+  "steps": 123,
+  "steps_scheduler": 123,
+  "suppressed": 0,
+  "ticks": 27
+ },
+ "dar": {
+  "any_duplicate": true,
+  "by_cause": {
+   "cross_agent": 7,
+   "same_agent": 3
+  },
+  "extras": 10,
+  "per100": 45.45454545454545,
+  "required": 22
+ },
+ "end_reason": "quiescent",
+ "episode_id": "D-B0-A-s3",
+ "fcr": {
+  "all": [
+   4,
+   9
+  ],
+  "lead": [
+   1,
+   1
+  ],
+  "manager": [
+   1,
+   2
+  ],
+  "worker": [
+   2,
+   6
+  ]
+ },
+ "fidelity": {
+  "claimed": 53,
+  "claimed_true": 53,
+  "lead": {
+   "claimed": 9,
+   "claimed_true": 9,
+   "met": 22,
+   "met_claimed": 9
+  },
+  "met": 79,
+  "met_claimed": 50
+ },
+ "lead_done": true,
+ "pcr": {
+  "all": [
+   0,
+   3
+  ],
+  "lead": [
+   0,
+   1
+  ],
+  "manager": [
+   0,
+   2
+  ]
+ },
+ "seed": 3,
+ "shape": "D",
+ "task_success": {
+  "met": 24,
+  "total": 27
+ }
+}

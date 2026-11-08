@@ -226,8 +226,9 @@ def fig3(t1: pd.DataFrame, out: Path, label: str) -> list:
         fig.legend(*axes[0][0].get_legend_handles_labels(), loc="upper left", bbox_to_anchor=(0.0, 0.972),
                    ncol=len(shapes), handletextpad=0.3, borderaxespad=0)
         fig.text(0.0, 1.0, "Failures by tree shape", ha="left", va="top", fontsize=7.5)
+        dplus = "; D+ = lead, 3 managers x 5" if "D+" in shapes else ""
         _note(fig, f"{label}; faults {prof}. F = lead + 6 workers; D = lead, 2 managers x 3\n"
-                   "workers; D+ = lead, 3 managers x 5. Bars: 95% CI (DAR: seed bootstrap; FCR: Wilson).")
+                   f"workers{dplus}. Bars: 95% CI (DAR: seed bootstrap; FCR: Wilson).")
         fig.tight_layout(h_pad=0.6, w_pad=0.4, rect=(0, 0, 1, 0.925))
         paths += _save(fig, out, "fig3_failures_by_shape" + _suffix(prof, profiles))
     return paths

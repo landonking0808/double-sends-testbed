@@ -47,6 +47,7 @@ Placeholders (only numbers that come from the analysis tables):
     {{V:<agents>:<shape>:<cond>:<col>[|fmt]}}          validation.csv (scripted vs analytic)
     {{EP:<model>:<shape>:<cond>:<col>|<agg>}}          episodes.csv, included episodes only
     {{S:<dotted.key>}}                                 summary.json
+    {{M:<view>:<monitor>:<group>:<metric>[:<col>][|fmt]}}  log-only monitor summary (Track 4)
     {{T1@<other-grid>:...}}                            read results/<other-grid>/ instead
 
 ``<model>`` may be an alias from ``report/config.json`` (``A``, ``B``); any field may be ``*`` or a
@@ -55,6 +56,17 @@ comma list. Metrics: any CSV column, plus for a rate column R (one with R_k, R_n
 one decimal), ``dar_ci``, ``dar_full``. fmt: a Python format spec (``.2f``), ``pct``, ``pct1``,
 ``int``, ``p`` (p-value), ``signpct``, ``ptimeout``; an aggregate first when several rows match:
 ``sum``, ``mean``, ``min``, ``max``, ``maxabs``, ``count``, e.g. ``|sum;,.0f``.
+
+Monitor placeholders (``M``) read the long-format ``summary.csv`` written by ``scripts/run_monitor.py``
+(columns monitor, view, group, metric, k, n, value, ci95_lo, ci95_hi). ``<view>`` is a key of
+``monitor_views`` in ``report/config.json``, which names the file (relative to ``results/``) and the
+number of episodes the finished run must cover; rows are also filtered on the CSV's ``view`` column, so a
+merged file (``monitor/grid-summary.csv``) works as well. ``<monitor>``: ``llm`` or ``baseline``;
+``<group>``: ``all``, ``team_model=<model or alias>``, ``condition=B0``, ``shape=D``; ``<col>``:
+``value`` (default), ``k``, ``n``, ``ci`` ("43% [30, 57]"), ``kn`` ("6/14"), ``full``. A rate (Wilson
+row) prints as a percent by default, an F1 (bootstrap row) with two decimals. While the run is not
+finished (fewer episodes than configured, or no file yet) the placeholder prints ``[monitor pending]``,
+the build warns, and ``--final`` refuses to build.
 """
 from __future__ import annotations
 
@@ -173,6 +185,7 @@ class Tables:
         self.config = config
         self._cache = {}
         self.log = []          # rows for numbers.csv
+        self.pending = []      # monitor placeholders whose run is not finished
 
     def path(self, grid: str, name: str) -> Path:
         return REPO / "results" / grid / name
@@ -235,6 +248,8 @@ class Tables:
             self.log.append({"placeholder": m.group(0), "file": f"results/{grid}/summary.json", "sha256": sha,
                              "rows": body, "raw": v, "text": text})
             return text
+        if kind == "M":
+            return self.resolve_monitor(m, parts, spec)
         if kind == "T1":
             name = "table1.csv"
             if len(parts) == 3:
@@ -287,6 +302,70 @@ class Tables:
         self.log.append({"placeholder": m.group(0), "file": f"results/{grid}/{name}", "sha256": sha,
                          "rows": desc, "raw": raw, "text": text})
         return text
+
+    def resolve_monitor(self, m: re.Match, parts: list, spec: str | None) -> str:
+        ph = m.group(0)
+        if len(parts) not in (4, 5):
+            raise BuildError(f"{ph}: M needs view:monitor:group:metric[:col]")
+        view, mon, group, metric = parts[:4]
+        col = parts[4] if len(parts) == 5 else "value"
+        views = self.config.get("monitor_views", {})
+        if view not in views:
+            raise BuildError(f"{ph}: no monitor view {view!r} in report/config.json monitor_views")
+        vcfg = views[view]
+        rel_file = vcfg["file"]
+        expect = int(vcfg.get("episodes", 0))
+        csv_view = vcfg.get("view", view)
+        if group.startswith("team_model="):
+            alias = self.models(self.grid)
+            group = "team_model=" + alias.get(group.split("=", 1)[1], group.split("=", 1)[1])
+        p = REPO / "results" / rel_file
+        if not p.exists():
+            return self._pending(ph, rel_file, "no file yet")
+        data = p.read_bytes()
+        sha = hashlib.sha256(data).hexdigest()
+        rows = [r for r in csv.DictReader(io.StringIO(data.decode("utf-8"))) if r.get("view") == csv_view]
+        done = [r for r in rows if r["monitor"] == mon and r["group"] == "all" and r["metric"] == "episodes"]
+        n_eps = int(float(done[0]["k"])) if done and done[0]["k"] not in ("", None) else 0
+        if expect and n_eps < expect:
+            return self._pending(ph, rel_file, f"{n_eps}/{expect} episodes")
+        hit = [r for r in rows if r["monitor"] == mon and r["group"] == group and r["metric"] == metric]
+        if len(hit) != 1:
+            raise BuildError(f"{ph}: {len(hit)} rows in results/{rel_file} for view={csv_view} monitor={mon} "
+                             f"group={group} metric={metric} (need exactly 1)")
+        r = hit[0]
+        wilson = r.get("ci_kind") == "wilson"
+        boot = r.get("ci_kind") == "episode_bootstrap"
+        v, lo, hi = _num(r.get("value")), _num(r.get("ci95_lo")), _num(r.get("ci95_hi"))
+        p_ = spec or ("pct" if wilson else ".2f")
+        num = (lambda x: fmt_value(x, "pctnum")) if p_ == "pct" else (lambda x: fmt_value(x, p_))
+        if col == "value":
+            text = fmt_value(_num(r["k"]), spec) if not (wilson or boot) else fmt_value(v, p_)
+        elif col in ("k", "n"):
+            text = fmt_value(_num(r[col]), spec)
+        elif col in ("ci", "full"):
+            if not (wilson or boot):
+                raise BuildError(f"{ph}: metric {metric} has no interval")
+            text = f"{fmt_value(v, p_)} [{num(lo)}, {num(hi)}]"
+            if col == "full" and wilson:
+                text += f" ({r['k']}/{r['n']})"
+        elif col == "kn":
+            if not wilson:
+                raise BuildError(f"{ph}: kn needs a rate metric")
+            text = f"{r['k']}/{r['n']}"
+        else:
+            raise BuildError(f"{ph}: unknown monitor column {col!r} (value, k, n, ci, kn, full)")
+        self.log.append({"placeholder": ph, "file": f"results/{rel_file}", "sha256": sha,
+                         "rows": f"view={csv_view},monitor={mon},group={group},metric={metric}",
+                         "raw": [r.get("k"), r.get("n"), r.get("value"), r.get("ci95_lo"), r.get("ci95_hi")],
+                         "text": text})
+        return text
+
+    def _pending(self, ph, rel_file, why):
+        self.pending.append((ph, rel_file, why))
+        self.log.append({"placeholder": ph, "file": f"results/{rel_file}", "sha256": "", "rows": why,
+                         "raw": "pending", "text": "[monitor pending]"})
+        return "[monitor pending]"
 
     def _metric(self, rows, col, spec, agg, ph, name):
         cols = rows[0].keys()
@@ -1308,6 +1387,10 @@ def main(argv=None) -> int:
         (problems if a.final else warnings).append(f"abstract has {words} words (150-250)")
     if todo:
         (problems if a.final else warnings).append(f"{todo} TODO paragraph(s) left")
+    if tables.pending:
+        (problems if a.final else warnings).append(
+            f"{len(tables.pending)} monitor placeholder(s) print [monitor pending], run not finished: "
+            + "; ".join(sorted({f"results/{f} ({why})" for _, f, why in tables.pending})))
 
     print(f"{'DEMO build (not the submission)' if a.demo else 'build'}: grid={a.grid}")
     print(f"  docx: {rel(docx_path)}")
